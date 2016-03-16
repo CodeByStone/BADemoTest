@@ -23,6 +23,8 @@ QQ：137361770
 
 #3、用SDLayout 布局三方库 和系统frame 混合使用，创建一个多分区，多种cell样式，文字自适应的tableView
 
+3.1 在这个demoVC3中，第二中cell样式中，用纯代码写了一个自定义button（图片在上，文字在下，且都居中显示），有需要的可以直接用，还可以自定义左右显示（第一种cell样式中的playButton就是左右显示）
+
 ![image](https://github.com/boai/BADemoTest/blob/master/Image/image3.png)
 
 
