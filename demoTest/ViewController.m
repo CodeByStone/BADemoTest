@@ -51,7 +51,6 @@
         
         _tableView.tableFooterView = [UIView new];
         
-        
         self.titlesArray = @[].mutableCopy;
         self.classNamesArray = @[].mutableCopy;
         
@@ -104,7 +103,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     NSString *className = self.classNamesArray[indexPath.row];
     Class class = NSClassFromString(className);
     if (class)

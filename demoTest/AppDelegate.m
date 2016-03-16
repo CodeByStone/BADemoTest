@@ -24,6 +24,9 @@
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = nav;
     
+     [NSThread sleepForTimeInterval:1.0];//延长启动页面时间
+    
+    
     [self.window makeKeyAndVisible];
 
     
