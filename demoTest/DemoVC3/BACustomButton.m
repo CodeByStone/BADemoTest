@@ -7,7 +7,6 @@
 //
 
 #import "BACustomButton.h"
-#import "BAHeader.h"
 
 @implementation BACustomButton
 

@@ -7,8 +7,6 @@
 //
 
 #import "DemoVC2Model.h"
-#import <UIKit/UIKit.h>
-#import "BAHeader.h"
 
 
 extern const CGFloat contentLabelFontSize;

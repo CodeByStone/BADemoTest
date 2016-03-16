@@ -7,7 +7,6 @@
 //
 
 #import "DemoVC1.h"
-#import "BAHeader.h"
 #import "YRHomeIncomeView.h"
 
 @interface DemoVC1 ()

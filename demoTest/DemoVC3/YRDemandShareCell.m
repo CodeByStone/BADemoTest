@@ -8,7 +8,6 @@
 
 #import "YRDemandShareCell.h"
 #import "YRDemandShareModel.h"
-#import "BAHeader.h"
 
 @interface YRDemandShareCell ()
 {

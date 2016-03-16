@@ -7,8 +7,7 @@
 //
 
 #import "DemoVC3Model.h"
-#import <UIKit/UIKit.h>
-#import "BAHeader.h"
+
 
 extern const CGFloat contentLabelFontSizes;
 extern const CGFloat maxContentLabelHeights;

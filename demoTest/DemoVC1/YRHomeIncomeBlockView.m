@@ -7,7 +7,6 @@
 //
 
 #import "YRHomeIncomeBlockView.h"
-#import "BAHeader.h"
 #import "BAHomeIncomeModel.h"
 #import "BAHomeIncomeCell.h"
 

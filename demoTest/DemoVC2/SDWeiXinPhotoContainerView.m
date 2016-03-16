@@ -23,7 +23,6 @@
  */
 
 #import "SDWeiXinPhotoContainerView.h"
-#import "BAHeader.h"
 
 #import "SDPhotoBrowser.h"
 

@@ -7,7 +7,6 @@
 //
 
 #import "DemoVC3.h"
-#import "BAHeader.h"
 #import "DemoVC3Model.h"
 #import "DemoVC3Cell.h"
 

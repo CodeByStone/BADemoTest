@@ -8,7 +8,6 @@
 
 #import "DemoVC2Cell.h"
 #import "DemoVC2Model.h"
-#import "BAHeader.h"
 #import "SDWeiXinPhotoContainerView.h"
 
 

@@ -7,7 +7,6 @@
 //
 
 #import "DemoVC2HeadView.h"
-#import "BAHeader.h"
 
 @implementation DemoVC2HeadView
 

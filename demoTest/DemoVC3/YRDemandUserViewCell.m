@@ -7,7 +7,6 @@
 //
 
 #import "YRDemandUserViewCell.h"
-#import "BAHeader.h"
 
 @implementation YRDemandUserViewCell
 

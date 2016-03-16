@@ -7,7 +7,6 @@
 //
 
 #import "DemoVC3Cell.h"
-#import "BAHeader.h"
 #import "DemoVC3Model.h"
 
 const CGFloat contentLabelFontSizes = 15;
