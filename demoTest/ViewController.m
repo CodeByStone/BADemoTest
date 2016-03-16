@@ -58,7 +58,7 @@
         [self addCell:@"微信朋友圈" class:@"DemoVC2"];
         [self addCell:@"自适应文字高度" class:@"DemoVC3"];
         [self addCell:@"测试tableView" class:@"DemoVC4"];
-//        [self addCell:@"此功能暂未开放" class:nil];
+        [self addCell:@"评论界面" class:@"DemoVC5"];
         
         [self.tableView reloadData];
     }

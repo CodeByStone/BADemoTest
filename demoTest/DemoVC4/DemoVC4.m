@@ -33,9 +33,6 @@
     [self addCell:@"Twitter" class:@"T1HomeTimelineItemsViewController" image:@"icon0.jpg"];
     [self addCell:@"Weibo" class:@"WBStatusTimelineViewController" image:@"icon1.jpg"];
     
-//    if (!kiOS7Later) {
-//        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
-//    }
     [self.tableView reloadData];
 }
 

@@ -9,7 +9,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods.xcscheme</key>
+		<key>Pods-demoTest.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SDAutoLayout.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>WHC_AutoLayoutKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,7 +37,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>660D7C18573951D8F09434C11E127EC4</key>
+		<key>9CEE30AA9FD88785A279E71EBB4AD2D2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A73DE9024D5CDDD76ECC8FE6ADE5FECC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D3B981F9B15C33C2284FFB95B9026BBB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DA7FE4892EA1568BFA2247DCB57E8536</key>
 		<dict>
 			<key>primary</key>
 			<true/>
