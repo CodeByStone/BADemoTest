@@ -131,8 +131,8 @@
 		C4225D801C98EA62006262C9 /* YRDemandShareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRDemandShareCell.m; sourceTree = "<group>"; };
 		C4225D811C98EA62006262C9 /* YRDemandUserViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDemandUserViewCell.h; sourceTree = "<group>"; };
 		C4225D821C98EA62006262C9 /* YRDemandUserViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRDemandUserViewCell.m; sourceTree = "<group>"; };
-		C4225D851C98EA7A006262C9 /* BACustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BACustomButton.h; sourceTree = "<group>"; };
-		C4225D861C98EA7A006262C9 /* BACustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BACustomButton.m; sourceTree = "<group>"; };
+		C4225D851C98EA7A006262C9 /* BACustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BACustomButton.h; path = ../DemoVC3/BACustomButton.h; sourceTree = "<group>"; };
+		C4225D861C98EA7A006262C9 /* BACustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BACustomButton.m; path = ../DemoVC3/BACustomButton.m; sourceTree = "<group>"; };
 		C4225D881C98EAF1006262C9 /* YRDemandShareModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDemandShareModel.h; sourceTree = "<group>"; };
 		C4225D891C98EAF1006262C9 /* YRDemandShareModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRDemandShareModel.m; sourceTree = "<group>"; };
 		C4225D8B1C98EB6D006262C9 /* YRDemandModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDemandModel.h; sourceTree = "<group>"; };
@@ -323,6 +323,8 @@
 		C4225D941C990ED2006262C9 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				C4225D851C98EA7A006262C9 /* BACustomButton.h */,
+				C4225D861C98EA7A006262C9 /* BACustomButton.m */,
 				C4225D951C990ED2006262C9 /* UIView+Extension.h */,
 				C4225D961C990ED2006262C9 /* UIView+Extension.m */,
 			);
@@ -543,8 +545,6 @@
 				C4225D801C98EA62006262C9 /* YRDemandShareCell.m */,
 				C4225D811C98EA62006262C9 /* YRDemandUserViewCell.h */,
 				C4225D821C98EA62006262C9 /* YRDemandUserViewCell.m */,
-				C4225D851C98EA7A006262C9 /* BACustomButton.h */,
-				C4225D861C98EA7A006262C9 /* BACustomButton.m */,
 			);
 			path = DemoVC3;
 			sourceTree = "<group>";

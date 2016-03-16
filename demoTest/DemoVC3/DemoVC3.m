@@ -88,7 +88,7 @@
         _dataArray = [NSMutableArray new];
     }
     
-    NSArray *namesArray = @[@"GSD_iOS",
+    NSArray *namesArray = @[@"博爱",
                             @"风口上的猪",
                             @"当今世界网名都不好起了",
                             @"我叫郭德纲",
@@ -228,6 +228,11 @@
         return [self.tableView cellHeightForIndexPath:indexPath model:model keyPath:@"model" cellClass:[DemoVC3Cell class] contentViewWidth:[self cellContentViewWith]];
     }
     return 80;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 10;
 }
 
 - (CGFloat)cellContentViewWith

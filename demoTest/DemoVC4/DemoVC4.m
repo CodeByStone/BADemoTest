@@ -30,8 +30,8 @@
     self.classNames = @[].mutableCopy;
     self.images = @[].mutableCopy;
     
-    [self addCell:@"Twitter" class:@"T1HomeTimelineItemsViewController" image:@"005.jpg"];
-    [self addCell:@"Weibo" class:@"WBStatusTimelineViewController" image:@"005.jpg"];
+    [self addCell:@"Twitter" class:@"T1HomeTimelineItemsViewController" image:@"icon0.jpg"];
+    [self addCell:@"Weibo" class:@"WBStatusTimelineViewController" image:@"icon1.jpg"];
     
 //    if (!kiOS7Later) {
 //        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
@@ -63,7 +63,7 @@
     cell.textLabel.text = _titles[indexPath.row];
     cell.imageView.image = _images[indexPath.row];
     cell.imageView.clipsToBounds = YES;
-    cell.imageView.layer.cornerRadius = cell.imageView.width / 2;
+    cell.imageView.layer.cornerRadius = 48 / 2;
     
     return cell;
 }
