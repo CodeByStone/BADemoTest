@@ -7,10 +7,10 @@
 //
 
 #import "ViewController.h"
-//#import "BAHeader.h"
 #import "DemoVC1.h"
 #import "DemoVC2.h"
 #import "DemoVC3.h"
+#import "DemoVC4.h"
 
 
 @interface ViewController ()
@@ -21,7 +21,8 @@
 
 
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) NSArray *titleArray;
+@property (nonatomic, strong) NSMutableArray *titlesArray;
+@property (nonatomic, strong) NSMutableArray *classNamesArray;
 
 @end
 
@@ -31,8 +32,6 @@
 {
     if (!_tableView)
     {
-        [self setUpTitleArray];
-        
         _tableView = [[UITableView alloc] init];
         _tableView.delegate = self;
         _tableView.dataSource = self;
@@ -51,18 +50,30 @@
         }];
         
         _tableView.tableFooterView = [UIView new];
+        
+        
+        self.titlesArray = @[].mutableCopy;
+        self.classNamesArray = @[].mutableCopy;
+        
+        [self addCell:@"收入排行榜" class:@"DemoVC1"];
+        [self addCell:@"微信朋友圈" class:@"DemoVC2"];
+        [self addCell:@"自适应文字高度" class:@"DemoVC3"];
+        [self addCell:@"测试tableView" class:@"DemoVC4"];
+//        [self addCell:@"此功能暂未开放" class:nil];
+        
+        [self.tableView reloadData];
     }
     return _tableView;
 }
 
-- (void)setUpTitleArray
+- (void)addCell:(NSString *)title class:(NSString *)className
 {
-    self.titleArray = @[@"收入排行榜", @"微信朋友圈", @"自适应文字高度", @"此功能暂未开放"];
+    [self.titlesArray addObject:title];
+    [self.classNamesArray addObject:className];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
     self.title = @"博爱demo测试";
     self.view.backgroundColor = [UIColor whiteColor];
@@ -72,7 +83,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.titleArray.count;
+    return self.titlesArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -85,7 +96,7 @@
     }
     
     cell.backgroundColor = [UIColor clearColor];
-    cell.textLabel.text = self.titleArray[indexPath.row];
+    cell.textLabel.text = self.titlesArray[indexPath.row];
     cell.textLabel.textColor = [UIColor whiteColor];
     
     return cell;
@@ -93,28 +104,17 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    NSString *className = self.classNamesArray[indexPath.row];
+    Class class = NSClassFromString(className);
+    if (class)
+    {
+        UIViewController *vc = class.new;
+        vc.title = self.titlesArray[indexPath.row];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
     // 点击立刻取消该cell的选中状态
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    if (indexPath.row == 0)
-    {
-        DemoVC1 *testVC1 = [[DemoVC1 alloc] init];
-        testVC1.title = self.titleArray[indexPath.row];
-        [self.navigationController pushViewController:testVC1 animated:YES];
-    }
-    if (indexPath.row == 1)
-    {
-        DemoVC2 *testVC2 = [[DemoVC2 alloc] init];
-        testVC2.title = self.titleArray[indexPath.row];
-        [self.navigationController pushViewController:testVC2 animated:YES];
-    }
-    if (indexPath.row == 2)
-    {
-        DemoVC3 *testVC3 = [[DemoVC3 alloc] init];
-        testVC3.title = self.titleArray[indexPath.row];
-        [self.navigationController pushViewController:testVC3 animated:YES];
-    }
-    
 }
 
 

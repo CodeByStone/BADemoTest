@@ -101,8 +101,6 @@ const CGFloat maxContentLabelHeights = 54;
 {
     _model = model;
     
-    NSLog(@"00000 %@", model.content);
-    
     _shouldOpenContentLabel = NO;
     
     _titleLable.text = model.title;

@@ -35,6 +35,7 @@
 		C4225DDA1C990ED2006262C9 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C4225DC21C990ED2006262C9 /* UIImageView+HighlightedWebCache.m */; };
 		C4225DDB1C990ED2006262C9 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C4225DC41C990ED2006262C9 /* UIImageView+WebCache.m */; };
 		C4225DDC1C990ED2006262C9 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C4225DC61C990ED2006262C9 /* UIView+WebCacheOperation.m */; };
+		C4225DE41C99254A006262C9 /* DemoVC4.m in Sources */ = {isa = PBXBuildFile; fileRef = C4225DE31C99254A006262C9 /* DemoVC4.m */; };
 		C42453CA1C979D9300D01865 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C42453C91C979D9300D01865 /* main.m */; };
 		C42453CD1C979D9300D01865 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C42453CC1C979D9300D01865 /* AppDelegate.m */; };
 		C42453D01C979D9300D01865 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C42453CF1C979D9300D01865 /* ViewController.m */; };
@@ -183,6 +184,8 @@
 		C4225DC51C990ED2006262C9 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		C4225DC61C990ED2006262C9 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		C4225DDE1C990F93006262C9 /* BADemo.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADemo.pch; sourceTree = "<group>"; };
+		C4225DE21C99254A006262C9 /* DemoVC4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC4.h; sourceTree = "<group>"; };
+		C4225DE31C99254A006262C9 /* DemoVC4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC4.m; sourceTree = "<group>"; };
 		C42453C51C979D9300D01865 /* demoTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = demoTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42453C91C979D9300D01865 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C42453CB1C979D9300D01865 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -412,6 +415,27 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
+		C4225DDF1C99250C006262C9 /* DemoVC5 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DemoVC5;
+			sourceTree = "<group>";
+		};
+		C4225DE01C99250C006262C9 /* DemoVC6 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DemoVC6;
+			sourceTree = "<group>";
+		};
+		C4225DE11C99250C006262C9 /* DemoVC7 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DemoVC7;
+			sourceTree = "<group>";
+		};
 		C42453BC1C979D9300D01865 = {
 			isa = PBXGroup;
 			children = (
@@ -446,6 +470,9 @@
 				C440E5631C98360D006FFA73 /* DemoVC2 */,
 				C440E4A31C980C3D006FFA73 /* DemoVC3 */,
 				C440E4A41C980C3D006FFA73 /* DemoVC4 */,
+				C4225DDF1C99250C006262C9 /* DemoVC5 */,
+				C4225DE01C99250C006262C9 /* DemoVC6 */,
+				C4225DE11C99250C006262C9 /* DemoVC7 */,
 				C4225DDD1C990F30006262C9 /* Other */,
 				C4225D941C990ED2006262C9 /* Category */,
 				C4225D971C990ED2006262C9 /* Lib */,
@@ -525,6 +552,8 @@
 		C440E4A41C980C3D006FFA73 /* DemoVC4 */ = {
 			isa = PBXGroup;
 			children = (
+				C4225DE21C99254A006262C9 /* DemoVC4.h */,
+				C4225DE31C99254A006262C9 /* DemoVC4.m */,
 			);
 			path = DemoVC4;
 			sourceTree = "<group>";
@@ -870,6 +899,7 @@
 				C4225DC81C990ED2006262C9 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				C440E56E1C98360D006FFA73 /* DemoVC2.m in Sources */,
 				C4225DCF1C990ED2006262C9 /* SDImageCache.m in Sources */,
+				C4225DE41C99254A006262C9 /* DemoVC4.m in Sources */,
 				C42454131C97B74100D01865 /* BAHomeIncomeCell.m in Sources */,
 				C4225DD41C990ED2006262C9 /* SDWebImageManager.m in Sources */,
 				C4225DD91C990ED2006262C9 /* UIImage+WebP.m in Sources */,

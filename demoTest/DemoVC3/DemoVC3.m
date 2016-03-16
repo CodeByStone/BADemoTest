@@ -9,6 +9,7 @@
 #import "DemoVC3.h"
 #import "DemoVC3Model.h"
 #import "DemoVC3Cell.h"
+#import "DemoVC2HeadView.h"
 
 #import "YRDemandShareCell.h"
 #import "YRDemandUserViewCell.h"
@@ -52,9 +53,9 @@
         
         _tableView.tableFooterView = [UIView new];
         
-//        DemoVC2HeadView *headView = [DemoVC2HeadView new];
-//        headView.frame = CGRectMake(0, 0, 0, 260);
-//        self.tableView.tableHeaderView = headView;
+        DemoVC2HeadView *headView = [DemoVC2HeadView new];
+        headView.frame = CGRectMake(0, 0, 0, 260);
+        self.tableView.tableHeaderView = headView;
         
         [self.view addSubview:_tableView];
         
@@ -118,8 +119,6 @@
         
         [self.dataArray addObject:model];
     }
-
-    NSLog(@"80890808 %@", self.dataArray);
 }
 
 - (void)viewDidLoad
