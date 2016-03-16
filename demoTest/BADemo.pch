@@ -23,7 +23,10 @@
 #import "UIImageView+WebCache.h"
 
 #import "UIView+WHC_AutoLayout.h"
+#import "UITableViewCell+WHC_AutoHeightForCell.h"
 
+#import "UIImageView+WebCache.h"
+#import "MJRefresh.h"
 
 //#define  contentLabelFontSize  15
 //#define  maxContentLabelHeight  54
@@ -50,7 +53,10 @@
 
 // 字体
 #define KFontSize(fontSize) [UIFont systemFontOfSize:fontSize]
-
+/**
+ * 随机数据
+ */
+#define BARandomData arc4random_uniform(10)
 
 
 #pragma mark - ***** 颜色设置

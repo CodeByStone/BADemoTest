@@ -1,5 +1,6 @@
 PODS:
   - Masonry (0.6.4)
+  - MJRefresh (3.1.0)
   - SDAutoLayout (1.31)
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
@@ -8,12 +9,14 @@ PODS:
 
 DEPENDENCIES:
   - Masonry (~> 0.6.4)
+  - MJRefresh
   - SDAutoLayout (~> 1.31)
   - SDWebImage (~> 3.7.5)
   - WHC_AutoLayoutKit (~> 2.0.0)
 
 SPEC CHECKSUMS:
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
+  MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
   SDAutoLayout: 79b8977f863ba4722bb8f8f6f92981d0b8ae932a
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   WHC_AutoLayoutKit: 8dc1026893e4ce77b22ff15969c057488c9e380c

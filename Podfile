@@ -12,7 +12,7 @@ pod 'Masonry', '~> 0.6.4'
 pod 'SDAutoLayout', '~> 1.31'
 pod 'WHC_AutoLayoutKit', '~> 2.0.0'
 pod 'SDWebImage', '~> 3.7.5'
-
+pod 'MJRefresh'
 
 
 

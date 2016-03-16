@@ -10,27 +10,5 @@
 
 @implementation DemoVC5Model
 
-@end
-
-@implementation DemoVC5ModelData : NSObject
-
-+ (NSDictionary *)objectClassInArray{
-    return @{@"reviews" : [Reviews class]};
-}
-
-@end
-
-
-@implementation Reviews
-
-@end
-
-
-@implementation Author
-
-@end
-
-
-@implementation Page
 
 @end

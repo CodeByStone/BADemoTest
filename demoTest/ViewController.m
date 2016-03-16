@@ -54,12 +54,13 @@
         self.titlesArray = @[].mutableCopy;
         self.classNamesArray = @[].mutableCopy;
         
-        [self addCell:@"收入排行榜" class:@"DemoVC1"];
-        [self addCell:@"微信朋友圈" class:@"DemoVC2"];
-        [self addCell:@"自适应文字高度" class:@"DemoVC3"];
-        [self addCell:@"测试tableView" class:@"DemoVC4"];
-        [self addCell:@"评论界面" class:@"DemoVC5"];
-        
+        [self addCell:@"1、收入排行榜" class:@"DemoVC1"];
+        [self addCell:@"2、微信朋友圈" class:@"DemoVC2"];
+        [self addCell:@"3、自适应文字高度" class:@"DemoVC3"];
+        [self addCell:@"4、测试tableView" class:@"DemoVC4"];
+        [self addCell:@"5、评论界面(WHC)" class:@"DemoVC5"];
+        [self addCell:@"6、评论界面(SD)" class:@"DemoVC6"];
+
         [self.tableView reloadData];
     }
     return _tableView;
