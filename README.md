@@ -21,7 +21,7 @@ ios开发中重难点展示
 
 ###### http://www.cnblogs.com/boai/p/4977976.html
 
-
+###### 在DemoVC7的评论功能中使用了键盘处理的三方库，具体使用清看【AppDelegate】
 
 # 更新记录：
 ## 2016.03.16 --- 
