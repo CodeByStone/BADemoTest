@@ -177,6 +177,12 @@
         replyVC.title = [NSString stringWithFormat:@"回复%@的评论", replyVC.quesstionDataModel.userName7];
         [[self viewController].navigationController pushViewController:replyVC animated:YES];
     }
+    else if (sender.tag == 2)
+    {
+        static int number = 0;
+        number++;
+        [supprotButton setTitle:[NSString stringWithFormat:@"%d", [self.model.supportNumber7 intValue] + number] forState:UIControlStateNormal];
+    }
     else
     {
         NSLog(@"温馨提示：点击了%ld个button!", (long)sender.tag);
