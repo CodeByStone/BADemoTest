@@ -23,7 +23,22 @@
     self.window.rootViewController = nav;
     [NSThread sleepForTimeInterval:1.0];//延长启动页面时间
     [self.window makeKeyAndVisible];
+    
+    // 键盘
+    [self completionHandleIQKeyboard];
+    
+    
     return YES;
+}
+
+// 键盘
+- (void)completionHandleIQKeyboard
+{
+    IQKeyboardManager *manager = [IQKeyboardManager sharedManager];
+    manager.enable = YES;
+    manager.shouldResignOnTouchOutside = YES;
+    manager.shouldToolbarUsesTextFieldTintColor = YES;
+    manager.enableAutoToolbar = YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

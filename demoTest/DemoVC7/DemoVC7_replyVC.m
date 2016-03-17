@@ -9,7 +9,7 @@
 #import "DemoVC7_replyVC.h"
 #import "DemoVC7Model.h"
 #import "DemoVC7_quesstionCell.h"
-
+#import "DemoVC7_replyView.h"
 
 @interface DemoVC7_replyVC ()
 
@@ -20,11 +20,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.backgroundColor = kBGGrayColor;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self creatReplyData];
+    [self creatSendReplyView];
+    
     NSLog(@"%s self.replyDataArray: %@", __func__,self.quesstionDataModel);
 }
 
+#pragma mark - ***** 添加评论View
+- (void)creatSendReplyView
+{
+    CGRect frame = CGRectMake(0, KSCREEN_HEIGHT - 50 - 64, KSCREEN_WIDTH, 50);
+    DemoVC7_replyView *replyView = [[DemoVC7_replyView alloc] initWithFrame:frame withImage:self.quesstionDataModel.icon7];
+    replyView.backgroundColor = KCOLOR(245, 244, 245, 1.0);
+    [self.view addSubview:replyView];
+    
+//    replyView.sd_layout
+//    .leftSpaceToView(self.view, 0)
+//    .rightSpaceToView(self.view, 0)
+//    .bottomSpaceToView(self.view, 0)
+//    .heightIs(50);
+}
+
+#pragma mark - ***** 添加ReplyData
 - (void)creatReplyData
 {
     if (!_replyDataArray) {
@@ -97,6 +116,7 @@
     
     if (indexPath.section == 0)
     {
+        quesstionCell7.backgroundColor = kWHITECOLOR;
         quesstionCell7.model = self.quesstionDataModel;
     }
     else

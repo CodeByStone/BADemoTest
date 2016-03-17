@@ -31,8 +31,9 @@
 - (void)setupSubView
 {
     userImageView = [UIImageView new];
+    userImageView.image = [UIImage imageNamed:imageNameStr];
     userImageView.layer.masksToBounds = YES;
-    userImageView.layer.cornerRadius = 50/2;
+    userImageView.layer.cornerRadius = 40/2;
 
     replyTextField = [UITextField new];
     replyTextField.borderStyle = UITextBorderStyleRoundedRect;
@@ -40,8 +41,11 @@
     
     sendButton = [UIButton buttonWithType:UIButtonTypeCustom];
     sendButton.layer.cornerRadius =  5.0f;
-    sendButton.backgroundColor = kBGGrayColor;
+    sendButton.layer.borderWidth = 1.0;
+    sendButton.layer.borderColor = kTEXTGrayColor.CGColor;
     [sendButton setTitle:@"发送" forState:UIControlStateNormal];
+    [sendButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    sendButton.titleLabel.font = KFontSize(15);
     
     NSArray *views = @[userImageView, replyTextField, sendButton];
     [views enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -56,13 +60,17 @@
     .widthIs(40)
     .heightIs(40);
     
-//    replyTextField.sd_layout
-//    .leftSpaceToView(userImageView, margin)
-//    .topSpaceToView(self, margin)
-//    .
+    replyTextField.sd_layout
+    .leftSpaceToView(userImageView, margin)
+    .topSpaceToView(self, margin)
+    .rightSpaceToView(sendButton, margin)
+    .heightIs(40);
     
-    
-    
+    sendButton.sd_layout
+    .rightSpaceToView(self, margin)
+    .topEqualToView(replyTextField)
+    .widthIs(50)
+    .heightIs(40);
 }
 
 @end

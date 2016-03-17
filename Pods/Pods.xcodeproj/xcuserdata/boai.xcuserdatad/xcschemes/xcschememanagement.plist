@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>IQKeyboardManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MJRefresh.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,17 +42,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1A726E25FEE8DAB2E317BBF0CB56C918</key>
+		<key>0501AC6917EB99ECEE4F27D167E33DD6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>34974649A58D37A1FBD8137CB25AA25F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>46A656D22E777A37C9B1B9CE3242A97C</key>
+		<key>10C8A7D9B4B61257FFD37027321ED213</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,12 +57,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>61DCC218B1561D2AF2CE274139CA5465</key>
+		<key>79390DF4148C933925A3044400ACBFF8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8F38A20B08A0DB5F65B9D259E3D2DCA6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>8F74D9EA91F4C43190670066BAC37D44</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BDDEA04F3D1FF036428BB5A4A6212A2D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

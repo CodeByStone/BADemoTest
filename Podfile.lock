@@ -1,4 +1,5 @@
 PODS:
+  - IQKeyboardManager (4.0.0)
   - Masonry (0.6.4)
   - MJRefresh (3.1.0)
   - SDAutoLayout (1.31)
@@ -8,13 +9,15 @@ PODS:
   - WHC_AutoLayoutKit (2.0.0)
 
 DEPENDENCIES:
+  - IQKeyboardManager (~> 4.0.0)
   - Masonry (~> 0.6.4)
-  - MJRefresh
+  - MJRefresh (~> 3.1.0)
   - SDAutoLayout (~> 1.31)
   - SDWebImage (~> 3.7.5)
   - WHC_AutoLayoutKit (~> 2.0.0)
 
 SPEC CHECKSUMS:
+  IQKeyboardManager: b91928f7927ba55a5829b4dcf4b7a6736ac9fc22
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
   SDAutoLayout: 79b8977f863ba4722bb8f8f6f92981d0b8ae932a
