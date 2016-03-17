@@ -8,6 +8,12 @@
 
 #import "DemoVC7_replyView.h"
 
+@interface DemoVC7_replyView ()
+
+@property (nonatomic, copy) cilckIndexBlock clickIndexBlock;
+
+@end
+
 @implementation DemoVC7_replyView
 {
     NSString *imageNameStr;
@@ -46,6 +52,8 @@
     [sendButton setTitle:@"发送" forState:UIControlStateNormal];
     [sendButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     sendButton.titleLabel.font = KFontSize(15);
+    [sendButton addTarget:self action:@selector(sendMessage:) forControlEvents:UIControlEventTouchUpInside];
+    sendButton.tag = 1;
     
     NSArray *views = @[userImageView, replyTextField, sendButton];
     [views enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -71,6 +79,19 @@
     .topEqualToView(replyTextField)
     .widthIs(50)
     .heightIs(40);
+}
+
+- (IBAction)sendMessage:(UIButton *)sender
+{
+    if (self.clickIndexBlock)
+    {
+        self.clickIndexBlock(sender.tag, replyTextField.text);
+    }
+}
+
+- (void)callBackIndex:(cilckIndexBlock)clickIndex
+{
+    self.clickIndexBlock = clickIndex;
 }
 
 @end

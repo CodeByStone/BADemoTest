@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^cilckIndexBlock)(NSInteger index, NSString *contentStr);
 @interface DemoVC7_replyView : UIView
 
 - (instancetype)initWithFrame:(CGRect)frame withImage:(NSString *)imageName;
+- (void)callBackIndex:(cilckIndexBlock)clickIndex;
 
 @end
