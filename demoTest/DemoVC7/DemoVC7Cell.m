@@ -47,6 +47,8 @@
     [addFriendButton setTitleColor:kWHITECOLOR forState:UIControlStateNormal];
     addFriendButton.layer.masksToBounds = YES;
     addFriendButton.layer.cornerRadius = 5.0;
+    addFriendButton.titleLabel.font = KFontSize(12);
+
     
     timeLabel = [UILabel new];
     timeLabel.font = KFontSize(11);
@@ -122,7 +124,7 @@
     .widthIs(50)
     .heightIs(15);
     
-    [self setupAutoHeightWithBottomView:replyButton bottomMargin:margin];
+    [self setupAutoHeightWithBottomView:supprotButton bottomMargin:margin];
 }
 
 - (void)setModel:(DemoVC7Model *)model

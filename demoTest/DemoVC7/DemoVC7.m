@@ -104,14 +104,14 @@
         cell7 = [[DemoVC7Cell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
     }
     
-    cell7.model = self.dataArray7[indexPath.row];
+    cell7.model = self.dataArray7[indexPath.section];
     
     return cell7;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [self.tableView cellHeightForIndexPath:indexPath model:self.dataArray7[indexPath.row] keyPath:@"model" cellClass:[DemoVC7Cell class] contentViewWidth:[self cellContentViewWith]];
+    return [self.tableView cellHeightForIndexPath:indexPath model:self.dataArray7[indexPath.section] keyPath:@"model" cellClass:[DemoVC7Cell class] contentViewWidth:[self cellContentViewWith]];
 }
 
 - (CGFloat)cellContentViewWith
