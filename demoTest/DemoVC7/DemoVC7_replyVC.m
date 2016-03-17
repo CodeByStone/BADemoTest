@@ -41,11 +41,15 @@
         NSString *msg = [NSString stringWithFormat:@"发送内容：%@", contentStr];
         SHOW_ALERT(@"温馨提示：", msg);
         
+        DemoVC7Model *model = [DemoVC7Model new];
+        model.icon7 = self.quesstionDataModel.icon7;
+        model.userName7 = self.quesstionDataModel.userName7;
+        model.content7 = contentStr;
+        model.time7 = [self getCurrentDateAndTime];
+        
+        [self.replyDataArray addObject:model];
+        [self.tableView reloadData];
     }];
-    
-    
- 
-    
 //    replyView.sd_layout
 //    .leftSpaceToView(self.view, 0)
 //    .rightSpaceToView(self.view, 0)
@@ -168,6 +172,19 @@
     return width;
 }
 
+#pragma mark - 获得系统当前日期和时间
+- (NSString *)getCurrentDateAndTime
+{
+    //获得系统日期
+    NSDate *senddate = [NSDate date];
+    NSDateFormatter *dateformatter = [[NSDateFormatter alloc] init];
+    
+    [dateformatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
+    NSString *morelocationString = [dateformatter stringFromDate:senddate];
+    NSLog(@"当前日期为：%@", morelocationString);
+    
+    return morelocationString;
+}
 
 
 @end
