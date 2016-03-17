@@ -139,7 +139,7 @@
 {
     if (section == 0)
     {
-        return 3;
+        return 2;
     }
     
     return 1;
@@ -181,19 +181,19 @@
             
             if (index == 1)
             {
-                [self clickCollectionBtn];
+                [self clickCollectionBtn:@"收藏"];
             }
             if (index == 2)
             {
-                [self clickCollectionBtn];
+                [self clickCollectionBtn:@"点赞"];
             }
             if (index == 3)
             {
-                [self clickCollectionBtn];
+                [self clickCollectionBtn:@"分享"];
             }
             if (index == 4)
             {
-                [self clickCollectionBtn];
+                [self clickCollectionBtn:@"赏"];
             }
         }];
         
@@ -253,9 +253,10 @@
 }
 
 #pragma mark 收藏
-- (void)clickCollectionBtn
+- (void)clickCollectionBtn:(NSString *)title
 {
-    SHOW_ALERT(@"温馨提示：", @"点击了 收藏 按钮！");
+    NSString *msg = [NSString stringWithFormat:@"点击了 %@ 按钮！", title];
+    SHOW_ALERT(@"温馨提示：", msg);
 }
 
 @end
