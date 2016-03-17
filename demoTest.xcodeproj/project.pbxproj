@@ -12,6 +12,7 @@
 		C40A7E101C9A3C56006F0687 /* DemoVC7Model.m in Sources */ = {isa = PBXBuildFile; fileRef = C40A7E0D1C9A3C56006F0687 /* DemoVC7Model.m */; };
 		C40A7E131C9A5462006F0687 /* DemoVC7_replyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C40A7E121C9A5462006F0687 /* DemoVC7_replyVC.m */; };
 		C40A7E161C9A5882006F0687 /* DemoVC7_quesstionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C40A7E151C9A5882006F0687 /* DemoVC7_quesstionCell.m */; };
+		C40A7E1C1C9A61D8006F0687 /* DemoVC7_replyView.m in Sources */ = {isa = PBXBuildFile; fileRef = C40A7E1B1C9A61D8006F0687 /* DemoVC7_replyView.m */; };
 		C4225D831C98EA62006262C9 /* YRDemandShareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4225D801C98EA62006262C9 /* YRDemandShareCell.m */; };
 		C4225D841C98EA62006262C9 /* YRDemandUserViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4225D821C98EA62006262C9 /* YRDemandUserViewCell.m */; };
 		C4225D871C98EA7A006262C9 /* BACustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C4225D861C98EA7A006262C9 /* BACustomButton.m */; };
@@ -129,6 +130,8 @@
 		C40A7E121C9A5462006F0687 /* DemoVC7_replyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC7_replyVC.m; sourceTree = "<group>"; };
 		C40A7E141C9A5882006F0687 /* DemoVC7_quesstionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC7_quesstionCell.h; sourceTree = "<group>"; };
 		C40A7E151C9A5882006F0687 /* DemoVC7_quesstionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC7_quesstionCell.m; sourceTree = "<group>"; };
+		C40A7E1A1C9A61D8006F0687 /* DemoVC7_replyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC7_replyView.h; sourceTree = "<group>"; };
+		C40A7E1B1C9A61D8006F0687 /* DemoVC7_replyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC7_replyView.m; sourceTree = "<group>"; };
 		C4225D7F1C98EA62006262C9 /* YRDemandShareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDemandShareCell.h; sourceTree = "<group>"; };
 		C4225D801C98EA62006262C9 /* YRDemandShareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRDemandShareCell.m; sourceTree = "<group>"; };
 		C4225D811C98EA62006262C9 /* YRDemandUserViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDemandUserViewCell.h; sourceTree = "<group>"; };
@@ -351,14 +354,16 @@
 			children = (
 				C40A7E081C9A3C56006F0687 /* DemoVC7.h */,
 				C40A7E091C9A3C56006F0687 /* DemoVC7.m */,
+				C40A7E111C9A5462006F0687 /* DemoVC7_replyVC.h */,
+				C40A7E121C9A5462006F0687 /* DemoVC7_replyVC.m */,
 				C40A7E0A1C9A3C56006F0687 /* DemoVC7Cell.h */,
 				C40A7E0B1C9A3C56006F0687 /* DemoVC7Cell.m */,
 				C40A7E0C1C9A3C56006F0687 /* DemoVC7Model.h */,
 				C40A7E0D1C9A3C56006F0687 /* DemoVC7Model.m */,
-				C40A7E111C9A5462006F0687 /* DemoVC7_replyVC.h */,
-				C40A7E121C9A5462006F0687 /* DemoVC7_replyVC.m */,
 				C40A7E141C9A5882006F0687 /* DemoVC7_quesstionCell.h */,
 				C40A7E151C9A5882006F0687 /* DemoVC7_quesstionCell.m */,
+				C40A7E1A1C9A61D8006F0687 /* DemoVC7_replyView.h */,
+				C40A7E1B1C9A61D8006F0687 /* DemoVC7_replyView.m */,
 			);
 			path = DemoVC7;
 			sourceTree = "<group>";
@@ -859,6 +864,7 @@
 				C440E5721C98360D006FFA73 /* SDWeiXinPhotoContainerView.m in Sources */,
 				C40A7E101C9A3C56006F0687 /* DemoVC7Model.m in Sources */,
 				C440E55D1C9821B7006FFA73 /* DemoVC3Model.m in Sources */,
+				C40A7E1C1C9A61D8006F0687 /* DemoVC7_replyView.m in Sources */,
 				C42454171C97BAD600D01865 /* BAHomeIncomeModel.m in Sources */,
 				C440E56E1C98360D006FFA73 /* DemoVC2.m in Sources */,
 				C40A7E0F1C9A3C56006F0687 /* DemoVC7Cell.m in Sources */,

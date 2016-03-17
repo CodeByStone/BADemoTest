@@ -108,12 +108,12 @@
     .leftSpaceToView(userImageView, margin)
     .topEqualToView(userImageView)
     .heightIs(20);
-    [userNameLabel setSingleLineAutoResizeWithMaxWidth:100];
+    [userNameLabel setSingleLineAutoResizeWithMaxWidth:150];
     
     starImageView.sd_layout
     .leftSpaceToView(userNameLabel, margin)
     .topEqualToView(userNameLabel)
-    .widthIs(100)
+    .widthIs(80)
     .heightIs(20);
     
     addFriendButton.sd_layout

@@ -60,7 +60,7 @@
     .leftSpaceToView(userImageView, margin)
     .topEqualToView(userImageView)
     .heightIs(20);
-    [userNameLabel setSingleLineAutoResizeWithMaxWidth:100];
+    [userNameLabel setSingleLineAutoResizeWithMaxWidth:150];
     
     timeLabel.sd_layout
     .leftEqualToView(userNameLabel)
