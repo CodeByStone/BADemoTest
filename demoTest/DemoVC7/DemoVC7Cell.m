@@ -46,6 +46,11 @@
     addFriendButton.backgroundColor = NaviBgBlueColor;
     [addFriendButton setTitle:@"加好友" forState:UIControlStateNormal];
     [addFriendButton setTitleColor:kWHITECOLOR forState:UIControlStateNormal];
+    [addFriendButton setImage:[UIImage imageNamed:@"btn_addFriend"] forState:UIControlStateNormal];
+    addFriendButton.imageEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 50);
+    addFriendButton.titleEdgeInsets = UIEdgeInsetsMake(0, -5, 0, -15);
+    addFriendButton.titleLabel.textAlignment = NSTextAlignmentRight;
+    
     addFriendButton.layer.masksToBounds = YES;
     addFriendButton.layer.cornerRadius = 5.0;
     addFriendButton.titleLabel.font = KFontSize(12);
@@ -67,6 +72,10 @@
     supprotButton.titleLabel.font = KFontSize(12);
     supprotButton.tag = 2;
     [supprotButton addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
+    [supprotButton setImage:[UIImage imageNamed:@"btn_support2"] forState:UIControlStateNormal];
+    supprotButton.imageEdgeInsets = UIEdgeInsetsMake(0, 5, 0, supprotButton.titleLabel.width+5);
+    supprotButton.titleEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 0);
+    supprotButton.titleLabel.textAlignment = NSTextAlignmentRight;
 
     vlineImageView = [UIImageView new];
     vlineImageView.image = [UIImage imageNamed:@"vline"];
@@ -77,6 +86,10 @@
     replyButton.titleLabel.font = KFontSize(12);
     replyButton.tag = 3;
     [replyButton addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
+    [replyButton setImage:[UIImage imageNamed:@"btn_reply"] forState:UIControlStateNormal];
+    replyButton.imageEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 30);
+    replyButton.titleEdgeInsets = UIEdgeInsetsMake(0, -5, 0, -15);
+    replyButton.titleLabel.textAlignment = NSTextAlignmentRight;
     
     NSArray *views = @[userImageView, userNameLabel, starImageView, addFriendButton, timeLabel, contentLabel, supprotButton, vlineImageView, replyButton];
     [views enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -107,7 +120,7 @@
     addFriendButton.sd_layout
     .rightSpaceToView(contentView, margin)
     .topEqualToView(userImageView)
-    .widthIs(50)
+    .widthIs(70)
     .heightIs(20);
     
     timeLabel.sd_layout
@@ -137,7 +150,7 @@
     supprotButton.sd_layout
     .rightSpaceToView(vlineImageView, 3)
     .topSpaceToView(contentLabel, margin)
-    .widthIs(50)
+    .widthIs(70)
     .heightIs(15);
     
     [self setupAutoHeightWithBottomView:supprotButton bottomMargin:margin];
