@@ -7,11 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "DemoVC1.h"
-#import "DemoVC2.h"
-#import "DemoVC3.h"
-#import "DemoVC4.h"
-
 
 @interface ViewController ()
 <
@@ -60,6 +55,7 @@
         [self addCell:@"4、测试tableView" class:@"DemoVC4"];
         [self addCell:@"5、评论界面(WHC)" class:@"DemoVC5"];
         [self addCell:@"6、评论界面(SD)" class:@"DemoVC6"];
+        [self addCell:@"7、评论列表" class:@"DemoVC7"];
 
         [self.tableView reloadData];
     }

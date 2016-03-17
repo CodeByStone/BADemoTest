@@ -44,31 +44,6 @@
     self.weixinContentLable = [UILabel new];
     self.weixinContentLable.font = KFontSize(14);
     
-//    [self.contentView addSubview:self.weixinImageView];
-//    [self.contentView addSubview:self.weixinNameLable];
-//    [self.contentView addSubview:self.weixinTimeLable];
-//    [self.contentView addSubview:self.weixinContentLable];
-    
-//    [self.weixinImageView whc_LeftSpace:10];
-//    [self.weixinImageView whc_TopSpace:10];
-//    [self.weixinImageView whc_Height:60];
-//    [self.weixinImageView whc_Width:60];
-//    
-//    [self.weixinNameLable whc_LeftSpace:10 relativeView:self.weixinImageView];
-//    [self.weixinNameLable whc_TopSpace:10];
-//    [self.weixinNameLable whc_RightSpace:10];
-//    [self.weixinNameLable whc_Height:20];
-//    
-//    [self.weixinTimeLable whc_LeftSpace:10 relativeView:self.weixinImageView];
-//    [self.weixinTimeLable whc_TopSpace:0 relativeView:self.weixinNameLable];
-//    [self.weixinTimeLable whc_RightSpace:10];
-//    [self.weixinTimeLable whc_Height:20];
-//    
-//    [self.weixinContentLable whc_LeftSpace:10 relativeView:self.weixinImageView];
-//    [self.weixinContentLable whc_TopSpace:0 relativeView:self.weixinTimeLable];
-//    [self.weixinContentLable whc_RightSpace:10];
-//    [self.weixinContentLable whc_HeightAuto];
-    
     NSArray *viewsArray = @[self.weixinImageView, self.weixinNameLable, self.weixinTimeLable, self.weixinContentLable];
     [viewsArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [self.contentView addSubview:obj];
