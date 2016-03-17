@@ -35,7 +35,6 @@
     DemoVC7_replyView *replyView = [[DemoVC7_replyView alloc] initWithFrame:frame withImage:self.quesstionDataModel.icon7];
     replyView.backgroundColor = KCOLOR(245, 244, 245, 1.0);
     [self.view addSubview:replyView];
-    
 //    replyView.sd_layout
 //    .leftSpaceToView(self.view, 0)
 //    .rightSpaceToView(self.view, 0)
