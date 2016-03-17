@@ -19,7 +19,7 @@
     UILabel        *contentLabel;
     UIButton       *supprotButton;
     UIButton       *replyButton;
-    
+    UIImageView    *vlineImageView;
 }
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -68,6 +68,8 @@
     supprotButton.tag = 2;
     [supprotButton addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
 
+    vlineImageView = [UIImageView new];
+    vlineImageView.image = [UIImage imageNamed:@"vline"];
     
     replyButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [replyButton setTitle:@"回复" forState:UIControlStateNormal];
@@ -76,7 +78,7 @@
     replyButton.tag = 3;
     [replyButton addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
     
-    NSArray *views = @[userImageView, userNameLabel, starImageView, addFriendButton, timeLabel, contentLabel, supprotButton, replyButton];
+    NSArray *views = @[userImageView, userNameLabel, starImageView, addFriendButton, timeLabel, contentLabel, supprotButton, vlineImageView, replyButton];
     [views enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [self.contentView addSubview:obj];
     }];
@@ -126,8 +128,14 @@
     .widthIs(50)
     .heightIs(15);
     
+    vlineImageView.sd_layout
+    .rightSpaceToView(replyButton, 3)
+    .topEqualToView(replyButton)
+    .heightIs(15)
+    .widthIs(1);
+    
     supprotButton.sd_layout
-    .rightSpaceToView(replyButton, margin)
+    .rightSpaceToView(vlineImageView, 3)
     .topSpaceToView(contentLabel, margin)
     .widthIs(50)
     .heightIs(15);
