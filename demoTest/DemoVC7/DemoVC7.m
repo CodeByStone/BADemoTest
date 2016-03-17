@@ -22,7 +22,6 @@
     [super viewDidLoad];
     
     [self creatModelsData7];
-    
 }
 
 - (void)creatModelsData7

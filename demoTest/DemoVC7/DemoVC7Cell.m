@@ -19,6 +19,7 @@
     UILabel        *contentLabel;
     UIButton       *supprotButton;
     UIButton       *replyButton;
+    
 }
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -48,6 +49,8 @@
     addFriendButton.layer.masksToBounds = YES;
     addFriendButton.layer.cornerRadius = 5.0;
     addFriendButton.titleLabel.font = KFontSize(12);
+    addFriendButton.tag = 1;
+    [addFriendButton addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
 
     
     timeLabel = [UILabel new];
@@ -62,11 +65,16 @@
     [supprotButton setTitle:@"888" forState:UIControlStateNormal];
     [supprotButton setTitleColor:NaviBgBlueColor forState:UIControlStateNormal];
     supprotButton.titleLabel.font = KFontSize(12);
+    supprotButton.tag = 2;
+    [supprotButton addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
+
     
     replyButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [replyButton setTitle:@"回复" forState:UIControlStateNormal];
     [replyButton setTitleColor:NaviBgBlueColor forState:UIControlStateNormal];
     replyButton.titleLabel.font = KFontSize(12);
+    replyButton.tag = 3;
+    [replyButton addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
     
     NSArray *views = @[userImageView, userNameLabel, starImageView, addFriendButton, timeLabel, contentLabel, supprotButton, replyButton];
     [views enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -137,6 +145,11 @@
     timeLabel.text = model.time7;
     contentLabel.text = model.content7;
     [supprotButton setTitle:model.supportNumber7 forState:UIControlStateNormal];
+}
+
+- (IBAction)clickButton:(UIButton *)sender
+{
+    NSLog(@"温馨提示：点击了%ld个button!", (long)sender.tag);
 }
 
 @end
