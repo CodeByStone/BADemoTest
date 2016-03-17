@@ -1,35 +1,33 @@
 //
-//  DemoVC7.m
+//  DemoVC7_replyVC.m
 //  demoTest
 //
-//  Created by 博爱 on 16/3/16.
+//  Created by 博爱 on 16/3/17.
 //  Copyright © 2016年 博爱之家. All rights reserved.
 //
 
-#import "DemoVC7.h"
-#import "DemoVC7Model.h"
-#import "DemoVC7Cell.h"
-
 #import "DemoVC7_replyVC.h"
+#import "DemoVC7Model.h"
+#import "DemoVC7_quesstionCell.h"
 
-@interface DemoVC7 ()
 
-@property (nonatomic, strong) NSMutableArray *dataArray7;
+@interface DemoVC7_replyVC ()
 
 @end
 
-@implementation DemoVC7
+@implementation DemoVC7_replyVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self creatModelsData7];
+    [self creatReplyData];
+    NSLog(@"%s self.replyDataArray: %@", __func__,self.quesstionDataModel);
 }
 
-- (void)creatModelsData7
+- (void)creatReplyData
 {
-    if (!_dataArray7) {
-        _dataArray7 = [NSMutableArray new];
+    if (!_replyDataArray) {
+        _replyDataArray = [NSMutableArray new];
     }
     
     NSArray *iconImageNamesArray = @[@"icon0.jpg",
@@ -52,22 +50,9 @@
                            @"屏幕宽度返回 320；然后等比例拉伸到大屏。这种情况下对界面不会产生任何影响，等于把小屏完全拉伸。但是建议不要长期处于这种模式下。"
                            ];
     
-    NSArray *picImageNamesArray = @[ @"1",
-                                     @"2",
-                                     @"3",
-                                     @"4",
-                                     @"5",
-                                     ];
-    
-    NSArray *supportNumberArray = @[ @"111",
-                                     @"222",
-                                     @"3333",
-                                     @"444",
-                                     @"555",
-                                     ];
     NSArray *timeArray = @[@"2016-03-06",@"2016-03-07",@"2016-03-08",@"2016-03-09",@"2016-03-10"];
     
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 5; i++) {
         int iconRandomIndex = arc4random_uniform(5);
         int nameRandomIndex = arc4random_uniform(5);
         int contentRandomIndex = arc4random_uniform(5);
@@ -78,41 +63,67 @@
         model.userName7 = namesArray[nameRandomIndex];
         model.content7 = textArray[contentRandomIndex];
         model.time7 = timeArray[picRandomIndex];
-        model.starNumber7 = picImageNamesArray[picRandomIndex];
-        model.supportNumber7 = supportNumberArray[picRandomIndex];
         
-        [self.dataArray7 addObject:model];
+        [self.replyDataArray addObject:model];
     }
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.dataArray7.count;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
-}
-
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    static NSString *cellID = @"Cell";
-    DemoVC7Cell *cell7 = [tableView dequeueReusableCellWithIdentifier:cellID];
-    if (!cell7)
+    return 2;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (section == 0)
     {
-        cell7 = [[DemoVC7Cell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
+        return 1;
+    }
+    return self.replyDataArray.count;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    static NSString *cellID = @"DemoVC7_quesstionCell";
+    DemoVC7_quesstionCell *quesstionCell7 = [tableView dequeueReusableCellWithIdentifier:cellID];
+    if (!quesstionCell7)
+    {
+        quesstionCell7 = [[DemoVC7_quesstionCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellID];
     }
     
-    cell7.model = self.dataArray7[indexPath.section];
+    if (indexPath.section == 0)
+    {
+        quesstionCell7.model = self.quesstionDataModel;
+    }
+    else
+    {
+        quesstionCell7.backgroundColor = kBGGrayColor;
+        quesstionCell7.model = self.replyDataArray[indexPath.row];
+    }
     
-    return cell7;
+    return quesstionCell7;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // 点击立刻取消该cell的选中状态
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [self.tableView cellHeightForIndexPath:indexPath model:self.dataArray7[indexPath.section] keyPath:@"model" cellClass:[DemoVC7Cell class] contentViewWidth:[self cellContentViewWith]];
+    if (indexPath.section == 0)
+    {
+        return [self.tableView cellHeightForIndexPath:indexPath model:self.quesstionDataModel keyPath:@"model" cellClass:[DemoVC7_quesstionCell class] contentViewWidth:[self cellContentViewWith]];
+    }
+    else
+    {
+        return [self.tableView cellHeightForIndexPath:indexPath model:self.replyDataArray[indexPath.row] keyPath:@"model" cellClass:[DemoVC7_quesstionCell class] contentViewWidth:[self cellContentViewWith]];
+    }
+    return 0;
 }
 
 - (CGFloat)cellContentViewWith
@@ -124,28 +135,6 @@
         width = [UIScreen mainScreen].bounds.size.height;
     }
     return width;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-    if (section == 0)
-    {
-        return 0;
-    }
-    return 10;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSLog(@"%s self.dataArray7: %@", __func__, self.dataArray7[indexPath.section]);
-    
-    DemoVC7_replyVC *replyVC = [[DemoVC7_replyVC alloc] init];
-    replyVC.quesstionDataModel = self.dataArray7[indexPath.section];
-    replyVC.title = [NSString stringWithFormat:@"回复%@的评论", replyVC.quesstionDataModel.userName7];
-    [self.navigationController pushViewController:replyVC animated:YES];
-    
-    // 点击立刻取消该cell的选中状态
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 

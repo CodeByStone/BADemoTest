@@ -10,6 +10,8 @@
 		C40A7E0E1C9A3C56006F0687 /* DemoVC7.m in Sources */ = {isa = PBXBuildFile; fileRef = C40A7E091C9A3C56006F0687 /* DemoVC7.m */; };
 		C40A7E0F1C9A3C56006F0687 /* DemoVC7Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = C40A7E0B1C9A3C56006F0687 /* DemoVC7Cell.m */; };
 		C40A7E101C9A3C56006F0687 /* DemoVC7Model.m in Sources */ = {isa = PBXBuildFile; fileRef = C40A7E0D1C9A3C56006F0687 /* DemoVC7Model.m */; };
+		C40A7E131C9A5462006F0687 /* DemoVC7_replyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C40A7E121C9A5462006F0687 /* DemoVC7_replyVC.m */; };
+		C40A7E161C9A5882006F0687 /* DemoVC7_quesstionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C40A7E151C9A5882006F0687 /* DemoVC7_quesstionCell.m */; };
 		C4225D831C98EA62006262C9 /* YRDemandShareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4225D801C98EA62006262C9 /* YRDemandShareCell.m */; };
 		C4225D841C98EA62006262C9 /* YRDemandUserViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4225D821C98EA62006262C9 /* YRDemandUserViewCell.m */; };
 		C4225D871C98EA7A006262C9 /* BACustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C4225D861C98EA7A006262C9 /* BACustomButton.m */; };
@@ -123,6 +125,10 @@
 		C40A7E0B1C9A3C56006F0687 /* DemoVC7Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC7Cell.m; sourceTree = "<group>"; };
 		C40A7E0C1C9A3C56006F0687 /* DemoVC7Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC7Model.h; sourceTree = "<group>"; };
 		C40A7E0D1C9A3C56006F0687 /* DemoVC7Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC7Model.m; sourceTree = "<group>"; };
+		C40A7E111C9A5462006F0687 /* DemoVC7_replyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC7_replyVC.h; sourceTree = "<group>"; };
+		C40A7E121C9A5462006F0687 /* DemoVC7_replyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC7_replyVC.m; sourceTree = "<group>"; };
+		C40A7E141C9A5882006F0687 /* DemoVC7_quesstionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC7_quesstionCell.h; sourceTree = "<group>"; };
+		C40A7E151C9A5882006F0687 /* DemoVC7_quesstionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC7_quesstionCell.m; sourceTree = "<group>"; };
 		C4225D7F1C98EA62006262C9 /* YRDemandShareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDemandShareCell.h; sourceTree = "<group>"; };
 		C4225D801C98EA62006262C9 /* YRDemandShareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRDemandShareCell.m; sourceTree = "<group>"; };
 		C4225D811C98EA62006262C9 /* YRDemandUserViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDemandUserViewCell.h; sourceTree = "<group>"; };
@@ -349,6 +355,10 @@
 				C40A7E0B1C9A3C56006F0687 /* DemoVC7Cell.m */,
 				C40A7E0C1C9A3C56006F0687 /* DemoVC7Model.h */,
 				C40A7E0D1C9A3C56006F0687 /* DemoVC7Model.m */,
+				C40A7E111C9A5462006F0687 /* DemoVC7_replyVC.h */,
+				C40A7E121C9A5462006F0687 /* DemoVC7_replyVC.m */,
+				C40A7E141C9A5882006F0687 /* DemoVC7_quesstionCell.h */,
+				C40A7E151C9A5882006F0687 /* DemoVC7_quesstionCell.m */,
 			);
 			path = DemoVC7;
 			sourceTree = "<group>";
@@ -831,6 +841,7 @@
 			files = (
 				C440E5621C982D41006FFA73 /* DemoVC3Cell.m in Sources */,
 				C440E5701C98360D006FFA73 /* DemoVC2HeadView.m in Sources */,
+				C40A7E131C9A5462006F0687 /* DemoVC7_replyVC.m in Sources */,
 				C4225DC71C990ED2006262C9 /* UIView+Extension.m in Sources */,
 				C4F2626D1C997E210026A0D6 /* DemoVC6Cell.m in Sources */,
 				C4F262611C99661C0026A0D6 /* DemoVC5Cell.m in Sources */,
@@ -861,6 +872,7 @@
 				C424540C1C97A32500D01865 /* YRHomeIncomeView.m in Sources */,
 				C424540F1C97B42D00D01865 /* YRHomeIncomeBlockView.m in Sources */,
 				C4225D871C98EA7A006262C9 /* BACustomButton.m in Sources */,
+				C40A7E161C9A5882006F0687 /* DemoVC7_quesstionCell.m in Sources */,
 				C4225D831C98EA62006262C9 /* YRDemandShareCell.m in Sources */,
 				C4F262641C99663C0026A0D6 /* DemoVC5Model.m in Sources */,
 			);

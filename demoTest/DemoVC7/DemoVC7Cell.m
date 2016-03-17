@@ -8,6 +8,7 @@
 
 #import "DemoVC7Cell.h"
 #import "DemoVC7Model.h"
+#import "DemoVC7_replyVC.h"
 
 @implementation DemoVC7Cell
 {
@@ -47,10 +48,9 @@
     [addFriendButton setTitle:@"加好友" forState:UIControlStateNormal];
     [addFriendButton setTitleColor:kWHITECOLOR forState:UIControlStateNormal];
     [addFriendButton setImage:[UIImage imageNamed:@"btn_addFriend"] forState:UIControlStateNormal];
-    addFriendButton.imageEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 50);
+    addFriendButton.imageEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 40);
     addFriendButton.titleEdgeInsets = UIEdgeInsetsMake(0, -5, 0, -15);
     addFriendButton.titleLabel.textAlignment = NSTextAlignmentRight;
-    
     addFriendButton.layer.masksToBounds = YES;
     addFriendButton.layer.cornerRadius = 5.0;
     addFriendButton.titleLabel.font = KFontSize(12);
@@ -64,7 +64,6 @@
     
     contentLabel = [UILabel new];
     contentLabel.font = KFontSize(14);
-    contentLabel.textColor = kTEXTGrayColor;
     
     supprotButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [supprotButton setTitle:@"888" forState:UIControlStateNormal];
@@ -120,7 +119,7 @@
     addFriendButton.sd_layout
     .rightSpaceToView(contentView, margin)
     .topEqualToView(userImageView)
-    .widthIs(70)
+    .widthIs(65)
     .heightIs(20);
     
     timeLabel.sd_layout
@@ -170,7 +169,32 @@
 
 - (IBAction)clickButton:(UIButton *)sender
 {
-    NSLog(@"温馨提示：点击了%ld个button!", (long)sender.tag);
+    
+    if (sender.tag == 3)
+    {
+        DemoVC7_replyVC *replyVC = [[DemoVC7_replyVC alloc] init];
+        replyVC.quesstionDataModel = self.model;
+        replyVC.title = [NSString stringWithFormat:@"回复%@的评论", replyVC.quesstionDataModel.userName7];
+        [[self viewController].navigationController pushViewController:replyVC animated:YES];
+    }
+    else
+    {
+        NSLog(@"温馨提示：点击了%ld个button!", (long)sender.tag);
+    }
+}
+
+#pragma mark - *****  调用view的C
+- (UIViewController *)viewController
+{
+    for (UIView* next = [self superview]; next; next = next.superview)
+    {
+        UIResponder *nextResponder = [next nextResponder];
+        if ([nextResponder isKindOfClass:[UIViewController class]])
+        {
+            return (UIViewController *)nextResponder;
+        }
+    }
+    return nil;
 }
 
 @end
