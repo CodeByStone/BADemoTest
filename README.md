@@ -13,6 +13,14 @@ ios开发中重难点展示
 在此基础上开始更新自己开发中的重难点demo，
 希望能够帮助更多遇到类似难点的同道中人！
 
+#### 今天很多人用的过程中出现pod报错，大家只需在终端中将pod更新下就行
+步骤：1、cd 项目路径
+     2、pod update --verbose --no-repo-update
+
+#### 对pod还是不熟的同学，可以看下我的博客，是最新的pod安装和使用方法，
+
+###### http://www.cnblogs.com/boai/p/4977976.html
+
 
 
 # 更新记录：
@@ -56,6 +64,11 @@ ios开发中重难点展示
 ![image](https://github.com/boai/BADemoTest/blob/master/Image/image8.png)
 
 ####   ☆☆ 4.2 新增点赞、回复按钮，实现各自效果
+
+####   ☆☆ 4.2 新增评论回复功能，可显示到当前tableView中
+
+![image](https://github.com/boai/BADemoTest/blob/master/Image/image9.png)
+
 
 
 ###    >> 未完待续！！！
