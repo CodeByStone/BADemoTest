@@ -50,11 +50,6 @@
         [self.replyDataArray addObject:model];
         [self.tableView reloadData];
     }];
-//    replyView.sd_layout
-//    .leftSpaceToView(self.view, 0)
-//    .rightSpaceToView(self.view, 0)
-//    .bottomSpaceToView(self.view, 0)
-//    .heightIs(50);
 }
 
 #pragma mark - ***** 添加ReplyData
