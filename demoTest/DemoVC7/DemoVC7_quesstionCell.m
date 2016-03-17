@@ -15,6 +15,8 @@
     UILabel        *userNameLabel;
     UILabel        *timeLabel;
     UILabel        *contentLabel;
+    UIImageView    *hlineImageView;
+
 }
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
@@ -42,7 +44,10 @@
     contentLabel = [UILabel new];
     contentLabel.font = KFontSize(14);
     
-    NSArray *views = @[userImageView, userNameLabel, timeLabel, contentLabel];
+    hlineImageView = [UIImageView new];
+    hlineImageView.image = [UIImage imageNamed:@"hline"];
+    
+    NSArray *views = @[userImageView, userNameLabel, timeLabel, contentLabel, hlineImageView];
     [views enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [self.contentView addSubview:obj];
     }];
@@ -74,7 +79,13 @@
     .rightSpaceToView(contentView, margin)
     .autoHeightRatio(0);
     
-    [self setupAutoHeightWithBottomView:contentLabel bottomMargin:margin];
+    hlineImageView.sd_layout
+    .leftSpaceToView(contentView, 0)
+    .rightSpaceToView(contentView, 0)
+    .topSpaceToView(contentLabel, margin)
+    .heightIs(1);
+    
+    [self setupAutoHeightWithBottomView:hlineImageView bottomMargin:0];
 }
 
 - (void)setModel:(DemoVC7Model *)model
