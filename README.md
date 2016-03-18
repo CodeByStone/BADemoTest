@@ -46,9 +46,7 @@ ios开发中重难点展示
 
 ![image](https://github.com/boai/BADemoTest/blob/master/Image/image8.png)
 
->####☆☆ 4.2 新增点赞、回复按钮，实现各自效果
-
->####☆☆ 4.2 新增评论回复功能，可显示到当前tableView中
+>####☆☆ 4.2 新增点赞、回复按钮，实增评论回复功能，可显示到当前tableView中
 
 ![image](https://github.com/boai/BADemoTest/blob/master/Image/image9.png)
 
