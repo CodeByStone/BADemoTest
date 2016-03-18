@@ -29,7 +29,7 @@ ios开发中重难点展示
 ## 2016.03.17 --- 
 
 ***
-###   >1、【DemoVC4】新增tableView的另一种cell的用法 
+>##1、【DemoVC4】新增tableView的另一种cell的用法 
 
 ![image](https://github.com/boai/BADemoTest/blob/master/Image/image4.png)
 
