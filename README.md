@@ -21,9 +21,14 @@ ios开发中重难点展示
 
 ###### 在DemoVC7的评论功能中使用了键盘处理的三方库，具体使用清看【AppDelegate】
 ***
+
 # 更新记录：
 
+***
+
 ## 2016.03.17 --- 
+
+***
 ###   > 1、【DemoVC4】新增tableView的另一种cell的用法 
 
 ![image](https://github.com/boai/BADemoTest/blob/master/Image/image4.png)
@@ -51,9 +56,11 @@ ios开发中重难点展示
 ![image](https://github.com/boai/BADemoTest/blob/master/Image/image9.png)
 
 
+***
 
 ## 2016.03.16 --- 
 
+***
 ###    > 1、【DemoVC1】view中嵌套自定义view2，view2中嵌套不同view3、和tableView
 
 ![image](https://github.com/boai/BADemoTest/blob/master/Image/image1.png)
