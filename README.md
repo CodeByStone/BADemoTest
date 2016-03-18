@@ -28,7 +28,7 @@ ios开发中重难点展示
 
 >##1、【DemoVC4】新增tableView的另一种cell的用法 
 
-![这是图片注释4！](https://github.com/boai/BADemoTest/blob/master/Image/image4.png)
+![image](https://github.com/boai/BADemoTest/blob/master/Image/image4.png)
 
 >##2、【DemoVC5】新增tableView的另一种cell的用法【评论列表（用WHC 布局库）】 
 
