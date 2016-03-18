@@ -13,7 +13,7 @@ ios开发中重难点展示
 ***
 #### 今天很多人用的过程中出现pod报错，大家只需在终端中将pod更新下就行
 **步骤：1、cd 项目路径**
-**2、pod update --verbose --no-repo-update**
+>**2、pod update --verbose --no-repo-update**
 
 ![image](https://github.com/boai/BADemoTest/blob/master/Image/image10.jpg)
 
