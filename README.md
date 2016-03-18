@@ -28,30 +28,29 @@ ios开发中重难点展示
 
 ## 2016.03.17 --- 
 
-***
 >##1、【DemoVC4】新增tableView的另一种cell的用法 
 
 ![image](https://github.com/boai/BADemoTest/blob/master/Image/image4.png)
 
-###    >2、【DemoVC5】新增tableView的另一种cell的用法【评论列表（用WHC 布局库）】 
+>##2、【DemoVC5】新增tableView的另一种cell的用法【评论列表（用WHC 布局库）】 
 
 ![image](https://github.com/boai/BADemoTest/blob/master/Image/image5.png)
 
-###    >3、【DemoVC6】新增tableView的另一种cell的用法【评论列表（用SDAutoLayout 布局库）】 
+>##3、【DemoVC6】新增tableView的另一种cell的用法【评论列表（用SDAutoLayout 布局库）】 
 
 ![image](https://github.com/boai/BADemoTest/blob/master/Image/image6.png)
 
-###    >4、【DemoVC7】新增评论列表（用SDAutoLayout 布局库） 
+>##>4、【DemoVC7】新增评论列表（用SDAutoLayout 布局库） 
 
 ![image](https://github.com/boai/BADemoTest/blob/master/Image/image7.png)
 
-####   ☆☆ 4.1 新增单个评论的评论详情界面
+>####☆☆ 4.1 新增单个评论的评论详情界面
 
 ![image](https://github.com/boai/BADemoTest/blob/master/Image/image8.png)
 
-####   ☆☆ 4.2 新增点赞、回复按钮，实现各自效果
+>####☆☆ 4.2 新增点赞、回复按钮，实现各自效果
 
-####   ☆☆ 4.2 新增评论回复功能，可显示到当前tableView中
+>####☆☆ 4.2 新增评论回复功能，可显示到当前tableView中
 
 ![image](https://github.com/boai/BADemoTest/blob/master/Image/image9.png)
 
