@@ -15,7 +15,7 @@ ios开发中重难点展示
 **步骤：1、cd 项目路径**
 **2、pod update --verbose --no-repo-update**
 
-![image](https://github.com/boai/BADemoTest/blob/master/Image/image10.png)
+![image](https://github.com/boai/BADemoTest/blob/master/Image/image10.jpg)
 
 
 #### 对pod还是不熟的同学，可以看下我的博客，是最新的pod安装和使用方法，
