@@ -23,6 +23,10 @@ ios开发中重难点展示
 
 ## 2016.03.19 --- 
 
+>##2、添加【DemoVC8】可以动态显示label的高度
+
+![image](https://github.com/boai/BADemoTest/blob/master/Image/gif1.gif)
+
 >##1、修复用户在git下载后pod报错的bug，已修复，之前下载的用户可以重新下载！
 
 ## 2016.03.17 --- 
