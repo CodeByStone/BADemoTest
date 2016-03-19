@@ -29,18 +29,6 @@ ios开发中重难点展示
 
 ## 2016.03.17 --- 
 
->##1、【DemoVC4】新增tableView的另一种cell的用法 
-
-![image](https://github.com/boai/BADemoTest/blob/master/Image/image4.png)
-
->##2、【DemoVC5】新增tableView的另一种cell的用法【评论列表（用WHC 布局库）】 
-
-![image](https://github.com/boai/BADemoTest/blob/master/Image/image5.png)
-
->##3、【DemoVC6】新增tableView的另一种cell的用法【评论列表（用SDAutoLayout 布局库）】 
-
-![image](https://github.com/boai/BADemoTest/blob/master/Image/image6.png)
-
 >##4、【DemoVC7】新增评论列表（用SDAutoLayout 布局库） 
 
 ![image](https://github.com/boai/BADemoTest/blob/master/Image/image7.png)
@@ -54,20 +42,24 @@ ios开发中重难点展示
 ![image](https://github.com/boai/BADemoTest/blob/master/Image/image9.png)
 
 
+>##3、【DemoVC6】新增tableView的另一种cell的用法【评论列表（用SDAutoLayout 布局库）】 
+
+![image](https://github.com/boai/BADemoTest/blob/master/Image/image6.png)
+
+>##2、【DemoVC5】新增tableView的另一种cell的用法【评论列表（用WHC 布局库）】 
+
+![image](https://github.com/boai/BADemoTest/blob/master/Image/image5.png)
+
+>##1、【DemoVC4】新增tableView的另一种cell的用法 
+
+![image](https://github.com/boai/BADemoTest/blob/master/Image/image4.png)
+
+
 ***
 
 ## 2016.03.16 --- 
 
 ***
->##1、【DemoVC1】view中嵌套自定义view2，view2中嵌套不同view3、和tableView
-
-![image](https://github.com/boai/BADemoTest/blob/master/Image/image1.png)
-
-
->##2、【DemoVC2】用SDLayout 布局三方库，写了一个微信朋友圈（原作者GSD_ios）
-
-![image](https://github.com/boai/BADemoTest/blob/master/Image/image2.png)
-
 
 >##3、【DemoVC3】用SDLayout 布局三方库 和系统frame 混合使用，创建一个多分区，多种cell样式，文字自适应的tableView
 
@@ -75,6 +67,14 @@ ios开发中重难点展示
 
 ![image](https://github.com/boai/BADemoTest/blob/master/Image/image3.png)
 
+
+>##2、【DemoVC2】用SDLayout 布局三方库，写了一个微信朋友圈（原作者GSD_ios）
+
+![image](https://github.com/boai/BADemoTest/blob/master/Image/image2.png)
+
+>##1、【DemoVC1】view中嵌套自定义view2，view2中嵌套不同view3、和tableView
+
+![image](https://github.com/boai/BADemoTest/blob/master/Image/image1.png)
 
 
 >#未完待续！！！
