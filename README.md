@@ -33,16 +33,10 @@ ios开发中重难点展示
 
 >##4、【DemoVC7】新增评论列表（用SDAutoLayout 布局库） 
 
-![image](https://github.com/boai/BADemoTest/blob/master/Image/image7.png)
-
 >####☆☆ 4.1 新增单个评论的评论详情界面
-
-![image](https://github.com/boai/BADemoTest/blob/master/Image/image8.png)
-
 >####☆☆ 4.2 新增点赞、回复按钮，实增评论回复功能，可显示到当前tableView中
 
-![image](https://github.com/boai/BADemoTest/blob/master/Image/image9.png)
-
+![image](https://github.com/boai/BADemoTest/blob/master/Image/gif2.gif)
 
 >##3、【DemoVC6】新增tableView的另一种cell的用法【评论列表（用SDAutoLayout 布局库）】 
 
