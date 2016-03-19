@@ -92,6 +92,8 @@
 		C440E5701C98360D006FFA73 /* DemoVC2HeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = C440E5691C98360D006FFA73 /* DemoVC2HeadView.m */; };
 		C440E5711C98360D006FFA73 /* DemoVC2Model.m in Sources */ = {isa = PBXBuildFile; fileRef = C440E56B1C98360D006FFA73 /* DemoVC2Model.m */; };
 		C440E5721C98360D006FFA73 /* SDWeiXinPhotoContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C440E56D1C98360D006FFA73 /* SDWeiXinPhotoContainerView.m */; };
+		C4E2D8F41C9D21A20083D6AE /* DemoVC8.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E2D8F31C9D21A20083D6AE /* DemoVC8.m */; };
+		C4E2D8F71C9D22570083D6AE /* DemoVC8_View1.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E2D8F61C9D22570083D6AE /* DemoVC8_View1.m */; };
 		C4F2625E1C9964E40026A0D6 /* DemoVC5.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F2625D1C9964E40026A0D6 /* DemoVC5.m */; };
 		C4F262611C99661C0026A0D6 /* DemoVC5Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F262601C99661C0026A0D6 /* DemoVC5Cell.m */; };
 		C4F262641C99663C0026A0D6 /* DemoVC5Model.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F262631C99663C0026A0D6 /* DemoVC5Model.m */; };
@@ -241,6 +243,10 @@
 		C440E56B1C98360D006FFA73 /* DemoVC2Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC2Model.m; sourceTree = "<group>"; };
 		C440E56C1C98360D006FFA73 /* SDWeiXinPhotoContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWeiXinPhotoContainerView.h; sourceTree = "<group>"; };
 		C440E56D1C98360D006FFA73 /* SDWeiXinPhotoContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWeiXinPhotoContainerView.m; sourceTree = "<group>"; };
+		C4E2D8F21C9D21A20083D6AE /* DemoVC8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC8.h; sourceTree = "<group>"; };
+		C4E2D8F31C9D21A20083D6AE /* DemoVC8.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC8.m; sourceTree = "<group>"; };
+		C4E2D8F51C9D22570083D6AE /* DemoVC8_View1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC8_View1.h; sourceTree = "<group>"; };
+		C4E2D8F61C9D22570083D6AE /* DemoVC8_View1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC8_View1.m; sourceTree = "<group>"; };
 		C4F2625C1C9964E40026A0D6 /* DemoVC5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC5.h; sourceTree = "<group>"; };
 		C4F2625D1C9964E40026A0D6 /* DemoVC5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC5.m; sourceTree = "<group>"; };
 		C4F2625F1C99661C0026A0D6 /* DemoVC5Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC5Cell.h; sourceTree = "<group>"; };
@@ -597,6 +603,10 @@
 		C4F2626E1C9988450026A0D6 /* DemoVC8 */ = {
 			isa = PBXGroup;
 			children = (
+				C4E2D8F21C9D21A20083D6AE /* DemoVC8.h */,
+				C4E2D8F31C9D21A20083D6AE /* DemoVC8.m */,
+				C4E2D8F51C9D22570083D6AE /* DemoVC8_View1.h */,
+				C4E2D8F61C9D22570083D6AE /* DemoVC8_View1.m */,
 			);
 			path = DemoVC8;
 			sourceTree = "<group>";
@@ -874,10 +884,12 @@
 				C4225D841C98EA62006262C9 /* YRDemandUserViewCell.m in Sources */,
 				C4F2625E1C9964E40026A0D6 /* DemoVC5.m in Sources */,
 				C40A7E0E1C9A3C56006F0687 /* DemoVC7.m in Sources */,
+				C4E2D8F71C9D22570083D6AE /* DemoVC8_View1.m in Sources */,
 				C424540B1C97A32500D01865 /* DemoVC1.m in Sources */,
 				C424540C1C97A32500D01865 /* YRHomeIncomeView.m in Sources */,
 				C424540F1C97B42D00D01865 /* YRHomeIncomeBlockView.m in Sources */,
 				C4225D871C98EA7A006262C9 /* BACustomButton.m in Sources */,
+				C4E2D8F41C9D21A20083D6AE /* DemoVC8.m in Sources */,
 				C40A7E161C9A5882006F0687 /* DemoVC7_quesstionCell.m in Sources */,
 				C4225D831C98EA62006262C9 /* YRDemandShareCell.m in Sources */,
 				C4F262641C99663C0026A0D6 /* DemoVC5Model.m in Sources */,
