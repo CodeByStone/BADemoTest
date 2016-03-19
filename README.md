@@ -25,7 +25,7 @@ ios开发中重难点展示
 
 >##2、添加【DemoVC8】可以动态显示label的高度
 
-![image](https://github.com/boai/BADemoTest/blob/master/Image/gif1.gif)
+![](https://github.com/boai/BADemoTest/blob/master/Image/gif1.gif)
 
 >##1、修复用户在git下载后pod报错的bug，已修复，之前下载的用户可以重新下载！
 
@@ -36,7 +36,7 @@ ios开发中重难点展示
 >####☆☆ 4.1 新增单个评论的评论详情界面
 >####☆☆ 4.2 新增点赞、回复按钮，实增评论回复功能，可显示到当前tableView中
 
-![image](https://github.com/boai/BADemoTest/blob/master/Image/gif2.gif)
+![](https://github.com/boai/BADemoTest/blob/master/Image/gif2.gif)
 
 >##3、【DemoVC6】新增tableView的另一种cell的用法【评论列表（用SDAutoLayout 布局库）】 
 
