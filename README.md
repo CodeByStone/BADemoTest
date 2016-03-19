@@ -11,12 +11,6 @@ ios开发中重难点展示
 ###本Demo中使用三方布局工具库【gsdios】开发的SDAutoLayout  原三方库地址： https://github.com/gsdios/SDAutoLayout
 ``` 在开发中遇到很多问题，非常感谢SDLayout（原作者gsdios）和其他各路大神的帮助，在此基础上开始更新自己开发中的重难点demo，希望能够帮助更多遇到类似难点的同道中人！ ```
 ***
-#### 今天很多人用的过程中出现pod报错，大家只需在终端中将pod更新下就行
-**步骤：1、cd 项目路径**
->**2、pod update --verbose --no-repo-update**
-
-![image](https://github.com/boai/BADemoTest/blob/master/Image/image10.jpg)
-
 
 #### 对pod还是不熟的同学，可以看下我的博客，是最新的pod安装和使用方法，
 
@@ -27,20 +21,22 @@ ios开发中重难点展示
 
 # 更新记录：【倒叙】（最新的更新在最上面）
 
+## 2016.03.19 --- 
+
+>##2、添加【DemoVC8】可以动态显示label的高度
+
+![](https://github.com/boai/BADemoTest/blob/master/Image/gif1.gif)
+
+>##1、修复用户在git下载后pod报错的bug，已修复，之前下载的用户可以重新下载！
+
 ## 2016.03.17 --- 
 
 >##4、【DemoVC7】新增评论列表（用SDAutoLayout 布局库） 
 
-![image](https://github.com/boai/BADemoTest/blob/master/Image/image7.png)
-
 >####☆☆ 4.1 新增单个评论的评论详情界面
-
-![image](https://github.com/boai/BADemoTest/blob/master/Image/image8.png)
-
 >####☆☆ 4.2 新增点赞、回复按钮，实增评论回复功能，可显示到当前tableView中
 
-![image](https://github.com/boai/BADemoTest/blob/master/Image/image9.png)
-
+![](https://github.com/boai/BADemoTest/blob/master/Image/gif2.gif)
 
 >##3、【DemoVC6】新增tableView的另一种cell的用法【评论列表（用SDAutoLayout 布局库）】 
 
