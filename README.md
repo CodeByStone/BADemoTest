@@ -40,11 +40,9 @@ ios开发中重难点展示
 
 >##3、【DemoVC6】新增tableView的另一种cell的用法【评论列表（用SDAutoLayout 布局库）】 
 
-![image](https://github.com/boai/BADemoTest/blob/master/Image/image6.png)
-
 >##2、【DemoVC5】新增tableView的另一种cell的用法【评论列表（用WHC 布局库）】 
 
-![image](https://github.com/boai/BADemoTest/blob/master/Image/image5.png)
+![image](https://github.com/boai/BADemoTest/blob/master/Image/gif3.gif)
 
 >##1、【DemoVC4】新增tableView的另一种cell的用法 
 
