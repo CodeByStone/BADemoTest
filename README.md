@@ -59,7 +59,7 @@ ios开发中重难点展示
 
 ####   ☆☆ 3.1 在这个demoVC3中，第二中cell样式中，用纯代码写了一个自定义button（图片在上，文字在下，且都居中显示），有需要的可以直接用，还可以自定义左右显示（第一种cell样式中的playButton就是左右显示）
 
-![image](https://github.com/boai/BADemoTest/blob/master/Image/image3.png)
+![image](https://github.com/boai/BADemoTest/blob/master/Image/gif4.gif)
 
 
 >##2、【DemoVC2】用SDLayout 布局三方库，写了一个微信朋友圈（原作者GSD_ios）
