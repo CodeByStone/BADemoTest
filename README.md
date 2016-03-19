@@ -11,12 +11,6 @@ ios开发中重难点展示
 ###本Demo中使用三方布局工具库【gsdios】开发的SDAutoLayout  原三方库地址： https://github.com/gsdios/SDAutoLayout
 ``` 在开发中遇到很多问题，非常感谢SDLayout（原作者gsdios）和其他各路大神的帮助，在此基础上开始更新自己开发中的重难点demo，希望能够帮助更多遇到类似难点的同道中人！ ```
 ***
-#### 今天很多人用的过程中出现pod报错，大家只需在终端中将pod更新下就行
-**步骤：1、cd 项目路径**
->**2、pod update --verbose --no-repo-update**
-
-![image](https://github.com/boai/BADemoTest/blob/master/Image/image10.jpg)
-
 
 #### 对pod还是不熟的同学，可以看下我的博客，是最新的pod安装和使用方法，
 
@@ -26,6 +20,10 @@ ios开发中重难点展示
 ***
 
 # 更新记录：【倒叙】（最新的更新在最上面）
+
+## 2016.03.19 --- 
+
+>##1、修复用户在git下载后pod报错的bug，已修复，之前下载的用户可以重新下载！
 
 ## 2016.03.17 --- 
 
