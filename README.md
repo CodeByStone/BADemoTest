@@ -64,7 +64,7 @@ ios开发中重难点展示
 
 >##2、【DemoVC2】用SDLayout 布局三方库，写了一个微信朋友圈（原作者GSD_ios）
 
-![image](https://github.com/boai/BADemoTest/blob/master/Image/image2.png)
+![image](https://github.com/boai/BADemoTest/blob/master/Image/gif5.gif)
 
 >##1、【DemoVC1】view中嵌套自定义view2，view2中嵌套不同view3、和tableView
 
