@@ -19,4 +19,9 @@
     return nil;
 }
 
+- (id)objectOrNilAtIndex:(NSUInteger)index
+{
+    return index < self.count ? self[index] : nil;
+}
+
 @end

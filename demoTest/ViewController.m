@@ -49,7 +49,7 @@
         self.titlesArray = @[].mutableCopy;
         self.classNamesArray = @[].mutableCopy;
         
-        [self addCell:@"1、收入排行榜" class:@"DemoVC1"];
+        [self addCell:@"1、自定义View(多重嵌套tableView)" class:@"DemoVC1"];
         [self addCell:@"2、微信朋友圈" class:@"DemoVC2"];
         [self addCell:@"3、自适应文字高度" class:@"DemoVC3"];
         [self addCell:@"4、测试tableView" class:@"DemoVC4"];

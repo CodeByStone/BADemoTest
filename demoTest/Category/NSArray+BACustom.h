@@ -17,6 +17,16 @@
  */
 - (nullable id)randomObject;
 
+/**
+ *   Returns the object located at index, or return nil when out of bounds.
+ It's similar to `objectAtIndex:`, but it never throw exception.
+ *
+ *  @param index The object located at index.
+ *
+ *  @return Returns the object located at index, or return nil when out of bounds.
+ It's similar to `objectAtIndex:`, but it never throw exception.
+ */
+- (nullable id)objectOrNilAtIndex:(NSUInteger)index;
 
 
 @end

@@ -8,6 +8,7 @@
 
 #import "NSString+BACustom.h"
 #import "NSNumber+BACustom.h"
+#import "NSData+BACustom.h"
 
 @implementation NSString (BACustom)
 
@@ -103,6 +104,12 @@
     }
     return str;
 }
+
+- (NSString *)md5String
+{
+    return [[self dataUsingEncoding:NSUTF8StringEncoding] md5String];
+}
+
 
 //+ (NSMutableAttributedString *)getColorWithLabel:(UILabel *)label WithString:(NSString *)string andColor:(UIColor *)color
 //{

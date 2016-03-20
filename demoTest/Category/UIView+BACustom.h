@@ -27,6 +27,12 @@
  */
 - (void)BA_AddSubViewsWithArray:(NSArray *)array;
 
+/**
+ *  获取当前View的VC
+ *
+ *  @return 获取当前View的VC
+ */
+- (UIViewController *)getCurrentViewController;
 
 
 

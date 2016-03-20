@@ -83,6 +83,23 @@
  */
 + (nullable NSString *)stringNamed:(nullable NSString *)name;
 
+/**
+ *   Returns a lowercase NSString for md5 hash.
+ *
+ *  @return  Returns a lowercase NSString for md5 hash.
+ */
+- (nullable NSString *)md5String;
+
+/**
+ *   Returns a lowercase NSString for hmac using algorithm md5 with key.
+ *
+ *  @param key The hmac key.
+ *
+ *  @return  Returns a lowercase NSString for hmac using algorithm md5 with key.
+ */
+- (nullable NSString *)hmacMD5StringWithKey:(nullable NSString *)key;
+
+
 
 //+ (NSString *)getColorWithLabel:(UILabel *)label WithString:(NSString *)string andColor:(UIColor *)color;
 

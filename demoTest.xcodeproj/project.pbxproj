@@ -14,6 +14,7 @@
 		C408231A1C9EA4DE00E85C9C /* UIImageView+BACustom.m in Sources */ = {isa = PBXBuildFile; fileRef = C40823191C9EA4DE00E85C9C /* UIImageView+BACustom.m */; };
 		C408231D1C9EA8F500E85C9C /* NSNumber+BACustom.m in Sources */ = {isa = PBXBuildFile; fileRef = C408231C1C9EA8F500E85C9C /* NSNumber+BACustom.m */; };
 		C40823201C9EAFF200E85C9C /* NSArray+BACustom.m in Sources */ = {isa = PBXBuildFile; fileRef = C408231F1C9EAFF200E85C9C /* NSArray+BACustom.m */; };
+		C40823231C9EBBA700E85C9C /* NSData+BACustom.m in Sources */ = {isa = PBXBuildFile; fileRef = C40823221C9EBBA700E85C9C /* NSData+BACustom.m */; };
 		C40A7E0E1C9A3C56006F0687 /* DemoVC7.m in Sources */ = {isa = PBXBuildFile; fileRef = C40A7E091C9A3C56006F0687 /* DemoVC7.m */; };
 		C40A7E0F1C9A3C56006F0687 /* DemoVC7Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = C40A7E0B1C9A3C56006F0687 /* DemoVC7Cell.m */; };
 		C40A7E101C9A3C56006F0687 /* DemoVC7Model.m in Sources */ = {isa = PBXBuildFile; fileRef = C40A7E0D1C9A3C56006F0687 /* DemoVC7Model.m */; };
@@ -137,6 +138,8 @@
 		C408231C1C9EA8F500E85C9C /* NSNumber+BACustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+BACustom.m"; sourceTree = "<group>"; };
 		C408231E1C9EAFF200E85C9C /* NSArray+BACustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+BACustom.h"; sourceTree = "<group>"; };
 		C408231F1C9EAFF200E85C9C /* NSArray+BACustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+BACustom.m"; sourceTree = "<group>"; };
+		C40823211C9EBBA700E85C9C /* NSData+BACustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+BACustom.h"; sourceTree = "<group>"; };
+		C40823221C9EBBA700E85C9C /* NSData+BACustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+BACustom.m"; sourceTree = "<group>"; };
 		C40A7E081C9A3C56006F0687 /* DemoVC7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC7.h; sourceTree = "<group>"; };
 		C40A7E091C9A3C56006F0687 /* DemoVC7.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC7.m; sourceTree = "<group>"; };
 		C40A7E0A1C9A3C56006F0687 /* DemoVC7Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC7Cell.h; sourceTree = "<group>"; };
@@ -337,6 +340,8 @@
 				C408231C1C9EA8F500E85C9C /* NSNumber+BACustom.m */,
 				C408231E1C9EAFF200E85C9C /* NSArray+BACustom.h */,
 				C408231F1C9EAFF200E85C9C /* NSArray+BACustom.m */,
+				C40823211C9EBBA700E85C9C /* NSData+BACustom.h */,
+				C40823221C9EBBA700E85C9C /* NSData+BACustom.m */,
 				C40823181C9EA4DE00E85C9C /* UIImageView+BACustom.h */,
 				C40823191C9EA4DE00E85C9C /* UIImageView+BACustom.m */,
 				C4225D951C990ED2006262C9 /* UIView+BACustom.h */,
@@ -899,6 +904,7 @@
 				C4F2626A1C997DCC0026A0D6 /* DemoVC6.m in Sources */,
 				C40823201C9EAFF200E85C9C /* NSArray+BACustom.m in Sources */,
 				C440E5721C98360D006FFA73 /* SDWeiXinPhotoContainerView.m in Sources */,
+				C40823231C9EBBA700E85C9C /* NSData+BACustom.m in Sources */,
 				C408231A1C9EA4DE00E85C9C /* UIImageView+BACustom.m in Sources */,
 				C40A7E101C9A3C56006F0687 /* DemoVC7Model.m in Sources */,
 				C440E55D1C9821B7006FFA73 /* DemoVC3Model.m in Sources */,

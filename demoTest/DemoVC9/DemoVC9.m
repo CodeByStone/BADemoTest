@@ -30,8 +30,8 @@
                         [NSString getDateWithTimeString:@"1458462423"],
                         [NSString getTimeWithTimeString:@"1458462423"],
                         [NSString getTimeStamp],
-                        @"彩色字体测试"
-                        
+                        @"彩色字体测试",
+                        [@"123456" md5String]
                         ];
     }
     return _titleArray;
@@ -63,6 +63,8 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
     }
     
+    cell.textLabel.numberOfLines = 0;
+    
     if (indexPath.row == 0)
     {
         cell.textLabel.text = [NSString stringWithFormat:@"获得系统当前日期和时间：%@",self.titleArray[indexPath.row]];
@@ -86,11 +88,22 @@
     if (indexPath.row == 5)
     {
         cell.textLabel.text = [NSString stringWithFormat:@"%@",self.titleArray[indexPath.row]];
-        //        cell.textLabel.text = [NSString getColorWithLabel:cell.textLabel WithString:self.titleArray[indexPath.row] andColor:[UIColor greenColor]];
     }
+    if (indexPath.row == 6)
+    {
+        cell.textLabel.text = [NSString stringWithFormat:@"md5加密测试：%@，【不建议使用MD5加密】目前MD5加密算法已不安全，解密网站【http://www.cmd5.com】",self.titleArray[indexPath.row]];
+    }
+    
+    NSLog(@"DemoVC9 打印测试：%@", cell.textLabel.text);
     
     return cell;
     
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
+    return cell.frame.size.height;
 }
 
 @end
