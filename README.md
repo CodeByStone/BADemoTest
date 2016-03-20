@@ -104,6 +104,8 @@ ios开发中重难点展示
 */
 - (nullable NSString *)hmacMD5StringWithKey:(nullable NSString *)key;
 
+![image](https://github.com/boai/BADemoTest/blob/master/Image/image2.png)
+
 
 
 ## 2016.03.19 --- 
