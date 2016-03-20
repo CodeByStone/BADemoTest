@@ -57,7 +57,7 @@
         [self addCell:@"6、评论界面(SD)" class:@"DemoVC6"];
         [self addCell:@"7、评论列表" class:@"DemoVC7"];
         [self addCell:@"8、动态该表label的高度" class:@"DemoVC8"];
-        [self addCell:@"8、NSString扩展" class:@"DemoVC9"];
+//        [self addCell:@"8、NSString扩展" class:@"DemoVC9"];
 
         [self.tableView reloadData];
     }
