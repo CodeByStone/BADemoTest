@@ -1,18 +1,19 @@
 //
-//  NSString+BANSString.m
+//  NSString+BACustom.m
 //  BADemoTest
 //
 //  Created by 博爱之家 on 16/3/20.
 //  Copyright © 2016年 博爱之家. All rights reserved.
 //
 
-#import "NSString+BANSString.h"
+#import "NSString+BACustom.h"
+#import "NSNumber+BACustom.h"
 
-@implementation NSString (BANSString)
+@implementation NSString (BACustom)
 
 
 #pragma mark - 获得系统当前日期和时间
-+ (NSString *)getCurrentDateAndTime
++ (nullable NSString *)getCurrentDateAndTime
 {
     //获得系统日期
     NSDate *senddate = [NSDate date];
@@ -27,7 +28,7 @@
 
 #pragma mark - 时间戳转换
 #pragma mark 时间戳转换【YYYY-MM-dd HH:mm:ss】
-+ (NSString *)getCurrentDateAndTimeWithTimeString:(NSString *)string
++ (nullable NSString *)getCurrentDateAndTimeWithTimeString:(nullable NSString *)string
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateStyle:NSDateFormatterMediumStyle];
@@ -41,7 +42,7 @@
 }
 
 #pragma mark 时间戳转换【YYYY-MM-dd】
-+ (NSString *)getDateWithTimeString:(NSString *)string
++ (nullable NSString *)getDateWithTimeString:(nullable NSString *)string
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateStyle:NSDateFormatterMediumStyle];
@@ -54,7 +55,7 @@
 }
 
 #pragma mark 时间戳转换【HH:mm】
-+ (NSString *)getTimeWithTimeString:(NSString *)string
++ (nullable NSString *)getTimeWithTimeString:(nullable NSString *)string
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateStyle:NSDateFormatterMediumStyle];
@@ -69,7 +70,7 @@
 }
 
 #pragma mark 时间转换时间戳
-+ (NSString *)getTimeStamp
++ (nullable NSString *)getTimeStamp
 {
     NSDate *datenow = [NSDate date];//现在时间,你可以输出来看下是什么格式
     // 时间转时间戳的方法:
@@ -78,14 +79,39 @@
     return timeSp;
 }
 
-+ (NSMutableAttributedString *)getColorWithLabel:(UILabel *)label WithString:(NSString *)string andColor:(UIColor *)color
-{
-    NSMutableAttributedString *colorString = [[NSMutableAttributedString alloc] initWithString:string];
-    [colorString addAttribute:NSForegroundColorAttributeName value:color range:NSMakeRange(0,string.length)];
-    label.lineBreakMode = NSLineBreakByWordWrapping;
-    
-    return colorString;
+- (nullable NSString *)stringByTrim {
+    NSCharacterSet *set = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+    return [self stringByTrimmingCharactersInSet:set];
 }
+
+- (NSNumber *)numberValue
+{
+    return [NSNumber numberWithString:self];
+}
+
+- (NSData *)dataValue
+{
+    return [self dataUsingEncoding:NSUTF8StringEncoding];
+}
+
++ (NSString *)stringNamed:(NSString *)name {
+    NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:@""];
+    NSString *str = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
+    if (!str) {
+        path = [[NSBundle mainBundle] pathForResource:name ofType:@"txt"];
+        str = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:NULL];
+    }
+    return str;
+}
+
+//+ (NSMutableAttributedString *)getColorWithLabel:(UILabel *)label WithString:(NSString *)string andColor:(UIColor *)color
+//{
+//    NSMutableAttributedString *colorString = [[NSMutableAttributedString alloc] initWithString:string];
+//    [colorString addAttribute:NSForegroundColorAttributeName value:color range:NSMakeRange(0,string.length)];
+//    label.lineBreakMode = NSLineBreakByWordWrapping;
+//    
+//    return colorString;
+//}
 
 
 @end

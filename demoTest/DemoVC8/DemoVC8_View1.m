@@ -61,9 +61,7 @@
     [rightBtn addTarget:self action:@selector(subView1RightBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     
     NSArray *viewsArray = @[subView1_Label1, rightBtn];
-    [viewsArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [subView1 addSubview:obj];
-    }];
+    [subView1 BA_AddSubViewsWithArray:viewsArray];
     
     CGFloat margin = 10;
     
@@ -104,7 +102,7 @@
 
 - (IBAction)subView1RightBtnClicked:(UIButton *)sender
 {
-    NSString *addStr = [NSString stringWithFormat:@"新增内容，时间：%@", [self getCurrentDateAndTime]];
+    NSString *addStr = [NSString stringWithFormat:@"新增内容，时间：%@", [NSString getCurrentDateAndTime]];
     
     subView1_Label1.text = [NSString stringWithFormat:@"%@\r%@", subView1_Label1.text, addStr];
     
@@ -123,19 +121,7 @@
     }
 }
 
-#pragma mark - 获得系统当前日期和时间
-- (NSString *)getCurrentDateAndTime
-{
-    //获得系统日期
-    NSDate *senddate = [NSDate date];
-    NSDateFormatter *dateformatter = [[NSDateFormatter alloc] init];
-    
-    [dateformatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
-    NSString *morelocationString = [dateformatter stringFromDate:senddate];
-    NSLog(@"当前日期为：%@", morelocationString);
-    
-    return morelocationString;
-}
+
 
 
 @end

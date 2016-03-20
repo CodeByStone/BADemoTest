@@ -1,14 +1,14 @@
 //
-//  UIView+Extension.m
+//  UIView+BACustom.m
 //  博爱微博
 //
 //  Created by 孙博岩 on 15/8/1.
 //  Copyright © 2015年 boai. All rights reserved.
 //
 
-#import "UIView+Extension.h"
+#import "UIView+BACustom.h"
 
-@implementation UIView (Extension)
+@implementation UIView (BACustom)
 
 - (void)setX:(CGFloat)x
 {
@@ -105,4 +105,49 @@
 {
     return self.frame.origin;
 }
+
+- (CGFloat)right
+{
+    return self.frame.origin.x + self.frame.size.width;
+}
+
+- (void)setRight:(CGFloat)right
+{
+    CGRect frame = self.frame;
+    frame.origin.x = right - frame.size.width;
+    self.frame = frame;
+}
+
+- (CGFloat)bottom
+{
+    return self.frame.origin.y + self.frame.size.height;
+}
+
+- (void)setBottom:(CGFloat)bottom
+{
+    CGRect frame = self.frame;
+    frame.origin.y = bottom - frame.size.height;
+    self.frame = frame;
+}
+
+/**
+ *  添加子View
+ *
+ *  @param array 添加子的ViewArray
+ */
+- (void)BA_AddSubViewsWithArray:(NSArray *)array
+{
+    if (array)
+    {
+        [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            [self addSubview:obj];
+        }];
+    }
+    else
+    {
+        NSLog(@"数组 %@ 为空！", array);
+    }
+}
+
+
 @end

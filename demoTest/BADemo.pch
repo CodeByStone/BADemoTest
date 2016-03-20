@@ -14,8 +14,8 @@
 #import <UIKit/UIKit.h> // UI
 #import <Foundation/Foundation.h> // NS
 
-#import "UIView+Extension.h"
-#import "NSString+BANSString.h"
+#import "UIView+BACustom.h"
+#import "NSString+BACustom.h"
 
 
 #import <Masonry.h>
@@ -76,13 +76,14 @@
 #define kBLUEColor         KCOLOR(78, 164, 255, 1.0)
 
 
-// 警告框-一个按钮
+// 警告框-一个按钮【VC】
 #define SHOW_ALERT(title, msg)  UIAlertController *alert = [UIAlertController alertControllerWithTitle:title  message:msg preferredStyle:UIAlertControllerStyleAlert];\
 [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {\
 NSLog(@"你点击了确定按钮！");\
 }]];\
 [self presentViewController:alert animated:YES completion:nil];\
-
+// 警告框-一个按钮【View】
+#define SHOW_AlertAtView(msg) [[[UIAlertView alloc] initWithTitle:@"温馨提示：" message:msg delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
 
 
 #endif /* BADemo_pch */
