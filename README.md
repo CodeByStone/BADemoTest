@@ -19,7 +19,7 @@ ios开发中重难点展示
 ###### 在DemoVC7的评论功能中使用了键盘处理的三方库，具体使用清看【AppDelegate】
 ***
 
-# 更新记录：【倒叙】（最新的更新在最上面）
+# 更新记录：【倒叙】（最新的更新在最上面）【基本每天一更】
 
 ## 2016.03.19 --- 
 
@@ -40,11 +40,9 @@ ios开发中重难点展示
 
 >##3、【DemoVC6】新增tableView的另一种cell的用法【评论列表（用SDAutoLayout 布局库）】 
 
-![image](https://github.com/boai/BADemoTest/blob/master/Image/image6.png)
-
 >##2、【DemoVC5】新增tableView的另一种cell的用法【评论列表（用WHC 布局库）】 
 
-![image](https://github.com/boai/BADemoTest/blob/master/Image/image5.png)
+![image](https://github.com/boai/BADemoTest/blob/master/Image/gif3.gif)
 
 >##1、【DemoVC4】新增tableView的另一种cell的用法 
 
@@ -61,12 +59,12 @@ ios开发中重难点展示
 
 ####   ☆☆ 3.1 在这个demoVC3中，第二中cell样式中，用纯代码写了一个自定义button（图片在上，文字在下，且都居中显示），有需要的可以直接用，还可以自定义左右显示（第一种cell样式中的playButton就是左右显示）
 
-![image](https://github.com/boai/BADemoTest/blob/master/Image/image3.png)
+![image](https://github.com/boai/BADemoTest/blob/master/Image/gif4.gif)
 
 
 >##2、【DemoVC2】用SDLayout 布局三方库，写了一个微信朋友圈（原作者GSD_ios）
 
-![image](https://github.com/boai/BADemoTest/blob/master/Image/image2.png)
+![image](https://github.com/boai/BADemoTest/blob/master/Image/gif5.gif)
 
 >##1、【DemoVC1】view中嵌套自定义view2，view2中嵌套不同view3、和tableView
 
