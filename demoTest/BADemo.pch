@@ -15,6 +15,7 @@
 #import <Foundation/Foundation.h> // NS
 
 #import "UIView+Extension.h"
+#import "NSString+BANSString.h"
 
 
 #import <Masonry.h>

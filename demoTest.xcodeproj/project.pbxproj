@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7ED89E7EAD9DDF5E73A11702 /* libPods-demoTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED601320E66DF2ED522196AB /* libPods-demoTest.a */; };
+		C40823041C9E914E00E85C9C /* DemoVC9.m in Sources */ = {isa = PBXBuildFile; fileRef = C40823031C9E914E00E85C9C /* DemoVC9.m */; };
+		C40823071C9E91AF00E85C9C /* NSString+BANSString.m in Sources */ = {isa = PBXBuildFile; fileRef = C40823061C9E91AF00E85C9C /* NSString+BANSString.m */; };
 		C40A7E0E1C9A3C56006F0687 /* DemoVC7.m in Sources */ = {isa = PBXBuildFile; fileRef = C40A7E091C9A3C56006F0687 /* DemoVC7.m */; };
 		C40A7E0F1C9A3C56006F0687 /* DemoVC7Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = C40A7E0B1C9A3C56006F0687 /* DemoVC7Cell.m */; };
 		C40A7E101C9A3C56006F0687 /* DemoVC7Model.m in Sources */ = {isa = PBXBuildFile; fileRef = C40A7E0D1C9A3C56006F0687 /* DemoVC7Model.m */; };
@@ -120,6 +122,10 @@
 
 /* Begin PBXFileReference section */
 		5C28A804240C9B46D0AB8D5B /* Pods-demoTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demoTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-demoTest/Pods-demoTest.debug.xcconfig"; sourceTree = "<group>"; };
+		C40823021C9E914E00E85C9C /* DemoVC9.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DemoVC9.h; path = ../../../../../../../Users/boai/Desktop/BADemoTest/BADemoTest/DemoVC9.h; sourceTree = "<group>"; };
+		C40823031C9E914E00E85C9C /* DemoVC9.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DemoVC9.m; path = ../../../../../../../Users/boai/Desktop/BADemoTest/BADemoTest/DemoVC9.m; sourceTree = "<group>"; };
+		C40823051C9E91AF00E85C9C /* NSString+BANSString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BANSString.h"; sourceTree = "<group>"; };
+		C40823061C9E91AF00E85C9C /* NSString+BANSString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BANSString.m"; sourceTree = "<group>"; };
 		C40A7E081C9A3C56006F0687 /* DemoVC7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC7.h; sourceTree = "<group>"; };
 		C40A7E091C9A3C56006F0687 /* DemoVC7.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC7.m; sourceTree = "<group>"; };
 		C40A7E0A1C9A3C56006F0687 /* DemoVC7Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC7Cell.h; sourceTree = "<group>"; };
@@ -307,6 +313,8 @@
 		C4225D941C990ED2006262C9 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				C40823051C9E91AF00E85C9C /* NSString+BANSString.h */,
+				C40823061C9E91AF00E85C9C /* NSString+BANSString.m */,
 				C4225D851C98EA7A006262C9 /* BACustomButton.h */,
 				C4225D861C98EA7A006262C9 /* BACustomButton.m */,
 				C4225D951C990ED2006262C9 /* UIView+Extension.h */,
@@ -614,6 +622,8 @@
 		C4F2626F1C9988450026A0D6 /* DemoVC9 */ = {
 			isa = PBXGroup;
 			children = (
+				C40823021C9E914E00E85C9C /* DemoVC9.h */,
+				C40823031C9E914E00E85C9C /* DemoVC9.m */,
 			);
 			path = DemoVC9;
 			sourceTree = "<group>";
@@ -867,6 +877,7 @@
 				C4225DCB1C990ED2006262C9 /* SDPhotoBrowser.m in Sources */,
 				C42453CD1C979D9300D01865 /* AppDelegate.m in Sources */,
 				C4225D8A1C98EAF1006262C9 /* YRDemandShareModel.m in Sources */,
+				C40823071C9E91AF00E85C9C /* NSString+BANSString.m in Sources */,
 				C42453CA1C979D9300D01865 /* main.m in Sources */,
 				C440E5711C98360D006FFA73 /* DemoVC2Model.m in Sources */,
 				C4225D8D1C98EB6D006262C9 /* YRDemandModel.m in Sources */,
@@ -889,6 +900,7 @@
 				C424540C1C97A32500D01865 /* YRHomeIncomeView.m in Sources */,
 				C424540F1C97B42D00D01865 /* YRHomeIncomeBlockView.m in Sources */,
 				C4225D871C98EA7A006262C9 /* BACustomButton.m in Sources */,
+				C40823041C9E914E00E85C9C /* DemoVC9.m in Sources */,
 				C4E2D8F41C9D21A20083D6AE /* DemoVC8.m in Sources */,
 				C40A7E161C9A5882006F0687 /* DemoVC7_quesstionCell.m in Sources */,
 				C4225D831C98EA62006262C9 /* YRDemandShareCell.m in Sources */,
