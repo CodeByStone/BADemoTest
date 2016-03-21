@@ -16,11 +16,6 @@
 		C40823201C9EAFF200E85C9C /* NSArray+BACustom.m in Sources */ = {isa = PBXBuildFile; fileRef = C408231F1C9EAFF200E85C9C /* NSArray+BACustom.m */; };
 		C40823231C9EBBA700E85C9C /* NSData+BACustom.m in Sources */ = {isa = PBXBuildFile; fileRef = C40823221C9EBBA700E85C9C /* NSData+BACustom.m */; };
 		C40823261C9ED9BA00E85C9C /* UIImage+BACustom.m in Sources */ = {isa = PBXBuildFile; fileRef = C40823251C9ED9BA00E85C9C /* UIImage+BACustom.m */; };
-		C408233E1C9EDB2C00E85C9C /* gif1.gif in Resources */ = {isa = PBXBuildFile; fileRef = C40823391C9EDB2C00E85C9C /* gif1.gif */; };
-		C408233F1C9EDB2C00E85C9C /* gif2.gif in Resources */ = {isa = PBXBuildFile; fileRef = C408233A1C9EDB2C00E85C9C /* gif2.gif */; };
-		C40823401C9EDB2C00E85C9C /* gif3.gif in Resources */ = {isa = PBXBuildFile; fileRef = C408233B1C9EDB2C00E85C9C /* gif3.gif */; };
-		C40823411C9EDB2C00E85C9C /* gif4.gif in Resources */ = {isa = PBXBuildFile; fileRef = C408233C1C9EDB2C00E85C9C /* gif4.gif */; };
-		C40823421C9EDB2C00E85C9C /* gif5.gif in Resources */ = {isa = PBXBuildFile; fileRef = C408233D1C9EDB2C00E85C9C /* gif5.gif */; };
 		C40823451C9EE35800E85C9C /* UITableView+BACustom.m in Sources */ = {isa = PBXBuildFile; fileRef = C40823441C9EE35800E85C9C /* UITableView+BACustom.m */; };
 		C40A7E0E1C9A3C56006F0687 /* DemoVC7.m in Sources */ = {isa = PBXBuildFile; fileRef = C40A7E091C9A3C56006F0687 /* DemoVC7.m */; };
 		C40A7E0F1C9A3C56006F0687 /* DemoVC7Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = C40A7E0B1C9A3C56006F0687 /* DemoVC7Cell.m */; };
@@ -149,11 +144,6 @@
 		C40823221C9EBBA700E85C9C /* NSData+BACustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+BACustom.m"; sourceTree = "<group>"; };
 		C40823241C9ED9BA00E85C9C /* UIImage+BACustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BACustom.h"; sourceTree = "<group>"; };
 		C40823251C9ED9BA00E85C9C /* UIImage+BACustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BACustom.m"; sourceTree = "<group>"; };
-		C40823391C9EDB2C00E85C9C /* gif1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif1.gif; sourceTree = "<group>"; };
-		C408233A1C9EDB2C00E85C9C /* gif2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif2.gif; sourceTree = "<group>"; };
-		C408233B1C9EDB2C00E85C9C /* gif3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif3.gif; sourceTree = "<group>"; };
-		C408233C1C9EDB2C00E85C9C /* gif4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif4.gif; sourceTree = "<group>"; };
-		C408233D1C9EDB2C00E85C9C /* gif5.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif5.gif; sourceTree = "<group>"; };
 		C40823431C9EE35800E85C9C /* UITableView+BACustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+BACustom.h"; sourceTree = "<group>"; };
 		C40823441C9EE35800E85C9C /* UITableView+BACustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+BACustom.m"; sourceTree = "<group>"; };
 		C40A7E081C9A3C56006F0687 /* DemoVC7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC7.h; sourceTree = "<group>"; };
@@ -345,18 +335,6 @@
 				C40823161C9EA0E200E85C9C /* DemoVC9.m */,
 			);
 			path = DemoVC9;
-			sourceTree = "<group>";
-		};
-		C40823381C9EDB2C00E85C9C /* gif */ = {
-			isa = PBXGroup;
-			children = (
-				C40823391C9EDB2C00E85C9C /* gif1.gif */,
-				C408233A1C9EDB2C00E85C9C /* gif2.gif */,
-				C408233B1C9EDB2C00E85C9C /* gif3.gif */,
-				C408233C1C9EDB2C00E85C9C /* gif4.gif */,
-				C408233D1C9EDB2C00E85C9C /* gif5.gif */,
-			);
-			path = gif;
 			sourceTree = "<group>";
 		};
 		C4225D941C990ED2006262C9 /* Category */ = {
@@ -586,7 +564,6 @@
 		C440E4B51C9816BC006FFA73 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				C40823381C9EDB2C00E85C9C /* gif */,
 				C440E4B61C9816BC006FFA73 /* cell_icons */,
 				C440E4CF1C9816BC006FFA73 /* Home.xcassets */,
 				C440E4D01C9816BC006FFA73 /* icon0.jpg */,
@@ -799,7 +776,6 @@
 				C440E5081C9816BC006FFA73 /* pic3.jpg in Resources */,
 				C440E4EF1C9816BC006FFA73 /* 17.jpg in Resources */,
 				C42454141C97B74100D01865 /* BAHomeIncomeCell.xib in Resources */,
-				C408233F1C9EDB2C00E85C9C /* gif2.gif in Resources */,
 				C440E5031C9816BC006FFA73 /* icon4.jpg in Resources */,
 				C440E4E81C9816BC006FFA73 /* 10.jpg in Resources */,
 				C440E4FA1C9816BC006FFA73 /* 6.jpg in Resources */,
@@ -811,13 +787,11 @@
 				C440E4F61C9816BC006FFA73 /* 23.jpg in Resources */,
 				C440E4F51C9816BC006FFA73 /* 22.jpg in Resources */,
 				C440E50E1C9816BC006FFA73 /* picon.jpg in Resources */,
-				C40823411C9EDB2C00E85C9C /* gif4.gif in Resources */,
 				C440E4F21C9816BC006FFA73 /* 2.jpg in Resources */,
 				C440E4FD1C9816BC006FFA73 /* 9.jpg in Resources */,
 				C440E4F01C9816BC006FFA73 /* 18.jpg in Resources */,
 				C440E4F91C9816BC006FFA73 /* 5.jpg in Resources */,
 				C440E4EA1C9816BC006FFA73 /* 12.jpg in Resources */,
-				C40823421C9EDB2C00E85C9C /* gif5.gif in Resources */,
 				C440E4E61C9816BC006FFA73 /* 0.jpg in Resources */,
 				C440E4F71C9816BC006FFA73 /* 3.jpg in Resources */,
 				C440E5131C9816BC006FFA73 /* test4.jpg in Resources */,
@@ -844,11 +818,9 @@
 				C440E4E91C9816BC006FFA73 /* 11.jpg in Resources */,
 				C440E5051C9816BC006FFA73 /* pic0.jpg in Resources */,
 				C440E4ED1C9816BC006FFA73 /* 15.jpg in Resources */,
-				C40823401C9EDB2C00E85C9C /* gif3.gif in Resources */,
 				C440E5061C9816BC006FFA73 /* pic1.jpg in Resources */,
 				C440E4FB1C9816BC006FFA73 /* 7.jpg in Resources */,
 				C440E4F11C9816BC006FFA73 /* 19.jpg in Resources */,
-				C408233E1C9EDB2C00E85C9C /* gif1.gif in Resources */,
 				C440E4F31C9816BC006FFA73 /* 20.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
