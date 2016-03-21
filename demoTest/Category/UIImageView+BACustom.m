@@ -10,7 +10,7 @@
 
 @implementation UIImageView (BACustom)
 
-+(UIImageView *)addImgWithFrame:(CGRect)frame AndImage:(NSString *)imgName
++ (UIImageView *)addImgWithFrame:(CGRect)frame AndImage:(NSString *)imgName
 {
     UIImageView *imgView =[[UIImageView alloc]initWithImage:[UIImage imageNamed:imgName]];
     
