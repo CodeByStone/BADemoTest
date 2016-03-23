@@ -57,9 +57,7 @@ const CGFloat maxContentLabelHeights = 54;
 //    _timeLabel.textColor = [UIColor lightGrayColor];
     
     NSArray *viewsArray = @[_titleLable, _playButton, _contentLabel, _moreButton];
-    [viewsArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [self.contentView addSubview:obj];
-    }];
+    [self.contentView BA_AddSubViewsWithArray:viewsArray];
     
     UIView *contentView = self.contentView;
     CGFloat margin = 10;

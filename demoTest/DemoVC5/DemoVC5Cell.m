@@ -32,7 +32,7 @@
 {
     self.weixinImageView = [UIImageView new];
     self.weixinImageView.layer.masksToBounds = YES;
-    self.weixinImageView.layer.cornerRadius = 60/2;
+    self.weixinImageView.layer.cornerRadius = 40/2;
     
     self.weixinNameLable = [UILabel new];
     self.weixinNameLable.font = KFontSize(15);
@@ -51,8 +51,8 @@
 
     [self.weixinImageView whc_LeftSpace:10];
     [self.weixinImageView whc_TopSpace:10];
-    [self.weixinImageView whc_Height:60];
-    [self.weixinImageView whc_Width:60];
+    [self.weixinImageView whc_Height:40];
+    [self.weixinImageView whc_Width:40];
     
     [self.weixinNameLable whc_LeftSpace:10 relativeView:self.weixinImageView];
     [self.weixinNameLable whc_TopSpace:10];

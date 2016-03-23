@@ -32,7 +32,7 @@
 {
     self.weixinImageView = [UIImageView new];
     self.weixinImageView.layer.masksToBounds = YES;
-    self.weixinImageView.layer.cornerRadius = 60/2;
+    self.weixinImageView.layer.cornerRadius = 40/2;
     
     self.weixinNameLable = [UILabel new];
     self.weixinNameLable.font = KFontSize(15);
@@ -45,9 +45,8 @@
     self.weixinContentLable.font = KFontSize(14);
     
     NSArray *viewsArray = @[self.weixinImageView, self.weixinNameLable, self.weixinTimeLable, self.weixinContentLable];
-    [viewsArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [self.contentView addSubview:obj];
-    }];
+    [self.contentView BA_AddSubViewsWithArray:viewsArray];
+
     
     UIView *contentView = self.contentView;
     CGFloat margin = 10;
@@ -55,8 +54,8 @@
     self.weixinImageView.sd_layout
     .leftSpaceToView(contentView, margin)
     .topSpaceToView(contentView, margin)
-    .widthIs(60)
-    .heightIs(60);
+    .widthIs(40)
+    .heightIs(40);
     
     self.weixinNameLable.sd_layout
     .leftSpaceToView(self.weixinImageView, margin)

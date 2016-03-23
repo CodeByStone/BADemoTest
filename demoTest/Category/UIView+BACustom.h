@@ -34,6 +34,14 @@
  */
 - (UIViewController *)getCurrentViewController;
 
+/*!
+ *  显示警告框
+ *
+ *  @param title   title description
+ *  @param message message description
+ */
+- (void)showAlertView:(NSString *)title message:(NSString *)message;
+
 
 
 @end

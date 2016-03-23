@@ -90,14 +90,7 @@
  */
 - (nullable NSString *)md5String;
 
-/**
- *   Returns a lowercase NSString for hmac using algorithm md5 with key.
- *
- *  @param key The hmac key.
- *
- *  @return  Returns a lowercase NSString for hmac using algorithm md5 with key.
- */
-- (nullable NSString *)hmacMD5StringWithKey:(nullable NSString *)key;
+
 
 
 

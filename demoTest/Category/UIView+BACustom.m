@@ -167,5 +167,11 @@
     return nil;
 }
 
+- (void)showAlertView:(NSString *)title message:(NSString *)message
+{
+    [[[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:@"ok" otherButtonTitles: nil] show];
+}
+
+
 
 @end

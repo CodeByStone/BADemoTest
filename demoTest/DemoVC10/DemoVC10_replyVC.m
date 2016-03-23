@@ -1,21 +1,20 @@
 //
-//  DemoVC7_replyVC.m
+//  DemoVC10_replyVC.m
 //  demoTest
 //
-//  Created by 博爱 on 16/3/17.
+//  Created by 博爱 on 16/3/23.
 //  Copyright © 2016年 博爱之家. All rights reserved.
 //
 
-#import "DemoVC7_replyVC.h"
-#import "DemoVC7Model.h"
-#import "DemoVC7_quesstionCell.h"
+#import "DemoVC10_replyVC.h"
 #import "DemoVC7_replyView.h"
+#import "DemoVC10Cell.h"
 
-@interface DemoVC7_replyVC ()
+@interface DemoVC10_replyVC ()
 
 @end
 
-@implementation DemoVC7_replyVC
+@implementation DemoVC10_replyVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,20 +31,20 @@
 - (void)creatSendReplyView
 {
     CGRect frame = CGRectMake(0, KSCREEN_HEIGHT - 50 - 64, KSCREEN_WIDTH, 50);
-    DemoVC7_replyView *replyView = [[DemoVC7_replyView alloc] initWithFrame:frame withImage:self.quesstionDataModel.icon7];
+    DemoVC7_replyView *replyView = [[DemoVC7_replyView alloc] initWithFrame:frame withImage:self.quesstionDataModel.imageName];
     replyView.backgroundColor = KCOLOR(245, 244, 245, 1.0);
     [self.view addSubview:replyView];
-
+    
     [replyView callBackIndex:^(NSInteger index, NSString *contentStr) {
         
         NSString *msg = [NSString stringWithFormat:@"发送内容：%@", contentStr];
         SHOW_ALERT(@"温馨提示：", msg);
         
-        DemoVC7Model *model = [DemoVC7Model new];
-        model.icon7 = self.quesstionDataModel.icon7;
-        model.userName7 = self.quesstionDataModel.userName7;
-        model.content7 = contentStr;
-        model.time7 = [NSString getCurrentDateAndTime];
+        DemoVC10Model *model = [DemoVC10Model new];
+        model.imageName = self.quesstionDataModel.imageName;
+        model.userName = self.quesstionDataModel.userName;
+        model.content = contentStr;
+        model.time = [NSString getCurrentDateAndTime];
         
         [self.replyDataArray addObject:model];
         [self.tableView reloadData];
@@ -87,11 +86,11 @@
         int contentRandomIndex = arc4random_uniform(5);
         int picRandomIndex = arc4random_uniform(5);
         
-        DemoVC7Model *model = [DemoVC7Model new];
-        model.icon7 = iconImageNamesArray[iconRandomIndex];
-        model.userName7 = namesArray[nameRandomIndex];
-        model.content7 = textArray[contentRandomIndex];
-        model.time7 = timeArray[picRandomIndex];
+        DemoVC10Model *model = [DemoVC10Model new];
+        model.imageName = iconImageNamesArray[iconRandomIndex];
+        model.userName = namesArray[nameRandomIndex];
+        model.content = textArray[contentRandomIndex];
+        model.time = timeArray[picRandomIndex];
         
         [self.replyDataArray addObject:model];
     }
@@ -108,33 +107,62 @@
 {
     if (section == 0)
     {
-        return 1;
+        return 2;
     }
     return self.replyDataArray.count;
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
-    static NSString *cellID = @"DemoVC7_quesstionCell";
-    DemoVC7_quesstionCell *quesstionCell7 = [tableView dequeueReusableCellWithIdentifier:cellID];
-    if (!quesstionCell7)
-    {
-        quesstionCell7 = [[DemoVC7_quesstionCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellID];
-    }
-    
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     if (indexPath.section == 0)
     {
-        quesstionCell7.backgroundColor = kWHITECOLOR;
-        quesstionCell7.model = self.quesstionDataModel;
+        if (indexPath.row == 0)
+        {
+            static NSString *cellID = @"Cell";
+            DemoVC10Cell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+            if (!cell)
+            {
+                cell = [[DemoVC10Cell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
+            }
+            cell.backgroundColor = kWHITECOLOR;
+            cell.addFriendButton.hidden = YES;
+            cell.model = self.quesstionDataModel;
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            
+            return cell;
+        }
+        if (indexPath.row == 1)
+        {
+            static NSString *cellID2 = @"DemoVC10_replyCell";
+            DemoVC10_replyCell *cell2 = [tableView dequeueReusableCellWithIdentifier:cellID2];
+            if (!cell2)
+            {
+                cell2 = [[DemoVC10_replyCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
+            }
+            cell2.backgroundColor = kWHITECOLOR;
+            cell2.model = self.replyDataModel;
+            cell2.selectionStyle = UITableViewCellSelectionStyleNone;
+            
+            return cell2;
+        }
     }
     else
     {
-        quesstionCell7.backgroundColor = kBGGrayColor;
-        quesstionCell7.model = self.replyDataArray[indexPath.row];
+        static NSString *cellID2 = @"DemoVC10_replyCell";
+        DemoVC10_replyVC_replyCell *cell3 = [tableView dequeueReusableCellWithIdentifier:cellID2];
+        if (!cell3)
+        {
+            cell3 = [[DemoVC10_replyVC_replyCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
+        }
+        cell3.backgroundColor = kBGGrayColor;
+        cell3.model = self.replyDataArray[indexPath.row];
+        cell3.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        return cell3;
     }
     
-    return quesstionCell7;
+    return nil;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -147,11 +175,19 @@
 {
     if (indexPath.section == 0)
     {
-        return [self.tableView cellHeightForIndexPath:indexPath model:self.quesstionDataModel keyPath:@"model" cellClass:[DemoVC7_quesstionCell class] contentViewWidth:[self cellContentViewWith]];
+        if (indexPath.row == 0)
+        {
+            return [self.tableView cellHeightForIndexPath:indexPath model:self.quesstionDataModel keyPath:@"model" cellClass:[DemoVC10Cell class] contentViewWidth:[self cellContentViewWith]];
+        }
+        else
+        {
+            id model = self.replyDataModel;
+            return [self.tableView cellHeightForIndexPath:indexPath model:model keyPath:@"model" cellClass:[DemoVC10_replyCell class] contentViewWidth:[self cellContentViewWith]];
+        }
     }
     else
     {
-        return [self.tableView cellHeightForIndexPath:indexPath model:self.replyDataArray[indexPath.row] keyPath:@"model" cellClass:[DemoVC7_quesstionCell class] contentViewWidth:[self cellContentViewWith]];
+        return [self.tableView cellHeightForIndexPath:indexPath model:self.replyDataArray[indexPath.row] keyPath:@"model" cellClass:[DemoVC10_replyVC_replyCell class] contentViewWidth:[self cellContentViewWith]];
     }
     return 0;
 }
@@ -166,5 +202,6 @@
     }
     return width;
 }
+
 
 @end

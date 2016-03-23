@@ -36,7 +36,7 @@
 {
     userImageView = [UIImageView new];
     userImageView.layer.masksToBounds = YES;
-    userImageView.layer.cornerRadius = 50/2;
+    userImageView.layer.cornerRadius = 40/2;
     
     userNameLabel = [UILabel new];
     userNameLabel.font = KFontSize(13);
@@ -91,9 +91,7 @@
     replyButton.titleLabel.textAlignment = NSTextAlignmentRight;
     
     NSArray *views = @[userImageView, userNameLabel, starImageView, addFriendButton, timeLabel, contentLabel, supprotButton, vlineImageView, replyButton];
-    [views enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [self.contentView addSubview:obj];
-    }];
+    [self.contentView BA_AddSubViewsWithArray:views];
     
     UIView *contentView = self.contentView;
     CGFloat margin = 10;
@@ -101,8 +99,8 @@
     userImageView.sd_layout
     .leftSpaceToView(contentView, margin)
     .topSpaceToView(contentView, margin)
-    .widthIs(50)
-    .heightIs(50);
+    .widthIs(40)
+    .heightIs(40);
     
     userNameLabel.sd_layout
     .leftSpaceToView(userImageView, margin)
