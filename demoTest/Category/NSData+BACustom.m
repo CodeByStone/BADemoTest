@@ -14,6 +14,22 @@
 
 - (NSString *)md5String
 {
+    /*
+     NSData *data = [self dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:YES];
+     
+     unsigned char hash[CC_MD5_DIGEST_LENGTH];
+     
+     CC_MD5([data bytes], (CC_LONG)[data length], hash);
+     
+     NSMutableString *md5String = [NSMutableString string];
+     
+     for (int i = 0; i < CC_MD5_DIGEST_LENGTH; i++)
+     {
+     [md5String appendFormat:@"%02x",hash[i]];
+     }
+     return [md5String copy];
+     */
+    
     unsigned char result[CC_MD5_DIGEST_LENGTH];
     CC_MD5(self.bytes, (CC_LONG)self.length, result);
     return [NSString stringWithFormat:
@@ -57,9 +73,6 @@
     }
     return hash;
 }
-
-
-
 
 
 

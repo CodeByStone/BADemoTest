@@ -25,13 +25,13 @@
 {
     if (!_titleArray)
     {
-        _titleArray = @[[NSString getCurrentDateAndTime],
-                        [NSString getCurrentDateAndTimeWithTimeString:@"1458462423"],
-                        [NSString getDateWithTimeString:@"1458462423"],
-                        [NSString getTimeWithTimeString:@"1458462423"],
-                        [NSString getTimeStamp],
+        _titleArray = @[[NSString BA_time_getCurrentDateAndTime],
+                        [NSString BA_time_getCurrentDateAndTimeWithTimeString:@"1458462423"],
+                        [NSString BA_time_getDateWithTimeString:@"1458462423"],
+                        [NSString BA_time_getTimeWithTimeString:@"1458462423"],
+                        [NSString BA_time_getTimeStamp],
                         @"彩色字体测试",
-                        [@"123456" md5String]
+                        [@"123456" BA_md5String]
                         ];
     }
     return _titleArray;
@@ -87,7 +87,9 @@
     }
     if (indexPath.row == 5)
     {
-        cell.textLabel.text = [NSString stringWithFormat:@"%@",self.titleArray[indexPath.row]];
+        NSString *text = @"NSMutableAttributedString: 我的名字是红色的！";
+        NSMutableAttributedString *mutableAttriStr = [NSString BA_creatMutableAttributedString:text textColor:[UIColor redColor] bgColor:[UIColor greenColor] font:14 range:NSMakeRange(text.length - 4, 2)];
+        cell.textLabel.attributedText = mutableAttriStr;
     }
     if (indexPath.row == 6)
     {

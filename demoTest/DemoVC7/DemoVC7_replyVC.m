@@ -45,7 +45,7 @@
         model.icon7 = self.quesstionDataModel.icon7;
         model.userName7 = self.quesstionDataModel.userName7;
         model.content7 = contentStr;
-        model.time7 = [NSString getCurrentDateAndTime];
+        model.time7 = [NSString BA_time_getCurrentDateAndTime];
         
         [self.replyDataArray addObject:model];
         [self.tableView reloadData];

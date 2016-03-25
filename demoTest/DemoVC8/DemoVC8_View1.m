@@ -102,7 +102,7 @@
 
 - (IBAction)subView1RightBtnClicked:(UIButton *)sender
 {
-    NSString *addStr = [NSString stringWithFormat:@"新增内容，时间：%@", [NSString getCurrentDateAndTime]];
+    NSString *addStr = [NSString stringWithFormat:@"新增内容，时间：%@", [NSString BA_time_getCurrentDateAndTime]];
     
     subView1_Label1.text = [NSString stringWithFormat:@"%@\r%@", subView1_Label1.text, addStr];
     

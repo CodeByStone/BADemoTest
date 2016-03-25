@@ -46,6 +46,7 @@
 		C42454131C97B74100D01865 /* BAHomeIncomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C42454111C97B74100D01865 /* BAHomeIncomeCell.m */; };
 		C42454141C97B74100D01865 /* BAHomeIncomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C42454121C97B74100D01865 /* BAHomeIncomeCell.xib */; };
 		C42454171C97BAD600D01865 /* BAHomeIncomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C42454161C97BAD600D01865 /* BAHomeIncomeModel.m */; };
+		C4245FD91CA51412006740E3 /* NSDate+BACustom.m in Sources */ = {isa = PBXBuildFile; fileRef = C4245FD81CA51412006740E3 /* NSDate+BACustom.m */; };
 		C440E4E61C9816BC006FFA73 /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C440E4B71C9816BC006FFA73 /* 0.jpg */; };
 		C440E4E71C9816BC006FFA73 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C440E4B81C9816BC006FFA73 /* 1.jpg */; };
 		C440E4E81C9816BC006FFA73 /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C440E4B91C9816BC006FFA73 /* 10.jpg */; };
@@ -209,6 +210,8 @@
 		C42454121C97B74100D01865 /* BAHomeIncomeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BAHomeIncomeCell.xib; sourceTree = "<group>"; };
 		C42454151C97BAD600D01865 /* BAHomeIncomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAHomeIncomeModel.h; sourceTree = "<group>"; };
 		C42454161C97BAD600D01865 /* BAHomeIncomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAHomeIncomeModel.m; sourceTree = "<group>"; };
+		C4245FD71CA51412006740E3 /* NSDate+BACustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+BACustom.h"; sourceTree = "<group>"; };
+		C4245FD81CA51412006740E3 /* NSDate+BACustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+BACustom.m"; sourceTree = "<group>"; };
 		C440E4B71C9816BC006FFA73 /* 0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 0.jpg; sourceTree = "<group>"; };
 		C440E4B81C9816BC006FFA73 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		C440E4B91C9816BC006FFA73 /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
@@ -371,6 +374,8 @@
 				C4225D961C990ED2006262C9 /* UIView+BACustom.m */,
 				C40823121C9EA0A000E85C9C /* BACustomButton.m */,
 				C40823131C9EA0A000E85C9C /* BACustomButton.h */,
+				C4245FD71CA51412006740E3 /* NSDate+BACustom.h */,
+				C4245FD81CA51412006740E3 /* NSDate+BACustom.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -927,6 +932,7 @@
 				C40823451C9EE35800E85C9C /* UITableView+BACustom.m in Sources */,
 				C440E55A1C981F51006FFA73 /* DemoVC3.m in Sources */,
 				C42453D01C979D9300D01865 /* ViewController.m in Sources */,
+				C4245FD91CA51412006740E3 /* NSDate+BACustom.m in Sources */,
 				C440E56F1C98360D006FFA73 /* DemoVC2Cell.m in Sources */,
 				C4225DCB1C990ED2006262C9 /* SDPhotoBrowser.m in Sources */,
 				C42453CD1C979D9300D01865 /* AppDelegate.m in Sources */,

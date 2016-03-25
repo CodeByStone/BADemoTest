@@ -9,12 +9,13 @@
 #import "NSString+BACustom.h"
 #import "NSNumber+BACustom.h"
 #import "NSData+BACustom.h"
+#import "NSDate+BACustom.h"
 
 @implementation NSString (BACustom)
 
 
 #pragma mark - 获得系统当前日期和时间
-+ (nullable NSString *)getCurrentDateAndTime
++ (nullable NSString *)BA_time_getCurrentDateAndTime
 {
     //获得系统日期
     NSDate *senddate = [NSDate date];
@@ -29,7 +30,7 @@
 
 #pragma mark - 时间戳转换
 #pragma mark 时间戳转换【YYYY-MM-dd HH:mm:ss】
-+ (nullable NSString *)getCurrentDateAndTimeWithTimeString:(nullable NSString *)string
++ (nullable NSString *)BA_time_getCurrentDateAndTimeWithTimeString:(nullable NSString *)string
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateStyle:NSDateFormatterMediumStyle];
@@ -43,7 +44,7 @@
 }
 
 #pragma mark 时间戳转换【YYYY-MM-dd】
-+ (nullable NSString *)getDateWithTimeString:(nullable NSString *)string
++ (nullable NSString *)BA_time_getDateWithTimeString:(nullable NSString *)string
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateStyle:NSDateFormatterMediumStyle];
@@ -56,7 +57,7 @@
 }
 
 #pragma mark 时间戳转换【HH:mm】
-+ (nullable NSString *)getTimeWithTimeString:(nullable NSString *)string
++ (nullable NSString *)BA_time_getTimeWithTimeString:(nullable NSString *)string
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateStyle:NSDateFormatterMediumStyle];
@@ -71,13 +72,68 @@
 }
 
 #pragma mark 时间转换时间戳
-+ (nullable NSString *)getTimeStamp
++ (nullable NSString *)BA_time_getTimeStamp
 {
     NSDate *datenow = [NSDate date];//现在时间,你可以输出来看下是什么格式
     // 时间转时间戳的方法:
     NSString *timeSp = [NSString stringWithFormat:@"%ld", (long)[datenow timeIntervalSince1970]];
     
     return timeSp;
+}
+
+/*! 解析新浪微博中的日期, 判断日期是今天，昨天还是明天 */
++ (NSString *)BA_time_resolveSinaWeiboDate:(NSString *)dateStr
+{
+    // Tue Mar 10 17:32:22 +0800 2015
+    // 字符串转换NSDate
+    //    _created_at = @"Tue Mar 11 17:48:24 +0800 2015";
+    
+    // 日期格式字符串
+    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+    fmt.dateFormat = @"EEE MMM d HH:mm:ss Z yyyy";
+    
+    // 设置格式本地化,日期格式字符串需要知道是哪个国家的日期，才知道怎么转换
+    fmt.locale = [NSLocale localeWithLocaleIdentifier:@"en_us"];
+    
+    NSDate *created_at = [fmt dateFromString:dateStr];
+    
+    if ([created_at isThisYear])
+    { // 今年
+        
+        if ([created_at isToday])
+        { // 今天
+            
+            // 计算跟当前时间差距
+            NSDateComponents *cmp = [created_at deltaWithNow];
+            
+            if (cmp.hour >= 1) {
+                return [NSString stringWithFormat:@"%ld小时之前",cmp.hour];
+            }else if (cmp.minute > 1){
+                return [NSString stringWithFormat:@"%ld分钟之前",cmp.minute];
+            }else{
+                return @"刚刚";
+            }
+            
+        }else if ([created_at isYesterday]){ // 昨天
+            fmt.dateFormat = @"昨天 HH:mm";
+            return  [fmt stringFromDate:created_at];
+            
+        }else{ // 前天
+            fmt.dateFormat = @"MM-dd HH:mm";
+            return  [fmt stringFromDate:created_at];
+        }
+        
+        
+        
+    }else{ // 不是今年
+        
+        fmt.dateFormat = @"yyyy-MM-dd HH:mm";
+        
+        return [fmt stringFromDate:created_at];
+        
+    }
+    
+    return dateStr;
 }
 
 - (nullable NSString *)stringByTrim {
@@ -105,20 +161,371 @@
     return str;
 }
 
-- (NSString *)md5String
+- (NSString *)BA_md5String
 {
     return [[self dataUsingEncoding:NSUTF8StringEncoding] md5String];
 }
 
+- (NSString *)BA_trimmedString:(NSString *)string
+{
+    // 去除字符串的特殊字符
+//    NSString *string = @"<f7091300 00000000 830000c4 00002c00 0000c500>";
+    NSCharacterSet *set = [NSCharacterSet characterSetWithCharactersInString:@"@／：；（）¥「」＂、<>[]{}#%-*+=_\\|~＜＞$?^?'@#$%^&*()_+'\""];
+    NSString*trimmedString = [string stringByTrimmingCharactersInSet:set];
+    NSLog(@"trimmedString1:%@",trimmedString);
+    // 去除字符串的空格
+    trimmedString = [trimmedString stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSLog(@"trimmedString2: %@",trimmedString);
+    
+    return trimmedString;
+}
 
-//+ (NSMutableAttributedString *)getColorWithLabel:(UILabel *)label WithString:(NSString *)string andColor:(UIColor *)color
+// 获得随机字符串
+//+ (NSString *)getRandString
 //{
-//    NSMutableAttributedString *colorString = [[NSMutableAttributedString alloc] initWithString:string];
-//    [colorString addAttribute:NSForegroundColorAttributeName value:color range:NSMakeRange(0,string.length)];
-//    label.lineBreakMode = NSLineBreakByWordWrapping;
+//    NSDate * date=[NSDate date];
+//    CFGregorianDate tempDate=[NSString FormatNSDate:date];
 //    
-//    return colorString;
+//    NSString * tempText=[NSString stringWithFormat:@"%04d%02d%02d%02d%02d%02d", (int)tempDate.year, tempDate.month, tempDate.day, tempDate.hour, tempDate.minute, (int)tempDate.second];
+//    
+//    return tempText;
 //}
+
++ (BOOL)BA_NSStringIsNULL:(NSString *)aStirng
+{
+    if([aStirng isKindOfClass:[NSNull class]]) return YES;
+    if(![aStirng isKindOfClass:[NSString class]]) return YES;
+    
+    if(aStirng == nil) return YES;
+    
+    NSUInteger len = aStirng.length;
+    if (len <= 0) return YES;
+    return NO;
+}
+
++ (BOOL)BA_url_isURL:(NSString *)url
+{
+    if([self BA_NSStringIsNULL:url]) return NO;
+    
+    if([url rangeOfString:@"http://" options:NSCaseInsensitiveSearch].location != NSNotFound)
+        return YES;
+    return NO;
+}
+
+/*! 一般应用程序设置这一组的存在，比如夜间模式，如果你。从8：00-23：00。在这个当前的时间是如何推断出期间。主要的困难在于如何使用NSDate生成8：00时间和23：00时间。然后用当前时间，也许有足够的时间，以使控制。 */
+/**
+ * @brief 推断当前时间是否在fromHour和toHour之间。如。fromHour=8，toHour=23时。即为推断当前时间是否在8:00-23:00之间
+ */
+- (BOOL)BA_time_isBetweenFromHour:(NSInteger)fromHour toHour:(NSInteger)toHour
+{
+    NSDate *date8 = [self BA_time_getCustomDateWithHour:8];
+    NSDate *date23 = [self BA_time_getCustomDateWithHour:23];
+    
+    NSDate *currentDate = [NSDate date];
+    
+    if ([currentDate compare:date8]==NSOrderedDescending && [currentDate compare:date23]==NSOrderedAscending)
+    {
+        NSLog(@"该时间在 %ld:00-%ld:00 之间！", (long)fromHour, (long)toHour);
+        return YES;
+    }
+    return NO;
+}
+
+/**
+ * @brief 生成当天的某个点（返回的是伦敦时间，可直接与当前时间[NSDate date]比較）
+ * @param hour 如hour为“8”。就是上午8:00（本地时间）
+ */
+- (NSDate *)BA_time_getCustomDateWithHour:(NSInteger)hour
+{
+    //获取当前时间
+    NSDate *currentDate = [NSDate date];
+    NSCalendar *currentCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *currentComps = [[NSDateComponents alloc] init];
+    
+    NSInteger unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitWeekday | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond;
+    
+    currentComps = [currentCalendar components:unitFlags fromDate:currentDate];
+    
+    //设置当天的某个点
+    NSDateComponents *resultComps = [[NSDateComponents alloc] init];
+    [resultComps setYear:[currentComps year]];
+    [resultComps setMonth:[currentComps month]];
+    [resultComps setDay:[currentComps day]];
+    [resultComps setHour:hour];
+    
+    NSCalendar *resultCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    return [resultCalendar dateFromComponents:resultComps];
+}
+
+/*! 判断日期是今天，昨天还是明天 */
+- (NSString *)BA_time_compareDate:(NSDate *)date
+{
+    NSTimeInterval secondsPerDay = 24 * 60 * 60;
+    NSDate *today = [[NSDate alloc] init];
+    NSDate *tomorrow, *yesterday;
+    
+    tomorrow = [today dateByAddingTimeInterval: secondsPerDay];
+    yesterday = [today dateByAddingTimeInterval: -secondsPerDay];
+    
+    // 10 first characters of description is the calendar date:
+    NSString * todayString = [[today description] substringToIndex:10];
+    NSString * yesterdayString = [[yesterday description] substringToIndex:10];
+    NSString * tomorrowString = [[tomorrow description] substringToIndex:10];
+    
+    NSString * dateString = [[date description] substringToIndex:10];
+    
+    if ([dateString isEqualToString:todayString])
+    {
+        return @"今天";
+    } else if ([dateString isEqualToString:yesterdayString])
+    {
+        return @"昨天";
+    }else if ([dateString isEqualToString:tomorrowString])
+    {
+        return @"明天";
+    }
+    else
+    {
+        return dateString;
+    }
+}
+
+/*! 计算上报时间差 */
+- (NSString *)BA_time_compareTime
+{
+    // 计算上报时间差
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    // 设置你想要的格式,hh与HH的区别:分别表示12小时制,24小时制
+    [formatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
+    NSTimeZone* timeZone = [NSTimeZone timeZoneWithName:@"Asia/Beijing"];
+    [formatter setTimeZone:timeZone];
+    NSDate *datenow = [NSDate date];
+    // 设置一个字符串的时间
+    NSMutableString *datestring = [NSMutableString stringWithFormat:@"%ld",20141202052740];
+    // 注意 如果20141202052740必须是数字，如果是UNIX时间，不需要下面的插入字符串。
+    [datestring insertString:@"-" atIndex:4];
+    [datestring insertString:@"-" atIndex:7];
+    [datestring insertString:@" " atIndex:10];
+    [datestring insertString:@":" atIndex:13];
+    [datestring insertString:@":" atIndex:16];
+    NSLog(@"datestring==%@",datestring);
+    NSDateFormatter * dm = [[NSDateFormatter alloc]init];
+    
+    //指定输出的格式  这里格式必须是和上面定义字符串的格式相同，否则输出空
+    [dm setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
+    NSDate * newdate = [dm dateFromString:datestring];
+    long dd = (long)[datenow timeIntervalSince1970] - [newdate timeIntervalSince1970];
+    NSString *timeString=@"";
+    if (dd/3600<1)
+    {
+        timeString = [NSString stringWithFormat:@"%ld", dd/60];
+        timeString=[NSString stringWithFormat:@"%@分钟前", timeString];
+    }
+    if (dd/3600>1&&dd/86400<1)
+    {
+        timeString = [NSString stringWithFormat:@"%ld", dd/3600];
+        timeString=[NSString stringWithFormat:@"%@小时前", timeString];
+    }
+    if (dd/86400>1)
+    {
+        timeString = [NSString stringWithFormat:@"%ld", dd/86400];
+        timeString=[NSString stringWithFormat:@"%@天前", timeString];
+    }
+    NSLog(@"=====%@",timeString);
+    return timeString;
+}
+
+/*! 去掉字符串中的html标签的方法 */
+- (NSString *)BA_filterHTML:(NSString *)html
+{
+    NSScanner * scanner = [NSScanner scannerWithString:html];
+    NSString * text = nil;
+    while([scanner isAtEnd]==NO)
+    {
+        //找到标签的起始位置
+        [scanner scanUpToString:@"<" intoString:nil];
+        //找到标签的结束位置
+        [scanner scanUpToString:@">" intoString:&text];
+        //替换字符
+        html = [html stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%@>",text] withString:@""];
+    }
+    //    NSString * regEx = @"<([^>]*)>";
+    //    html = [html stringByReplacingOccurrencesOfString:regEx withString:@""];
+    html = [html stringByReplacingOccurrencesOfString:@"&nbsp;" withString:@""];    //去掉html里面的空格
+    html = [html stringByReplacingOccurrencesOfString:@"\n" withString:@""];    //去掉换行
+    
+    html = [html stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];  //去掉前后两边空白
+    //    NSLog(@"html:------------%@",html);
+    return html;
+}
+
+/*! 十六进制转换为普通字符串 */
+- (NSString *)BA_stringFromHexString:(NSString *)hexString
+{
+    char *myBuffer = (char *)malloc((int)[hexString length] / 2 + 1);
+    bzero(myBuffer, [hexString length] / 2 + 1);
+    for (int i = 0; i < [hexString length] - 1; i += 2) {
+        unsigned int anInt;
+        NSString * hexCharStr = [hexString substringWithRange:NSMakeRange(i, 2)];
+        NSScanner * scanner = [[NSScanner alloc] initWithString:hexCharStr];
+        [scanner scanHexInt:&anInt];
+        myBuffer[i / 2] = (char)anInt;
+    }
+    NSString *unicodeString = [NSString stringWithCString:myBuffer encoding:4];
+    NSLog(@"------字符串=======%@",unicodeString);
+    return unicodeString;
+}
+
+/*! 获取软件沙盒路径 */
++ (NSString *)BA_path_getApplicationSupportPath
+{
+    //such as:../Applications/9A425424-645E-4337-8730-8A080DF086F4/Library/Application Support
+    
+    NSArray* libraryPaths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSAllDomainsMask, YES);
+    
+    NSString *path = nil;
+    if ([libraryPaths count] > 0) {
+        path = [libraryPaths objectAtIndex:0];
+    }
+    
+    if (![self BA_path_fileExist:path]) {
+        [self BA_path_createDirectory:path];
+    }
+    
+    return path;
+}
+
+/*! 获取软件沙盒Documents路径 */
++ (NSString *)BA_path_getDocumentsPath
+{
+    NSString *documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES) objectAtIndex:0];
+    
+    //such as:../Applications/9A425424-645E-4337-8730-8A080DF086F4/Documents
+    return documentPath;
+}
+
+/*! 获取软件沙盒cache路径 */
++ (NSString *)BA_path_getCachePath
+{
+    // such as : ../Applications/9A425424-645E-4337-8730-8A080DF086F4/Library/Caches
+    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask,YES) objectAtIndex:0];
+    return cachePath;
+}
+
+/*! 获取软件沙盒cachesDic路径 */
++ (NSString *)BA_path_getTemPath
+{
+    NSString *cachesDic = NSTemporaryDirectory();
+    return cachesDic;
+}
+
+/*! 在软件沙盒指定的路径创建一个目录 */
++ (BOOL)BA_path_createDirectory:(NSString *)newDirectory
+{
+    if([self BA_path_fileExist:newDirectory]) return YES;
+    
+    NSError * error = nil;
+    BOOL finished = [[NSFileManager defaultManager] createDirectoryAtPath:newDirectory
+                                              withIntermediateDirectories:YES
+                                                               attributes:nil
+                                                                    error:&error];
+    return finished;
+}
+
+/*! 在软件沙盒指定的路径删除一个目录 */
++ (BOOL)BA_path_deleteFilesysItem:(NSString*)strItem
+{
+    if ([strItem length] == 0) {
+        return YES;
+    }
+    
+    NSError * error = nil;
+    
+    BOOL finished = [[NSFileManager defaultManager] removeItemAtPath:strItem error:&error];
+    return finished;
+}
+
+/*! 在软件沙盒路径移动一个目录到另一个目录中 */
++ (BOOL)BA_path_moveFilesysItem:(NSString *)srcPath toPath:(NSString *)dstPath
+{
+    if (![self BA_path_fileExist:srcPath]) return NO;
+    
+    NSError * error = nil;
+    return [[NSFileManager defaultManager] moveItemAtPath:srcPath
+                                                   toPath:dstPath
+                                                    error:&error];
+}
+
+/*! 在软件沙盒路径中查看有没有这个路径 */
++ (BOOL)BA_path_fileExist:(NSString*)strPath
+{
+    NSFileManager *file_manager = [NSFileManager defaultManager];
+    BOOL finded = [file_manager fileExistsAtPath:strPath];
+    return finded;
+}
+
+/*! 在软件沙盒路径中获取指定userPath路径 */
+- (NSString *)BA_path_getUserInfoStorePath:(NSString *)userPath
+{
+    NSString *destPath = [NSString BA_path_getDocumentsPath];
+    NSString *userInfoPath = [destPath stringByAppendingString:[NSString stringWithFormat:@"/%@", userPath]];
+    return userInfoPath;
+}
+
+/*! 判断字符串是否是邮箱账号 */
++ (BOOL)BA_isEmailString:(NSString *)emailString
+{
+    NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:emailString];
+}
+
+/*! 判断字符串是否是字母或数字 */
++ (BOOL)BA_isLetterOrNumberString:(NSString *)string
+{
+    NSString *letterOrNumberRegex = @"[A-Z0-9a-z]+";
+    NSPredicate *letterOrNumberTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", letterOrNumberRegex];
+    return [letterOrNumberTest evaluateWithObject:string];
+}
+
+/*! 获取字符串的长度 */
++ (NSUInteger)BA_getLengthOfStr:(NSString*)str
+{
+    NSStringEncoding enc = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+    NSData* da = [str dataUsingEncoding:enc];
+    return [da length];
+}
+
+/*! 判断字符串是否是手机号码 */
++ (BOOL)BA_isMobileNumber:(NSString *)mobileNum
+{
+    /*
+     13 14 15 16 17 18 开头号码段
+     */
+    NSString *phoneRegex = @"^1[34578]\\d{9}$";
+    NSPredicate *phoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",phoneRegex];
+    return [phoneTest evaluateWithObject:mobileNum];
+}
+
+/*! 特殊字符串处理：改变部分字符串的字体颜色 */
++ (NSMutableAttributedString *)BA_creatMutableAttributedString:(NSString *)text textColor:(UIColor *)textColor bgColor:(UIColor *)bgColor font:(CGFloat)fontSize range:(NSRange)range
+{
+    NSMutableAttributedString *attributedStr = [[NSMutableAttributedString alloc]initWithString:text];
+    
+    [attributedStr addAttributes:@{NSForegroundColorAttributeName:textColor,NSBackgroundColorAttributeName:bgColor, NSFontAttributeName:[UIFont systemFontOfSize:fontSize]} range:range];
+    return attributedStr;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 @end

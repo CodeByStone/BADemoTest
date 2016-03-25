@@ -44,7 +44,7 @@
         model.imageName = self.quesstionDataModel.imageName;
         model.userName = self.quesstionDataModel.userName;
         model.content = contentStr;
-        model.time = [NSString getCurrentDateAndTime];
+        model.time = [NSString BA_time_getCurrentDateAndTime];
         
         [self.replyDataArray addObject:model];
         [self.tableView reloadData];
