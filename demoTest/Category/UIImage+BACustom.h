@@ -22,4 +22,11 @@
  */
 + (nullable UIImage *)imageWithSmallGIFData:(nonnull NSData *)data scale:(CGFloat)scale;
 
+// 加载最原始的图片
++ (instancetype)imageWithOrginalName:(NSString *)imageName;
+
++ (instancetype)imageWithStretchableName:(NSString *)imageName;
+
++ (UIImage *)imageWithColor:(UIColor *)color;
+
 @end

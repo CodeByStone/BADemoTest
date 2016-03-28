@@ -19,7 +19,8 @@
 #import "UIView+BACustom.h"
 #import "NSString+BACustom.h"
 #import "NSData+BACustom.h"
-
+#import "UIImage+BACustom.h"
+#import "UINavigationItem+CustomItem.h"
 
 #import <Masonry.h>
 #import "UIView+SDAutoLayout.h"

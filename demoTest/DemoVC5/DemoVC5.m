@@ -9,10 +9,20 @@
 #import "DemoVC5.h"
 #import "DemoVC5Model.h"
 #import "DemoVC5Cell.h"
+#import "BASearchBar.h"
+#import "BATokenManager.h"
+#import "DemoVC5_SearchVC.h"
+
+#define fontCOLOR [UIColor colorWithRed:163/255.0f green:163/255.0f blue:163/255.0f alpha:1]
 
 @interface DemoVC5 ()
 
 @property (nonatomic, strong) NSMutableArray *dataArray;
+@property (nonatomic, strong) BASearchBar *searchBar;
+
+@property (nonatomic, strong) NSMutableArray * searchHistory;
+@property (nonatomic, strong) NSArray *myArray;//搜索记录的数组
+
 
 @end
 
@@ -22,7 +32,13 @@
     [super viewDidLoad];
     
     [self creatModelsData];
-    
+    [self creatNaviSearch];
+}
+
+- (void)creatNaviSearch
+{
+    UIBarButtonItem *searchBtn = [[UIBarButtonItem alloc] initWithTitle:@"搜索" style:UIBarButtonItemStylePlain target:self action:@selector(searchBarClick)];
+    self.navigationItem.rightBarButtonItem = searchBtn;
 }
 
 - (void)creatModelsData
@@ -50,13 +66,7 @@
                            @"高能效的M9 运动协处理器M9 运动协处理器直接嵌入在 A9 芯片上，并与加速感应器、指南针及三轴陀螺仪相连，具备一系列追踪健身活动的功能，比如记录你的步数和距离。而且，有了它，你不必拿起 iPhone，只需说一声 “嘿 Siri” 就能轻松激活 Siri。",
                            @"Live Photos 可捕捉声音和动作，让你的影像生动鲜活。只需在你的 1200 万像素照片上按住任意位置，就能重温照片拍摄前后的时刻，让你的照片变成鲜活的记忆。"
                            ];
-    
-//    NSArray *picImageNamesArray = @[ @"pic0.jpg",
-//                                     @"pic1.jpg",
-//                                     @"pic2.jpg",
-//                                     @"pic3.jpg",
-//                                     @"pic4.jpg",
-//                                     ];
+
     NSArray *timeArray = @[@"2016-03-06",@"2016-03-07",@"2016-03-08",@"2016-03-09",@"2016-03-10"];
     
     for (int i = 0; i < 10; i++) {
@@ -124,6 +134,47 @@
     }
     return 10;
 }
+
+- (void)searchBarClick
+{
+    
+    DemoVC5_SearchVC *replyVC = [[DemoVC5_SearchVC alloc] init];
+    replyVC.title = @"搜索";
+    [self.navigationController pushViewController:replyVC animated:YES];
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

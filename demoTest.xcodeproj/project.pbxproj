@@ -105,6 +105,8 @@
 		C48063B31CA27973000DD080 /* DemoVC10Model.m in Sources */ = {isa = PBXBuildFile; fileRef = C48063B21CA27973000DD080 /* DemoVC10Model.m */; };
 		C48063B61CA27A30000DD080 /* DemoVC10Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = C48063B51CA27A30000DD080 /* DemoVC10Cell.m */; };
 		C48063B91CA28CA5000DD080 /* DemoVC10_replyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C48063B81CA28CA5000DD080 /* DemoVC10_replyVC.m */; };
+		C4C2E17D1CA8C95900C04EE5 /* BATokenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4C2E17C1CA8C95900C04EE5 /* BATokenManager.m */; };
+		C4C2E1801CA8CB9A00C04EE5 /* DemoVC5_SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C4C2E17F1CA8CB9A00C04EE5 /* DemoVC5_SearchVC.m */; };
 		C4E2D8F41C9D21A20083D6AE /* DemoVC8.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E2D8F31C9D21A20083D6AE /* DemoVC8.m */; };
 		C4E2D8F71C9D22570083D6AE /* DemoVC8_View1.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E2D8F61C9D22570083D6AE /* DemoVC8_View1.m */; };
 		C4F2625E1C9964E40026A0D6 /* DemoVC5.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F2625D1C9964E40026A0D6 /* DemoVC5.m */; };
@@ -112,6 +114,9 @@
 		C4F262641C99663C0026A0D6 /* DemoVC5Model.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F262631C99663C0026A0D6 /* DemoVC5Model.m */; };
 		C4F2626A1C997DCC0026A0D6 /* DemoVC6.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F262691C997DCC0026A0D6 /* DemoVC6.m */; };
 		C4F2626D1C997E210026A0D6 /* DemoVC6Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F2626C1C997E210026A0D6 /* DemoVC6Cell.m */; };
+		C4F623701CA8C53900DCF152 /* BASearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F6236F1CA8C53900DCF152 /* BASearchBar.m */; };
+		C4F623761CA8C76100DCF152 /* BACustomBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F623731CA8C76100DCF152 /* BACustomBarItem.m */; };
+		C4F623771CA8C76100DCF152 /* UINavigationItem+CustomItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F623751CA8C76100DCF152 /* UINavigationItem+CustomItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -283,6 +288,10 @@
 		C48063B51CA27A30000DD080 /* DemoVC10Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC10Cell.m; sourceTree = "<group>"; };
 		C48063B71CA28CA5000DD080 /* DemoVC10_replyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC10_replyVC.h; sourceTree = "<group>"; };
 		C48063B81CA28CA5000DD080 /* DemoVC10_replyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC10_replyVC.m; sourceTree = "<group>"; };
+		C4C2E17B1CA8C95900C04EE5 /* BATokenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BATokenManager.h; sourceTree = "<group>"; };
+		C4C2E17C1CA8C95900C04EE5 /* BATokenManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BATokenManager.m; sourceTree = "<group>"; };
+		C4C2E17E1CA8CB9A00C04EE5 /* DemoVC5_SearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC5_SearchVC.h; sourceTree = "<group>"; };
+		C4C2E17F1CA8CB9A00C04EE5 /* DemoVC5_SearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC5_SearchVC.m; sourceTree = "<group>"; };
 		C4E2D8F21C9D21A20083D6AE /* DemoVC8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC8.h; sourceTree = "<group>"; };
 		C4E2D8F31C9D21A20083D6AE /* DemoVC8.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC8.m; sourceTree = "<group>"; };
 		C4E2D8F51C9D22570083D6AE /* DemoVC8_View1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC8_View1.h; sourceTree = "<group>"; };
@@ -297,6 +306,12 @@
 		C4F262691C997DCC0026A0D6 /* DemoVC6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC6.m; sourceTree = "<group>"; };
 		C4F2626B1C997E210026A0D6 /* DemoVC6Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC6Cell.h; sourceTree = "<group>"; };
 		C4F2626C1C997E210026A0D6 /* DemoVC6Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC6Cell.m; sourceTree = "<group>"; };
+		C4F6236E1CA8C53900DCF152 /* BASearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BASearchBar.h; sourceTree = "<group>"; };
+		C4F6236F1CA8C53900DCF152 /* BASearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BASearchBar.m; sourceTree = "<group>"; };
+		C4F623721CA8C76100DCF152 /* BACustomBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BACustomBarItem.h; sourceTree = "<group>"; };
+		C4F623731CA8C76100DCF152 /* BACustomBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BACustomBarItem.m; sourceTree = "<group>"; };
+		C4F623741CA8C76100DCF152 /* UINavigationItem+CustomItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+CustomItem.h"; sourceTree = "<group>"; };
+		C4F623751CA8C76100DCF152 /* UINavigationItem+CustomItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+CustomItem.m"; sourceTree = "<group>"; };
 		E0AA54C6B23A77162D9B2A27 /* Pods-demoTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demoTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-demoTest/Pods-demoTest.release.xcconfig"; sourceTree = "<group>"; };
 		ED601320E66DF2ED522196AB /* libPods-demoTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-demoTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -383,6 +398,7 @@
 		C4225D971C990ED2006262C9 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				C4F623711CA8C76100DCF152 /* BANavigationItem */,
 				C4225D9D1C990ED2006262C9 /* SDPhotoBrowser */,
 			);
 			path = Lib;
@@ -422,6 +438,12 @@
 				C4F262631C99663C0026A0D6 /* DemoVC5Model.m */,
 				C4F2625F1C99661C0026A0D6 /* DemoVC5Cell.h */,
 				C4F262601C99661C0026A0D6 /* DemoVC5Cell.m */,
+				C4F6236E1CA8C53900DCF152 /* BASearchBar.h */,
+				C4F6236F1CA8C53900DCF152 /* BASearchBar.m */,
+				C4C2E17E1CA8CB9A00C04EE5 /* DemoVC5_SearchVC.h */,
+				C4C2E17F1CA8CB9A00C04EE5 /* DemoVC5_SearchVC.m */,
+				C4C2E17B1CA8C95900C04EE5 /* BATokenManager.h */,
+				C4C2E17C1CA8C95900C04EE5 /* BATokenManager.m */,
 			);
 			path = DemoVC5;
 			sourceTree = "<group>";
@@ -692,6 +714,17 @@
 			path = DemoVC10;
 			sourceTree = "<group>";
 		};
+		C4F623711CA8C76100DCF152 /* BANavigationItem */ = {
+			isa = PBXGroup;
+			children = (
+				C4F623721CA8C76100DCF152 /* BACustomBarItem.h */,
+				C4F623731CA8C76100DCF152 /* BACustomBarItem.m */,
+				C4F623741CA8C76100DCF152 /* UINavigationItem+CustomItem.h */,
+				C4F623751CA8C76100DCF152 /* UINavigationItem+CustomItem.m */,
+			);
+			path = BANavigationItem;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -923,10 +956,13 @@
 			files = (
 				C440E5621C982D41006FFA73 /* DemoVC3Cell.m in Sources */,
 				C440E5701C98360D006FFA73 /* DemoVC2HeadView.m in Sources */,
+				C4C2E17D1CA8C95900C04EE5 /* BATokenManager.m in Sources */,
+				C4F623761CA8C76100DCF152 /* BACustomBarItem.m in Sources */,
 				C40A7E131C9A5462006F0687 /* DemoVC7_replyVC.m in Sources */,
 				C4225DC71C990ED2006262C9 /* UIView+BACustom.m in Sources */,
 				C48063B01CA276CD000DD080 /* DemoVC10.m in Sources */,
 				C4F2626D1C997E210026A0D6 /* DemoVC6Cell.m in Sources */,
+				C4F623701CA8C53900DCF152 /* BASearchBar.m in Sources */,
 				C4F262611C99661C0026A0D6 /* DemoVC5Cell.m in Sources */,
 				C4225DCA1C990ED2006262C9 /* SDBrowserImageView.m in Sources */,
 				C40823451C9EE35800E85C9C /* UITableView+BACustom.m in Sources */,
@@ -940,6 +976,7 @@
 				C42453CA1C979D9300D01865 /* main.m in Sources */,
 				C440E5711C98360D006FFA73 /* DemoVC2Model.m in Sources */,
 				C408231D1C9EA8F500E85C9C /* NSNumber+BACustom.m in Sources */,
+				C4F623771CA8C76100DCF152 /* UINavigationItem+CustomItem.m in Sources */,
 				C4225D8D1C98EB6D006262C9 /* YRDemandModel.m in Sources */,
 				C4F2626A1C997DCC0026A0D6 /* DemoVC6.m in Sources */,
 				C40823201C9EAFF200E85C9C /* NSArray+BACustom.m in Sources */,
@@ -971,6 +1008,7 @@
 				C40823261C9ED9BA00E85C9C /* UIImage+BACustom.m in Sources */,
 				C40A7E161C9A5882006F0687 /* DemoVC7_quesstionCell.m in Sources */,
 				C4225D831C98EA62006262C9 /* YRDemandShareCell.m in Sources */,
+				C4C2E1801CA8CB9A00C04EE5 /* DemoVC5_SearchVC.m in Sources */,
 				C40823141C9EA0A000E85C9C /* BACustomButton.m in Sources */,
 				C4F262641C99663C0026A0D6 /* DemoVC5Model.m in Sources */,
 			);
