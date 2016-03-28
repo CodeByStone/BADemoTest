@@ -29,4 +29,5 @@
 - (void)hiddenPickerView;
 
 - (NSString *)protectString:(NSString *)string;
+
 @end

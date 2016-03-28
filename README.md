@@ -24,7 +24,11 @@ ios开发中重难点展示
 ## 2016.03.28 --- 
 
 >##1、新增DemoVC11，城市选择器
+```
+实现一行代码回调结果：
+- (void)getSelectCity:(NSString *)city;
 
+```
 ![image](https://github.com/boai/BADemoTest/blob/master/Image/image6.png)
 
 ## 2016.03.23 --- 
