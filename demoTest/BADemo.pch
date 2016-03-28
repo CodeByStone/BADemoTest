@@ -21,6 +21,7 @@
 #import "NSData+BACustom.h"
 #import "UIImage+BACustom.h"
 #import "UINavigationItem+CustomItem.h"
+#import "UIColor+RCColor.h"
 
 #import <Masonry.h>
 #import "UIView+SDAutoLayout.h"

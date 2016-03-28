@@ -21,6 +21,12 @@ ios开发中重难点展示
 
 # 更新记录：【倒叙】（最新的更新在最上面）【基本每天一更】
 
+## 2016.03.28 --- 
+
+>##1、新增DemoVC11，城市选择器
+
+![image](https://github.com/boai/BADemoTest/blob/master/Image/image6.png)
+
 ## 2016.03.23 --- 
 
 >##1、新增DemoVC10，多级评论，点击可显示评论详情

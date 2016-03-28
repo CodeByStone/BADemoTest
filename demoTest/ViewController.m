@@ -59,6 +59,7 @@
         [self addCell:@"8、动态该表label的高度" class:@"DemoVC8"];
         [self addCell:@"9、NSString扩展" class:@"DemoVC9"];
         [self addCell:@"10、多级评论" class:@"DemoVC10"];
+        [self addCell:@"11、城市选择器(pickView)" class:@"DemoVC11"];
 
         [self.tableView reloadData];
     }

@@ -50,6 +50,7 @@
 #define kBGGrayColor       KCOLOR(239, 239, 239, 1.0)
 #define kTEXTGrayColor     KCOLOR(148, 147, 133, 1.0)
 #define kBLUEColor         KCOLOR(78, 164, 255, 1.0)
+#define kBGClearColor      [UIColor colorWithRed:0.1f green:0.1f blue:0.1f alpha:0.7f]
 
 
 // 警告框-一个按钮【VC】
