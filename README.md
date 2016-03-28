@@ -28,7 +28,6 @@ ios开发中重难点展示
 实现一行代码回调结果：
 - (void)getSelectCity:(NSString *)city;
 
-```
 ![image](https://github.com/boai/BADemoTest/blob/master/Image/image6.png)
 
 ## 2016.03.23 --- 
