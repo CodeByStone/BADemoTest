@@ -36,7 +36,6 @@ ios开发中重难点展示
             field.secureTextEntry = YES;
             field.placeholder = @"请输入密码：";
         }
-        
     } animated:YES action:^(NSArray<UITextField *> *fields, NSInteger index) {
         NSLog(@"账号：%@, 密码：%@", fields[0].text, fields[1].text);
     }];
