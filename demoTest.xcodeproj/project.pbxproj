@@ -109,6 +109,9 @@
 		C48063B31CA27973000DD080 /* DemoVC10Model.m in Sources */ = {isa = PBXBuildFile; fileRef = C48063B21CA27973000DD080 /* DemoVC10Model.m */; };
 		C48063B61CA27A30000DD080 /* DemoVC10Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = C48063B51CA27A30000DD080 /* DemoVC10Cell.m */; };
 		C48063B91CA28CA5000DD080 /* DemoVC10_replyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C48063B81CA28CA5000DD080 /* DemoVC10_replyVC.m */; };
+		C493ED291CAA92CE00DF2A44 /* UIViewController+BAAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C493ED281CAA92CE00DF2A44 /* UIViewController+BAAlertView.m */; };
+		C493ED2C1CAA92F600DF2A44 /* BACustomModalTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = C493ED2B1CAA92F600DF2A44 /* BACustomModalTransition.m */; };
+		C493ED2F1CAA932900DF2A44 /* BARadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C493ED2E1CAA932900DF2A44 /* BARadioButton.m */; };
 		C4C2E17D1CA8C95900C04EE5 /* BATokenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4C2E17C1CA8C95900C04EE5 /* BATokenManager.m */; };
 		C4C2E1801CA8CB9A00C04EE5 /* DemoVC5_SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C4C2E17F1CA8CB9A00C04EE5 /* DemoVC5_SearchVC.m */; };
 		C4E2D8F41C9D21A20083D6AE /* DemoVC8.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E2D8F31C9D21A20083D6AE /* DemoVC8.m */; };
@@ -299,6 +302,12 @@
 		C48063B51CA27A30000DD080 /* DemoVC10Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC10Cell.m; sourceTree = "<group>"; };
 		C48063B71CA28CA5000DD080 /* DemoVC10_replyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC10_replyVC.h; sourceTree = "<group>"; };
 		C48063B81CA28CA5000DD080 /* DemoVC10_replyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC10_replyVC.m; sourceTree = "<group>"; };
+		C493ED271CAA92CE00DF2A44 /* UIViewController+BAAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BAAlertView.h"; sourceTree = "<group>"; };
+		C493ED281CAA92CE00DF2A44 /* UIViewController+BAAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BAAlertView.m"; sourceTree = "<group>"; };
+		C493ED2A1CAA92F600DF2A44 /* BACustomModalTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BACustomModalTransition.h; sourceTree = "<group>"; };
+		C493ED2B1CAA92F600DF2A44 /* BACustomModalTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BACustomModalTransition.m; sourceTree = "<group>"; };
+		C493ED2D1CAA932900DF2A44 /* BARadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BARadioButton.h; sourceTree = "<group>"; };
+		C493ED2E1CAA932900DF2A44 /* BARadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BARadioButton.m; sourceTree = "<group>"; };
 		C4C2E17B1CA8C95900C04EE5 /* BATokenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BATokenManager.h; sourceTree = "<group>"; };
 		C4C2E17C1CA8C95900C04EE5 /* BATokenManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BATokenManager.m; sourceTree = "<group>"; };
 		C4C2E17E1CA8CB9A00C04EE5 /* DemoVC5_SearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC5_SearchVC.h; sourceTree = "<group>"; };
@@ -493,6 +502,12 @@
 				C40823131C9EA0A000E85C9C /* BACustomButton.h */,
 				C4245FD71CA51412006740E3 /* NSDate+BACustom.h */,
 				C4245FD81CA51412006740E3 /* NSDate+BACustom.m */,
+				C493ED271CAA92CE00DF2A44 /* UIViewController+BAAlertView.h */,
+				C493ED281CAA92CE00DF2A44 /* UIViewController+BAAlertView.m */,
+				C493ED2A1CAA92F600DF2A44 /* BACustomModalTransition.h */,
+				C493ED2B1CAA92F600DF2A44 /* BACustomModalTransition.m */,
+				C493ED2D1CAA932900DF2A44 /* BARadioButton.h */,
+				C493ED2E1CAA932900DF2A44 /* BARadioButton.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1011,6 +1026,7 @@
 				C42453CA1C979D9300D01865 /* main.m in Sources */,
 				C440E5711C98360D006FFA73 /* DemoVC2Model.m in Sources */,
 				C408231D1C9EA8F500E85C9C /* NSNumber+BACustom.m in Sources */,
+				C493ED2C1CAA92F600DF2A44 /* BACustomModalTransition.m in Sources */,
 				C4F623771CA8C76100DCF152 /* UINavigationItem+CustomItem.m in Sources */,
 				C4225D8D1C98EB6D006262C9 /* YRDemandModel.m in Sources */,
 				C4F2626A1C997DCC0026A0D6 /* DemoVC6.m in Sources */,
@@ -1035,6 +1051,7 @@
 				C4F2625E1C9964E40026A0D6 /* DemoVC5.m in Sources */,
 				C40A7E0E1C9A3C56006F0687 /* DemoVC7.m in Sources */,
 				C404EC101CA9628400A82D3A /* BAPickerView.m in Sources */,
+				C493ED2F1CAA932900DF2A44 /* BARadioButton.m in Sources */,
 				C4E2D8F71C9D22570083D6AE /* DemoVC8_View1.m in Sources */,
 				C48063B31CA27973000DD080 /* DemoVC10Model.m in Sources */,
 				C424540B1C97A32500D01865 /* DemoVC1.m in Sources */,
@@ -1048,6 +1065,7 @@
 				C4225D831C98EA62006262C9 /* YRDemandShareCell.m in Sources */,
 				C4C2E1801CA8CB9A00C04EE5 /* DemoVC5_SearchVC.m in Sources */,
 				C40823141C9EA0A000E85C9C /* BACustomButton.m in Sources */,
+				C493ED291CAA92CE00DF2A44 /* UIViewController+BAAlertView.m in Sources */,
 				C4F262641C99663C0026A0D6 /* DemoVC5Model.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
