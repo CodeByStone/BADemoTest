@@ -22,7 +22,7 @@ ios开发中重难点展示
 # 更新记录：【倒叙】（最新的更新在最上面）【基本每天一更】
 
 ## 2016.03.29 --- 
->##3、新增demoVC12，alert封装
+>##3、新增demoVC12，alert封装，简单的一行代码block回调！
 ```
     /** 下面是带输入框的alert，自适应系统 */
     [self BAAlertWithTitle:@"测试ios7Alert" message:@"ios7Alert message" buttons:@[KCancel, KSure]  textFieldNumber:2 configuration:^(UITextField *field, NSInteger index) {
