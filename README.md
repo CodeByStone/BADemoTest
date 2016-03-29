@@ -23,6 +23,23 @@ ios开发中重难点展示
 
 ## 2016.03.29 --- 
 >##3、新增demoVC12，alert封装
+```
+    /** 下面是带输入框的alert，自适应系统 */
+    [self BAAlertWithTitle:@"测试ios7Alert" message:@"ios7Alert message" buttons:@[KCancel, KSure]  textFieldNumber:2 configuration:^(UITextField *field, NSInteger index) {
+        if (index == 0)
+        {
+            field.secureTextEntry = NO;
+            field.placeholder = @"请输入账号：";
+        }
+        if (index == 1)
+        {
+            field.secureTextEntry = YES;
+            field.placeholder = @"请输入密码：";
+        }
+        
+    } animated:YES action:^(NSArray<UITextField *> *fields, NSInteger index) {
+        NSLog(@"账号：%@, 密码：%@", fields[0].text, fields[1].text);
+    }];
 
 ![image](https://github.com/boai/BADemoTest/blob/master/Image/image7.png)
 ![image](https://github.com/boai/BADemoTest/blob/master/Image/image8.png)
