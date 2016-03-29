@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DemoVC12">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3A-o2-gy1">
+                    <rect key="frame" x="0.0" y="80" width="150" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="8Oe-C5-Bpc"/>
+                    </constraints>
+                    <state key="normal" title="ios7Alert"/>
+                    <connections>
+                        <action selector="ios7Alert:" destination="-1" eventType="touchUpInside" id="LXr-z7-UNN"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGZ-Ap-Uql">
+                    <rect key="frame" x="150" y="80" width="150" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="rjy-ky-bDE"/>
+                    </constraints>
+                    <state key="normal" title="ios7Actionsheet"/>
+                    <connections>
+                        <action selector="ios7Actionsheet:" destination="-1" eventType="touchUpInside" id="eOc-mu-z3B"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Juy-6N-QXn">
+                    <rect key="frame" x="300" y="80" width="150" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="InA-Hd-c3B"/>
+                    </constraints>
+                    <state key="normal" title="ios8Alert"/>
+                    <connections>
+                        <action selector="ios8Alert:" destination="-1" eventType="touchUpInside" id="DpP-w7-1NI"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3m-MF-yPM">
+                    <rect key="frame" x="450" y="80" width="150" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="0aO-Cx-9OD"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="DnF-Rf-RfH"/>
+                    </constraints>
+                    <state key="normal" title="ios8Actionsheet"/>
+                    <connections>
+                        <action selector="ios8ActionSheet:" destination="-1" eventType="touchUpInside" id="QqJ-Kq-fUJ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="R3m-MF-yPM" firstAttribute="leading" secondItem="Juy-6N-QXn" secondAttribute="trailing" id="1AN-cg-p6N"/>
+                <constraint firstItem="IGZ-Ap-Uql" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="3N1-bD-1eP"/>
+                <constraint firstItem="IGZ-Ap-Uql" firstAttribute="width" secondItem="r3A-o2-gy1" secondAttribute="width" id="8vh-8N-s5q"/>
+                <constraint firstItem="Juy-6N-QXn" firstAttribute="leading" secondItem="IGZ-Ap-Uql" secondAttribute="trailing" id="ERp-OW-1aG"/>
+                <constraint firstItem="Juy-6N-QXn" firstAttribute="width" secondItem="r3A-o2-gy1" secondAttribute="width" id="Hsi-tE-dUs"/>
+                <constraint firstItem="R3m-MF-yPM" firstAttribute="height" secondItem="r3A-o2-gy1" secondAttribute="height" id="Jwj-sg-M6l"/>
+                <constraint firstItem="Juy-6N-QXn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="R0O-b1-COe"/>
+                <constraint firstItem="R3m-MF-yPM" firstAttribute="leading" secondItem="Juy-6N-QXn" secondAttribute="trailing" id="S02-2h-GTi"/>
+                <constraint firstItem="r3A-o2-gy1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="V3u-To-Woy"/>
+                <constraint firstItem="r3A-o2-gy1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Zqe-Ti-ERK"/>
+                <constraint firstItem="Juy-6N-QXn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="aqq-6a-ZNz"/>
+                <constraint firstItem="R3m-MF-yPM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="bkp-Na-HwI"/>
+                <constraint firstItem="r3A-o2-gy1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="cSh-E8-x00"/>
+                <constraint firstItem="R3m-MF-yPM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="cnp-IT-POm"/>
+                <constraint firstItem="Juy-6N-QXn" firstAttribute="leading" secondItem="IGZ-Ap-Uql" secondAttribute="trailing" id="gnA-MA-v2t"/>
+                <constraint firstItem="R3m-MF-yPM" firstAttribute="width" secondItem="r3A-o2-gy1" secondAttribute="width" id="jxo-tC-dg1"/>
+                <constraint firstItem="IGZ-Ap-Uql" firstAttribute="leading" secondItem="r3A-o2-gy1" secondAttribute="trailing" id="koK-P0-W3G"/>
+                <constraint firstItem="r3A-o2-gy1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="m2E-zR-yux"/>
+                <constraint firstItem="IGZ-Ap-Uql" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="ook-6i-iK5"/>
+                <constraint firstItem="IGZ-Ap-Uql" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="qso-da-3kO"/>
+                <constraint firstAttribute="trailing" secondItem="R3m-MF-yPM" secondAttribute="trailing" id="r7A-Xs-2Y5"/>
+                <constraint firstItem="Juy-6N-QXn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="rJz-3F-uUc"/>
+                <constraint firstAttribute="trailing" secondItem="R3m-MF-yPM" secondAttribute="trailing" id="sNR-76-Msm"/>
+                <constraint firstItem="IGZ-Ap-Uql" firstAttribute="height" secondItem="r3A-o2-gy1" secondAttribute="height" id="sst-LV-NUe"/>
+                <constraint firstItem="Juy-6N-QXn" firstAttribute="height" secondItem="r3A-o2-gy1" secondAttribute="height" id="zks-bE-VQR"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="cSh-E8-x00"/>
+                    <exclude reference="m2E-zR-yux"/>
+                    <exclude reference="ook-6i-iK5"/>
+                    <exclude reference="aqq-6a-ZNz"/>
+                    <exclude reference="bkp-Na-HwI"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="268" y="374"/>
+        </view>
+    </objects>
+</document>

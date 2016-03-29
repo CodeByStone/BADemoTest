@@ -109,6 +109,8 @@
 		C48063B31CA27973000DD080 /* DemoVC10Model.m in Sources */ = {isa = PBXBuildFile; fileRef = C48063B21CA27973000DD080 /* DemoVC10Model.m */; };
 		C48063B61CA27A30000DD080 /* DemoVC10Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = C48063B51CA27A30000DD080 /* DemoVC10Cell.m */; };
 		C48063B91CA28CA5000DD080 /* DemoVC10_replyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C48063B81CA28CA5000DD080 /* DemoVC10_replyVC.m */; };
+		C4815DEE1CAA9C8800B22831 /* DemoVC12.m in Sources */ = {isa = PBXBuildFile; fileRef = C4815DEC1CAA9C8800B22831 /* DemoVC12.m */; };
+		C4815DEF1CAA9C8800B22831 /* DemoVC12.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4815DED1CAA9C8800B22831 /* DemoVC12.xib */; };
 		C493ED291CAA92CE00DF2A44 /* UIViewController+BAAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C493ED281CAA92CE00DF2A44 /* UIViewController+BAAlertView.m */; };
 		C493ED2C1CAA92F600DF2A44 /* BACustomModalTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = C493ED2B1CAA92F600DF2A44 /* BACustomModalTransition.m */; };
 		C493ED2F1CAA932900DF2A44 /* BARadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C493ED2E1CAA932900DF2A44 /* BARadioButton.m */; };
@@ -302,6 +304,9 @@
 		C48063B51CA27A30000DD080 /* DemoVC10Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC10Cell.m; sourceTree = "<group>"; };
 		C48063B71CA28CA5000DD080 /* DemoVC10_replyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC10_replyVC.h; sourceTree = "<group>"; };
 		C48063B81CA28CA5000DD080 /* DemoVC10_replyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC10_replyVC.m; sourceTree = "<group>"; };
+		C4815DEB1CAA9C8800B22831 /* DemoVC12.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC12.h; sourceTree = "<group>"; };
+		C4815DEC1CAA9C8800B22831 /* DemoVC12.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC12.m; sourceTree = "<group>"; };
+		C4815DED1CAA9C8800B22831 /* DemoVC12.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoVC12.xib; sourceTree = "<group>"; };
 		C493ED271CAA92CE00DF2A44 /* UIViewController+BAAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BAAlertView.h"; sourceTree = "<group>"; };
 		C493ED281CAA92CE00DF2A44 /* UIViewController+BAAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BAAlertView.m"; sourceTree = "<group>"; };
 		C493ED2A1CAA92F600DF2A44 /* BACustomModalTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BACustomModalTransition.h; sourceTree = "<group>"; };
@@ -637,6 +642,7 @@
 				C408230E1C9EA05A00E85C9C /* DemoVC9 */,
 				C4F262701C9988450026A0D6 /* DemoVC10 */,
 				C404EC0A1CA9620000A82D3A /* DemoVC11 */,
+				C493ED301CAA99F400DF2A44 /* DemoVC12 */,
 				C4225D941C990ED2006262C9 /* Category */,
 				C4225D971C990ED2006262C9 /* Lib */,
 				C4225DDD1C990F30006262C9 /* Other */,
@@ -735,6 +741,16 @@
 				C440E56D1C98360D006FFA73 /* SDWeiXinPhotoContainerView.m */,
 			);
 			path = DemoVC2;
+			sourceTree = "<group>";
+		};
+		C493ED301CAA99F400DF2A44 /* DemoVC12 */ = {
+			isa = PBXGroup;
+			children = (
+				C4815DEB1CAA9C8800B22831 /* DemoVC12.h */,
+				C4815DEC1CAA9C8800B22831 /* DemoVC12.m */,
+				C4815DED1CAA9C8800B22831 /* DemoVC12.xib */,
+			);
+			path = DemoVC12;
 			sourceTree = "<group>";
 		};
 		C4F2626E1C9988450026A0D6 /* DemoVC8 */ = {
@@ -883,6 +899,7 @@
 			files = (
 				C404EC501CA9680F00A82D3A /* 16.jpg in Resources */,
 				C404EC6A1CA9680F00A82D3A /* pic3.jpg in Resources */,
+				C4815DEF1CAA9C8800B22831 /* DemoVC12.xib in Resources */,
 				C404EC771CA9681500A82D3A /* area.plist in Resources */,
 				C404EC511CA9680F00A82D3A /* 17.jpg in Resources */,
 				C42454141C97B74100D01865 /* BAHomeIncomeCell.xib in Resources */,
@@ -1042,6 +1059,7 @@
 				C42454171C97BAD600D01865 /* BAHomeIncomeModel.m in Sources */,
 				C408230A1C9E9F9600E85C9C /* NSString+BACustom.m in Sources */,
 				C440E56E1C98360D006FFA73 /* DemoVC2.m in Sources */,
+				C4815DEE1CAA9C8800B22831 /* DemoVC12.m in Sources */,
 				C40A7E0F1C9A3C56006F0687 /* DemoVC7Cell.m in Sources */,
 				C4225DE41C99254A006262C9 /* DemoVC4.m in Sources */,
 				C42454131C97B74100D01865 /* BAHomeIncomeCell.m in Sources */,

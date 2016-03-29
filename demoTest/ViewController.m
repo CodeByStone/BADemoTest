@@ -60,6 +60,7 @@
         [self addCell:@"9、NSString扩展" class:@"DemoVC9"];
         [self addCell:@"10、多级评论" class:@"DemoVC10"];
         [self addCell:@"11、城市选择器(pickView)" class:@"DemoVC11"];
+        [self addCell:@"12、alertView封装" class:@"DemoVC12"];
 
         [self.tableView reloadData];
     }
