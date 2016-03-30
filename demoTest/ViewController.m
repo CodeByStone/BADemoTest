@@ -62,7 +62,9 @@
         [self addCell:@"11、城市选择器(pickView)" class:@"DemoVC11"];
         [self addCell:@"12、alertView封装" class:@"DemoVC12"];
         [self addCell:@"13、文字和APP名字的国际化(webView封装)" class:@"DemoVC13"];
+        [self addCell:@"14、自定义collection" class:@"DemoVC14"];
 
+        
         [self.tableView reloadData];
     }
     return _tableView;
