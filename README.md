@@ -37,7 +37,6 @@ UIWebView *webView = [UIWebView loadRequest:[NSURLRequest requestWithURL:[NSURL 
     }];
     webView.frame = frame;
     webView.scalesPageToFit = YES;
-
     [self.view addSubview: webView];
 
 ## 2016.03.29 --- 
