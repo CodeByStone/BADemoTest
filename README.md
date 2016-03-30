@@ -21,6 +21,23 @@ ios开发中重难点展示
 
 # 更新记录：【倒叙】（最新的更新在最上面）【基本每天一更】
 
+## 2016.03.30 --- 
+
+>##2、APP中的文字和APP名字的国际化多语言处理
+
+
+>##1、新增demoVC13，对webView 和 webVC的封装处理，
+```
+UIWebView *webView = [UIWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlStr] ] loaded:^(UIWebView *webView) {
+        NSLog(@"Loaded %@", webView.request.URL);
+    } failed:^(UIWebView *webView, NSError *error) {
+        NSLog(@"Failed loading with error: %@", error.localizedDescription);
+    }];
+    webView.frame = frame;
+    webView.scalesPageToFit = YES;
+
+    [self.view addSubview: webView];
+
 ## 2016.03.29 --- 
 >##3、新增demoVC12，alert封装，简单的一行代码block回调！
 ```
