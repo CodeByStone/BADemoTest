@@ -53,7 +53,7 @@
         
     } animated:YES action:^(NSArray<UITextField *> *fields, NSInteger index) {
         NSLog(@"账号：%@, 密码：%@", fields[0].text, fields[1].text);
-    }]; 
+    }];
 }
 
 - (IBAction)ios7Actionsheet:(UIButton *)sender
