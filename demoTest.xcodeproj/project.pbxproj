@@ -73,6 +73,7 @@
 		C40A7E131C9A5462006F0687 /* DemoVC7_replyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C40A7E121C9A5462006F0687 /* DemoVC7_replyVC.m */; };
 		C40A7E161C9A5882006F0687 /* DemoVC7_quesstionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C40A7E151C9A5882006F0687 /* DemoVC7_quesstionCell.m */; };
 		C40A7E1C1C9A61D8006F0687 /* DemoVC7_replyView.m in Sources */ = {isa = PBXBuildFile; fileRef = C40A7E1B1C9A61D8006F0687 /* DemoVC7_replyView.m */; };
+		C41910581CABC7E800F46268 /* UIWebView+BACustom.m in Sources */ = {isa = PBXBuildFile; fileRef = C41910571CABC7E800F46268 /* UIWebView+BACustom.m */; };
 		C4225D831C98EA62006262C9 /* YRDemandShareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4225D801C98EA62006262C9 /* YRDemandShareCell.m */; };
 		C4225D841C98EA62006262C9 /* YRDemandUserViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4225D821C98EA62006262C9 /* YRDemandUserViewCell.m */; };
 		C4225D8A1C98EAF1006262C9 /* YRDemandShareModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4225D891C98EAF1006262C9 /* YRDemandShareModel.m */; };
@@ -105,6 +106,8 @@
 		C440E5701C98360D006FFA73 /* DemoVC2HeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = C440E5691C98360D006FFA73 /* DemoVC2HeadView.m */; };
 		C440E5711C98360D006FFA73 /* DemoVC2Model.m in Sources */ = {isa = PBXBuildFile; fileRef = C440E56B1C98360D006FFA73 /* DemoVC2Model.m */; };
 		C440E5721C98360D006FFA73 /* SDWeiXinPhotoContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C440E56D1C98360D006FFA73 /* SDWeiXinPhotoContainerView.m */; };
+		C465DE0E1CABBF8D00D1A728 /* DemoVC13.m in Sources */ = {isa = PBXBuildFile; fileRef = C465DE0D1CABBF8D00D1A728 /* DemoVC13.m */; };
+		C465DE111CABC19200D1A728 /* BAWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C465DE101CABC19200D1A728 /* BAWebViewController.m */; };
 		C48063B01CA276CD000DD080 /* DemoVC10.m in Sources */ = {isa = PBXBuildFile; fileRef = C48063AF1CA276CD000DD080 /* DemoVC10.m */; };
 		C48063B31CA27973000DD080 /* DemoVC10Model.m in Sources */ = {isa = PBXBuildFile; fileRef = C48063B21CA27973000DD080 /* DemoVC10Model.m */; };
 		C48063B61CA27A30000DD080 /* DemoVC10Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = C48063B51CA27A30000DD080 /* DemoVC10Cell.m */; };
@@ -118,7 +121,6 @@
 		C4C2E1801CA8CB9A00C04EE5 /* DemoVC5_SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C4C2E17F1CA8CB9A00C04EE5 /* DemoVC5_SearchVC.m */; };
 		C4CAF6AF1CAB97B000CE265A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4CAF6B11CAB97B000CE265A /* Localizable.strings */; };
 		C4CAF6B31CAB97BC00CE265A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4CAF6B51CAB97BC00CE265A /* InfoPlist.strings */; };
-		C4CAF6BA1CAB9A4F00CE265A /* DemoVC13.m in Sources */ = {isa = PBXBuildFile; fileRef = C4CAF6B91CAB9A4F00CE265A /* DemoVC13.m */; };
 		C4E2D8F41C9D21A20083D6AE /* DemoVC8.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E2D8F31C9D21A20083D6AE /* DemoVC8.m */; };
 		C4E2D8F71C9D22570083D6AE /* DemoVC8_View1.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E2D8F61C9D22570083D6AE /* DemoVC8_View1.m */; };
 		C4F2625E1C9964E40026A0D6 /* DemoVC5.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F2625D1C9964E40026A0D6 /* DemoVC5.m */; };
@@ -233,6 +235,8 @@
 		C40A7E151C9A5882006F0687 /* DemoVC7_quesstionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC7_quesstionCell.m; sourceTree = "<group>"; };
 		C40A7E1A1C9A61D8006F0687 /* DemoVC7_replyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC7_replyView.h; sourceTree = "<group>"; };
 		C40A7E1B1C9A61D8006F0687 /* DemoVC7_replyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC7_replyView.m; sourceTree = "<group>"; };
+		C41910561CABC7E800F46268 /* UIWebView+BACustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+BACustom.h"; sourceTree = "<group>"; };
+		C41910571CABC7E800F46268 /* UIWebView+BACustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+BACustom.m"; sourceTree = "<group>"; };
 		C4225D7F1C98EA62006262C9 /* YRDemandShareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDemandShareCell.h; sourceTree = "<group>"; };
 		C4225D801C98EA62006262C9 /* YRDemandShareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRDemandShareCell.m; sourceTree = "<group>"; };
 		C4225D811C98EA62006262C9 /* YRDemandUserViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRDemandUserViewCell.h; sourceTree = "<group>"; };
@@ -298,6 +302,10 @@
 		C440E56B1C98360D006FFA73 /* DemoVC2Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC2Model.m; sourceTree = "<group>"; };
 		C440E56C1C98360D006FFA73 /* SDWeiXinPhotoContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWeiXinPhotoContainerView.h; sourceTree = "<group>"; };
 		C440E56D1C98360D006FFA73 /* SDWeiXinPhotoContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWeiXinPhotoContainerView.m; sourceTree = "<group>"; };
+		C465DE0C1CABBF8D00D1A728 /* DemoVC13.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC13.h; sourceTree = "<group>"; };
+		C465DE0D1CABBF8D00D1A728 /* DemoVC13.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC13.m; sourceTree = "<group>"; };
+		C465DE0F1CABC19200D1A728 /* BAWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAWebViewController.h; sourceTree = "<group>"; };
+		C465DE101CABC19200D1A728 /* BAWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAWebViewController.m; sourceTree = "<group>"; };
 		C48063AD1CA275B8000DD080 /* BADefin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BADefin.h; sourceTree = "<group>"; };
 		C48063AE1CA276CD000DD080 /* DemoVC10.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC10.h; sourceTree = "<group>"; };
 		C48063AF1CA276CD000DD080 /* DemoVC10.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC10.m; sourceTree = "<group>"; };
@@ -326,8 +334,6 @@
 		C4CAF6B21CAB97B200CE265A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C4CAF6B41CAB97BC00CE265A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		C4CAF6B61CAB97BE00CE265A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C4CAF6B81CAB9A4F00CE265A /* DemoVC13.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC13.h; sourceTree = "<group>"; };
-		C4CAF6B91CAB9A4F00CE265A /* DemoVC13.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC13.m; sourceTree = "<group>"; };
 		C4E2D8F21C9D21A20083D6AE /* DemoVC8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC8.h; sourceTree = "<group>"; };
 		C4E2D8F31C9D21A20083D6AE /* DemoVC8.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC8.m; sourceTree = "<group>"; };
 		C4E2D8F51C9D22570083D6AE /* DemoVC8_View1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC8_View1.h; sourceTree = "<group>"; };
@@ -494,6 +500,10 @@
 		C4225D941C990ED2006262C9 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				C465DE0F1CABC19200D1A728 /* BAWebViewController.h */,
+				C465DE101CABC19200D1A728 /* BAWebViewController.m */,
+				C41910561CABC7E800F46268 /* UIWebView+BACustom.h */,
+				C41910571CABC7E800F46268 /* UIWebView+BACustom.m */,
 				C404EC121CA9667E00A82D3A /* UIColor+RCColor.h */,
 				C404EC131CA9667E00A82D3A /* UIColor+RCColor.m */,
 				C404EC0E1CA9628400A82D3A /* BAPickerView.h */,
@@ -770,8 +780,8 @@
 		C4CAF6B71CAB995500CE265A /* DemoVC13 */ = {
 			isa = PBXGroup;
 			children = (
-				C4CAF6B81CAB9A4F00CE265A /* DemoVC13.h */,
-				C4CAF6B91CAB9A4F00CE265A /* DemoVC13.m */,
+				C465DE0C1CABBF8D00D1A728 /* DemoVC13.h */,
+				C465DE0D1CABBF8D00D1A728 /* DemoVC13.m */,
 			);
 			path = DemoVC13;
 			sourceTree = "<group>";
@@ -1046,6 +1056,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C440E5621C982D41006FFA73 /* DemoVC3Cell.m in Sources */,
+				C41910581CABC7E800F46268 /* UIWebView+BACustom.m in Sources */,
 				C440E5701C98360D006FFA73 /* DemoVC2HeadView.m in Sources */,
 				C4C2E17D1CA8C95900C04EE5 /* BATokenManager.m in Sources */,
 				C4F623761CA8C76100DCF152 /* BACustomBarItem.m in Sources */,
@@ -1053,6 +1064,8 @@
 				C4225DC71C990ED2006262C9 /* UIView+BACustom.m in Sources */,
 				C48063B01CA276CD000DD080 /* DemoVC10.m in Sources */,
 				C4F2626D1C997E210026A0D6 /* DemoVC6Cell.m in Sources */,
+				C465DE111CABC19200D1A728 /* BAWebViewController.m in Sources */,
+				C465DE0E1CABBF8D00D1A728 /* DemoVC13.m in Sources */,
 				C4F623701CA8C53900DCF152 /* BASearchBar.m in Sources */,
 				C4F262611C99661C0026A0D6 /* DemoVC5Cell.m in Sources */,
 				C4225DCA1C990ED2006262C9 /* SDBrowserImageView.m in Sources */,
@@ -1061,7 +1074,6 @@
 				C42453D01C979D9300D01865 /* ViewController.m in Sources */,
 				C4245FD91CA51412006740E3 /* NSDate+BACustom.m in Sources */,
 				C440E56F1C98360D006FFA73 /* DemoVC2Cell.m in Sources */,
-				C4CAF6BA1CAB9A4F00CE265A /* DemoVC13.m in Sources */,
 				C4225DCB1C990ED2006262C9 /* SDPhotoBrowser.m in Sources */,
 				C42453CD1C979D9300D01865 /* AppDelegate.m in Sources */,
 				C4225D8A1C98EAF1006262C9 /* YRDemandShareModel.m in Sources */,
