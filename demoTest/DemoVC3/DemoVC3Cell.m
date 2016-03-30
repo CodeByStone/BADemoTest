@@ -35,12 +35,12 @@ const CGFloat maxContentLabelHeights = 54;
     _shouldOpenContentLabel = NO;
     
     _titleLable = [UILabel new];
-    _titleLable.font = KFontSize(15);
+    _titleLable.font = BA_FontSize(15);
     
     _playButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _playButton.userInteractionEnabled = NO;
     [_playButton setImage:[UIImage imageNamed:@"playCount"] forState:UIControlStateNormal];
-    [_playButton setTitleColor:kTEXTGrayColor forState:UIControlStateNormal];
+    [_playButton setTitleColor:BA_TEXTGrayColor forState:UIControlStateNormal];
 
     
     _contentLabel = [UILabel new];
@@ -48,9 +48,9 @@ const CGFloat maxContentLabelHeights = 54;
     
     _moreButton = [UIButton new];
     [_moreButton setTitle:@"显示全部" forState:UIControlStateNormal];
-    [_moreButton setTitleColor:NaviBgBlueColor forState:UIControlStateNormal];
+    [_moreButton setTitleColor:BA_NaviBgBlueColor forState:UIControlStateNormal];
     [_moreButton addTarget:self action:@selector(moreButtonClicked) forControlEvents:UIControlEventTouchUpInside];
-    _moreButton.titleLabel.font = KFontSize(14);
+    _moreButton.titleLabel.font = BA_FontSize(14);
     
 //    _timeLabel = [UILabel new];
 //    _timeLabel.font = [UIFont systemFontOfSize:13];

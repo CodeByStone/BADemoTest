@@ -32,30 +32,30 @@
     userImageView.layer.cornerRadius = 40/2;
     
     userNameLabel = [UILabel new];
-    userNameLabel.font = KFontSize(13);
+    userNameLabel.font = BA_FontSize(13);
     
     self.addFriendButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.addFriendButton.backgroundColor = NaviBgBlueColor;
+    self.addFriendButton.backgroundColor = BA_NaviBgBlueColor;
     [self.addFriendButton setTitle:@"123" forState:UIControlStateNormal];
-    [self.addFriendButton setTitleColor:kWHITECOLOR forState:UIControlStateNormal];
+    [self.addFriendButton setTitleColor:BA_White_Color forState:UIControlStateNormal];
     [self.addFriendButton setImage:[UIImage imageNamed:@"btn_addFriend"] forState:UIControlStateNormal];
     self.addFriendButton.imageEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 40);
     self.addFriendButton.titleEdgeInsets = UIEdgeInsetsMake(0, -5, 0, -15);
     self.addFriendButton.titleLabel.textAlignment = NSTextAlignmentRight;
     self.addFriendButton.layer.masksToBounds = YES;
     self.addFriendButton.layer.cornerRadius = 5.0;
-    self.addFriendButton.titleLabel.font = KFontSize(12);
+    self.addFriendButton.titleLabel.font = BA_FontSize(12);
     self.addFriendButton.tag = 1;
     [self.addFriendButton addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
     
     
     timeLabel = [UILabel new];
-    timeLabel.font = KFontSize(11);
-    timeLabel.textColor = kTEXTGrayColor;
+    timeLabel.font = BA_FontSize(11);
+    timeLabel.textColor = BA_TEXTGrayColor;
     
     contentLabel = [UILabel new];
-    contentLabel.font = KFontSize(14);
-    contentLabel.textColor = NaviBgBlueColor;
+    contentLabel.font = BA_FontSize(14);
+    contentLabel.textColor = BA_NaviBgBlueColor;
     
     self.vlineImageView = [UIImageView new];
     self.vlineImageView.image = [UIImage imageNamed:@"vline"];
@@ -166,14 +166,14 @@
     userImageView.layer.cornerRadius = 40/2;
     
     userNameLabel = [UILabel new];
-    userNameLabel.font = KFontSize(13);
+    userNameLabel.font = BA_FontSize(13);
 
     timeLabel = [UILabel new];
-    timeLabel.font = KFontSize(11);
-    timeLabel.textColor = kTEXTGrayColor;
+    timeLabel.font = BA_FontSize(11);
+    timeLabel.textColor = BA_TEXTGrayColor;
     
     contentLabel = [UILabel new];
-    contentLabel.font = KFontSize(14);
+    contentLabel.font = BA_FontSize(14);
     
     NSArray *views = @[userImageView, userNameLabel, timeLabel, contentLabel];
     [self.contentView BA_AddSubViewsWithArray:views];
@@ -244,14 +244,14 @@
     userImageView.layer.cornerRadius = 40/2;
     
     userNameLabel = [UILabel new];
-    userNameLabel.font = KFontSize(13);
+    userNameLabel.font = BA_FontSize(13);
     
     timeLabel = [UILabel new];
-    timeLabel.font = KFontSize(11);
-    timeLabel.textColor = kTEXTGrayColor;
+    timeLabel.font = BA_FontSize(11);
+    timeLabel.textColor = BA_TEXTGrayColor;
     
     contentLabel = [UILabel new];
-    contentLabel.font = KFontSize(14);
+    contentLabel.font = BA_FontSize(14);
     
     NSArray *views = @[userImageView, userNameLabel, timeLabel, contentLabel];
     [self.contentView BA_AddSubViewsWithArray:views];

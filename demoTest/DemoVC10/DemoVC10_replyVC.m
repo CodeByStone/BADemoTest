@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tableView.backgroundColor = kBGGrayColor;
+    self.tableView.backgroundColor = BA_BGGrayColor;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self creatReplyData];
     [self creatSendReplyView];
@@ -30,15 +30,15 @@
 #pragma mark - ***** 添加评论View
 - (void)creatSendReplyView
 {
-    CGRect frame = CGRectMake(0, KSCREEN_HEIGHT - 50 - 64, KSCREEN_WIDTH, 50);
+    CGRect frame = CGRectMake(0, BA_SCREEN_HEIGHT - 50 - 64, BA_SCREEN_WIDTH, 50);
     DemoVC7_replyView *replyView = [[DemoVC7_replyView alloc] initWithFrame:frame withImage:self.quesstionDataModel.imageName];
-    replyView.backgroundColor = KCOLOR(245, 244, 245, 1.0);
+    replyView.backgroundColor = BA_COLOR(245, 244, 245, 1.0);
     [self.view addSubview:replyView];
     
     [replyView callBackIndex:^(NSInteger index, NSString *contentStr) {
         
         NSString *msg = [NSString stringWithFormat:@"发送内容：%@", contentStr];
-        SHOW_ALERT(@"温馨提示：", msg);
+        BA_SHOW_ALERT(@"温馨提示：", msg);
         
         DemoVC10Model *model = [DemoVC10Model new];
         model.imageName = self.quesstionDataModel.imageName;
@@ -80,7 +80,7 @@
     
     NSArray *timeArray = @[@"2016-03-06",@"2016-03-07",@"2016-03-08",@"2016-03-09",@"2016-03-10"];
     
-    for (int i = 0; i < BARandomData; i++) {
+    for (int i = 0; i < BA_RandomData; i++) {
         int iconRandomIndex = arc4random_uniform(5);
         int nameRandomIndex = arc4random_uniform(5);
         int contentRandomIndex = arc4random_uniform(5);
@@ -125,7 +125,7 @@
             {
                 cell = [[DemoVC10Cell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
             }
-            cell.backgroundColor = kWHITECOLOR;
+            cell.backgroundColor = BA_White_Color;
             cell.addFriendButton.hidden = YES;
             cell.model = self.quesstionDataModel;
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -140,7 +140,7 @@
             {
                 cell2 = [[DemoVC10_replyCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
             }
-            cell2.backgroundColor = kWHITECOLOR;
+            cell2.backgroundColor = BA_White_Color;
             cell2.model = self.replyDataModel;
             cell2.selectionStyle = UITableViewCellSelectionStyleNone;
             
@@ -155,7 +155,7 @@
         {
             cell3 = [[DemoVC10_replyVC_replyCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
         }
-        cell3.backgroundColor = kBGGrayColor;
+        cell3.backgroundColor = BA_BGGrayColor;
         cell3.model = self.replyDataArray[indexPath.row];
         cell3.selectionStyle = UITableViewCellSelectionStyleNone;
         

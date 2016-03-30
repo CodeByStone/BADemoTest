@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = kWHITECOLOR;
+    self.view.backgroundColor = BA_White_Color;
     
     [self creatUI];
 }

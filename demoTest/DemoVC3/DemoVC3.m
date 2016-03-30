@@ -250,14 +250,14 @@
 #pragma mark 关注
 - (IBAction)clickAttentionButton:(UIButton *)sender
 {
-    SHOW_ALERT(@"温馨提示：", @"点击了 关注 按钮！");
+    BA_SHOW_ALERT(@"温馨提示：", @"点击了 关注 按钮！");
 }
 
 #pragma mark 收藏
 - (void)clickCollectionBtn:(NSString *)title
 {
     NSString *msg = [NSString stringWithFormat:@"点击了 %@ 按钮！", title];
-    SHOW_ALERT(@"温馨提示：", msg);
+    BA_SHOW_ALERT(@"温馨提示：", msg);
 }
 
 @end

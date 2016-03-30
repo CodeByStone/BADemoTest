@@ -32,11 +32,11 @@
 {
     if (self = [super initWithFrame:frame])
     {
-        self.backgroundColor = kBGClearColor;
+        self.backgroundColor = BA_BGClearColor;
         
         UIView *bgView = [UIView new];
-        bgView.frame = CGRectMake(30, (KSCREEN_HEIGHT - 300)/2, KSCREEN_WIDTH - 60, KSCREEN_HEIGHT/3);
-        bgView.backgroundColor = kWHITECOLOR;
+        bgView.frame = CGRectMake(30, (BA_SCREEN_HEIGHT - 300)/2, BA_SCREEN_WIDTH - 60, BA_SCREEN_HEIGHT/3);
+        bgView.backgroundColor = BA_White_Color;
         [self addSubview:bgView];
         
         CGRect pickerViewFrame = CGRectMake(0, 0, bgView.frame.size.width, bgView.frame.size.height - 40);

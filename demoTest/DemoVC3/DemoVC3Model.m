@@ -24,7 +24,7 @@ extern const CGFloat maxContentLabelHeights;
 
 - (NSString *)content
 {
-    CGFloat contentW = KSCREEN_WIDTH - 20;
+    CGFloat contentW = BA_SCREEN_WIDTH - 20;
     CGRect textRect = [_content boundingRectWithSize:CGSizeMake(contentW, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:contentLabelFontSizes]} context:nil];
     
     if (textRect.size.height > maxContentLabelHeights)

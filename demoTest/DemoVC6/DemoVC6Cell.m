@@ -35,14 +35,14 @@
     self.weixinImageView.layer.cornerRadius = 40/2;
     
     self.weixinNameLable = [UILabel new];
-    self.weixinNameLable.font = KFontSize(15);
+    self.weixinNameLable.font = BA_FontSize(15);
     
     self.weixinTimeLable = [UILabel new];
-    self.weixinTimeLable.font = KFontSize(12);
-    self.weixinTimeLable.textColor = kTEXTGrayColor;
+    self.weixinTimeLable.font = BA_FontSize(12);
+    self.weixinTimeLable.textColor = BA_TEXTGrayColor;
     
     self.weixinContentLable = [UILabel new];
-    self.weixinContentLable.font = KFontSize(14);
+    self.weixinContentLable.font = BA_FontSize(14);
     
     NSArray *viewsArray = @[self.weixinImageView, self.weixinNameLable, self.weixinTimeLable, self.weixinContentLable];
     [self.contentView BA_AddSubViewsWithArray:viewsArray];

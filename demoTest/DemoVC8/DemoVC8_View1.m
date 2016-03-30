@@ -54,7 +54,7 @@
     subView1_Label1.text = @"这是测试nameLabel!";
     
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    rightBtn.backgroundColor = NaviBgBlueColor;
+    rightBtn.backgroundColor = BA_NaviBgBlueColor;
     rightBtn.layer.masksToBounds = YES;
     rightBtn.layer.cornerRadius = 5.0f;
     [rightBtn setTitle:@"添加文字" forState:UIControlStateNormal];

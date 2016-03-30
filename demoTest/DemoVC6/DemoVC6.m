@@ -43,7 +43,7 @@
 {
     // 1.添加假数据
     for (int i = 0; i<5; i++) {
-        [self.dataArray insertObject:self.dataArray[BARandomData] atIndex:0];
+        [self.dataArray insertObject:self.dataArray[BA_RandomData] atIndex:0];
     }
     
     // 2.模拟2秒后刷新表格UI（真实开发中，可以移除这段gcd代码）
@@ -61,7 +61,7 @@
 {
     // 1.添加假数据
     for (int i = 0; i<5; i++) {
-        [self.dataArray addObject:self.dataArray[BARandomData]];
+        [self.dataArray addObject:self.dataArray[BA_RandomData]];
     }
     
     // 2.模拟2秒后刷新表格UI（真实开发中，可以移除这段gcd代码）

@@ -121,7 +121,7 @@
 - (void)creatCityPickView
 {
     _cityPickView = [[BAPickerView alloc]init];
-    _cityPickView.frame = CGRectMake(0, 0, KSCREEN_WIDTH, KSCREEN_HEIGHT + 20);
+    _cityPickView.frame = CGRectMake(0, 0, BA_SCREEN_WIDTH, BA_SCREEN_HEIGHT + 20);
     _cityPickView.delegate = self;
     [self.view addSubview:_cityPickView];
 }

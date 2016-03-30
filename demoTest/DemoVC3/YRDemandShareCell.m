@@ -32,32 +32,32 @@
 - (void)addContentView
 {
     self.collectionBtn = [BACustomButton buttonWithType:UIButtonTypeCustom];
-    self.collectionBtn.frame = CGRectMake(0, 0, KSCREEN_WIDTH/4, 80);
+    self.collectionBtn.frame = CGRectMake(0, 0, BA_SCREEN_WIDTH/4, 80);
     [self.collectionBtn setTitle:@"收藏" forState:UIControlStateNormal];
-    [self.collectionBtn setTitleColor:kTEXTGrayColor forState:UIControlStateNormal];
+    [self.collectionBtn setTitleColor:BA_TEXTGrayColor forState:UIControlStateNormal];
     [self.collectionBtn setImage:[UIImage imageNamed:@"btn_uncollection"] forState:UIControlStateNormal];
     self.collectionBtn.tag = 1;
     
     self.supportBtn = [BACustomButton buttonWithType:UIButtonTypeCustom];
-    self.supportBtn.frame = CGRectMake(CGRectGetMaxX(self.collectionBtn.frame), 0, KSCREEN_WIDTH/4, 80);
+    self.supportBtn.frame = CGRectMake(CGRectGetMaxX(self.collectionBtn.frame), 0, BA_SCREEN_WIDTH/4, 80);
     [self.supportBtn setTitle:@"点赞" forState:UIControlStateNormal];
-    [self.supportBtn setTitleColor:kTEXTGrayColor forState:UIControlStateNormal];
+    [self.supportBtn setTitleColor:BA_TEXTGrayColor forState:UIControlStateNormal];
     [self.supportBtn setImage:[UIImage imageNamed:@"btn_unsupport"] forState:UIControlStateNormal];
     self.supportBtn.tag = 2;
 
     
     self.shareBtn = [BACustomButton buttonWithType:UIButtonTypeCustom];
-    self.shareBtn.frame = CGRectMake(CGRectGetMaxX(self.supportBtn.frame), 0, KSCREEN_WIDTH/4, 80);
+    self.shareBtn.frame = CGRectMake(CGRectGetMaxX(self.supportBtn.frame), 0, BA_SCREEN_WIDTH/4, 80);
     [self.shareBtn setTitle:@"分享" forState:UIControlStateNormal];
-    [self.shareBtn setTitleColor:kTEXTGrayColor forState:UIControlStateNormal];
+    [self.shareBtn setTitleColor:BA_TEXTGrayColor forState:UIControlStateNormal];
     [self.shareBtn setImage:[UIImage imageNamed:@"btn_share"] forState:UIControlStateNormal];
     self.shareBtn.tag = 3;
 
     
     self.shangBtn = [BACustomButton buttonWithType:UIButtonTypeCustom];
-    self.shangBtn.frame = CGRectMake(CGRectGetMaxX(self.shareBtn.frame), 0, KSCREEN_WIDTH/4, 80);
+    self.shangBtn.frame = CGRectMake(CGRectGetMaxX(self.shareBtn.frame), 0, BA_SCREEN_WIDTH/4, 80);
     [self.shangBtn setTitle:@"赏" forState:UIControlStateNormal];
-    [self.shangBtn setTitleColor:kTEXTGrayColor forState:UIControlStateNormal];
+    [self.shangBtn setTitleColor:BA_TEXTGrayColor forState:UIControlStateNormal];
     [self.shangBtn setImage:[UIImage imageNamed:@"btn_shang"] forState:UIControlStateNormal];
     self.shangBtn.tag = 4;
 

@@ -20,7 +20,7 @@
     self.titleLabel.y = self.imageView.height + 10;
     self.titleLabel.width = self.width;
     self.titleLabel.height = self.height - self.imageView.height - 10;
-    self.titleLabel.font = KFontSize(14);
+    self.titleLabel.font = BA_FontSize(14);
     
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
 }

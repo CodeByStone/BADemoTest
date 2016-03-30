@@ -27,7 +27,7 @@
 
 - (void)setupSubView
 {
-    YRHomeIncomeView *subView = [[YRHomeIncomeView alloc] initWithFrame:CGRectMake(10, 100, KSCREEN_WIDTH - 20, 145)];
+    YRHomeIncomeView *subView = [[YRHomeIncomeView alloc] initWithFrame:CGRectMake(10, 100, BA_SCREEN_WIDTH - 20, 145)];
     
     [self.view addSubview:subView];
     

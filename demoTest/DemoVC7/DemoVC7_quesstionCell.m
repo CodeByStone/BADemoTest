@@ -35,14 +35,14 @@
     userImageView.layer.cornerRadius = 40/2;
     
     userNameLabel = [UILabel new];
-    userNameLabel.font = KFontSize(13);
+    userNameLabel.font = BA_FontSize(13);
     
     timeLabel = [UILabel new];
-    timeLabel.font = KFontSize(11);
-    timeLabel.textColor = kTEXTGrayColor;
+    timeLabel.font = BA_FontSize(11);
+    timeLabel.textColor = BA_TEXTGrayColor;
     
     contentLabel = [UILabel new];
-    contentLabel.font = KFontSize(14);
+    contentLabel.font = BA_FontSize(14);
     
     hlineImageView = [UIImageView new];
     hlineImageView.image = [UIImage imageNamed:@"hline"];

@@ -30,6 +30,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="rjy-ky-bDE"/>
                     </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <state key="normal" title="ios7Actionsheet"/>
                     <connections>
                         <action selector="ios7Actionsheet:" destination="-1" eventType="touchUpInside" id="eOc-mu-z3B"/>
@@ -51,6 +52,7 @@
                         <constraint firstAttribute="height" constant="30" id="0aO-Cx-9OD"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="DnF-Rf-RfH"/>
                     </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <state key="normal" title="ios8Actionsheet"/>
                     <connections>
                         <action selector="ios8ActionSheet:" destination="-1" eventType="touchUpInside" id="QqJ-Kq-fUJ"/>

@@ -37,7 +37,7 @@
 
 - (void)creatNaviSearch
 {
-    CGRect searchBarFrame = CGRectMake(KSCREEN_WIDTH - 110, STATUSBAR_HEIGHT + 5,  100, 35);
+    CGRect searchBarFrame = CGRectMake(BA_SCREEN_WIDTH - 110, BA_STATUSBAR_HEIGHT + 5,  100, 35);
     self.searchBar = [[BASearchBar alloc] initWithFrame:searchBarFrame];
     self.searchBar.placeholder = @"搜索名字、视频";
         

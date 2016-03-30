@@ -27,16 +27,16 @@
     self.userImageView.layer.masksToBounds = YES;
     self.userImageView.layer.cornerRadius = 50/2;
     self.userImageView.layer.borderWidth = 1.0f;
-    self.userImageView.layer.borderColor = NaviBgBlueColor.CGColor;
+    self.userImageView.layer.borderColor = BA_NaviBgBlueColor.CGColor;
     
     self.userNameLabel = [UILabel new];
-    self.userNameLabel.frame = CGRectMake(CGRectGetMaxX(self.userImageView.frame) + 10, 5, KSCREEN_WIDTH - 60, 20);
+    self.userNameLabel.frame = CGRectMake(CGRectGetMaxX(self.userImageView.frame) + 10, 5, BA_SCREEN_WIDTH - 60, 20);
     self.userNameLabel.text = @"博爱";
     
     self.userInfoLabel = [[UILabel alloc] init];
-    self.userInfoLabel.frame = CGRectMake(CGRectGetMinX(self.userNameLabel.frame), CGRectGetMaxY(self.userNameLabel.frame), KSCREEN_WIDTH - 60, 20);
+    self.userInfoLabel.frame = CGRectMake(CGRectGetMinX(self.userNameLabel.frame), CGRectGetMaxY(self.userNameLabel.frame), BA_SCREEN_WIDTH - 60, 20);
     self.userInfoLabel.textAlignment = NSTextAlignmentLeft;
-    self.userInfoLabel.textColor = kTEXTGrayColor;
+    self.userInfoLabel.textColor = BA_TEXTGrayColor;
     self.userInfoLabel.lineBreakMode = NSLineBreakByTruncatingHead;
     self.userInfoLabel.font = [UIFont systemFontOfSize:14];
     self.userInfoLabel.numberOfLines = 0;
@@ -45,9 +45,9 @@
     self.attentionButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.attentionButton.frame = CGRectMake(CGRectGetMinX(self.userNameLabel.frame), CGRectGetMaxY(self.userInfoLabel.frame)+5, 60, 25);
 
-    self.attentionButton.backgroundColor = NaviBgBlueColor;
+    self.attentionButton.backgroundColor = BA_NaviBgBlueColor;
     [self.attentionButton setTitle:@"关注" forState:UIControlStateNormal];
-    [self.attentionButton setTintColor:kWHITECOLOR];
+    [self.attentionButton setTintColor:BA_White_Color];
     self.attentionButton.layer.masksToBounds = YES;
     self.attentionButton.layer.cornerRadius = 5.0f;
 

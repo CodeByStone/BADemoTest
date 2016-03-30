@@ -39,36 +39,36 @@
     userImageView.layer.cornerRadius = 40/2;
     
     userNameLabel = [UILabel new];
-    userNameLabel.font = KFontSize(13);
+    userNameLabel.font = BA_FontSize(13);
     
     starImageView = [UIImageView new];
     
     addFriendButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    addFriendButton.backgroundColor = NaviBgBlueColor;
+    addFriendButton.backgroundColor = BA_NaviBgBlueColor;
     [addFriendButton setTitle:@"加好友" forState:UIControlStateNormal];
-    [addFriendButton setTitleColor:kWHITECOLOR forState:UIControlStateNormal];
+    [addFriendButton setTitleColor:BA_White_Color forState:UIControlStateNormal];
     [addFriendButton setImage:[UIImage imageNamed:@"btn_addFriend"] forState:UIControlStateNormal];
     addFriendButton.imageEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 40);
     addFriendButton.titleEdgeInsets = UIEdgeInsetsMake(0, -5, 0, -15);
     addFriendButton.titleLabel.textAlignment = NSTextAlignmentRight;
     addFriendButton.layer.masksToBounds = YES;
     addFriendButton.layer.cornerRadius = 5.0;
-    addFriendButton.titleLabel.font = KFontSize(12);
+    addFriendButton.titleLabel.font = BA_FontSize(12);
     addFriendButton.tag = 1;
     [addFriendButton addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
 
     
     timeLabel = [UILabel new];
-    timeLabel.font = KFontSize(11);
-    timeLabel.textColor = kTEXTGrayColor;
+    timeLabel.font = BA_FontSize(11);
+    timeLabel.textColor = BA_TEXTGrayColor;
     
     contentLabel = [UILabel new];
-    contentLabel.font = KFontSize(14);
+    contentLabel.font = BA_FontSize(14);
     
     supprotButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [supprotButton setTitle:@"888" forState:UIControlStateNormal];
-    [supprotButton setTitleColor:NaviBgBlueColor forState:UIControlStateNormal];
-    supprotButton.titleLabel.font = KFontSize(12);
+    [supprotButton setTitleColor:BA_NaviBgBlueColor forState:UIControlStateNormal];
+    supprotButton.titleLabel.font = BA_FontSize(12);
     supprotButton.tag = 2;
     [supprotButton addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
     [supprotButton setImage:[UIImage imageNamed:@"btn_support2"] forState:UIControlStateNormal];
@@ -81,8 +81,8 @@
     
     replyButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [replyButton setTitle:@"回复" forState:UIControlStateNormal];
-    [replyButton setTitleColor:NaviBgBlueColor forState:UIControlStateNormal];
-    replyButton.titleLabel.font = KFontSize(12);
+    [replyButton setTitleColor:BA_NaviBgBlueColor forState:UIControlStateNormal];
+    replyButton.titleLabel.font = BA_FontSize(12);
     replyButton.tag = 3;
     [replyButton addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
     [replyButton setImage:[UIImage imageNamed:@"btn_reply"] forState:UIControlStateNormal];

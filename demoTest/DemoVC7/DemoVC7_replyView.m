@@ -48,10 +48,10 @@
     sendButton = [UIButton buttonWithType:UIButtonTypeCustom];
     sendButton.layer.cornerRadius =  5.0f;
     sendButton.layer.borderWidth = 1.0;
-    sendButton.layer.borderColor = kTEXTGrayColor.CGColor;
+    sendButton.layer.borderColor = BA_TEXTGrayColor.CGColor;
     [sendButton setTitle:@"发送" forState:UIControlStateNormal];
     [sendButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    sendButton.titleLabel.font = KFontSize(15);
+    sendButton.titleLabel.font = BA_FontSize(15);
     [sendButton addTarget:self action:@selector(sendMessage:) forControlEvents:UIControlEventTouchUpInside];
     sendButton.tag = 1;
     
