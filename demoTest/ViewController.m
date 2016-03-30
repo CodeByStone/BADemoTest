@@ -76,7 +76,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"博爱demo测试";
+    self.title = NSLocalizedString(@"title", nil);
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.tableView.hidden = NO;
