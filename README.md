@@ -25,6 +25,8 @@ ios开发中重难点展示
 
 >##2、APP中的文字和APP名字的国际化多语言处理
 
+![image](https://github.com/boai/BADemoTest/blob/master/Image/image9.png)
+![image](https://github.com/boai/BADemoTest/blob/master/Image/image10.png)
 
 >##1、新增demoVC13，对webView 和 webVC的封装处理，
 ```
