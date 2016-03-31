@@ -93,7 +93,7 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"%s,你点击了第%ld个item！", __func__, (long)indexPath.row);
+    BALog(@"%s,你点击了第%ld个item！", __func__, (long)indexPath.row);
 }
 
 
