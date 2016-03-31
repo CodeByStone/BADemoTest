@@ -14,15 +14,10 @@
 #import <UIKit/UIKit.h> // UI
 #import <Foundation/Foundation.h> // NS
 
-#include "BADefin.h"
+#import "BADefin.h"
 #import "BA_Kit/BAKit.h"
 
-#import "UIView+BACustom.h"
-#import "NSString+BACustom.h"
-#import "NSData+BACustom.h"
-#import "UIImage+BACustom.h"
 #import "UINavigationItem+CustomItem.h"
-#import "UIColor+RCColor.h"
 
 #import <Masonry.h>
 #import "UIView+SDAutoLayout.h"
