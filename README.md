@@ -21,6 +21,14 @@ ios开发中重难点展示
 
 # 更新记录：【倒叙】（最新的更新在最上面）【基本每天一更】
 
+## 2016.03.31 --- 
+
+>##2、整理了下目前已有的BAKit框架，已打包，后期可pod下载！需要的同学可自行下载！
+
+>##1、自定义collectionView的UICollectionViewFlowLayout，仿写了一个LOL的选择英雄的界面（源码来自网络，非原创）
+
+![image](https://github.com/boai/BADemoTest/blob/master/Image/gif6.gif)
+
 ## 2016.03.30 --- 
 
 >##2、APP中的文字和APP名字的国际化多语言处理
