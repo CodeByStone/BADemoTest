@@ -22,19 +22,15 @@
 #import <Masonry.h>
 #import "UIView+SDAutoLayout.h"
 #import "UITableView+SDAutoTableViewCellHeight.h"
-#import "UIImageView+WebCache.h"
 
 #import "UIView+WHC_AutoLayout.h"
 #import "UITableViewCell+WHC_AutoHeightForCell.h"
 
-#import "UIImageView+WebCache.h"
 #import "MJRefresh.h"
+#import "UIImageView+WebCache.h"
 
 // 键盘
 #import "IQKeyboardManager.h"
-
-//#define  contentLabelFontSize  15
-//#define  maxContentLabelHeight  54
 
 
 
