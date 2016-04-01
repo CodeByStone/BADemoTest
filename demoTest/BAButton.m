@@ -40,7 +40,7 @@
 {
     _buttonStatus = buttonStatus;
 }
-
+// https://github.com/gitkong/FLButtonDemo
 #pragma mark - 左对齐
 - (void)alignmentLeft
 {
