@@ -23,6 +23,25 @@
 
 @implementation DemoVC14
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+//    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    //UIStatusBarStyleDefault = 0 黑色文字，浅色背景时使用
+    //UIStatusBarStyleLightContent = 1 白色文字，深色背景时使用
+    return UIStatusBarStyleDefault;
+}
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES; // 返回NO表示要显示，返回YES将hiden
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
    

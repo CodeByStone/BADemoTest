@@ -19,8 +19,11 @@
 #define BA_APP_VersionShort [[[NSBundle mainBundle] infoDictionary] objectForKey:BABundleShortVersionString]
 
 /*! 4、使用BALocalizedString检索本地化字符串 */
-#define BALocalizedString(key, comment) \
-[[NSBundle mainBundle] localizedStringForKey:(key) value:@"" table:@"BAKit"]
+//#define BALocalizedString(key, comment) \
+//[[NSBundle mainBundle] localizedStringForKey:(key) value:@"" table:@"BAKit"]
+
+#define BALocalizedString(key, comment) NSLocalizedString(key, comment)
+
 
 /*! 5、获取AppDelegate */
 #define APPDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])

@@ -81,6 +81,7 @@
     
 //    self.title = NSLocalizedString(@"title", nil);
     self.title = BALocalizedString(@"title", @"博爱Demo测试");
+    self.title = BALocalizedString(@"title", nil);
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.tableView.hidden = NO;
