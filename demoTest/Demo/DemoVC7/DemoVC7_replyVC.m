@@ -12,44 +12,71 @@
 #import "DemoVC7_replyView.h"
 
 @interface DemoVC7_replyVC ()
+<
+    UITableViewDelegate,
+    UITableViewDataSource
+>
+@property (nonatomic, strong) UITableView *tableView;
 
 @end
 
 @implementation DemoVC7_replyVC
 
+- (UITableView *)tableView
+{
+    if (!_tableView)
+    {
+        _tableView = [[UITableView alloc] init];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.backgroundColor = BA_BGGrayColor;
+        
+        [self.view addSubview:_tableView];
+        
+        self.tableView.sd_layout
+        .leftSpaceToView(self.view, 0)
+        .rightSpaceToView(self.view, 0)
+        .topSpaceToView(self.view, 0)
+        .bottomSpaceToView(self.view, 50);
+        
+        _tableView.tableFooterView = [UIView new];
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    }
+    return _tableView;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tableView.backgroundColor = BA_BGGrayColor;
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.view.backgroundColor = BA_White_Color;
+    self.tableView.hidden = NO;
+    NSLog(@"%s self.replyDataArray: %@", __func__,self.quesstionDataModel);
+    
     [self creatReplyData];
     [self creatSendReplyView];
-    
-    NSLog(@"%s self.replyDataArray: %@", __func__,self.quesstionDataModel);
 }
 
 #pragma mark - ***** 添加评论View
 - (void)creatSendReplyView
 {
-    CGRect frame = CGRectMake(0, BA_SCREEN_HEIGHT - 50 - 64, BA_SCREEN_WIDTH, 50);
-    DemoVC7_replyView *replyView = [[DemoVC7_replyView alloc] initWithFrame:frame withImage:self.quesstionDataModel.icon7];
-    replyView.backgroundColor = BA_COLOR(245, 244, 245, 1.0);
-    [self.view addSubview:replyView];
-
-    [replyView callBackIndex:^(NSInteger index, NSString *contentStr) {
+    CGRect frame = CGRectMake(0, BA_SCREEN_HEIGHT - 50, BA_SCREEN_WIDTH, 50);
+    DemoVC7_replyView *replyView = [[DemoVC7_replyView alloc] initWithFrame:frame withImage:self.quesstionDataModel.icon7 callBackIndex:^(NSString *contentStr) {
         
         NSString *msg = [NSString stringWithFormat:@"发送内容：%@", contentStr];
         BA_SHOW_ALERT(@"温馨提示：", msg);
         
         DemoVC7Model *model = [DemoVC7Model new];
-        model.icon7 = self.quesstionDataModel.icon7;
         model.userName7 = self.quesstionDataModel.userName7;
+        model.icon7 = self.quesstionDataModel.icon7;
         model.content7 = contentStr;
         model.time7 = [NSString BA_time_getCurrentDateAndTime];
         
         [self.replyDataArray addObject:model];
-        [self.tableView reloadData];
+        [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationAutomatic];
+        
     }];
+    replyView.backgroundColor = BA_COLOR(245, 244, 245, 1.0);
+    [self.view addSubview:replyView];
 }
 
 #pragma mark - ***** 添加ReplyData

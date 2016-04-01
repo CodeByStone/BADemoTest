@@ -8,26 +8,15 @@
 
 #import "DemoVC7_replyView.h"
 
-@interface DemoVC7_replyView ()
-
-@property (nonatomic, copy) cilckIndexBlock clickIndexBlock;
-
-@end
-
 @implementation DemoVC7_replyView
-{
-    NSString *imageNameStr;
-    UIImageView *userImageView;
-    UITextField *replyTextField;
-    UIButton *sendButton;
-}
 
 #pragma mark - 初始化
-- (instancetype)initWithFrame:(CGRect)frame withImage:(NSString *)imageName
+- (instancetype)initWithFrame:(CGRect)frame withImage:(NSString *)imageName callBackIndex:(cilckIndexBlock)clickIndex
 {
     self = [super initWithFrame:frame];
     if (self)
     {
+        self.clickIndexBlock = clickIndex;
         imageNameStr = imageName;
         [self setupSubView];
     }
@@ -40,10 +29,12 @@
     userImageView.image = [UIImage imageNamed:imageNameStr];
     userImageView.layer.masksToBounds = YES;
     userImageView.layer.cornerRadius = 40/2;
-
-    replyTextField = [UITextField new];
-    replyTextField.borderStyle = UITextBorderStyleRoundedRect;
-    replyTextField.placeholder = @"评论问题";
+    
+    self.replyTextField = [UITextField new];
+    self.replyTextField.borderStyle = UITextBorderStyleRoundedRect;
+    self.replyTextField.delegate = self;
+    self.replyTextField.placeholder = @"评论问题";
+    //    self.replyTextField.backgroundColor = [UIColor purpleColor];
     
     sendButton = [UIButton buttonWithType:UIButtonTypeCustom];
     sendButton.layer.cornerRadius =  5.0f;
@@ -53,9 +44,9 @@
     [sendButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     sendButton.titleLabel.font = BA_FontSize(15);
     [sendButton addTarget:self action:@selector(sendMessage:) forControlEvents:UIControlEventTouchUpInside];
-    sendButton.tag = 1;
+    //    sendButton.tag = 1;
     
-    NSArray *views = @[userImageView, replyTextField, sendButton];
+    NSArray *views = @[userImageView, self.replyTextField, sendButton];
     [views enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         [self addSubview:obj];
     }];
@@ -68,15 +59,15 @@
     .widthIs(40)
     .heightIs(40);
     
-    replyTextField.sd_layout
-    .leftSpaceToView(userImageView, margin)
+    self.replyTextField.sd_layout
+    .leftSpaceToView(self, 50)
     .topSpaceToView(self, margin)
-    .rightSpaceToView(sendButton, margin)
+    .rightSpaceToView(self, 60)
     .heightIs(40);
     
     sendButton.sd_layout
     .rightSpaceToView(self, margin)
-    .topEqualToView(replyTextField)
+    .topEqualToView(self.replyTextField)
     .widthIs(50)
     .heightIs(40);
 }
@@ -85,13 +76,9 @@
 {
     if (self.clickIndexBlock)
     {
-        self.clickIndexBlock(sender.tag, replyTextField.text);
+        self.clickIndexBlock(self.replyTextField.text);
+        self.replyTextField.text = @"";
     }
-}
-
-- (void)callBackIndex:(cilckIndexBlock)clickIndex
-{
-    self.clickIndexBlock = clickIndex;
 }
 
 @end

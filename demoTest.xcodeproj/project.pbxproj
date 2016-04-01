@@ -149,6 +149,7 @@
 		C44A807A1CAD47C7002AA7C9 /* NSProcessInfo+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A80791CAD47C7002AA7C9 /* NSProcessInfo+BAKit.m */; };
 		C44A807D1CAD47E6002AA7C9 /* NSString+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A807C1CAD47E6002AA7C9 /* NSString+BAKit.m */; };
 		C44A80801CAD4808002AA7C9 /* NSThread+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A807F1CAD4808002AA7C9 /* NSThread+BAKit.m */; };
+		C462F3B41CAE01BC00E932F0 /* AppDelegate+BATest.m in Sources */ = {isa = PBXBuildFile; fileRef = C462F3B31CAE01BC00E932F0 /* AppDelegate+BATest.m */; };
 		C4871CB21CAD3FB50089EF82 /* BAPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4871CAD1CAD3FB50089EF82 /* BAPickerView.m */; };
 		C4871CB61CAD435C0089EF82 /* UIButton+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C4871CB51CAD435C0089EF82 /* UIButton+BAKit.m */; };
 		C4871CB91CAD43BA0089EF82 /* UIColor+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C4871CB81CAD43BA0089EF82 /* UIColor+BAKit.m */; };
@@ -406,6 +407,8 @@
 		C44A807C1CAD47E6002AA7C9 /* NSString+BAKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BAKit.m"; sourceTree = "<group>"; };
 		C44A807E1CAD4808002AA7C9 /* NSThread+BAKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSThread+BAKit.h"; sourceTree = "<group>"; };
 		C44A807F1CAD4808002AA7C9 /* NSThread+BAKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSThread+BAKit.m"; sourceTree = "<group>"; };
+		C462F3B21CAE01BC00E932F0 /* AppDelegate+BATest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+BATest.h"; sourceTree = "<group>"; };
+		C462F3B31CAE01BC00E932F0 /* AppDelegate+BATest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+BATest.m"; sourceTree = "<group>"; };
 		C48063AD1CA275B8000DD080 /* BADefin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BADefin.h; sourceTree = "<group>"; };
 		C4871CAC1CAD3FB50089EF82 /* BAPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAPickerView.h; sourceTree = "<group>"; };
 		C4871CAD1CAD3FB50089EF82 /* BAPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAPickerView.m; sourceTree = "<group>"; };
@@ -642,6 +645,8 @@
 				C42453CC1C979D9300D01865 /* AppDelegate.m */,
 				C42453CE1C979D9300D01865 /* ViewController.h */,
 				C42453CF1C979D9300D01865 /* ViewController.m */,
+				C462F3B21CAE01BC00E932F0 /* AppDelegate+BATest.h */,
+				C462F3B31CAE01BC00E932F0 /* AppDelegate+BATest.m */,
 				C43092041CAD3E6900A9E081 /* Demo */,
 				C4F99A251CACEDF50013C7DF /* BA_Kit */,
 				C4225D941C990ED2006262C9 /* Category */,
@@ -1317,6 +1322,7 @@
 				C43092831CAD3E6900A9E081 /* DemoVC2Model.m in Sources */,
 				C493ED2C1CAA92F600DF2A44 /* BACustomModalTransition.m in Sources */,
 				C43092021CAD3E3200A9E081 /* BASystemSound.m in Sources */,
+				C462F3B41CAE01BC00E932F0 /* AppDelegate+BATest.m in Sources */,
 				C44A807A1CAD47C7002AA7C9 /* NSProcessInfo+BAKit.m in Sources */,
 				C4F623771CA8C76100DCF152 /* UINavigationItem+CustomItem.m in Sources */,
 				C43092921CAD3E6900A9E081 /* DemoVC5Model.m in Sources */,

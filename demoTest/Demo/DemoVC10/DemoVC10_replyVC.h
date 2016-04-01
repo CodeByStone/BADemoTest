@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DemoVC10Model.h"
 
-@interface DemoVC10_replyVC : UITableViewController
+@interface DemoVC10_replyVC : UIViewController
 
 @property (nonatomic, strong) DemoVC10Model *quesstionDataModel;
 @property (nonatomic, strong) DemoVC10Model *replyDataModel;

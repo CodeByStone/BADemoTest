@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "AppDelegate+BATest.h"
 
 @interface AppDelegate ()
 
@@ -27,6 +28,8 @@
     // 键盘
     [self completionHandleIQKeyboard];
     
+    // 测试
+    [self test];
     
     return YES;
 }

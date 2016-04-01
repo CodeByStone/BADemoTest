@@ -8,10 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^cilckIndexBlock)(NSInteger index, NSString *contentStr);
-@interface DemoVC7_replyView : UIView
+typedef void(^cilckIndexBlock)(NSString *contentStr);
 
-- (instancetype)initWithFrame:(CGRect)frame withImage:(NSString *)imageName;
-- (void)callBackIndex:(cilckIndexBlock)clickIndex;
+@interface DemoVC7_replyView : UIView<UITextFieldDelegate>
+{
+    NSString *imageNameStr;
+    UIImageView *userImageView;
+    UIButton *sendButton;
+}
+@property (nonatomic, strong) UITextField *replyTextField;
+@property (nonatomic, copy) cilckIndexBlock clickIndexBlock;
+
+- (instancetype)initWithFrame:(CGRect)frame withImage:(NSString *)imageName callBackIndex:(cilckIndexBlock)clickIndex;
+
 
 @end
