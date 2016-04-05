@@ -34,7 +34,6 @@
     return self;
 }
 
-
 - (void)setHighlighted:(BOOL)highlighted {
     if (![self isHighlighted] && highlighted) {
         [self addSubview:_overlayImgView];
@@ -64,144 +63,156 @@
 
 @end
 
-@implementation BAButton_image_text
+/*! 定义宏：按钮中文本和图片的间隔 */
+#define BA_padding 7
+#define BA_btnRadio 0.6
+/*! 获得按钮的大小 */
+#define BA_btnWidth       self.bounds.size.width
+#define BA_btnHeight      self.bounds.size.height
+/*! 获得按钮中UILabel文本的大小 */
+#define BA_labelWidth     self.titleLabel.bounds.size.width
+#define BA_labelHeight    self.titleLabel.bounds.size.height
+/*! 获得按钮中image图标的大小 */
+#define BA_imageWidth     self.imageView.bounds.size.width
+#define BA_imageHeight    self.imageView.bounds.size.height
 
+
+@implementation BACustomButton
+
++ (instancetype)BA_ShareButton
+{
+    return [[self alloc] init];
+}
+
+- (instancetype)initWitAligenmentStatus:(BAAligenmentStatus)status
+{
+    BACustomButton *button = [[BACustomButton alloc] init];
+    button.buttonStatus = status;
+    return button;
+}
+
+- (void)setButtonStatus:(BAAligenmentStatus)buttonStatus
+{
+    _buttonStatus = buttonStatus;
+}
+
+#pragma mark - 左对齐
+- (void)alignmentLeft
+{
+    //    获得按钮的文本的frame
+    CGRect titleFrame = self.titleLabel.frame;
+    //    设置按钮的文本的x坐标为0-－－左对齐
+    titleFrame.origin.x = 0;
+    //    获得按钮的图片的frame
+    CGRect imageFrame = self.imageView.frame;
+    //    设置按钮的图片的x坐标紧跟文本的后面
+    imageFrame.origin.x = CGRectGetWidth(titleFrame);
+    
+    self.titleLabel.frame = titleFrame;
+    self.imageView.frame = imageFrame;
+}
+
+#pragma mark - 右对齐【文字在左，图片在右】
+- (void)alignmentRight
+{
+    CGRect frame = [self getTitleLabelWith];
+    CGRect imageFrame = self.imageView.frame;
+    imageFrame.origin.x = BA_btnWidth - BA_imageWidth;
+    CGRect titleFrame = self.titleLabel.frame;
+    titleFrame.origin.x = imageFrame.origin.x - frame.size.width;
+    
+    //    重写赋值frame
+    self.titleLabel.frame = titleFrame;
+    self.imageView.frame = imageFrame;
+}
+
+#pragma mark - 计算文本的的宽度
+- (CGRect)getTitleLabelWith
+{
+    NSMutableDictionary *dictM = [NSMutableDictionary dictionary];
+    dictM[NSFontAttributeName] = self.titleLabel.font;
+    CGRect frame = [self.titleLabel.text boundingRectWithSize:CGSizeMake(MAXFLOAT, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:dictM context:nil];
+    
+    return frame;
+}
+
+#pragma mark - 居中对齐
+- (void)alignmentCenter
+{
+    //    设置文本的坐标
+    CGFloat labelX = (BA_btnWidth - BA_labelWidth - BA_imageWidth - BA_padding) * 0.5;
+    CGFloat labelY = (BA_btnHeight - BA_labelHeight) * 0.5;
+    //    设置label的frame
+    self.titleLabel.frame = CGRectMake(labelX, labelY, BA_labelWidth, BA_labelHeight);
+    
+    //    设置图片的坐标
+    CGFloat imageX = CGRectGetMaxX(self.titleLabel.frame) + BA_padding;
+    CGFloat imageY = (BA_btnHeight - BA_imageHeight) * 0.5;
+    //    设置图片的frame
+    self.imageView.frame = CGRectMake(imageX, imageY, BA_imageWidth, BA_imageHeight);
+}
+
+#pragma mark - 图标在上，文本在下(居中)
+- (void)alignmentTop
+{
+    CGRect frame = [self getTitleLabelWith];
+    
+    CGFloat imageX = (BA_btnWidth - BA_imageWidth) * 0.5;
+    self.imageView.frame = CGRectMake(imageX, BA_btnHeight * 0.5 - BA_imageHeight * BA_ButtonTopRadio, BA_imageWidth, BA_imageHeight);
+    self.titleLabel.frame = CGRectMake((self.center.x - frame.size.width) * 0.5, BA_btnHeight * 0.5 + BA_labelHeight * BA_ButtonTopRadio, BA_labelWidth, BA_labelHeight);
+    CGPoint labelCenter = self.titleLabel.center;
+    labelCenter.x = self.imageView.center.x;
+    self.titleLabel.center = labelCenter;
+}
+
+#pragma mark - 图标在下，文本在上(居中)
+- (void)alignmentBottom
+{
+    CGRect frame = [self getTitleLabelWith];
+    
+    CGFloat imageX = (BA_btnWidth - BA_imageWidth) * 0.5;
+    self.titleLabel.frame = CGRectMake((self.center.x - frame.size.width) * 0.5, BA_btnHeight * 0.5 - BA_labelHeight * (1 + BA_ButtonBottomRadio), BA_labelWidth, BA_labelHeight);
+    self.imageView.frame = CGRectMake(imageX, BA_btnHeight * 0.5, BA_imageWidth, BA_imageHeight);
+    CGPoint labelCenter = self.titleLabel.center;
+    labelCenter.x = self.imageView.center.x;
+    self.titleLabel.center = labelCenter;
+}
+
+- (void)setButtonCornerRadius:(CGFloat)buttonCornerRadius
+{
+    self.layer.masksToBounds = YES;
+    self.layer.cornerRadius = buttonCornerRadius;
+}
+
+/** 布局子控件 */
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    self.imageView.y = 10;
-    self.imageView.centerX = self.width/2;
     
-    self.titleLabel.x = 0;
-    self.titleLabel.y = self.imageView.height + 10;
-    self.titleLabel.width = self.width;
-    self.titleLabel.height = self.height - self.imageView.height - 10;
-    self.titleLabel.font = BA_FontSize(14);
-    
-    self.titleLabel.textAlignment = NSTextAlignmentCenter;
-}
-
-@end
-
-
-#define Q_RADIO_ICON_WH                     (16.0)
-#define Q_ICON_TITLE_MARGIN                 (5.0)
-
-
-static NSMutableDictionary *_groupRadioDic = nil;
-
-@implementation BARadioButton
-
-@synthesize delegate = _delegate;
-@synthesize checked  = _checked;
-
-- (id)initWithDelegate:(id)delegate groupId:(NSString*)groupId {
-    self = [super init];
-    if (self) {
-        _delegate = delegate;
-        _groupId = [groupId copy];
-        
-        [self addToGroup];
-        
-        self.exclusiveTouch = YES;
-        
-        [self setImage:[UIImage imageNamed:@"radio_unchecked.png"] forState:UIControlStateNormal];
-        [self setImage:[UIImage imageNamed:@"radio_checked.png"] forState:UIControlStateSelected];
-        [self addTarget:self action:@selector(radioBtnChecked) forControlEvents:UIControlEventTouchUpInside];
+    if (_buttonStatus == BAAligenmentStatusNormal)
+    {
     }
-    return self;
-}
-
-- (void)addToGroup {
-    if(!_groupRadioDic){
-        _groupRadioDic = [NSMutableDictionary dictionary];
+    else if (_buttonStatus == BAAligenmentStatusLeft)
+    {
+        [self alignmentLeft];
     }
-    
-    NSMutableArray *_gRadios = [_groupRadioDic objectForKey:_groupId];
-    if (!_gRadios) {
-        _gRadios = [NSMutableArray array];
+    else if (_buttonStatus == BAAligenmentStatusCenter)
+    {
+        [self alignmentCenter];
     }
-    [_gRadios addObject:self];
-    [_groupRadioDic setObject:_gRadios forKey:_groupId];
-}
-
-- (void)removeFromGroup {
-    if (_groupRadioDic) {
-        NSMutableArray *_gRadios = [_groupRadioDic objectForKey:_groupId];
-        if (_gRadios) {
-            [_gRadios removeObject:self];
-            if (_gRadios.count == 0) {
-                [_groupRadioDic removeObjectForKey:_groupId];
-            }
-        }
+    else if (_buttonStatus == BAAligenmentStatusRight)
+    {
+        [self alignmentRight];
+    }
+    else if (_buttonStatus == BAAligenmentStatusTop)
+    {
+        [self alignmentTop];
+    }
+    else if (_buttonStatus == BAAligenmentStatusBottom)
+    {
+        [self alignmentBottom];
     }
 }
-
-- (void)uncheckOtherRadios {
-    NSMutableArray *_gRadios = [_groupRadioDic objectForKey:_groupId];
-    if (_gRadios.count > 0) {
-        for (BARadioButton *_radio in _gRadios) {
-            if (_radio.checked && ![_radio isEqual:self]) {
-                _radio.checked = NO;
-            }
-        }
-    }
-}
-
-- (void)setChecked:(BOOL)checked {
-    if (_checked == checked) {
-        return;
-    }
-    
-    _checked = checked;
-    self.selected = checked;
-    
-    if (self.selected) {
-        [self uncheckOtherRadios];
-    }
-    
-    if (self.selected && _delegate && [_delegate respondsToSelector:@selector(didSelectedRadioButton:groupId:)]) {
-        [_delegate didSelectedRadioButton:self groupId:_groupId];
-    }
-}
-
-- (void)radioBtnChecked {
-    if (_checked) {
-        return;
-    }
-    
-    self.selected = !self.selected;
-    _checked = self.selected;
-    
-    if (self.selected) {
-        [self uncheckOtherRadios];
-    }
-    
-    if (self.selected && _delegate && [_delegate respondsToSelector:@selector(didSelectedRadioButton:groupId:)]) {
-        [_delegate didSelectedRadioButton:self groupId:_groupId];
-        
-    }
-}
-
-- (CGRect)imageRectForContentRect:(CGRect)contentRect {
-    return CGRectMake(0, (CGRectGetHeight(contentRect) - Q_RADIO_ICON_WH)/2.0, Q_RADIO_ICON_WH, Q_RADIO_ICON_WH);
-}
-
-- (CGRect)titleRectForContentRect:(CGRect)contentRect {
-    return CGRectMake(Q_RADIO_ICON_WH + Q_ICON_TITLE_MARGIN, 0,
-                      CGRectGetWidth(contentRect) - Q_RADIO_ICON_WH - Q_ICON_TITLE_MARGIN,
-                      CGRectGetHeight(contentRect));
-}
-
-- (void)dealloc {
-    [self removeFromGroup];
-    
-    _delegate = nil;
-    //    [_groupId release];
-    _groupId = nil;
-    //    [super dealloc];
-}
-
 @end
 
 

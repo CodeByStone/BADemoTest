@@ -12,10 +12,10 @@ typedef void(^cilckIndexBlock)(NSInteger index);
 
 @interface YRDemandShareCell : UITableViewCell
 
-@property (strong, nonatomic) BAButton_image_text *collectionBtn;
-@property (strong, nonatomic) BAButton_image_text *supportBtn;
-@property (strong, nonatomic) BAButton_image_text *shareBtn;
-@property (strong, nonatomic) BAButton_image_text *shangBtn;
+@property (strong, nonatomic) BACustomButton *collectionBtn;
+@property (strong, nonatomic) BACustomButton *supportBtn;
+@property (strong, nonatomic) BACustomButton *shareBtn;
+@property (strong, nonatomic) BACustomButton *shangBtn;
 
 - (void)callBackIndex:(cilckIndexBlock)clickIndex;
 
