@@ -47,6 +47,8 @@
 #import <MJRefresh.h>
 #import "UIScrollView+BARefresh.h"
 
+// 友盟分享
+#import "BAShareManage.h"
 
 
 #endif /* BADemo_pch */

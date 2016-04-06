@@ -10,6 +10,16 @@
 #define BADefin_h
 
 
+#pragma mark - ***** AppDelegate
+// 友盟分享SDK
+#define YRUmengAppkey     @"56f217d467e58e513a000434"
+#define kSinaAppKey       @"2447331824"
+#define WX_APP_KEY        @"wx19d8c52e02fa7556"
+#define WX_APP_SECRET     @"90eeb0c9ef2a1c99fb473890809f7f19"
+#define kQQKey            @"wrGGgg89e0lqqoXT"
+#define kQQAppID          @"1105285308"
+
+
 #pragma mark - ***** frame设置
 // 当前设备的屏幕宽度
 #define BA_SCREEN_WIDTH    [[UIScreen mainScreen] bounds].size.width

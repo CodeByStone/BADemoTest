@@ -150,6 +150,12 @@
 		C462F3B41CAE01BC00E932F0 /* AppDelegate+BATest.m in Sources */ = {isa = PBXBuildFile; fileRef = C462F3B31CAE01BC00E932F0 /* AppDelegate+BATest.m */; };
 		C46866161CB4D9360038BA76 /* DemoVC15Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = C46866151CB4D9360038BA76 /* DemoVC15Cell.m */; };
 		C46866191CB4DBBC0038BA76 /* DemoVC15_ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C46866181CB4DBBC0038BA76 /* DemoVC15_ViewModel.m */; };
+		C484897B1CB50288002F8815 /* DemoVC16.m in Sources */ = {isa = PBXBuildFile; fileRef = C484897A1CB50288002F8815 /* DemoVC16.m */; };
+		C48489801CB50366002F8815 /* LPLevelView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C484897D1CB50366002F8815 /* LPLevelView.bundle */; };
+		C48489811CB50366002F8815 /* LPLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = C484897F1CB50366002F8815 /* LPLevelView.m */; };
+		C48489851CB50392002F8815 /* BAShareManage.m in Sources */ = {isa = PBXBuildFile; fileRef = C48489841CB50392002F8815 /* BAShareManage.m */; };
+		C48489911CB5044F002F8815 /* BAAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C484898E1CB5044F002F8815 /* BAAnimationView.m */; };
+		C48489921CB5044F002F8815 /* BAView.m in Sources */ = {isa = PBXBuildFile; fileRef = C48489901CB5044F002F8815 /* BAView.m */; };
 		C4871CB21CAD3FB50089EF82 /* BAPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4871CAD1CAD3FB50089EF82 /* BAPickerView.m */; };
 		C4871CB61CAD435C0089EF82 /* UIButton+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C4871CB51CAD435C0089EF82 /* UIButton+BAKit.m */; };
 		C4871CB91CAD43BA0089EF82 /* UIColor+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C4871CB81CAD43BA0089EF82 /* UIColor+BAKit.m */; };
@@ -422,6 +428,17 @@
 		C46866171CB4DBBC0038BA76 /* DemoVC15_ViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC15_ViewModel.h; sourceTree = "<group>"; };
 		C46866181CB4DBBC0038BA76 /* DemoVC15_ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC15_ViewModel.m; sourceTree = "<group>"; };
 		C48063AD1CA275B8000DD080 /* BADefin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BADefin.h; sourceTree = "<group>"; };
+		C48489791CB50288002F8815 /* DemoVC16.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC16.h; sourceTree = "<group>"; };
+		C484897A1CB50288002F8815 /* DemoVC16.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC16.m; sourceTree = "<group>"; };
+		C484897D1CB50366002F8815 /* LPLevelView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LPLevelView.bundle; sourceTree = "<group>"; };
+		C484897E1CB50366002F8815 /* LPLevelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPLevelView.h; sourceTree = "<group>"; };
+		C484897F1CB50366002F8815 /* LPLevelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPLevelView.m; sourceTree = "<group>"; };
+		C48489831CB50392002F8815 /* BAShareManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAShareManage.h; sourceTree = "<group>"; };
+		C48489841CB50392002F8815 /* BAShareManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAShareManage.m; sourceTree = "<group>"; };
+		C484898D1CB5044F002F8815 /* BAAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAAnimationView.h; sourceTree = "<group>"; };
+		C484898E1CB5044F002F8815 /* BAAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAAnimationView.m; sourceTree = "<group>"; };
+		C484898F1CB5044F002F8815 /* BAView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAView.h; sourceTree = "<group>"; };
+		C48489901CB5044F002F8815 /* BAView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAView.m; sourceTree = "<group>"; };
 		C4871CAC1CAD3FB50089EF82 /* BAPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAPickerView.h; sourceTree = "<group>"; };
 		C4871CAD1CAD3FB50089EF82 /* BAPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAPickerView.m; sourceTree = "<group>"; };
 		C4871CB41CAD435C0089EF82 /* UIButton+BAKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+BAKit.h"; sourceTree = "<group>"; };
@@ -630,6 +647,9 @@
 		C4225D971C990ED2006262C9 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				C484898C1CB5044F002F8815 /* BAAnimationView */,
+				C48489821CB50392002F8815 /* 博爱分享 */,
+				C484897C1CB50366002F8815 /* LPLevelView */,
 				C4F623711CA8C76100DCF152 /* BANavigationItem */,
 				C4225D9D1C990ED2006262C9 /* SDPhotoBrowser */,
 			);
@@ -817,6 +837,7 @@
 				C43092231CAD3E6900A9E081 /* DemoVC13 */,
 				C43092261CAD3E6900A9E081 /* DemoVC14 */,
 				C4D415BA1CB4CBC700384434 /* DemoVC15 */,
+				C48489781CB50202002F8815 /* DemoVC16 */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -1060,6 +1081,47 @@
 			path = Foundation;
 			sourceTree = "<group>";
 		};
+		C48489781CB50202002F8815 /* DemoVC16 */ = {
+			isa = PBXGroup;
+			children = (
+				C48489791CB50288002F8815 /* DemoVC16.h */,
+				C484897A1CB50288002F8815 /* DemoVC16.m */,
+			);
+			path = DemoVC16;
+			sourceTree = "<group>";
+		};
+		C484897C1CB50366002F8815 /* LPLevelView */ = {
+			isa = PBXGroup;
+			children = (
+				C484897D1CB50366002F8815 /* LPLevelView.bundle */,
+				C484897E1CB50366002F8815 /* LPLevelView.h */,
+				C484897F1CB50366002F8815 /* LPLevelView.m */,
+			);
+			path = LPLevelView;
+			sourceTree = "<group>";
+		};
+		C48489821CB50392002F8815 /* 博爱分享 */ = {
+			isa = PBXGroup;
+			children = (
+				C48489831CB50392002F8815 /* BAShareManage.h */,
+				C48489841CB50392002F8815 /* BAShareManage.m */,
+			);
+			name = "博爱分享";
+			path = "分享";
+			sourceTree = "<group>";
+		};
+		C484898C1CB5044F002F8815 /* BAAnimationView */ = {
+			isa = PBXGroup;
+			children = (
+				C484898D1CB5044F002F8815 /* BAAnimationView.h */,
+				C484898E1CB5044F002F8815 /* BAAnimationView.m */,
+				C484898F1CB5044F002F8815 /* BAView.h */,
+				C48489901CB5044F002F8815 /* BAView.m */,
+			);
+			name = BAAnimationView;
+			path = CLAnimationView;
+			sourceTree = "<group>";
+		};
 		C4D415BA1CB4CBC700384434 /* DemoVC15 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1276,6 +1338,7 @@
 				C404EC651CA9680F00A82D3A /* icon4.jpg in Resources */,
 				C404EC4A1CA9680F00A82D3A /* 10.jpg in Resources */,
 				C404EC5C1CA9680F00A82D3A /* 6.jpg in Resources */,
+				C48489801CB50366002F8815 /* LPLevelView.bundle in Resources */,
 				C404EC6C1CA9680F00A82D3A /* pic5.jpg in Resources */,
 				C404EC611CA9680F00A82D3A /* icon0.jpg in Resources */,
 				C404EC691CA9680F00A82D3A /* pic2.jpg in Resources */,
@@ -1417,6 +1480,7 @@
 				C4D415DE1CB4D34B00384434 /* BABaseNetManager.m in Sources */,
 				C43092991CAD3E6900A9E081 /* DemoVC7Cell.m in Sources */,
 				C43092891CAD3E6900A9E081 /* YRDemandShareCell.m in Sources */,
+				C48489911CB5044F002F8815 /* BAAnimationView.m in Sources */,
 				C46866191CB4DBBC0038BA76 /* DemoVC15_ViewModel.m in Sources */,
 				C43092871CAD3E6900A9E081 /* DemoVC3Model.m in Sources */,
 				C43092931CAD3E6900A9E081 /* DemoVC6.m in Sources */,
@@ -1428,6 +1492,7 @@
 				C4225DCA1C990ED2006262C9 /* SDBrowserImageView.m in Sources */,
 				C430929D1CAD3E6900A9E081 /* DemoVC9.m in Sources */,
 				C430928C1CAD3E6900A9E081 /* DemoVC4.m in Sources */,
+				C48489921CB5044F002F8815 /* BAView.m in Sources */,
 				C43092811CAD3E6900A9E081 /* DemoVC2Cell.m in Sources */,
 				C44A80681CAD46F3002AA7C9 /* NSDate+BAKit.m in Sources */,
 				C4F02F551CAD449B00371A9C /* UIImage+BAKit.m in Sources */,
@@ -1441,6 +1506,7 @@
 				C44A806E1CAD4739002AA7C9 /* NSFileManager+BAKit.m in Sources */,
 				C4225DCB1C990ED2006262C9 /* SDPhotoBrowser.m in Sources */,
 				C42453CD1C979D9300D01865 /* AppDelegate.m in Sources */,
+				C48489811CB50366002F8815 /* LPLevelView.m in Sources */,
 				C43092741CAD3E6900A9E081 /* YRHomeIncomeView.m in Sources */,
 				C43092801CAD3E6900A9E081 /* DemoVC2.m in Sources */,
 				C44A80771CAD47A5002AA7C9 /* NSNumber+BAKit.m in Sources */,
@@ -1459,6 +1525,7 @@
 				C44A807A1CAD47C7002AA7C9 /* NSProcessInfo+BAKit.m in Sources */,
 				C4F623771CA8C76100DCF152 /* UINavigationItem+CustomItem.m in Sources */,
 				C43092921CAD3E6900A9E081 /* DemoVC5Model.m in Sources */,
+				C48489851CB50392002F8815 /* BAShareManage.m in Sources */,
 				C4D415EB1CB4D39F00384434 /* UIScrollView+BARefresh.m in Sources */,
 				C44A806B1CAD4719002AA7C9 /* NSDictionary+BAKit.m in Sources */,
 				C44A80611CAD4671002AA7C9 /* UIWindow+BAKit.m in Sources */,
@@ -1474,6 +1541,7 @@
 				C43092751CAD3E6900A9E081 /* DemoVC10.m in Sources */,
 				C430926F1CAD3E6900A9E081 /* BAHomeIncomeCell.m in Sources */,
 				C44A80551CAD4583002AA7C9 /* UITextField+BAKit.m in Sources */,
+				C484897B1CB50288002F8815 /* DemoVC16.m in Sources */,
 				C430927B1CAD3E6900A9E081 /* DemoVC12.m in Sources */,
 				C43092941CAD3E6900A9E081 /* DemoVC6Cell.m in Sources */,
 				C430927A1CAD3E6900A9E081 /* DemoVC11.m in Sources */,
@@ -1672,6 +1740,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/BADemo.pch";
 				INFOPLIST_FILE = demoTest/Info.plist;
@@ -1693,6 +1762,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/BADemo.pch";
 				INFOPLIST_FILE = demoTest/Info.plist;

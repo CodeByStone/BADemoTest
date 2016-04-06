@@ -29,6 +29,7 @@ PODS:
   - SDWebImage (3.7.5):
     - SDWebImage/Core (= 3.7.5)
   - SDWebImage/Core (3.7.5)
+  - UMengSocial (4.4)
   - WHC_AutoLayoutKit (2.0.0)
 
 DEPENDENCIES:
@@ -42,6 +43,7 @@ DEPENDENCIES:
   - MWPhotoBrowser
   - SDAutoLayout (~> 1.31)
   - SDWebImage (~> 3.7.5)
+  - UMengSocial (~> 4.4)
   - WHC_AutoLayoutKit (~> 2.0.0)
 
 SPEC CHECKSUMS:
@@ -56,6 +58,7 @@ SPEC CHECKSUMS:
   MWPhotoBrowser: ba0d0c09ffda3a7ea10093518738c502c1c7141c
   SDAutoLayout: 88b539a0c6204787d8e4084ef1b0db250241cc47
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+  UMengSocial: aba7296602310385114d82c255539a7bef3b7ab0
   WHC_AutoLayoutKit: 8dc1026893e4ce77b22ff15969c057488c9e380c
 
 COCOAPODS: 0.39.0

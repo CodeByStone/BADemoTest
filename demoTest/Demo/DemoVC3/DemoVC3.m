@@ -190,7 +190,7 @@
             }
             if (index == 3)
             {
-                [self clickCollectionBtn:@"分享"];
+                [self clickshareBtn];
             }
             if (index == 4)
             {
@@ -258,6 +258,17 @@
 {
     NSString *msg = [NSString stringWithFormat:@"点击了 %@ 按钮！", title];
     BA_SHOW_ALERT(@"温馨提示：", msg);
+}
+
+#pragma mark 分享
+- (void)clickshareBtn
+{
+    NSString *shareText = @"测试（博爱demo）分享【博爱之家】！";
+    UIImage *shareImage = [UIImage imageNamed:@"005.jpg"];
+    NSString *urlSrt = @"http://www.cnblogs.com/boai/";
+    
+    BAShareManage *manger = [BAShareManage shareManage];
+    [manger shareListWithViewControll:self withShareText:shareText image:shareImage url:urlSrt];
 }
 
 @end
