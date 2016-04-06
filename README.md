@@ -12,6 +12,15 @@ ios开发中重难点展示
 ``` 在开发中遇到很多问题，非常感谢SDLayout（原作者gsdios）和其他各路大神的帮助，在此基础上开始更新自己开发中的重难点demo，希望能够帮助更多遇到类似难点的同道中人！ ```
 ***
 
+### 推荐
+#### 完全实现button的自定义的类库，pod 导入：   pod 'BAButton', '~> 1.0.1'
+如果发现pod search BAButton 搜索出来的不是最新版本，需要在终端执行cd转换文件路径命令退回到desktop，然后执行pod setup命令更新本地spec缓存（可能需要几分钟），然后再搜索就可以了
+具体步骤：
+- pod setup : 初始化
+- pod repo update : 更新仓库
+- pod search BAButton
+
+
 #### 对pod还是不熟的同学，可以看下我的博客，是最新的pod安装和使用方法，
 
 ###### http://www.cnblogs.com/boai/p/4977976.html
@@ -20,6 +29,12 @@ ios开发中重难点展示
 ***
 
 # 更新记录：【倒叙】（最新的更新在最上面）【基本每天一更】
+
+## 2016.04.6 --- 
+
+>##2、新增新浪微博demo，链接：【https://github.com/boai/BAWeiBo】
+
+>##1、新增demoVC15，用MVVM模式优化tabelView，提升流畅度！
 
 ## 2016.04.1 --- 
 
