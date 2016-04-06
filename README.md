@@ -32,7 +32,7 @@ ios开发中重难点展示
 
 ## 2016.04.6 --- 
 
->##2、新增新浪微博demo，链接：【https://github.com/boai/BAWeiBo】
+>##2、新增新浪微博demo，链接：【 https://github.com/boai/BAWeiBo 】
 
 >##1、新增demoVC15，用MVVM模式优化tabelView，提升流畅度！
 
