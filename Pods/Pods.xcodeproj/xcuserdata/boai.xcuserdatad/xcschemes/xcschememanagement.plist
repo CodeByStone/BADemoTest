@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>BAButton.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>IQKeyboardManager.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,12 +47,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0501AC6917EB99ECEE4F27D167E33DD6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>10C8A7D9B4B61257FFD37027321ED213</key>
+		<key>10241F7B124091B2608FCC0103E94368</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,12 +57,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>79390DF4148C933925A3044400ACBFF8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8F38A20B08A0DB5F65B9D259E3D2DCA6</key>
+		<key>65D1DBD1FDA8D514CE56059182856341</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,7 +67,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BDDEA04F3D1FF036428BB5A4A6212A2D</key>
+		<key>985F42852C5AD70E725D4F06503F5C5A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C743C42395D3C33F9883CB4690B475A0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D957F25F80162EEA2F3C9BAF9A6CFB10</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F11C8BDD56205D92CED012A2092BB16B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

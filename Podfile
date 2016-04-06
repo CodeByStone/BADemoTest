@@ -16,6 +16,7 @@ pod 'WHC_AutoLayoutKit', '~> 2.0.0'
 pod 'SDWebImage', '~> 3.7.5'
 pod 'MJRefresh', '~> 3.1.0'
 pod 'IQKeyboardManager', '~> 4.0.0'
+pod 'BAButton', '~> 1.0.1'
 
 
 

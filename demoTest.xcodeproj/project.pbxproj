@@ -165,7 +165,6 @@
 		C4F02F611CAD454900371A9C /* UITableView+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F02F601CAD454900371A9C /* UITableView+BAKit.m */; };
 		C4F623761CA8C76100DCF152 /* BACustomBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F623731CA8C76100DCF152 /* BACustomBarItem.m */; };
 		C4F623771CA8C76100DCF152 /* UINavigationItem+CustomItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F623751CA8C76100DCF152 /* UINavigationItem+CustomItem.m */; };
-		C4FD4AC71CB36C9B0070F196 /* BAButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FD4AC61CB36C9B0070F196 /* BAButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -443,8 +442,6 @@
 		C4F623731CA8C76100DCF152 /* BACustomBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BACustomBarItem.m; sourceTree = "<group>"; };
 		C4F623741CA8C76100DCF152 /* UINavigationItem+CustomItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+CustomItem.h"; sourceTree = "<group>"; };
 		C4F623751CA8C76100DCF152 /* UINavigationItem+CustomItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+CustomItem.m"; sourceTree = "<group>"; };
-		C4FD4AC51CB36C9B0070F196 /* BAButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAButton.h; sourceTree = "<group>"; };
-		C4FD4AC61CB36C9B0070F196 /* BAButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAButton.m; sourceTree = "<group>"; };
 		E0AA54C6B23A77162D9B2A27 /* Pods-demoTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-demoTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-demoTest/Pods-demoTest.release.xcconfig"; sourceTree = "<group>"; };
 		ED601320E66DF2ED522196AB /* libPods-demoTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-demoTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -700,8 +697,6 @@
 			children = (
 				C493ED2A1CAA92F600DF2A44 /* BACustomModalTransition.h */,
 				C493ED2B1CAA92F600DF2A44 /* BACustomModalTransition.m */,
-				C4FD4AC51CB36C9B0070F196 /* BAButton.h */,
-				C4FD4AC61CB36C9B0070F196 /* BAButton.m */,
 				C4871CB41CAD435C0089EF82 /* UIButton+BAKit.h */,
 				C4871CB51CAD435C0089EF82 /* UIButton+BAKit.m */,
 				C4871CAC1CAD3FB50089EF82 /* BAPickerView.h */,
@@ -770,6 +765,7 @@
 				C430921F1CAD3E6900A9E081 /* DemoVC12 */,
 				C43092231CAD3E6900A9E081 /* DemoVC13 */,
 				C43092261CAD3E6900A9E081 /* DemoVC14 */,
+				C4D415BA1CB4CBC700384434 /* DemoVC15 */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -1011,6 +1007,13 @@
 				C44A807F1CAD4808002AA7C9 /* NSThread+BAKit.m */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		C4D415BA1CB4CBC700384434 /* DemoVC15 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DemoVC15;
 			sourceTree = "<group>";
 		};
 		C4F623711CA8C76100DCF152 /* BANavigationItem */ = {
@@ -1338,7 +1341,6 @@
 				C43092751CAD3E6900A9E081 /* DemoVC10.m in Sources */,
 				C430926F1CAD3E6900A9E081 /* BAHomeIncomeCell.m in Sources */,
 				C44A80551CAD4583002AA7C9 /* UITextField+BAKit.m in Sources */,
-				C4FD4AC71CB36C9B0070F196 /* BAButton.m in Sources */,
 				C430927B1CAD3E6900A9E081 /* DemoVC12.m in Sources */,
 				C43092941CAD3E6900A9E081 /* DemoVC6Cell.m in Sources */,
 				C430927A1CAD3E6900A9E081 /* DemoVC11.m in Sources */,

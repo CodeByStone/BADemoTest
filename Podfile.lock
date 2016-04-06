@@ -1,5 +1,6 @@
 PODS:
-  - IQKeyboardManager (4.0.0)
+  - BAButton (1.0.1)
+  - IQKeyboardManager (4.0.1)
   - Masonry (0.6.4)
   - MJRefresh (3.1.0)
   - SDAutoLayout (1.50)
@@ -9,6 +10,7 @@ PODS:
   - WHC_AutoLayoutKit (2.0.0)
 
 DEPENDENCIES:
+  - BAButton (~> 1.0.1)
   - IQKeyboardManager (~> 4.0.0)
   - Masonry (~> 0.6.4)
   - MJRefresh (~> 3.1.0)
@@ -17,7 +19,8 @@ DEPENDENCIES:
   - WHC_AutoLayoutKit (~> 2.0.0)
 
 SPEC CHECKSUMS:
-  IQKeyboardManager: b91928f7927ba55a5829b4dcf4b7a6736ac9fc22
+  BAButton: bb8f74e5e167a7e01ce8c0a66eafc3245ebb8c31
+  IQKeyboardManager: 0c11a0cb402a621f7aa1aff506f60ab6d2388969
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
   SDAutoLayout: 88b539a0c6204787d8e4084ef1b0db250241cc47
