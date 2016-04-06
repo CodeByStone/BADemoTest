@@ -14,7 +14,9 @@
 #import <UIKit/UIKit.h> // UI
 #import <Foundation/Foundation.h> // NS
 
+// 全局宏定义文件
 #import "BADefin.h"
+
 #import "BA_Kit/BAKit.h"
 
 #import "UINavigationItem+CustomItem.h"
@@ -26,12 +28,24 @@
 #import "UIView+WHC_AutoLayout.h"
 #import "UITableViewCell+WHC_AutoHeightForCell.h"
 
-#import "MJRefresh.h"
 #import "UIImageView+WebCache.h"
 
 // 键盘
 #import "IQKeyboardManager.h"
 
+// 加载框提示
+//#import "NSObject+BAProgressHUD.h"
+
+// 只要有网络操作
+#import <AFNetworking.h>
+#import <UIKit+AFNetworking.h>
+
+// 可选(与<UIKit+AFNetworking.h>冲突，二选一)
+#import <SDImageCache.h>
+
+// 上下拉刷新
+#import <MJRefresh.h>
+#import "UIScrollView+BARefresh.h"
 
 
 

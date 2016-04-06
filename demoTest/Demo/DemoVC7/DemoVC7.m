@@ -74,12 +74,12 @@
         int picRandomIndex = arc4random_uniform(5);
         
         DemoVC7Model *model = [DemoVC7Model new];
-        model.icon7 = iconImageNamesArray[iconRandomIndex];
-        model.userName7 = namesArray[nameRandomIndex];
-        model.content7 = textArray[contentRandomIndex];
-        model.time7 = timeArray[picRandomIndex];
-        model.starNumber7 = picImageNamesArray[picRandomIndex];
-        model.supportNumber7 = supportNumberArray[picRandomIndex];
+        model.imageName = iconImageNamesArray[iconRandomIndex];
+        model.userName = namesArray[nameRandomIndex];
+        model.content = textArray[contentRandomIndex];
+        model.time = timeArray[picRandomIndex];
+        model.starNumber = picImageNamesArray[picRandomIndex];
+        model.supportNumber = supportNumberArray[picRandomIndex];
         
         [self.dataArray7 addObject:model];
     }
@@ -137,11 +137,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"%s self.dataArray7: %@", __func__, self.dataArray7[indexPath.section]);
+    BALog(@"self.dataArray7: %@", self.dataArray7[indexPath.section]);
     
     DemoVC7_replyVC *replyVC = [[DemoVC7_replyVC alloc] init];
     replyVC.quesstionDataModel = self.dataArray7[indexPath.section];
-    replyVC.title = [NSString stringWithFormat:@"回复%@的评论", replyVC.quesstionDataModel.userName7];
+    replyVC.title = [NSString stringWithFormat:@"回复%@的评论", replyVC.quesstionDataModel.userName];
     [self.navigationController pushViewController:replyVC animated:YES];
     
     // 点击立刻取消该cell的选中状态

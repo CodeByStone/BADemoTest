@@ -157,12 +157,12 @@
 {
     _model = model;
     
-    userImageView.image = [UIImage imageNamed:model.icon7];
-    userNameLabel.text = model.userName7;
-    starImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"star%@", model.starNumber7]];
-    timeLabel.text = model.time7;
-    contentLabel.text = model.content7;
-    [supprotButton setTitle:model.supportNumber7 forState:UIControlStateNormal];
+    userImageView.image = [UIImage imageNamed:model.imageName];
+    userNameLabel.text = model.userName;
+    starImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"star%@", model.starNumber]];
+    timeLabel.text = model.time;
+    contentLabel.text = model.content;
+    [supprotButton setTitle:model.supportNumber forState:UIControlStateNormal];
 }
 
 - (IBAction)clickButton:(UIButton *)sender
@@ -172,33 +172,19 @@
     {
         DemoVC7_replyVC *replyVC = [[DemoVC7_replyVC alloc] init];
         replyVC.quesstionDataModel = self.model;
-        replyVC.title = [NSString stringWithFormat:@"回复%@的评论", replyVC.quesstionDataModel.userName7];
-        [[self viewController].navigationController pushViewController:replyVC animated:YES];
+        replyVC.title = [NSString stringWithFormat:@"回复%@的评论", replyVC.quesstionDataModel.userName];
+        [[self getCurrentViewController].navigationController pushViewController:replyVC animated:YES];
     }
     else if (sender.tag == 2)
     {
         static int number = 0;
         number++;
-        [supprotButton setTitle:[NSString stringWithFormat:@"%d", [self.model.supportNumber7 intValue] + number] forState:UIControlStateNormal];
+        [supprotButton setTitle:[NSString stringWithFormat:@"%d", [self.model.supportNumber intValue] + number] forState:UIControlStateNormal];
     }
     else
     {
         NSLog(@"温馨提示：点击了%ld个button!", (long)sender.tag);
     }
-}
-
-#pragma mark - *****  调用view的C
-- (UIViewController *)viewController
-{
-    for (UIView* next = [self superview]; next; next = next.superview)
-    {
-        UIResponder *nextResponder = [next nextResponder];
-        if ([nextResponder isKindOfClass:[UIViewController class]])
-        {
-            return (UIViewController *)nextResponder;
-        }
-    }
-    return nil;
 }
 
 @end

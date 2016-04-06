@@ -50,8 +50,10 @@
     
     self.view.backgroundColor = BA_White_Color;
     self.tableView.hidden = NO;
-    NSLog(@"%s self.replyDataArray: %@", __func__,self.quesstionDataModel);
+    BALog(@"self.replyDataArray: %@",self.quesstionDataModel);
     
+    self.title = [NSString stringWithFormat:@"回复%@的评论", self.quesstionDataModel.userName];
+
     [self creatReplyData];
     [self creatSendReplyView];
 }
@@ -60,16 +62,16 @@
 - (void)creatSendReplyView
 {
     CGRect frame = CGRectMake(0, BA_SCREEN_HEIGHT - 50, BA_SCREEN_WIDTH, 50);
-    DemoVC7_replyView *replyView = [[DemoVC7_replyView alloc] initWithFrame:frame withImage:self.quesstionDataModel.icon7 callBackIndex:^(NSString *contentStr) {
+    DemoVC7_replyView *replyView = [[DemoVC7_replyView alloc] initWithFrame:frame withImage:self.quesstionDataModel.imageName callBackIndex:^(NSString *contentStr) {
         
         NSString *msg = [NSString stringWithFormat:@"发送内容：%@", contentStr];
         BA_SHOW_ALERT(@"温馨提示：", msg);
         
         DemoVC7Model *model = [DemoVC7Model new];
-        model.userName7 = self.quesstionDataModel.userName7;
-        model.icon7 = self.quesstionDataModel.icon7;
-        model.content7 = contentStr;
-        model.time7 = [NSString BA_time_getCurrentDateAndTime];
+        model.userName = self.quesstionDataModel.userName;
+        model.imageName = self.quesstionDataModel.imageName;
+        model.content = contentStr;
+        model.time = [NSString BA_time_getCurrentDateAndTime];
         
         [self.replyDataArray addObject:model];
         [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationAutomatic];
@@ -115,10 +117,10 @@
         int picRandomIndex = arc4random_uniform(5);
         
         DemoVC7Model *model = [DemoVC7Model new];
-        model.icon7 = iconImageNamesArray[iconRandomIndex];
-        model.userName7 = namesArray[nameRandomIndex];
-        model.content7 = textArray[contentRandomIndex];
-        model.time7 = timeArray[picRandomIndex];
+        model.imageName = iconImageNamesArray[iconRandomIndex];
+        model.userName = namesArray[nameRandomIndex];
+        model.content = textArray[contentRandomIndex];
+        model.time = timeArray[picRandomIndex];
         
         [self.replyDataArray addObject:model];
     }

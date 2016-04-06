@@ -10,12 +10,17 @@
 
 @interface DemoVC7Model : NSObject
 
-@property (nonatomic, copy) NSString *icon7;
-@property (nonatomic, copy) NSString *userName7;
-@property (nonatomic, copy) NSString *starNumber7;
-@property (nonatomic, copy) NSString *time7;
-@property (nonatomic, copy) NSString *content7;
-@property (nonatomic, copy) NSString *supportNumber7;
-
+// 头像
+@property (nonatomic, copy) NSString *imageName;
+// 用户名
+@property (nonatomic, copy) NSString *userName;
+// 时间
+@property (nonatomic, copy) NSString *time;
+// 文字内容
+@property (nonatomic, copy) NSString *content;
+// 星星
+@property (nonatomic, copy) NSString *starNumber;
+// 点赞数
+@property (nonatomic, copy) NSString *supportNumber;
 
 @end

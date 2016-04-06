@@ -90,10 +90,10 @@
 {
     _model = model;
     
-    userImageView.image = [UIImage imageNamed:model.icon7];
-    userNameLabel.text = model.userName7;
-    timeLabel.text = model.time7;
-    contentLabel.text = model.content7;
+    userImageView.image = [UIImage imageNamed:model.imageName];
+    userNameLabel.text = model.userName;
+    timeLabel.text = model.time;
+    contentLabel.text = model.content;
 }
 
 - (IBAction)clickButton:(UIButton *)sender

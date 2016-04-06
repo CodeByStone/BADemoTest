@@ -56,7 +56,7 @@
 - (NSArray *)titlesArray
 {
     if (!_titlesArray) {
-        _titlesArray = @[@"1、自定义View(多重嵌套tableView)", @"2、微信朋友圈", @"3、自适应文字高度", @"4、测试tableView", @"5、评论界面(WHC)", @"6、评论界面(SD)", @"7、评论列表", @"8、动态该表label的高度", @"9、NSString扩展",  @"10、多级评论", @"11、城市选择器(pickView)", @"12、alertView封装", @"13、文字和APP名字的国际化(webView封装)", @"14、自定义collection"];
+        _titlesArray = @[@"1、自定义View(多重嵌套tableView)", @"2、微信朋友圈", @"3、自适应文字高度", @"4、测试tableView", @"5、评论界面(WHC)", @"6、评论界面(SD)", @"7、评论列表", @"8、动态该表label的高度", @"9、NSString扩展",  @"10、多级评论", @"11、城市选择器(pickView)", @"12、alertView封装", @"13、文字和APP名字的国际化(webView封装)", @"14、自定义collection", @"15、MVVM设计模式"];
     }
     return _titlesArray;
 }

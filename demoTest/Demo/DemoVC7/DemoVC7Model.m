@@ -10,7 +10,4 @@
 
 @implementation DemoVC7Model
 
-
-
-
 @end
