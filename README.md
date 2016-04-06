@@ -12,7 +12,7 @@ ios开发中重难点展示
 ``` 在开发中遇到很多问题，非常感谢SDLayout（原作者gsdios）和其他各路大神的帮助，在此基础上开始更新自己开发中的重难点demo，希望能够帮助更多遇到类似难点的同道中人！ ```
 ***
 
-### 推荐
+## 推荐
 #### 完全实现button的自定义的类库，pod 导入：   pod 'BAButton', '~> 1.0.1'
 如果发现pod search BAButton 搜索出来的不是最新版本，需要在终端执行cd转换文件路径命令退回到desktop，然后执行pod setup命令更新本地spec缓存（可能需要几分钟），然后再搜索就可以了
 具体步骤：
@@ -28,37 +28,37 @@ ios开发中重难点展示
 ###### 在DemoVC7的评论功能中使用了键盘处理的三方库，具体使用清看【AppDelegate】
 ***
 
-# 更新记录：【倒叙】（最新的更新在最上面）【基本每天一更】
+## 更新记录：【倒叙】（最新的更新在最上面）【基本每天一更】
 
-## 2016.04.6 --- 
+### 2016.04.6 --- 
 
->##3、新增demoVC16，友盟分享和友盟登陆！完美封装！
+>###3、新增demoVC16，友盟分享和友盟登陆！完美封装！
 
->##2、新增新浪微博demo，链接：【 https://github.com/boai/BAWeiBo 】
+>###2、新增新浪微博demo，链接：【 https://github.com/boai/BAWeiBo 】
 
->##1、新增demoVC15，用MVVM模式优化tabelView，提升流畅度！
+>###1、新增demoVC15，用MVVM模式优化tabelView，提升流畅度！
 
-## 2016.04.1 --- 
+### 2016.04.1 --- 
 
->##2、新增AppDelegate+BATest测试，系统版本号等获取！
->##1、优化demoVC7和10的评论和回复
+>###2、新增AppDelegate+BATest测试，系统版本号等获取！
+>###1、优化demoVC7和10的评论和回复
 
-## 2016.03.31 --- 
+### 2016.03.31 --- 
 
->##2、整理了下目前已有的BAKit框架，已打包，后期可pod下载！需要的同学可自行下载！
+>###2、整理了下目前已有的BAKit框架，已打包，后期可pod下载！需要的同学可自行下载！
 
->##1、自定义collectionView的UICollectionViewFlowLayout，仿写了一个LOL的选择英雄的界面（源码来自网络，非原创）
+>###1、自定义collectionView的UICollectionViewFlowLayout，仿写了一个LOL的选择英雄的界面（源码来自网络，非原创）
 ![image](https://github.com/boai/BADemoTest/blob/master/Image/gif6.gif)
 
-## 2016.03.30 --- 
+### 2016.03.30 --- 
 
->##2、APP中的文字和APP名字的国际化多语言处理
+>###2、APP中的文字和APP名字的国际化多语言处理
 具体详情可以查看我的博客：http://www.cnblogs.com/boai/p/5337558.html
 
 ![image](https://github.com/boai/BADemoTest/blob/master/Image/image9.jpg)
 ![image](https://github.com/boai/BADemoTest/blob/master/Image/image10.png)
 
->##1、新增demoVC13，对webView 和 webVC的封装处理，
+>###1、新增demoVC13，对webView 和 webVC的封装处理，
 ```
 UIWebView *webView = [UIWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlStr] ] loaded:^(UIWebView *webView) {
         NSLog(@"Loaded %@", webView.request.URL);
@@ -92,14 +92,14 @@ UIWebView *webView = [UIWebView loadRequest:[NSURLRequest requestWithURL:[NSURL 
 ![image](https://github.com/boai/BADemoTest/blob/master/Image/image8.png)
 
 
->##2、新增modal动画封装类，和alert封装类
+>###2、新增modal动画封装类，和alert封装类
 
->##1、新版百度地图API的定位于反地理编译的使用详情，具体先看博客，后期更新demo，
+>###1、新版百度地图API的定位于反地理编译的使用详情，具体先看博客，后期更新demo，
 http://www.cnblogs.com/boai/p/5332365.html
 
-## 2016.03.28 --- 
+### 2016.03.28 --- 
 
->##1、新增DemoVC11，城市选择器
+>###1、新增DemoVC11，城市选择器
 ```
 实现一行代码回调结果：
 - (void)getSelectCity:(NSString *)city;
