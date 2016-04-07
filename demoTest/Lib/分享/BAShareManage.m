@@ -10,7 +10,7 @@
 #import "UMSocial.h"
 #import "UMSocialWechatHandler.h"
 #import "WXApi.h"
-#import "BAAnimationView.h"
+#import "BAShareAnimationView.h"
 #import "UMSocialQQHandler.h"
 
 @implementation BAShareManage {
@@ -45,7 +45,7 @@ static BAShareManage *shareManage;
 }
 
 #pragma mark 微信分享
-- (void)wxShareWithViewControll:(UIViewController *)viewC withShareText:shareText image:shareImage url:shareURLString
+- (void)BA_wxShareWithViewControll:(UIViewController *)viewC withShareText:shareText image:shareImage url:shareURLString
 {
     _viewC = viewC;
     [[UMSocialControllerService defaultControllerService] setShareText:shareText shareImage:shareImage socialUIDelegate:nil];
@@ -55,7 +55,7 @@ static BAShareManage *shareManage;
 }
 
 #pragma mark 新浪微博分享
-- (void)wbShareWithViewControll:(UIViewController *)viewC withShareText:shareText image:shareImage 
+- (void)BA_wbShareWithViewControll:(UIViewController *)viewC withShareText:shareText image:shareImage
 {
     _viewC = viewC;
     [[UMSocialControllerService defaultControllerService] setShareText:shareText shareImage:shareImage socialUIDelegate:nil];
@@ -63,7 +63,7 @@ static BAShareManage *shareManage;
 }
 
 #pragma mark 微信朋友圈分享
-- (void)wxpyqShareWithViewControll:(UIViewController *)viewC withShareText:shareText image:shareImage url:shareURLString
+- (void)BA_wxpyqShareWithViewControll:(UIViewController *)viewC withShareText:shareText image:shareImage url:shareURLString
 {
     _viewC = viewC;
     [[UMSocialControllerService defaultControllerService] setShareText:shareText shareImage:shareImage socialUIDelegate:nil];
@@ -72,7 +72,7 @@ static BAShareManage *shareManage;
 }
 
 #pragma mark qq分享
-- (void)qqShareWithViewControll:(UIViewController *)viewC withShareText:shareText image:shareImage url:shareURLString
+- (void)BA_qqShareWithViewControll:(UIViewController *)viewC withShareText:shareText image:shareImage url:shareURLString
 {
     _viewC = viewC;
     [[UMSocialControllerService defaultControllerService] setShareText:shareText shareImage:shareImage socialUIDelegate:nil];
@@ -82,7 +82,7 @@ static BAShareManage *shareManage;
 }
 
 #pragma mark qqzone分享
-- (void)qqzoneShareWithViewControll:(UIViewController *)viewC withShareText:shareText image:shareImage url:shareURLString
+- (void)BA_qqzoneShareWithViewControll:(UIViewController *)viewC withShareText:shareText image:shareImage url:shareURLString
 {
     _viewC = viewC;
     [[UMSocialControllerService defaultControllerService] setShareText:shareText shareImage:shareImage socialUIDelegate:nil];
@@ -92,7 +92,7 @@ static BAShareManage *shareManage;
 }
 
 #pragma mark 短信分享
-- (void)smsShareWithViewControll:(UIViewController *)viewC withShareText:shareText image:shareImage
+- (void)BA_smsShareWithViewControll:(UIViewController *)viewC withShareText:shareText image:shareImage
 {
     _viewC = viewC;
     Class messageClass = (NSClassFromString(@"MFMessageComposeViewController"));
@@ -110,7 +110,7 @@ static BAShareManage *shareManage;
 }
 
 #pragma mark 短信的代理方法
-- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result{
+- (void)BA_messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result{
     [_viewC dismissViewControllerAnimated:YES completion:nil];
     switch (result)
     {
@@ -129,11 +129,11 @@ static BAShareManage *shareManage;
 }
 
 #pragma mark 分享列表
-- (void)shareListWithViewControll:(UIViewController *)viewC withShareText:(NSString *)shareText image:(UIImage *)shareImage url:(NSString *)shareURLString
+- (void)BA_UMshareListWithViewControll:(UIViewController *)viewC withShareText:(NSString *)shareText image:(UIImage *)shareImage url:(NSString *)shareURLString
 {
     NSMutableArray *titarray = [NSMutableArray arrayWithObjects:@"微信",@"朋友圈",@"微博", @"QQ",@"空间",nil];
     NSMutableArray *picarray = [NSMutableArray arrayWithObjects:@"wechat",@"pyq",@"weibo", @"qq",@"zone",nil];
-    BAAnimationView *animationView = [[BAAnimationView alloc]initWithTitleArray:titarray picarray:picarray title:@"第三方分享"];
+    BAShareAnimationView *animationView = [[BAShareAnimationView alloc]initWithTitleArray:titarray picarray:picarray title:@"第三方分享"];
     [animationView selectedWithIndex:^(NSInteger index,id shareType) {
         NSLog(@"你选择的index ＝＝ %ld",(long)index);
         NSLog(@"要分享到的平台");
@@ -141,19 +141,19 @@ static BAShareManage *shareManage;
         switch (index)
         {
             case 1:
-                [self wxShareWithViewControll:viewC withShareText:shareText image:shareImage url:shareURLString];
+                [self BA_wxShareWithViewControll:viewC withShareText:shareText image:shareImage url:shareURLString];
                 break;
             case 2:
-                [self wxpyqShareWithViewControll:viewC withShareText:shareText image:shareImage url:shareURLString];
+                [self BA_wxpyqShareWithViewControll:viewC withShareText:shareText image:shareImage url:shareURLString];
                 break;
             case 3:
-                [self wbShareWithViewControll:viewC withShareText:shareText image:shareImage];
+                [self BA_wbShareWithViewControll:viewC withShareText:shareText image:shareImage];
                 break;
             case 4:
-                [self qqShareWithViewControll:viewC withShareText:shareText image:shareImage url:shareURLString];
+                [self BA_qqShareWithViewControll:viewC withShareText:shareText image:shareImage url:shareURLString];
                 break;
             case 5:
-                [self qqzoneShareWithViewControll:viewC withShareText:shareText image:shareImage url:shareURLString];
+                [self BA_qqzoneShareWithViewControll:viewC withShareText:shareText image:shareImage url:shareURLString];
                 break;
                 
             default:
@@ -190,7 +190,7 @@ static BAShareManage *shareManage;
 
 #pragma mark - 友盟登录
 /**友盟 QQ 登录**/
-- (void)BAQQLogin:(UIViewController *)viewController
+- (void)BA_QQLogin:(UIViewController *)viewController
 {
     UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToQQ];
     
@@ -217,7 +217,7 @@ static BAShareManage *shareManage;
 }
 
 /**友盟 Qzone 登录**/
-- (void)BAQzoneLogin:(UIViewController *)viewController
+- (void)BA_QzoneLogin:(UIViewController *)viewController
 {
     UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToQzone];
     
@@ -244,7 +244,7 @@ static BAShareManage *shareManage;
 }
 
 /**友盟 新浪微博 登录**/
-- (void)BASinaLogin:(UIViewController *)viewController
+- (void)BA_SinaLogin:(UIViewController *)viewController
 {
     UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToSina];
     
@@ -279,7 +279,7 @@ static BAShareManage *shareManage;
 }
 
 /**友盟 微信 登录**/
-- (void)BAWechatSessionLogin:(UIViewController *)viewController
+- (void)BA_WechatSessionLogin:(UIViewController *)viewController
 {
     UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToWechatSession];
     
@@ -306,11 +306,11 @@ static BAShareManage *shareManage;
 }
 
 /**友盟登录列表**/
-- (void)BAUMLoginListWithViewControll:(UIViewController *)viewController
+- (void)BA_UMLoginListWithViewControll:(UIViewController *)viewController
 {
     NSMutableArray *titarray = [NSMutableArray arrayWithObjects:@"微信",@"微博", @"QQ",@"空间",nil];
     NSMutableArray *picarray = [NSMutableArray arrayWithObjects:@"wechat",@"weibo", @"qq",@"zone",nil];
-    BAAnimationView *animationView = [[BAAnimationView alloc]initWithTitleArray:titarray picarray:picarray title:@"第三方登录"];
+    BAShareAnimationView *animationView = [[BAShareAnimationView alloc]initWithTitleArray:titarray picarray:picarray title:@"第三方登录"];
     [animationView selectedWithIndex:^(NSInteger index,id shareType) {
         NSLog(@"你选择的index ＝＝ %ld",(long)index);
         NSLog(@"要登录的平台");
@@ -318,16 +318,16 @@ static BAShareManage *shareManage;
         switch (index)
         {
             case 1:
-                [self BAWechatSessionLogin:viewController];
+                [self BA_WechatSessionLogin:viewController];
                 break;
             case 2:
-                [self BASinaLogin:viewController];
+                [self BA_SinaLogin:viewController];
                 break;
             case 3:
-                [self BAQQLogin:viewController];
+                [self BA_QQLogin:viewController];
                 break;
             case 4:
-                [self BAQzoneLogin:viewController];
+                [self BA_QzoneLogin:viewController];
                 break;
 
             default:

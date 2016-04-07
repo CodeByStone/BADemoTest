@@ -1,5 +1,5 @@
 //
-//  BAView.h
+//  BAShareManage.h
 //  yrapp
 //
 //  Created by 博爱 on 16/2/3.
@@ -11,7 +11,7 @@
 typedef  void (^RRBlock)(NSInteger index,UILabel *sheetLab,id ShareType);
 
 
-@interface BAView : UIView
+@interface BAShareManageView : UIView
 
 
 /*

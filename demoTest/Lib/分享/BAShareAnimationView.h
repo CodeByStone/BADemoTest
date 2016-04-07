@@ -1,5 +1,5 @@
 //
-//  BAAnimationView.h
+//  BAShareAnimationView.h
 //  yrapp
 //
 //  Created by 博爱 on 16/2/3.
@@ -14,7 +14,7 @@ typedef void (^CLBlock)(NSInteger index,id shareType);
 // 选择按钮
 typedef void(^CLBtnBlock)(UIButton *btn);
 
-@interface BAAnimationView : UIView
+@interface BAShareAnimationView : UIView
 
 @property (nonatomic,copy) CLBlock block;
 @property (nonatomic,copy) CLBtnBlock btnBlock;

@@ -73,7 +73,7 @@
     NSString *urlSrt = @"http://www.cnblogs.com/boai/";
     
     BAShareManage *manger = [BAShareManage shareManage];
-    [manger shareListWithViewControll:self withShareText:shareText image:shareImage url:urlSrt];
+    [manger BA_UMshareListWithViewControll:self withShareText:shareText image:shareImage url:urlSrt];
 }
 
 #pragma mark 友盟登陆
@@ -81,7 +81,7 @@
 {
     BAShareManage *manger = [BAShareManage shareManage];
     manger.delegate = self;
-    [manger BAUMLoginListWithViewControll:self];
+    [manger BA_UMLoginListWithViewControll:self];
 }
 
 - (void)getUserData:(NSDictionary *)backUserData

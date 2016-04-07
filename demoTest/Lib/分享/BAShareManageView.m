@@ -1,15 +1,15 @@
 //
-//  BAView.m
+//  BAShareManage.m
 //  yrapp
 //
 //  Created by 博爱 on 16/2/3.
 //  Copyright © 2016年 有人科技. All rights reserved.
 //
 
-#import "BAView.h"
+#import "BAShareManageView.h"
 #import "UMSocial.h"
 
-@implementation BAView
+@implementation BAShareManageView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {

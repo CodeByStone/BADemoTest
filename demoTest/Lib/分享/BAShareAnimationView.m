@@ -1,13 +1,13 @@
 //
-//  BAAnimationView.m
+//  BAShareAnimationView.m
 //  yrapp
 //
 //  Created by 博爱 on 16/2/3.
 //  Copyright © 2016年 有人科技. All rights reserved.
 //
 
-#import "BAAnimationView.h"
-#import "BAView.h"
+#import "BAShareAnimationView.h"
+#import "BAShareManageView.h"
 #import "UMSocial.h"
 
 
@@ -16,7 +16,7 @@
 #define SCREENHEIGHT    [UIScreen mainScreen].bounds.size.height
 
 
-@interface BAAnimationView ()<UIScrollViewDelegate>
+@interface BAShareAnimationView ()<UIScrollViewDelegate>
 {
     UIPageControl *pageShow ;
 }
@@ -27,7 +27,7 @@
 
 @end
 
-@implementation BAAnimationView
+@implementation BAShareAnimationView
 
 
 - (id)initWithTitleArray:(NSMutableArray *)titlearray picarray:(NSMutableArray *)picarray title:(NSString *)title
@@ -71,11 +71,11 @@
         pageShow.currentPageIndicatorTintColor = [UIColor grayColor];
         pageShow.pageIndicatorTintColor = [UIColor lightGrayColor];
         pageShow.numberOfPages = (titlearray.count +3)/4;
-        pageShow.center = CGPointMake(SCREENWIDTH/2, 80);
+        pageShow.center = CGPointMake(SCREENWIDTH/2, 100);
         [_largeView addSubview:pageShow];
         
         for (int i = 0; i < titlearray.count; i ++) {
-            BAView *rr = [[BAView alloc]initWithFrame:CGRectMake(i *(SCREENWIDTH / 4), 40, SCREENWIDTH/4, 90)];
+            BAShareManageView *rr = [[BAShareManageView alloc]initWithFrame:CGRectMake(i *(SCREENWIDTH / 4), 40, SCREENWIDTH/4, 90)];
             rr.tag = 10 + i;
             rr.sheetBtn.tag = i + 1;
             [rr.sheetBtn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",picarray[i]]] forState:UIControlStateNormal];
@@ -129,7 +129,7 @@
             
             CGPoint CLCenterPoint = CGPointMake(SCREENWIDTH/4* i  + (SCREENWIDTH/8), 45);
             
-            BAView *rr =  (BAView *)[self viewWithTag:10 + i];
+            BAShareManageView *rr =  (BAShareManageView *)[self viewWithTag:10 + i];
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(i*0.03 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [UIView animateWithDuration:1.0 delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:0.8 options:UIViewAnimationOptionCurveEaseOut animations:^{
                     rr.center = CLCenterPoint;

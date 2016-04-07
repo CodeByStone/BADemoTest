@@ -118,6 +118,9 @@
 		C430929C1CAD3E6900A9E081 /* DemoVC8_View1.m in Sources */ = {isa = PBXBuildFile; fileRef = C430926B1CAD3E6900A9E081 /* DemoVC8_View1.m */; };
 		C430929D1CAD3E6900A9E081 /* DemoVC9.m in Sources */ = {isa = PBXBuildFile; fileRef = C430926E1CAD3E6900A9E081 /* DemoVC9.m */; };
 		C43B62B81CB5E86500D44D5E /* BAFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C43B62B71CB5E86500D44D5E /* BAFPSLabel.m */; };
+		C43B62BF1CB629C100D44D5E /* BAShareAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C43B62BA1CB629C100D44D5E /* BAShareAnimationView.m */; };
+		C43B62C01CB629C100D44D5E /* BAShareManage.m in Sources */ = {isa = PBXBuildFile; fileRef = C43B62BC1CB629C100D44D5E /* BAShareManage.m */; };
+		C43B62C11CB629C100D44D5E /* BAShareManageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C43B62BE1CB629C100D44D5E /* BAShareManageView.m */; };
 		C43FDA421CABE9D300D43E22 /* img0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C43FDA331CABE9D300D43E22 /* img0.jpg */; };
 		C43FDA431CABE9D300D43E22 /* img1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C43FDA341CABE9D300D43E22 /* img1.jpg */; };
 		C43FDA441CABE9D300D43E22 /* img10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C43FDA351CABE9D300D43E22 /* img10.jpg */; };
@@ -154,9 +157,6 @@
 		C484897B1CB50288002F8815 /* DemoVC16.m in Sources */ = {isa = PBXBuildFile; fileRef = C484897A1CB50288002F8815 /* DemoVC16.m */; };
 		C48489801CB50366002F8815 /* LPLevelView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C484897D1CB50366002F8815 /* LPLevelView.bundle */; };
 		C48489811CB50366002F8815 /* LPLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = C484897F1CB50366002F8815 /* LPLevelView.m */; };
-		C48489851CB50392002F8815 /* BAShareManage.m in Sources */ = {isa = PBXBuildFile; fileRef = C48489841CB50392002F8815 /* BAShareManage.m */; };
-		C48489911CB5044F002F8815 /* BAAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C484898E1CB5044F002F8815 /* BAAnimationView.m */; };
-		C48489921CB5044F002F8815 /* BAView.m in Sources */ = {isa = PBXBuildFile; fileRef = C48489901CB5044F002F8815 /* BAView.m */; };
 		C4871CB21CAD3FB50089EF82 /* BAPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4871CAD1CAD3FB50089EF82 /* BAPickerView.m */; };
 		C4871CB61CAD435C0089EF82 /* UIButton+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C4871CB51CAD435C0089EF82 /* UIButton+BAKit.m */; };
 		C4871CB91CAD43BA0089EF82 /* UIColor+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C4871CB81CAD43BA0089EF82 /* UIColor+BAKit.m */; };
@@ -379,6 +379,12 @@
 		C430926E1CAD3E6900A9E081 /* DemoVC9.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC9.m; sourceTree = "<group>"; };
 		C43B62B61CB5E86500D44D5E /* BAFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAFPSLabel.h; sourceTree = "<group>"; };
 		C43B62B71CB5E86500D44D5E /* BAFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAFPSLabel.m; sourceTree = "<group>"; };
+		C43B62B91CB629C100D44D5E /* BAShareAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAShareAnimationView.h; sourceTree = "<group>"; };
+		C43B62BA1CB629C100D44D5E /* BAShareAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAShareAnimationView.m; sourceTree = "<group>"; };
+		C43B62BB1CB629C100D44D5E /* BAShareManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAShareManage.h; sourceTree = "<group>"; };
+		C43B62BC1CB629C100D44D5E /* BAShareManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAShareManage.m; sourceTree = "<group>"; };
+		C43B62BD1CB629C100D44D5E /* BAShareManageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAShareManageView.h; sourceTree = "<group>"; };
+		C43B62BE1CB629C100D44D5E /* BAShareManageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAShareManageView.m; sourceTree = "<group>"; };
 		C43FDA331CABE9D300D43E22 /* img0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img0.jpg; sourceTree = "<group>"; };
 		C43FDA341CABE9D300D43E22 /* img1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img1.jpg; sourceTree = "<group>"; };
 		C43FDA351CABE9D300D43E22 /* img10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img10.jpg; sourceTree = "<group>"; };
@@ -436,12 +442,6 @@
 		C484897D1CB50366002F8815 /* LPLevelView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LPLevelView.bundle; sourceTree = "<group>"; };
 		C484897E1CB50366002F8815 /* LPLevelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPLevelView.h; sourceTree = "<group>"; };
 		C484897F1CB50366002F8815 /* LPLevelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPLevelView.m; sourceTree = "<group>"; };
-		C48489831CB50392002F8815 /* BAShareManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAShareManage.h; sourceTree = "<group>"; };
-		C48489841CB50392002F8815 /* BAShareManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAShareManage.m; sourceTree = "<group>"; };
-		C484898D1CB5044F002F8815 /* BAAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAAnimationView.h; sourceTree = "<group>"; };
-		C484898E1CB5044F002F8815 /* BAAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAAnimationView.m; sourceTree = "<group>"; };
-		C484898F1CB5044F002F8815 /* BAView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAView.h; sourceTree = "<group>"; };
-		C48489901CB5044F002F8815 /* BAView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAView.m; sourceTree = "<group>"; };
 		C4871CAC1CAD3FB50089EF82 /* BAPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAPickerView.h; sourceTree = "<group>"; };
 		C4871CAD1CAD3FB50089EF82 /* BAPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAPickerView.m; sourceTree = "<group>"; };
 		C4871CB41CAD435C0089EF82 /* UIButton+BAKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+BAKit.h"; sourceTree = "<group>"; };
@@ -652,7 +652,6 @@
 			children = (
 				C43B62B61CB5E86500D44D5E /* BAFPSLabel.h */,
 				C43B62B71CB5E86500D44D5E /* BAFPSLabel.m */,
-				C484898C1CB5044F002F8815 /* BAAnimationView */,
 				C48489821CB50392002F8815 /* 博爱分享 */,
 				C484897C1CB50366002F8815 /* LPLevelView */,
 				C4F623711CA8C76100DCF152 /* BANavigationItem */,
@@ -1108,23 +1107,15 @@
 		C48489821CB50392002F8815 /* 博爱分享 */ = {
 			isa = PBXGroup;
 			children = (
-				C48489831CB50392002F8815 /* BAShareManage.h */,
-				C48489841CB50392002F8815 /* BAShareManage.m */,
+				C43B62BB1CB629C100D44D5E /* BAShareManage.h */,
+				C43B62BC1CB629C100D44D5E /* BAShareManage.m */,
+				C43B62B91CB629C100D44D5E /* BAShareAnimationView.h */,
+				C43B62BA1CB629C100D44D5E /* BAShareAnimationView.m */,
+				C43B62BD1CB629C100D44D5E /* BAShareManageView.h */,
+				C43B62BE1CB629C100D44D5E /* BAShareManageView.m */,
 			);
 			name = "博爱分享";
 			path = "分享";
-			sourceTree = "<group>";
-		};
-		C484898C1CB5044F002F8815 /* BAAnimationView */ = {
-			isa = PBXGroup;
-			children = (
-				C484898D1CB5044F002F8815 /* BAAnimationView.h */,
-				C484898E1CB5044F002F8815 /* BAAnimationView.m */,
-				C484898F1CB5044F002F8815 /* BAView.h */,
-				C48489901CB5044F002F8815 /* BAView.m */,
-			);
-			name = BAAnimationView;
-			path = CLAnimationView;
 			sourceTree = "<group>";
 		};
 		C4D415BA1CB4CBC700384434 /* DemoVC15 */ = {
@@ -1485,7 +1476,6 @@
 				C4D415DE1CB4D34B00384434 /* BABaseNetManager.m in Sources */,
 				C43092991CAD3E6900A9E081 /* DemoVC7Cell.m in Sources */,
 				C43092891CAD3E6900A9E081 /* YRDemandShareCell.m in Sources */,
-				C48489911CB5044F002F8815 /* BAAnimationView.m in Sources */,
 				C46866191CB4DBBC0038BA76 /* DemoVC15_ViewModel.m in Sources */,
 				C43092871CAD3E6900A9E081 /* DemoVC3Model.m in Sources */,
 				C43092931CAD3E6900A9E081 /* DemoVC6.m in Sources */,
@@ -1497,7 +1487,6 @@
 				C4225DCA1C990ED2006262C9 /* SDBrowserImageView.m in Sources */,
 				C430929D1CAD3E6900A9E081 /* DemoVC9.m in Sources */,
 				C430928C1CAD3E6900A9E081 /* DemoVC4.m in Sources */,
-				C48489921CB5044F002F8815 /* BAView.m in Sources */,
 				C43092811CAD3E6900A9E081 /* DemoVC2Cell.m in Sources */,
 				C44A80681CAD46F3002AA7C9 /* NSDate+BAKit.m in Sources */,
 				C4F02F551CAD449B00371A9C /* UIImage+BAKit.m in Sources */,
@@ -1507,6 +1496,7 @@
 				C430929B1CAD3E6900A9E081 /* DemoVC8.m in Sources */,
 				C430928B1CAD3E6900A9E081 /* YRDemandUserViewCell.m in Sources */,
 				C430927E1CAD3E6900A9E081 /* BACardLayout.m in Sources */,
+				C43B62C11CB629C100D44D5E /* BAShareManageView.m in Sources */,
 				C44A80801CAD4808002AA7C9 /* NSThread+BAKit.m in Sources */,
 				C44A806E1CAD4739002AA7C9 /* NSFileManager+BAKit.m in Sources */,
 				C4225DCB1C990ED2006262C9 /* SDPhotoBrowser.m in Sources */,
@@ -1527,11 +1517,11 @@
 				C43092021CAD3E3200A9E081 /* BASystemSound.m in Sources */,
 				C4D415CA1CB4CF0C00384434 /* NSObject+BAMJParse.m in Sources */,
 				C462F3B41CAE01BC00E932F0 /* AppDelegate+BATest.m in Sources */,
+				C43B62C01CB629C100D44D5E /* BAShareManage.m in Sources */,
 				C4D415DF1CB4D34B00384434 /* BANewsNetManager.m in Sources */,
 				C44A807A1CAD47C7002AA7C9 /* NSProcessInfo+BAKit.m in Sources */,
 				C4F623771CA8C76100DCF152 /* UINavigationItem+CustomItem.m in Sources */,
 				C43092921CAD3E6900A9E081 /* DemoVC5Model.m in Sources */,
-				C48489851CB50392002F8815 /* BAShareManage.m in Sources */,
 				C4D415EB1CB4D39F00384434 /* UIScrollView+BARefresh.m in Sources */,
 				C44A806B1CAD4719002AA7C9 /* NSDictionary+BAKit.m in Sources */,
 				C44A80611CAD4671002AA7C9 /* UIWindow+BAKit.m in Sources */,
@@ -1539,6 +1529,7 @@
 				C43092771CAD3E6900A9E081 /* DemoVC10Cell.m in Sources */,
 				C44A805E1CAD4648002AA7C9 /* UIWebView+BAKit.m in Sources */,
 				C43092971CAD3E6900A9E081 /* DemoVC7_replyVC.m in Sources */,
+				C43B62BF1CB629C100D44D5E /* BAShareAnimationView.m in Sources */,
 				C430928D1CAD3E6900A9E081 /* BASearchBar.m in Sources */,
 				C4D415C41CB4CE6000384434 /* DemoVC15.m in Sources */,
 				C4D415CD1CB4D2FD00384434 /* NSData+BAKit.m in Sources */,

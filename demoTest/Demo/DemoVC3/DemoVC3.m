@@ -268,7 +268,7 @@
     NSString *urlSrt = @"http://www.cnblogs.com/boai/";
     
     BAShareManage *manger = [BAShareManage shareManage];
-    [manger shareListWithViewControll:self withShareText:shareText image:shareImage url:urlSrt];
+    [manger BA_UMshareListWithViewControll:self withShareText:shareText image:shareImage url:urlSrt];
 }
 
 @end
