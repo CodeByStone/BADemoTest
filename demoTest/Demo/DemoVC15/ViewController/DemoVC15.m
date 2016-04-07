@@ -108,7 +108,7 @@
                                      ];
     NSArray *timeArray = @[@"2016-03-06",@"2016-03-07",@"2016-03-08",@"2016-03-09",@"2016-03-10"];
     
-    for (int i = 0; i < 100; i++)
+    for (int i = 0; i < 1000; i++)
     {
         int iconRandomIndex = arc4random_uniform(5);
         int nameRandomIndex = arc4random_uniform(5);

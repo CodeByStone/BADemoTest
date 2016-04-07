@@ -127,6 +127,8 @@
     self.title = BALocalizedString(@"title", nil);
     self.view.backgroundColor = [UIColor whiteColor];
     
+    [BAFPSLabel showInWindow:[UIApplication sharedApplication].keyWindow];
+    
     self.tableView.hidden = NO;
 }
 

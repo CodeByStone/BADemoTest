@@ -50,5 +50,9 @@
 // 友盟分享
 #import "BAShareManage.h"
 
+// FPS
+#import "BAFPSLabel.h"
+
+
 
 #endif /* BADemo_pch */

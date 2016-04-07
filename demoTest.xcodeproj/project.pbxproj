@@ -117,6 +117,7 @@
 		C430929B1CAD3E6900A9E081 /* DemoVC8.m in Sources */ = {isa = PBXBuildFile; fileRef = C43092691CAD3E6900A9E081 /* DemoVC8.m */; };
 		C430929C1CAD3E6900A9E081 /* DemoVC8_View1.m in Sources */ = {isa = PBXBuildFile; fileRef = C430926B1CAD3E6900A9E081 /* DemoVC8_View1.m */; };
 		C430929D1CAD3E6900A9E081 /* DemoVC9.m in Sources */ = {isa = PBXBuildFile; fileRef = C430926E1CAD3E6900A9E081 /* DemoVC9.m */; };
+		C43B62B81CB5E86500D44D5E /* BAFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C43B62B71CB5E86500D44D5E /* BAFPSLabel.m */; };
 		C43FDA421CABE9D300D43E22 /* img0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C43FDA331CABE9D300D43E22 /* img0.jpg */; };
 		C43FDA431CABE9D300D43E22 /* img1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C43FDA341CABE9D300D43E22 /* img1.jpg */; };
 		C43FDA441CABE9D300D43E22 /* img10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C43FDA351CABE9D300D43E22 /* img10.jpg */; };
@@ -376,6 +377,8 @@
 		C430926B1CAD3E6900A9E081 /* DemoVC8_View1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC8_View1.m; sourceTree = "<group>"; };
 		C430926D1CAD3E6900A9E081 /* DemoVC9.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC9.h; sourceTree = "<group>"; };
 		C430926E1CAD3E6900A9E081 /* DemoVC9.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC9.m; sourceTree = "<group>"; };
+		C43B62B61CB5E86500D44D5E /* BAFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAFPSLabel.h; sourceTree = "<group>"; };
+		C43B62B71CB5E86500D44D5E /* BAFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAFPSLabel.m; sourceTree = "<group>"; };
 		C43FDA331CABE9D300D43E22 /* img0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img0.jpg; sourceTree = "<group>"; };
 		C43FDA341CABE9D300D43E22 /* img1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img1.jpg; sourceTree = "<group>"; };
 		C43FDA351CABE9D300D43E22 /* img10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img10.jpg; sourceTree = "<group>"; };
@@ -647,6 +650,8 @@
 		C4225D971C990ED2006262C9 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				C43B62B61CB5E86500D44D5E /* BAFPSLabel.h */,
+				C43B62B71CB5E86500D44D5E /* BAFPSLabel.m */,
 				C484898C1CB5044F002F8815 /* BAAnimationView */,
 				C48489821CB50392002F8815 /* 博爱分享 */,
 				C484897C1CB50366002F8815 /* LPLevelView */,
@@ -1509,6 +1514,7 @@
 				C48489811CB50366002F8815 /* LPLevelView.m in Sources */,
 				C43092741CAD3E6900A9E081 /* YRHomeIncomeView.m in Sources */,
 				C43092801CAD3E6900A9E081 /* DemoVC2.m in Sources */,
+				C43B62B81CB5E86500D44D5E /* BAFPSLabel.m in Sources */,
 				C44A80771CAD47A5002AA7C9 /* NSNumber+BAKit.m in Sources */,
 				C42453CA1C979D9300D01865 /* main.m in Sources */,
 				C4D415D01CB4D32700384434 /* BACustomModalTransition.m in Sources */,
