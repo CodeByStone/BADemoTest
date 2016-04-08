@@ -19,12 +19,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    [self.navigationBar setBarTintColor:BA_ColorFromRGB(0xffffff)];
+
+//    [self.navigationBar setBarTintColor:BA_ColorFromRGB(0xffffff)];
     [self.navigationBar setTranslucent:NO];
     self.hidesBarsOnSwipe = YES;
-    
-    // 去掉导航分割线
+//
+//    // 去掉导航分割线
     [self.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
     [self.navigationBar setShadowImage:[[UIImage alloc] init]];
 
@@ -35,15 +35,26 @@
     self.delegate = self;
 
     UINavigationBar * bar = self.navigationBar;
-    
+    [bar setBackgroundImage:[UIImage imageNamed:@"005.jpg"] forBarMetrics:UIBarMetricsCompactPrompt];
     [bar setBarTintColor:BA_Green_Color];
     
-    // 设置导航条按钮的文字颜色
+//     设置导航条按钮的文字颜色
     NSMutableDictionary *titleAttr = [NSMutableDictionary dictionary];
     titleAttr[NSForegroundColorAttributeName] = BA_ColorFromRGB(0xf7f7f7);
     titleAttr[NSFontAttributeName] = BA_FontSize(18);
     
     [bar setTitleTextAttributes:titleAttr];
+    
+//    if ([self.navigationController.navigationBar respondsToSelector:@selector(setBackgroundImage: forBarPosition: barMetrics:)]){
+//        UIImage *backgroundImage = [UIImage imageNamed:@"005.jpg"];
+//        [self.navigationController.navigationBar setBackgroundImage:backgroundImage forBarPosition:UIBarPositionTopAttached barMetrics:UIBarMetricsCompactPrompt];
+//    } else if ([self.navigationController.navigationBar respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)]){
+//        UIImage *backgroundImage = [UIImage imageNamed:@"005.jpg"];
+//        [self.navigationController.navigationBar setBackgroundImage:backgroundImage forBarMetrics:UIBarMetricsCompactPrompt];
+//    }
+//    [self.navigationController.navigationBar setBackgroundColor:[UIColor clearColor]];
+//    [self.navigationController.navigationBar setBarStyle:UIBarStyleBlack];
+//    [self.navigationController.navigationBar setTintColor:[UIColor clearColor]];
 }
 
 // 导航控制器跳转完成的时候调用
