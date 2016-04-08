@@ -72,6 +72,7 @@
                          @"14、自定义collection",
                          @"15、MVVM设计模式",
                          @"16、友盟分享和登陆",
+                         @"17、QQ好友分组",
                          ];
     }
     return _titlesArray;
