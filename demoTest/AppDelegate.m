@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "BANavigationController.h"
 #import "AppDelegate+BATest.h"
 #import "AppDelegate+Category.h"
 
@@ -28,7 +29,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     ViewController *vc = [[ViewController alloc] init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    BANavigationController *nav = [[BANavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = nav;
     [NSThread sleepForTimeInterval:1.0];//延长启动页面时间
     [self.window makeKeyAndVisible];

@@ -7,6 +7,7 @@
 //
 
 #import "DemoVC17.h"
+#import "BARoundCornerCell.h"
 
 @interface DemoVC17 ()
 <
@@ -112,11 +113,18 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellID = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-    if (!cell)
-    {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
-    }
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+//    if (!cell)
+//    {
+//        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
+//    }
+
+    BARoundCornerCell *cell = [BARoundCornerCell cellWithTableView:tableView style:UITableViewCellStyleDefault radius:10.0f indexPath:indexPath strokeLineWidth:2 strokeColor:nil];
+    
+    cell.backgroundColor = [UIColor colorWithRed:arc4random() % 255 / 255.0
+                                           green:arc4random() % 255 / 255.0
+                                            blue:arc4random() % 255 / 255.0
+                                           alpha:1.0];
     
     cell.textLabel.text = self.dataArray[indexPath.section][indexPath.row];
     cell.backgroundColor = [UIColor whiteColor];

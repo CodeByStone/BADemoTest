@@ -150,6 +150,9 @@
 		C442C2E81CB74D1B00E493DD /* icon-9@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C442C2DB1CB74D1B00E493DD /* icon-9@2x.png */; };
 		C442C2E91CB74D1B00E493DD /* icon-sjt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C442C2DC1CB74D1B00E493DD /* icon-sjt@2x.png */; };
 		C442C2EA1CB74D1B00E493DD /* icon-xjt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C442C2DD1CB74D1B00E493DD /* icon-xjt@2x.png */; };
+		C442C2ED1CB77BEE00E493DD /* BARoundCornerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C442C2EC1CB77BEE00E493DD /* BARoundCornerCell.m */; };
+		C442C2F01CB77F5900E493DD /* BANavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C442C2EF1CB77F5900E493DD /* BANavigationController.m */; };
+		C442C2F31CB7817300E493DD /* UIBarButtonItem+Item.m in Sources */ = {isa = PBXBuildFile; fileRef = C442C2F21CB7817300E493DD /* UIBarButtonItem+Item.m */; };
 		C44A80551CAD4583002AA7C9 /* UITextField+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A80541CAD4583002AA7C9 /* UITextField+BAKit.m */; };
 		C44A80581CAD45A8002AA7C9 /* UIView+BA.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A80571CAD45A8002AA7C9 /* UIView+BA.m */; };
 		C44A805B1CAD45EF002AA7C9 /* UIView+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A805A1CAD45EF002AA7C9 /* UIView+BAKit.m */; };
@@ -429,6 +432,12 @@
 		C442C2DB1CB74D1B00E493DD /* icon-9@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-9@2x.png"; sourceTree = "<group>"; };
 		C442C2DC1CB74D1B00E493DD /* icon-sjt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-sjt@2x.png"; sourceTree = "<group>"; };
 		C442C2DD1CB74D1B00E493DD /* icon-xjt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-xjt@2x.png"; sourceTree = "<group>"; };
+		C442C2EB1CB77BEE00E493DD /* BARoundCornerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BARoundCornerCell.h; sourceTree = "<group>"; };
+		C442C2EC1CB77BEE00E493DD /* BARoundCornerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BARoundCornerCell.m; sourceTree = "<group>"; };
+		C442C2EE1CB77F5900E493DD /* BANavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BANavigationController.h; sourceTree = "<group>"; };
+		C442C2EF1CB77F5900E493DD /* BANavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BANavigationController.m; sourceTree = "<group>"; };
+		C442C2F11CB7817300E493DD /* UIBarButtonItem+Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Item.h"; sourceTree = "<group>"; };
+		C442C2F21CB7817300E493DD /* UIBarButtonItem+Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Item.m"; sourceTree = "<group>"; };
 		C44A80531CAD4583002AA7C9 /* UITextField+BAKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+BAKit.h"; sourceTree = "<group>"; };
 		C44A80541CAD4583002AA7C9 /* UITextField+BAKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+BAKit.m"; sourceTree = "<group>"; };
 		C44A80561CAD45A8002AA7C9 /* UIView+BA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BA.h"; sourceTree = "<group>"; };
@@ -661,6 +670,8 @@
 		C4225D941C990ED2006262C9 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				C442C2F11CB7817300E493DD /* UIBarButtonItem+Item.h */,
+				C442C2F21CB7817300E493DD /* UIBarButtonItem+Item.m */,
 				C4D415E01CB4D38800384434 /* AppDelegate+Category.h */,
 				C4D415E11CB4D38800384434 /* AppDelegate+Category.m */,
 				C493ED271CAA92CE00DF2A44 /* UIViewController+BAAlertView.h */,
@@ -680,6 +691,8 @@
 		C4225D971C990ED2006262C9 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				C442C2EE1CB77F5900E493DD /* BANavigationController.h */,
+				C442C2EF1CB77F5900E493DD /* BANavigationController.m */,
 				C43B62B61CB5E86500D44D5E /* BAFPSLabel.h */,
 				C43B62B71CB5E86500D44D5E /* BAFPSLabel.m */,
 				C48489821CB50392002F8815 /* 博爱分享 */,
@@ -1092,6 +1105,8 @@
 			children = (
 				C442C2C91CB741A500E493DD /* DemoVC17.h */,
 				C442C2CA1CB741A500E493DD /* DemoVC17.m */,
+				C442C2EB1CB77BEE00E493DD /* BARoundCornerCell.h */,
+				C442C2EC1CB77BEE00E493DD /* BARoundCornerCell.m */,
 			);
 			path = DemoVC17;
 			sourceTree = "<group>";
@@ -1549,6 +1564,7 @@
 				C43092861CAD3E6900A9E081 /* DemoVC3Cell.m in Sources */,
 				C4D415DE1CB4D34B00384434 /* BABaseNetManager.m in Sources */,
 				C43092991CAD3E6900A9E081 /* DemoVC7Cell.m in Sources */,
+				C442C2F01CB77F5900E493DD /* BANavigationController.m in Sources */,
 				C43092891CAD3E6900A9E081 /* YRDemandShareCell.m in Sources */,
 				C46866191CB4DBBC0038BA76 /* DemoVC15_ViewModel.m in Sources */,
 				C43092871CAD3E6900A9E081 /* DemoVC3Model.m in Sources */,
@@ -1583,6 +1599,7 @@
 				C42453CA1C979D9300D01865 /* main.m in Sources */,
 				C4D415D01CB4D32700384434 /* BACustomModalTransition.m in Sources */,
 				C43092731CAD3E6900A9E081 /* YRHomeIncomeBlockView.m in Sources */,
+				C442C2F31CB7817300E493DD /* UIBarButtonItem+Item.m in Sources */,
 				C4871CB21CAD3FB50089EF82 /* BAPickerView.m in Sources */,
 				C43092821CAD3E6900A9E081 /* DemoVC2HeadView.m in Sources */,
 				C43092841CAD3E6900A9E081 /* SDWeiXinPhotoContainerView.m in Sources */,
@@ -1595,6 +1612,7 @@
 				C43B62C01CB629C100D44D5E /* BAShareManage.m in Sources */,
 				C4D415DF1CB4D34B00384434 /* BANewsNetManager.m in Sources */,
 				C44A807A1CAD47C7002AA7C9 /* NSProcessInfo+BAKit.m in Sources */,
+				C442C2ED1CB77BEE00E493DD /* BARoundCornerCell.m in Sources */,
 				C4F623771CA8C76100DCF152 /* UINavigationItem+CustomItem.m in Sources */,
 				C43092921CAD3E6900A9E081 /* DemoVC5Model.m in Sources */,
 				C4D415EB1CB4D39F00384434 /* UIScrollView+BARefresh.m in Sources */,
