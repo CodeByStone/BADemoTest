@@ -63,6 +63,10 @@
     self.view.backgroundColor = BA_White_Color;
     self.shareBtn.hidden = NO;
     self.QQLoginBtn.hidden = NO;
+    
+
+    
+    
 }
 
 #pragma mark 友盟分享

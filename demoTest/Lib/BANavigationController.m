@@ -36,14 +36,14 @@
 
     UINavigationBar * bar = self.navigationBar;
     [bar setBackgroundImage:[UIImage imageNamed:@"005.jpg"] forBarMetrics:UIBarMetricsCompactPrompt];
-    [bar setBarTintColor:BA_Green_Color];
+    [bar setBarTintColor:BA_White_Color];
     
 //     设置导航条按钮的文字颜色
-    NSMutableDictionary *titleAttr = [NSMutableDictionary dictionary];
-    titleAttr[NSForegroundColorAttributeName] = BA_ColorFromRGB(0xf7f7f7);
-    titleAttr[NSFontAttributeName] = BA_FontSize(18);
-    
-    [bar setTitleTextAttributes:titleAttr];
+//    NSMutableDictionary *titleAttr = [NSMutableDictionary dictionary];
+//    titleAttr[NSForegroundColorAttributeName] = BA_ColorFromRGB(0xf7f7f7);
+//    titleAttr[NSFontAttributeName] = BA_FontSize(18);
+//    
+//    [bar setTitleTextAttributes:titleAttr];
     
 //    if ([self.navigationController.navigationBar respondsToSelector:@selector(setBackgroundImage: forBarPosition: barMetrics:)]){
 //        UIImage *backgroundImage = [UIImage imageNamed:@"005.jpg"];

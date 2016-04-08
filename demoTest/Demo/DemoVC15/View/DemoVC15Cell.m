@@ -11,21 +11,23 @@
 #import "DemoVC15Model.h"
 #import "DemoVC7_replyVC.h"
 
+@interface DemoVC15Cell ()
+
+@property(nonatomic, strong) UIImageView    *userImageView;
+@property(nonatomic, strong) UILabel        *userNameLabel;
+@property(nonatomic, strong) UIImageView    *starImageView;
+@property(nonatomic, strong) UIButton       *addFriendButton;
+@property(nonatomic, strong) UILabel        *timeLabel;
+@property(nonatomic, strong) UILabel        *contentLabel;
+@property(nonatomic, strong) BACustomButton *supprotButton;
+@property(nonatomic, strong) BACustomButton *replyButton;
+@property(nonatomic, strong) UIImageView    *vlineImageView;
+
+@end
+
 @implementation DemoVC15Cell
-{
-    UIImageView    *userImageView;
-    UILabel        *userNameLabel;
-    UIImageView    *starImageView;
-    UIButton       *addFriendButton;
-    UILabel        *timeLabel;
-    UILabel        *contentLabel;
-    BACustomButton *supprotButton;
-    BACustomButton *replyButton;
-    UIImageView    *vlineImageView;
-}
 
 // 注意：cell是用initWithStyle初始化
-
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])
@@ -40,60 +42,60 @@
 // 添加所有子控件
 - (void)setUpAllChildView
 {
-    userImageView = [UIImageView new];
-    userImageView.layer.masksToBounds = YES;
-    userImageView.layer.cornerRadius = 40/2;
+    _userImageView = [UIImageView new];
+    _userImageView.layer.masksToBounds = YES;
+    _userImageView.layer.cornerRadius = 40/2;
     
-    userNameLabel = [UILabel new];
-    userNameLabel.font = BA_FontSize(13);
+    _userNameLabel = [UILabel new];
+    _userNameLabel.font = BA_FontSize(13);
     
-    starImageView = [UIImageView new];
+    _starImageView = [UIImageView new];
     
-    addFriendButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    addFriendButton.backgroundColor = BA_NaviBgBlueColor;
-    [addFriendButton setTitle:@"加好友" forState:UIControlStateNormal];
-    [addFriendButton setTitleColor:BA_White_Color forState:UIControlStateNormal];
-    [addFriendButton setImage:[UIImage imageNamed:@"btn_addFriend"] forState:UIControlStateNormal];
-    addFriendButton.imageEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 40);
-    addFriendButton.titleEdgeInsets = UIEdgeInsetsMake(0, -5, 0, -15);
-    addFriendButton.titleLabel.textAlignment = NSTextAlignmentRight;
-    addFriendButton.layer.masksToBounds = YES;
-    addFriendButton.layer.cornerRadius = 5.0;
-    addFriendButton.titleLabel.font = BA_FontSize(12);
-    addFriendButton.tag = 1;
-    [addFriendButton addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
+    _addFriendButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    _addFriendButton.backgroundColor = BA_NaviBgBlueColor;
+    [_addFriendButton setTitle:@"加好友" forState:UIControlStateNormal];
+    [_addFriendButton setTitleColor:BA_White_Color forState:UIControlStateNormal];
+    [_addFriendButton setImage:[UIImage imageNamed:@"btn_addFriend"] forState:UIControlStateNormal];
+    _addFriendButton.imageEdgeInsets = UIEdgeInsetsMake(0, 5, 0, 40);
+    _addFriendButton.titleEdgeInsets = UIEdgeInsetsMake(0, -5, 0, -15);
+    _addFriendButton.titleLabel.textAlignment = NSTextAlignmentRight;
+    _addFriendButton.layer.masksToBounds = YES;
+    _addFriendButton.layer.cornerRadius = 5.0;
+    _addFriendButton.titleLabel.font = BA_FontSize(12);
+    _addFriendButton.tag = 1;
+    [_addFriendButton addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
     
     
-    timeLabel = [UILabel new];
-    timeLabel.font = BA_FontSize(11);
-    timeLabel.textColor = BA_TEXTGrayColor;
+    _timeLabel = [UILabel new];
+    _timeLabel.font = BA_FontSize(11);
+    _timeLabel.textColor = BA_TEXTGrayColor;
     
-    contentLabel = [UILabel new];
-    contentLabel.font = BA_FontSize(14);
-    contentLabel.numberOfLines = 0;
+    _contentLabel = [UILabel new];
+    _contentLabel.font = BA_FontSize(14);
+    _contentLabel.numberOfLines = 0;
     
-    supprotButton = [BACustomButton BA_ShareButton];
-    [supprotButton setTitle:@"888" forState:UIControlStateNormal];
-    [supprotButton setTitleColor:BA_NaviBgBlueColor forState:UIControlStateNormal];
-    supprotButton.titleLabel.font = BA_FontSize(12);
-    supprotButton.tag = 2;
-    [supprotButton addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
-    [supprotButton setImage:[UIImage imageNamed:@"btn_support2"] forState:UIControlStateNormal];
-    supprotButton.titleLabel.textAlignment = NSTextAlignmentRight;
+    _supprotButton = [BACustomButton BA_ShareButton];
+    [_supprotButton setTitle:@"888" forState:UIControlStateNormal];
+    [_supprotButton setTitleColor:BA_NaviBgBlueColor forState:UIControlStateNormal];
+    _supprotButton.titleLabel.font = BA_FontSize(12);
+    _supprotButton.tag = 2;
+    [_supprotButton addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
+    [_supprotButton setImage:[UIImage imageNamed:@"btn_support2"] forState:UIControlStateNormal];
+    _supprotButton.titleLabel.textAlignment = NSTextAlignmentRight;
     
-    vlineImageView = [UIImageView new];
-    vlineImageView.image = [UIImage imageNamed:@"vline"];
+    _vlineImageView = [UIImageView new];
+    _vlineImageView.image = [UIImage imageNamed:@"vline"];
     
-    replyButton = [BACustomButton BA_ShareButton];
-    [replyButton setTitle:@"回复" forState:UIControlStateNormal];
-    [replyButton setTitleColor:BA_NaviBgBlueColor forState:UIControlStateNormal];
-    replyButton.titleLabel.font = BA_FontSize(12);
-    replyButton.tag = 3;
-    [replyButton addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
-    [replyButton setImage:[UIImage imageNamed:@"btn_reply"] forState:UIControlStateNormal];
-    replyButton.titleLabel.textAlignment = NSTextAlignmentRight;
+    _replyButton = [BACustomButton BA_ShareButton];
+    [_replyButton setTitle:@"回复" forState:UIControlStateNormal];
+    [_replyButton setTitleColor:BA_NaviBgBlueColor forState:UIControlStateNormal];
+    _replyButton.titleLabel.font = BA_FontSize(12);
+    _replyButton.tag = 3;
+    [_replyButton addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
+    [_replyButton setImage:[UIImage imageNamed:@"btn_reply"] forState:UIControlStateNormal];
+    _replyButton.titleLabel.textAlignment = NSTextAlignmentRight;
     
-    NSArray *views = @[userImageView, userNameLabel, starImageView, addFriendButton, timeLabel, contentLabel, supprotButton, vlineImageView, replyButton];
+    NSArray *views = @[_userImageView, _userNameLabel, _starImageView, _addFriendButton, _timeLabel, _contentLabel, _supprotButton, _vlineImageView, _replyButton];
     [self.contentView BA_AddSubViewsWithArray:views];
 }
 
@@ -122,7 +124,7 @@
     {
         static int number = 0;
         number++;
-        [supprotButton setTitle:[NSString stringWithFormat:@"%d", [_subViewFrame.model.supportNumber intValue] + number] forState:UIControlStateNormal];
+        [_supprotButton setTitle:[NSString stringWithFormat:@"%d", [_subViewFrame.model.supportNumber intValue] + number] forState:UIControlStateNormal];
     }
     else
     {
@@ -155,27 +157,25 @@
 {
     DemoVC15Model *model = _subViewFrame.model;
     
-    userImageView.image = [UIImage imageNamed:model.imageName];
-    userNameLabel.text = model.userName;
-    starImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"star%@", model.starNumber]];
-    timeLabel.text     = model.time;
-    contentLabel.text  = model.content;
-    [supprotButton setTitle:model.supportNumber forState:UIControlStateNormal];
+    self.userImageView.image = [UIImage imageNamed:model.imageName];
+    self.userNameLabel.text = model.userName;
+    self.starImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"star%@", model.starNumber]];
+    self.timeLabel.text     = model.time;
+    self.contentLabel.text  = model.content;
+    [self.supprotButton setTitle:model.supportNumber forState:UIControlStateNormal];
 }
 
 - (void)setUpFrame
 {
-    userImageView.frame = _subViewFrame.imageNameFrame;
-    userNameLabel.frame = _subViewFrame.userNameFrame;
-    starImageView.frame = _subViewFrame.starNumberFrame;
-    addFriendButton.frame = _subViewFrame.addFriendButtonFrame;
-    timeLabel.frame     = _subViewFrame.timeFrame;
-    contentLabel.frame  = _subViewFrame.contentFrame;
-    replyButton.frame   = _subViewFrame.replyButtonFrame;
-    vlineImageView.frame= _subViewFrame.vlineImageViewFrame;
-    supprotButton.frame = _subViewFrame.supportNumberFrame;
-    
-    
+    _userImageView.frame = _subViewFrame.imageNameFrame;
+    _userNameLabel.frame = _subViewFrame.userNameFrame;
+    _starImageView.frame = _subViewFrame.starNumberFrame;
+    _addFriendButton.frame = _subViewFrame.addFriendButtonFrame;
+    _timeLabel.frame     = _subViewFrame.timeFrame;
+    _contentLabel.frame  = _subViewFrame.contentFrame;
+    _replyButton.frame   = _subViewFrame.replyButtonFrame;
+    _vlineImageView.frame= _subViewFrame.vlineImageViewFrame;
+    _supprotButton.frame = _subViewFrame.supportNumberFrame;
 }
 
 @end
