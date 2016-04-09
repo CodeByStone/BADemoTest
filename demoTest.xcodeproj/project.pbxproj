@@ -173,6 +173,12 @@
 		C46866191CB4DBBC0038BA76 /* DemoVC15_ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C46866181CB4DBBC0038BA76 /* DemoVC15_ViewModel.m */; };
 		C47383611CB8A38B0090C22F /* DemoVC17Header.m in Sources */ = {isa = PBXBuildFile; fileRef = C47383601CB8A38B0090C22F /* DemoVC17Header.m */; };
 		C47383641CB8AC0B0090C22F /* BANavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C47383631CB8AC0B0090C22F /* BANavigationBar.m */; };
+		C47383661CB905D40090C22F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47383651CB905D40090C22F /* QuartzCore.framework */; };
+		C473836D1CB906990090C22F /* 樱花树1.png in Resources */ = {isa = PBXBuildFile; fileRef = C47383681CB906990090C22F /* 樱花树1.png */; };
+		C473836E1CB906990090C22F /* 樱花树2.png in Resources */ = {isa = PBXBuildFile; fileRef = C47383691CB906990090C22F /* 樱花树2.png */; };
+		C473836F1CB906990090C22F /* 樱花树3.png in Resources */ = {isa = PBXBuildFile; fileRef = C473836A1CB906990090C22F /* 樱花树3.png */; };
+		C47383701CB906990090C22F /* 樱花瓣1.png in Resources */ = {isa = PBXBuildFile; fileRef = C473836B1CB906990090C22F /* 樱花瓣1.png */; };
+		C47383711CB906990090C22F /* 樱花瓣2.png in Resources */ = {isa = PBXBuildFile; fileRef = C473836C1CB906990090C22F /* 樱花瓣2.png */; };
 		C484897B1CB50288002F8815 /* DemoVC16.m in Sources */ = {isa = PBXBuildFile; fileRef = C484897A1CB50288002F8815 /* DemoVC16.m */; };
 		C48489801CB50366002F8815 /* LPLevelView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C484897D1CB50366002F8815 /* LPLevelView.bundle */; };
 		C48489811CB50366002F8815 /* LPLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = C484897F1CB50366002F8815 /* LPLevelView.m */; };
@@ -480,6 +486,12 @@
 		C47383601CB8A38B0090C22F /* DemoVC17Header.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC17Header.m; sourceTree = "<group>"; };
 		C47383621CB8AC0B0090C22F /* BANavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BANavigationBar.h; sourceTree = "<group>"; };
 		C47383631CB8AC0B0090C22F /* BANavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BANavigationBar.m; sourceTree = "<group>"; };
+		C47383651CB905D40090C22F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C47383681CB906990090C22F /* 樱花树1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "樱花树1.png"; sourceTree = "<group>"; };
+		C47383691CB906990090C22F /* 樱花树2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "樱花树2.png"; sourceTree = "<group>"; };
+		C473836A1CB906990090C22F /* 樱花树3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "樱花树3.png"; sourceTree = "<group>"; };
+		C473836B1CB906990090C22F /* 樱花瓣1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "樱花瓣1.png"; sourceTree = "<group>"; };
+		C473836C1CB906990090C22F /* 樱花瓣2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "樱花瓣2.png"; sourceTree = "<group>"; };
 		C48063AD1CA275B8000DD080 /* BADefin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BADefin.h; sourceTree = "<group>"; };
 		C48489791CB50288002F8815 /* DemoVC16.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC16.h; sourceTree = "<group>"; };
 		C484897A1CB50288002F8815 /* DemoVC16.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC16.m; sourceTree = "<group>"; };
@@ -555,6 +567,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C47383661CB905D40090C22F /* QuartzCore.framework in Frameworks */,
 				7ED89E7EAD9DDF5E73A11702 /* libPods-demoTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,6 +601,7 @@
 		B3ADD67382168C95FA1E519B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C47383651CB905D40090C22F /* QuartzCore.framework */,
 				ED601320E66DF2ED522196AB /* libPods-demoTest.a */,
 			);
 			name = Frameworks;
@@ -596,6 +610,7 @@
 		C404EC161CA9680F00A82D3A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C47383671CB906990090C22F /* 樱花 */,
 				C442C2D01CB74D1B00E493DD /* DemoVC17Image */,
 				C404EC761CA9681500A82D3A /* area.plist */,
 				C43FDA321CABE9D300D43E22 /* collectionImg */,
@@ -1179,6 +1194,18 @@
 			path = Foundation;
 			sourceTree = "<group>";
 		};
+		C47383671CB906990090C22F /* 樱花 */ = {
+			isa = PBXGroup;
+			children = (
+				C47383681CB906990090C22F /* 樱花树1.png */,
+				C47383691CB906990090C22F /* 樱花树2.png */,
+				C473836A1CB906990090C22F /* 樱花树3.png */,
+				C473836B1CB906990090C22F /* 樱花瓣1.png */,
+				C473836C1CB906990090C22F /* 樱花瓣2.png */,
+			);
+			path = "樱花";
+			sourceTree = "<group>";
+		};
 		C48489781CB50202002F8815 /* DemoVC16 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1422,6 +1449,7 @@
 				C404EC501CA9680F00A82D3A /* 16.jpg in Resources */,
 				C404EC6A1CA9680F00A82D3A /* pic3.jpg in Resources */,
 				C404EC771CA9681500A82D3A /* area.plist in Resources */,
+				C473836F1CB906990090C22F /* 樱花树3.png in Resources */,
 				C43FDA4D1CABE9D300D43E22 /* img6.jpg in Resources */,
 				C404EC511CA9680F00A82D3A /* 17.jpg in Resources */,
 				C442C2E21CB74D1B00E493DD /* icon-3@2x.png in Resources */,
@@ -1458,7 +1486,9 @@
 				C404EC591CA9680F00A82D3A /* 3.jpg in Resources */,
 				C404EC751CA9680F00A82D3A /* test4.jpg in Resources */,
 				C404EC601CA9680F00A82D3A /* Home.xcassets in Resources */,
+				C473836E1CB906990090C22F /* 樱花树2.png in Resources */,
 				C404EC641CA9680F00A82D3A /* icon3.jpg in Resources */,
+				C47383711CB906990090C22F /* 樱花瓣2.png in Resources */,
 				C43FDA471CABE9D300D43E22 /* img13.jpg in Resources */,
 				C43FDA4A1CABE9D300D43E22 /* img3.jpg in Resources */,
 				C404EC5A1CA9680F00A82D3A /* 4.jpg in Resources */,
@@ -1468,6 +1498,7 @@
 				C43FDA441CABE9D300D43E22 /* img10.jpg in Resources */,
 				C43FDA4C1CABE9D300D43E22 /* img5.jpg in Resources */,
 				C43FDA461CABE9D300D43E22 /* img12.jpg in Resources */,
+				C47383701CB906990090C22F /* 樱花瓣1.png in Resources */,
 				C442C2E31CB74D1B00E493DD /* icon-4@2x.png in Resources */,
 				C404EC631CA9680F00A82D3A /* icon2.jpg in Resources */,
 				C404EC6D1CA9680F00A82D3A /* pic6.jpg in Resources */,
@@ -1494,6 +1525,7 @@
 				C404EC671CA9680F00A82D3A /* pic0.jpg in Resources */,
 				C404EC4F1CA9680F00A82D3A /* 15.jpg in Resources */,
 				C43FDA491CABE9D300D43E22 /* img2.jpg in Resources */,
+				C473836D1CB906990090C22F /* 樱花树1.png in Resources */,
 				C404EC681CA9680F00A82D3A /* pic1.jpg in Resources */,
 				C442C2E91CB74D1B00E493DD /* icon-sjt@2x.png in Resources */,
 				C430927C1CAD3E6900A9E081 /* DemoVC12.xib in Resources */,
