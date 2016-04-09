@@ -73,6 +73,7 @@
                          @"15、MVVM设计模式+自定义navi",
                          @"16、友盟分享和登陆",
                          @"17、QQ好友分组",
+                         @"18、gif动画"
                          ];
     }
     return _titlesArray;
@@ -133,7 +134,9 @@
     self.tableView.hidden = NO;
     
     [self BA_starYingHuaCoreAnimation];
-    [self BA_starXueHuaCoreAnimation];
+//    [self BA_starXueHuaCoreAnimation];
+    [self BA_starYanHuaCoreAnimation];
+
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

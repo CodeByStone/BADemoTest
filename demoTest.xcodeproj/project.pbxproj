@@ -191,6 +191,13 @@
 		C496FAE11CB920C800E32618 /* 金元宝.png in Resources */ = {isa = PBXBuildFile; fileRef = C496FADE1CB920C800E32618 /* 金元宝.png */; };
 		C496FAE21CB920C800E32618 /* 雪花.png in Resources */ = {isa = PBXBuildFile; fileRef = C496FADF1CB920C800E32618 /* 雪花.png */; };
 		C496FAE31CB920C800E32618 /* snowbg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C496FAE01CB920C800E32618 /* snowbg.jpg */; };
+		C496FAE71CB9284500E32618 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = C496FAE41CB9284500E32618 /* ball.png */; };
+		C496FAE81CB9284500E32618 /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = C496FAE51CB9284500E32618 /* fire.png */; };
+		C496FAE91CB9284500E32618 /* snow.png in Resources */ = {isa = PBXBuildFile; fileRef = C496FAE61CB9284500E32618 /* snow.png */; };
+		C496FAEC1CB9289900E32618 /* BAGIFImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C496FAEB1CB9289900E32618 /* BAGIFImageView.m */; };
+		C496FAEE1CB929F700E32618 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C496FAED1CB929F700E32618 /* ImageIO.framework */; };
+		C496FAF21CB92C0C00E32618 /* gif1.gif in Resources */ = {isa = PBXBuildFile; fileRef = C496FAF01CB92C0C00E32618 /* gif1.gif */; };
+		C496FAF31CB92C0C00E32618 /* gif2.gif in Resources */ = {isa = PBXBuildFile; fileRef = C496FAF11CB92C0C00E32618 /* gif2.gif */; };
 		C4CAF6AF1CAB97B000CE265A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4CAF6B11CAB97B000CE265A /* Localizable.strings */; };
 		C4CAF6B31CAB97BC00CE265A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4CAF6B51CAB97BC00CE265A /* InfoPlist.strings */; };
 		C4D415C41CB4CE6000384434 /* DemoVC15.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D415C21CB4CE6000384434 /* DemoVC15.m */; };
@@ -518,6 +525,14 @@
 		C496FADE1CB920C800E32618 /* 金元宝.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "金元宝.png"; sourceTree = "<group>"; };
 		C496FADF1CB920C800E32618 /* 雪花.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "雪花.png"; sourceTree = "<group>"; };
 		C496FAE01CB920C800E32618 /* snowbg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = snowbg.jpg; sourceTree = "<group>"; };
+		C496FAE41CB9284500E32618 /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
+		C496FAE51CB9284500E32618 /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
+		C496FAE61CB9284500E32618 /* snow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snow.png; sourceTree = "<group>"; };
+		C496FAEA1CB9289900E32618 /* BAGIFImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAGIFImageView.h; sourceTree = "<group>"; };
+		C496FAEB1CB9289900E32618 /* BAGIFImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAGIFImageView.m; sourceTree = "<group>"; };
+		C496FAED1CB929F700E32618 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		C496FAF01CB92C0C00E32618 /* gif1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif1.gif; sourceTree = "<group>"; };
+		C496FAF11CB92C0C00E32618 /* gif2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gif2.gif; sourceTree = "<group>"; };
 		C4CAF6A91CAB973D00CE265A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		C4CAF6AA1CAB973D00CE265A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		C4CAF6B01CAB97B000CE265A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -579,6 +594,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C496FAEE1CB929F700E32618 /* ImageIO.framework in Frameworks */,
 				C47383661CB905D40090C22F /* QuartzCore.framework in Frameworks */,
 				7ED89E7EAD9DDF5E73A11702 /* libPods-demoTest.a in Frameworks */,
 			);
@@ -613,6 +629,7 @@
 		B3ADD67382168C95FA1E519B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C496FAED1CB929F700E32618 /* ImageIO.framework */,
 				C47383651CB905D40090C22F /* QuartzCore.framework */,
 				ED601320E66DF2ED522196AB /* libPods-demoTest.a */,
 			);
@@ -622,6 +639,7 @@
 		C404EC161CA9680F00A82D3A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C496FAEF1CB92C0C00E32618 /* gif */,
 				C47383671CB906990090C22F /* 樱花 */,
 				C442C2D01CB74D1B00E493DD /* DemoVC17Image */,
 				C43FDA321CABE9D300D43E22 /* collectionImg */,
@@ -1206,6 +1224,9 @@
 		C47383671CB906990090C22F /* 樱花 */ = {
 			isa = PBXGroup;
 			children = (
+				C496FAE41CB9284500E32618 /* ball.png */,
+				C496FAE51CB9284500E32618 /* fire.png */,
+				C496FAE61CB9284500E32618 /* snow.png */,
 				C496FADE1CB920C800E32618 /* 金元宝.png */,
 				C496FADF1CB920C800E32618 /* 雪花.png */,
 				C496FAE01CB920C800E32618 /* snowbg.jpg */,
@@ -1262,8 +1283,19 @@
 				C47383631CB8AC0B0090C22F /* BANavigationBar.m */,
 				C43B62B61CB5E86500D44D5E /* BAFPSLabel.h */,
 				C43B62B71CB5E86500D44D5E /* BAFPSLabel.m */,
+				C496FAEA1CB9289900E32618 /* BAGIFImageView.h */,
+				C496FAEB1CB9289900E32618 /* BAGIFImageView.m */,
 			);
 			path = BABaseData;
+			sourceTree = "<group>";
+		};
+		C496FAEF1CB92C0C00E32618 /* gif */ = {
+			isa = PBXGroup;
+			children = (
+				C496FAF01CB92C0C00E32618 /* gif1.gif */,
+				C496FAF11CB92C0C00E32618 /* gif2.gif */,
+			);
+			path = gif;
 			sourceTree = "<group>";
 		};
 		C4D415BA1CB4CBC700384434 /* DemoVC15 */ = {
@@ -1475,6 +1507,8 @@
 			files = (
 				C404EC501CA9680F00A82D3A /* 16.jpg in Resources */,
 				C496FAE31CB920C800E32618 /* snowbg.jpg in Resources */,
+				C496FAF21CB92C0C00E32618 /* gif1.gif in Resources */,
+				C496FAE91CB9284500E32618 /* snow.png in Resources */,
 				C404EC6A1CA9680F00A82D3A /* pic3.jpg in Resources */,
 				C404EC771CA9681500A82D3A /* area.plist in Resources */,
 				C43FDA4D1CABE9D300D43E22 /* img6.jpg in Resources */,
@@ -1487,10 +1521,12 @@
 				C404EC5C1CA9680F00A82D3A /* 6.jpg in Resources */,
 				C48489801CB50366002F8815 /* LPLevelView.bundle in Resources */,
 				C404EC6C1CA9680F00A82D3A /* pic5.jpg in Resources */,
+				C496FAE81CB9284500E32618 /* fire.png in Resources */,
 				C404EC611CA9680F00A82D3A /* icon0.jpg in Resources */,
 				C404EC691CA9680F00A82D3A /* pic2.jpg in Resources */,
 				C496FAE11CB920C800E32618 /* 金元宝.png in Resources */,
 				C442C2E01CB74D1B00E493DD /* icon-1@2x.png in Resources */,
+				C496FAE71CB9284500E32618 /* ball.png in Resources */,
 				C404EC4E1CA9680F00A82D3A /* 14.jpg in Resources */,
 				C442C2E41CB74D1B00E493DD /* icon-5@2x.png in Resources */,
 				C404EC6E1CA9680F00A82D3A /* pic7.jpg in Resources */,
@@ -1521,6 +1557,7 @@
 				C404EC5A1CA9680F00A82D3A /* 4.jpg in Resources */,
 				C442C2E51CB74D1B00E493DD /* icon-6@2x.png in Resources */,
 				C404EC561CA9680F00A82D3A /* 21.jpg in Resources */,
+				C496FAF31CB92C0C00E32618 /* gif2.gif in Resources */,
 				C404EC731CA9680F00A82D3A /* test2.jpg in Resources */,
 				C43FDA441CABE9D300D43E22 /* img10.jpg in Resources */,
 				C43FDA4C1CABE9D300D43E22 /* img5.jpg in Resources */,
@@ -1712,6 +1749,7 @@
 				C4F02F5B1CAD44F200371A9C /* UILabel+BAKit.m in Sources */,
 				C4D415C71CB4CE8900384434 /* DemoVC15Model.m in Sources */,
 				C43092751CAD3E6900A9E081 /* DemoVC10.m in Sources */,
+				C496FAEC1CB9289900E32618 /* BAGIFImageView.m in Sources */,
 				C430926F1CAD3E6900A9E081 /* BAHomeIncomeCell.m in Sources */,
 				C44A80551CAD4583002AA7C9 /* UITextField+BAKit.m in Sources */,
 				C484897B1CB50288002F8815 /* DemoVC16.m in Sources */,

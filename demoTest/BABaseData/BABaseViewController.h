@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface BABaseViewController : UIViewController
 
 /*!
@@ -31,5 +32,19 @@
  *  暂停雪花动画
  */
 - (void)BA_stopXueHuaCoreAnimation;
+
+/*!
+ *  开启烟花动画（CAEmitterLayer动画）
+ */
+- (void)BA_starYanHuaCoreAnimation;
+
+/*!
+ *  gif动画
+ *
+ *  @param gifImageName gifImageName
+ *  @param imgFrame     imgFrame
+ */
+- (void)BA_useGIFImageViewWithGifImageName:(NSString *)gifImageName frame:(CGRect)imgFrame;
+
 
 @end
