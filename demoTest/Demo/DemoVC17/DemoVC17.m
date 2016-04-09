@@ -8,6 +8,8 @@
 
 #import "DemoVC17.h"
 #import "BARoundCornerCell.h"
+#import "DemoVC17Header.h"
+#import "BANavigationBar.h"
 
 @interface DemoVC17 ()
 <
@@ -16,10 +18,13 @@
 >
 
 
-@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) UITableView    *tableView;
 @property (nonatomic, strong) NSMutableArray *titlesArray;
 @property (nonatomic, strong) NSMutableArray *dataArray;
 @property (nonatomic, strong) NSMutableArray *stateArray;
+
+@property (nonatomic, strong) DemoVC17Header *headView;
+@property (nonatomic, strong) UIImageView    *bigImageView;
 
 @end
 
@@ -75,10 +80,22 @@
     
     for (int i = 0; i < self.dataArray.count; i++)
     {
-        //所有的分区都是闭合
+        // 所有的分区都是闭合
         [_stateArray addObject:@"0"];
     }
+}
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self setNavbarBackgroundHidden:NO];
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
 - (void)viewDidLoad {
@@ -87,6 +104,54 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.tableView.hidden = NO;
+    [self setupHeader];
+}
+
+- (void)setupHeader
+{
+    _bigImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
+    _bigImageView.image = [UIImage imageNamed:@"005.jpg"];
+    _bigImageView.clipsToBounds = YES;
+    _bigImageView.contentMode = UIViewContentModeScaleAspectFill;
+    UIImageView *smallView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 80, 80)];
+    smallView.image = [UIImage imageNamed:@"icon2.jpg"];
+    smallView.center = CGPointMake(_bigImageView.center.x, _bigImageView.center.y);
+    smallView.clipsToBounds = YES;
+    smallView.contentMode = UIViewContentModeScaleAspectFill;
+    
+    _headView=[[DemoVC17Header alloc]init];
+    [_headView initWithTableView:self.tableView andBackGroundView:_bigImageView andSubviews:smallView];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    [self setNavbarBackgroundHidden:YES];
+}
+
+- (void)setNavbarBackgroundHidden:(BOOL)hidden
+{
+    BANavigationBar *navBar =(BANavigationBar *)self.navigationController.navigationBar;
+    if (!hidden) {
+        [navBar BA_showNaviBar];
+        [self.navigationController setNavigationBarHidden:NO animated:NO];
+    }else{
+        [navBar BA_hiddenNaviBar];
+        [self.navigationController setNavigationBarHidden:YES animated:NO];
+    }
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    [_headView scrollViewDidScroll:scrollView];
+    if (scrollView.contentOffset.y<self.bigImageView.frame.size.height-64) {
+        [self setNavbarBackgroundHidden:YES];
+    }else
+    {
+        [self setNavbarBackgroundHidden:NO];
+    }
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [_headView resizeView];
 }
 
 #pragma mark - UITableViewDataSource UITableViewDelegate

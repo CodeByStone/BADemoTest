@@ -14,10 +14,12 @@
 
 // view类
 #import "DemoVC15Cell.h"
+#import "DemoVC17Header.h"
 
 // VC类
 #import "DemoVC7_replyVC.h"
 
+#import "BANavigationBar.h"
 
 @interface DemoVC15 ()
 <
@@ -29,6 +31,9 @@
 @property (nonatomic, strong) NSMutableArray *dataArray;
 /*！ viewModel:DemoVC15_ViewModel */
 @property (nonatomic, strong) NSMutableArray *statusFrames;
+
+@property (nonatomic, strong) DemoVC17Header *headView;
+@property (nonatomic, strong) UIImageView    *bigImageView;
 
 @end
 
@@ -137,7 +142,20 @@
     }
     
     [self.statusFrames addObjectsFromArray:statusF];
-    BALog(@"self.statusFrames : %@", self.statusFrames);
+//    BALog(@"self.statusFrames : %@", self.statusFrames);
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self setNavbarBackgroundHidden:NO];
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
 - (void)viewDidLoad {
@@ -146,6 +164,54 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.tableView.hidden = NO;
+    [self setupHeader];
+}
+
+- (void)setupHeader
+{
+    _bigImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
+    _bigImageView.image = [UIImage imageNamed:@"005.jpg"];
+    _bigImageView.clipsToBounds = YES;
+    _bigImageView.contentMode = UIViewContentModeScaleAspectFill;
+    UIImageView *smallView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 80, 80)];
+    smallView.image = [UIImage imageNamed:@"icon1.jpg"];
+    smallView.center = CGPointMake(_bigImageView.center.x, _bigImageView.center.y);
+    smallView.clipsToBounds = YES;
+    smallView.contentMode = UIViewContentModeScaleAspectFill;
+    
+    _headView=[[DemoVC17Header alloc]init];
+    [_headView initWithTableView:self.tableView andBackGroundView:_bigImageView andSubviews:smallView];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    [self setNavbarBackgroundHidden:YES];
+}
+
+- (void)setNavbarBackgroundHidden:(BOOL)hidden
+{
+    BANavigationBar *navBar =(BANavigationBar *)self.navigationController.navigationBar;
+    if (!hidden) {
+        [navBar BA_showNaviBar];
+        [self.navigationController setNavigationBarHidden:NO animated:NO];
+    }else{
+        [navBar BA_hiddenNaviBar];
+        [self.navigationController setNavigationBarHidden:YES animated:NO];
+    }
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    [_headView scrollViewDidScroll:scrollView];
+    if (scrollView.contentOffset.y < self.bigImageView.frame.size.height-64) {
+        [self setNavbarBackgroundHidden:YES];
+    }else
+    {
+        [self setNavbarBackgroundHidden:NO];
+    }
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [_headView resizeView];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

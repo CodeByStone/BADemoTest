@@ -8,6 +8,8 @@
 
 #import "BANavigationController.h"
 #import "UIBarButtonItem+Item.h"
+#import "BANavigationBar.h"
+
 
 @interface BANavigationController ()<UINavigationControllerDelegate>
 
@@ -20,41 +22,47 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-//    [self.navigationBar setBarTintColor:BA_ColorFromRGB(0xffffff)];
-    [self.navigationBar setTranslucent:NO];
-    self.hidesBarsOnSwipe = YES;
-//
-//    // 去掉导航分割线
-    [self.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
-    [self.navigationBar setShadowImage:[[UIImage alloc] init]];
-
     _popDelegate = self.interactivePopGestureRecognizer.delegate;
     // 实现滑动返回功能
     // 清空滑动返回手势代理
     self.interactivePopGestureRecognizer.delegate = nil;
     self.delegate = self;
 
-    UINavigationBar * bar = self.navigationBar;
-    [bar setBackgroundImage:[UIImage imageNamed:@"005.jpg"] forBarMetrics:UIBarMetricsCompactPrompt];
-    [bar setBarTintColor:BA_White_Color];
+//    BANavigationBar * bar = self.navigationBar;
+//    [bar setBackgroundImage:[UIImage imageNamed:@"005.jpg"] forBarMetrics:UIBarMetricsCompactPrompt];
+//    [bar setBarTintColor:BA_White_Color];
     
-//     设置导航条按钮的文字颜色
-//    NSMutableDictionary *titleAttr = [NSMutableDictionary dictionary];
-//    titleAttr[NSForegroundColorAttributeName] = BA_ColorFromRGB(0xf7f7f7);
-//    titleAttr[NSFontAttributeName] = BA_FontSize(18);
-//    
-//    [bar setTitleTextAttributes:titleAttr];
+    BANavigationBar *bar = [[BANavigationBar alloc]initWithFrame:CGRectMake(0, 20, BA_SCREEN_WIDTH, 44)];
+    [self setValue:bar forKey:@"navigationBar"];
+//    [bar setBarTintColor:BA_White_Color];
+    [bar setTranslucent:NO]; // 半透明
     
-//    if ([self.navigationController.navigationBar respondsToSelector:@selector(setBackgroundImage: forBarPosition: barMetrics:)]){
-//        UIImage *backgroundImage = [UIImage imageNamed:@"005.jpg"];
-//        [self.navigationController.navigationBar setBackgroundImage:backgroundImage forBarPosition:UIBarPositionTopAttached barMetrics:UIBarMetricsCompactPrompt];
-//    } else if ([self.navigationController.navigationBar respondsToSelector:@selector(setBackgroundImage:forBarMetrics:)]){
-//        UIImage *backgroundImage = [UIImage imageNamed:@"005.jpg"];
-//        [self.navigationController.navigationBar setBackgroundImage:backgroundImage forBarMetrics:UIBarMetricsCompactPrompt];
-//    }
-//    [self.navigationController.navigationBar setBackgroundColor:[UIColor clearColor]];
-//    [self.navigationController.navigationBar setBarStyle:UIBarStyleBlack];
-//    [self.navigationController.navigationBar setTintColor:[UIColor clearColor]];
+    self.navigationBar.barTintColor = BA_White_Color;
+
+    // 去掉导航分割线
+    [bar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+    [bar setShadowImage:[[UIImage alloc] init]];
+
+    // 设置导航条按钮的文字颜色
+    NSMutableDictionary *titleAttr = [NSMutableDictionary dictionary];
+    titleAttr[NSForegroundColorAttributeName] = BA_Green_Color;
+    titleAttr[NSFontAttributeName] = BA_FontSize(18);
+    
+    [bar setTitleTextAttributes:titleAttr];
+}
+
+/*! 当用户刷时,导航控制器的navigationBar会隐藏或显示 */
+- (void)setNavigationBarHidden:(BOOL)navigationBarHidden
+{
+    if (navigationBarHidden)
+    {
+        self.hidesBarsOnSwipe = YES;
+    }
+    else
+    {
+        self.hidesBarsOnSwipe = NO;
+    }
+
 }
 
 // 导航控制器跳转完成的时候调用

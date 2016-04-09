@@ -28,10 +28,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    ViewController *vc = [[ViewController alloc] init];
-    BANavigationController *nav = [[BANavigationController alloc] initWithRootViewController:vc];
+//    ViewController *vc = [[ViewController alloc] init];
+    BANavigationController *nav = [[BANavigationController alloc] initWithRootViewController:[ViewController new]];
     self.window.rootViewController = nav;
-    [NSThread sleepForTimeInterval:1.0];//延长启动页面时间
+    [NSThread sleepForTimeInterval:1.0]; //延长启动页面时间
     [self.window makeKeyAndVisible];
     
     // 键盘

@@ -10,4 +10,7 @@
 
 @interface BANavigationController : UINavigationController
 
+/*! 当用户刷时,导航控制器的navigationBar会隐藏或显示 */
+- (void)setNavigationBarHidden:(BOOL)navigationBarHidden;
+
 @end
