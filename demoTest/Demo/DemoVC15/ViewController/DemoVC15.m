@@ -148,14 +148,12 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    [self setNavbarBackgroundHidden:NO];
-    [self.navigationController setNavigationBarHidden:NO animated:NO];
+    [self BA_setNavbarBackgroundHidden:NO];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
 - (void)viewDidLoad {
@@ -165,6 +163,8 @@
     
     self.tableView.hidden = NO;
     [self setupHeader];
+    [self BA_starYingHuaCoreAnimation];
+    [self BA_starXueHuaCoreAnimation];
 }
 
 - (void)setupHeader
@@ -183,29 +183,17 @@
     [_headView initWithTableView:self.tableView andBackGroundView:_bigImageView andSubviews:smallView];
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    [self setNavbarBackgroundHidden:YES];
-}
-
-- (void)setNavbarBackgroundHidden:(BOOL)hidden
-{
-    BANavigationBar *navBar =(BANavigationBar *)self.navigationController.navigationBar;
-    if (!hidden) {
-        [navBar BA_showNaviBar];
-        [self.navigationController setNavigationBarHidden:NO animated:NO];
-    }else{
-        [navBar BA_hiddenNaviBar];
-        [self.navigationController setNavigationBarHidden:YES animated:NO];
-    }
+    [self BA_setNavbarBackgroundHidden:YES];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     [_headView scrollViewDidScroll:scrollView];
     if (scrollView.contentOffset.y < self.bigImageView.frame.size.height-64) {
-        [self setNavbarBackgroundHidden:YES];
+        [self BA_setNavbarBackgroundHidden:YES];
     }else
     {
-        [self setNavbarBackgroundHidden:NO];
+        [self BA_setNavbarBackgroundHidden:NO];
     }
 }
 

@@ -46,10 +46,6 @@
         _tableView.separatorColor = [UIColor redColor];
         
         [_tableView setBackgroundColor:[UIColor whiteColor]];
-//        UIImageView *bgImageView = [[UIImageView alloc] init];
-//        bgImageView.image = [UIImage imageNamed:@"005.jpg"];
-//        bgImageView.frame = self.tableView.bounds;
-//        _tableView.backgroundView = bgImageView;
         
         _tableView.tableFooterView = [UIView new];
         
@@ -60,7 +56,7 @@
         [self.view addSubview:_tableView];
         
         [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.mas_equalTo(UIEdgeInsetsMake(64, 0, 0, 0));
+            make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
         }];
         
         [self.tableView registerClass:[DemoVC3Cell class] forCellReuseIdentifier:kDemoVC3CellId];

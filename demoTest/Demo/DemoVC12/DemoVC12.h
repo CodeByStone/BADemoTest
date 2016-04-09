@@ -6,8 +6,9 @@
 //  Copyright © 2016年 博爱之家. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BABaseViewController.h"
 
-@interface DemoVC12 : UIViewController
+@interface DemoVC12 : BABaseViewController
+
 
 @end

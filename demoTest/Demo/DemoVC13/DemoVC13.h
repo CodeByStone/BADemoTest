@@ -6,9 +6,10 @@
 //  Copyright © 2016年 博爱之家. All rights reserved.
 //
 
-#import "DemoVC13.h"
+#import "BABaseViewController.h"
 
-@interface DemoVC13 : UIViewController
+@interface DemoVC13 : BABaseViewController
+
 
 @end
 

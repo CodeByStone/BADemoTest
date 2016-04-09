@@ -26,6 +26,7 @@
 {
     [UIView animateWithDuration:0.3 animations:^{
         self.bgView.hidden = NO;
+        [self setTranslucent:NO]; // 半透明
     }];
 }
 
@@ -34,6 +35,7 @@
 {
     [UIView animateWithDuration:0.3 animations:^{
         self.bgView.hidden = YES;
+        [self setTranslucent:YES]; // 半透明
     }];}
 
 @end

@@ -54,7 +54,7 @@
         [self.view addSubview:_tableView];
         
         [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.mas_equalTo(UIEdgeInsetsMake(64, 0, 0, 0));
+            make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
         }];
     }
     return _tableView;
