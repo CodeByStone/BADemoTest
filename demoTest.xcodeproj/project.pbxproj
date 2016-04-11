@@ -174,7 +174,7 @@
 		C47383611CB8A38B0090C22F /* DemoVC17Header.m in Sources */ = {isa = PBXBuildFile; fileRef = C47383601CB8A38B0090C22F /* DemoVC17Header.m */; };
 		C47383641CB8AC0B0090C22F /* BANavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C47383631CB8AC0B0090C22F /* BANavigationBar.m */; };
 		C47383661CB905D40090C22F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47383651CB905D40090C22F /* QuartzCore.framework */; };
-		C47A1C3C1CBB7AE8008A6349 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C47A1C3B1CBB7AE8008A6349 /* Person.m */; };
+		C47A1C3F1CBBC6F6008A6349 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C47A1C3E1CBBC6F6008A6349 /* Person.m */; };
 		C484897B1CB50288002F8815 /* DemoVC16.m in Sources */ = {isa = PBXBuildFile; fileRef = C484897A1CB50288002F8815 /* DemoVC16.m */; };
 		C48489801CB50366002F8815 /* LPLevelView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C484897D1CB50366002F8815 /* LPLevelView.bundle */; };
 		C48489811CB50366002F8815 /* LPLevelView.m in Sources */ = {isa = PBXBuildFile; fileRef = C484897F1CB50366002F8815 /* LPLevelView.m */; };
@@ -500,8 +500,8 @@
 		C47383621CB8AC0B0090C22F /* BANavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BANavigationBar.h; path = ../Lib/BANavigationBar.h; sourceTree = "<group>"; };
 		C47383631CB8AC0B0090C22F /* BANavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BANavigationBar.m; path = ../Lib/BANavigationBar.m; sourceTree = "<group>"; };
 		C47383651CB905D40090C22F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		C47A1C3A1CBB7AE8008A6349 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
-		C47A1C3B1CBB7AE8008A6349 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		C47A1C3D1CBBC6F6008A6349 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		C47A1C3E1CBBC6F6008A6349 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		C48063AD1CA275B8000DD080 /* BADefin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BADefin.h; sourceTree = "<group>"; };
 		C48489791CB50288002F8815 /* DemoVC16.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC16.h; sourceTree = "<group>"; };
 		C484897A1CB50288002F8815 /* DemoVC16.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC16.m; sourceTree = "<group>"; };
@@ -1191,8 +1191,8 @@
 			children = (
 				C496FAD11CB91A2500E32618 /* DemoVC18.h */,
 				C496FAD21CB91A2500E32618 /* DemoVC18.m */,
-				C47A1C3A1CBB7AE8008A6349 /* Person.h */,
-				C47A1C3B1CBB7AE8008A6349 /* Person.m */,
+				C47A1C3D1CBBC6F6008A6349 /* Person.h */,
+				C47A1C3E1CBBC6F6008A6349 /* Person.m */,
 			);
 			path = DemoVC18;
 			sourceTree = "<group>";
@@ -1745,7 +1745,7 @@
 				C430928F1CAD3E6900A9E081 /* DemoVC5.m in Sources */,
 				C43092771CAD3E6900A9E081 /* DemoVC10Cell.m in Sources */,
 				C44A805E1CAD4648002AA7C9 /* UIWebView+BAKit.m in Sources */,
-				C47A1C3C1CBB7AE8008A6349 /* Person.m in Sources */,
+				C47A1C3F1CBBC6F6008A6349 /* Person.m in Sources */,
 				C43092971CAD3E6900A9E081 /* DemoVC7_replyVC.m in Sources */,
 				C47383611CB8A38B0090C22F /* DemoVC17Header.m in Sources */,
 				C43B62BF1CB629C100D44D5E /* BAShareAnimationView.m in Sources */,

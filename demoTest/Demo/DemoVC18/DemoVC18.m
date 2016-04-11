@@ -24,14 +24,18 @@
     // 测试GIF动态图
     [self BA_useGIFImageViewWithGifImageName:@"gif1.gif" frame:CGRectMake(0, 0, BA_SCREEN_WIDTH, BA_SCREEN_HEIGHT)];
     
-    [self test1];
-    [self test2];
-    [self test3];
-    [self test4];
-    [self test5];
+    // 首先声明：此demo是CocoChina的大神写的，我搜集了很多相关资料，整合了这个demo，如有版权问题，记得通知下我！立即删除！
+//    [self test1];
+//    [self test2];
+//    [self test3];
+//    [self test4];
+//    [self test5];
+    [self test6];
 }
 
 /*
+ 名词解析
+ 
  什么是runtime?
  
  runtime直译就是运行时间,run(跑,运行) time(时间),网上大家都叫它运行时,它是一套比较底层的纯C语言API,属于一个C语言库,包含了很多底层的C语言API,它是OC的幕后工作者,我们平时写的OC代码,在运行过程时,都会转为runtime的C语言代码
@@ -47,6 +51,28 @@
  
  这里是【test1】；
  
+ 成员变量
+ 
+ 1、定义：
+ 
+ Ivar: 实例变量类型，是一个指向objc_ivar结构体的指针
+ 
+ typedef struct objc_ivar *Ivar;
+ 2、操作函数：
+ 
+ // 获取所有成员变量
+ class_copyIvarList
+ // 获取成员变量名
+ ivar_getName
+ // 获取成员变量类型编码
+ ivar_getTypeEncoding
+ // 获取指定名称的成员变量
+ class_getInstanceVariable
+ // 获取某个对象成员变量的值
+ object_getIvar
+ // 设置某个对象成员变量的值
+ object_setIvar
+ 
  */
 - (void)test1
 {
@@ -61,20 +87,21 @@
         const char *name = ivar_getName(ivar);
         // C的字符串转OC的字符串
         NSString *key = [NSString stringWithUTF8String:name];
-        NSLog(@"1、获取一个类的全部成员变量名：%d == %@", i, key);
+        BALog(@"1、获取一个类的全部成员变量名：%d == %@", i, key);
     }
     // 记得释放
     free(ivars);
 }
 /*
- 2016-04-11 18:42:21.734 runTimetest[35832:447309] 1、获取一个类的全部成员变量名：0 == _age
- 2016-04-11 18:42:21.734 runTimetest[35832:447309] 1、获取一个类的全部成员变量名：1 == _height
- 2016-04-11 18:42:21.735 runTimetest[35832:447309] 1、获取一个类的全部成员变量名：2 == _delegate
- 2016-04-11 18:42:21.735 runTimetest[35832:447309] 1、获取一个类的全部成员变量名：3 == _name
- 2016-04-11 18:42:21.735 runTimetest[35832:447309] 1、获取一个类的全部成员变量名：4 == _sex
- 2016-04-11 18:42:21.735 runTimetest[35832:447309] 1、获取一个类的全部成员变量名：5 == _job
- 2016-04-11 18:42:21.735 runTimetest[35832:447309] 1、获取一个类的全部成员变量名：6 == _native
- 2016-04-11 18:42:21.735 runTimetest[35832:447309] 1、获取一个类的全部成员变量名：7 == _education
+ 2016-04-11 19:16:28.135 runTimetest[36263:486317] 1、获取一个类的全部成员变量名：0 == _str1
+ 2016-04-11 19:16:28.135 runTimetest[36263:486317] 1、获取一个类的全部成员变量名：1 == _age
+ 2016-04-11 19:16:28.135 runTimetest[36263:486317] 1、获取一个类的全部成员变量名：2 == _height
+ 2016-04-11 19:16:28.136 runTimetest[36263:486317] 1、获取一个类的全部成员变量名：3 == _delegate
+ 2016-04-11 19:16:28.136 runTimetest[36263:486317] 1、获取一个类的全部成员变量名：4 == _name
+ 2016-04-11 19:16:28.136 runTimetest[36263:486317] 1、获取一个类的全部成员变量名：5 == _sex
+ 2016-04-11 19:16:28.136 runTimetest[36263:486317] 1、获取一个类的全部成员变量名：6 == _job
+ 2016-04-11 19:16:28.136 runTimetest[36263:486317] 1、获取一个类的全部成员变量名：7 == _native
+ 2016-04-11 19:16:28.138 runTimetest[36263:486317] 1、获取一个类的全部成员变量名：8 == _education
  */
 
 
@@ -85,37 +112,114 @@
  作用2  同理,我们可以获取到一个类的全部属性名
  这里是【test2】；
  
+ 属性
+ 
+ 1、定义：
+ 
+ objc_property_t：声明的属性的类型，是一个指向objc_property结构体的指针
+ 
+ typedef struct objc_property *objc_property_t;
+ 2、操作函数：
+ 
+ // 获取所有属性
+ class_copyPropertyList
+ 说明：使用class_copyPropertyList并不会获取无@property声明的成员变量
+ 
+ // 获取属性名
+ property_getName
+ // 获取属性特性描述字符串
+ property_getAttributes
+ // 获取所有属性特性
+ property_copyAttributeList
+ 说明：
+ 
+ property_getAttributes函数返回objc_property_attribute_t结构体列表，objc_property_attribute_t结构体包含name和value，常用的属性如下：
+ 
+ 属性类型  name值：T  value：变化
+ 编码类型  name值：C(copy) &(strong) W(weak) 空(assign) 等 value：无
+ 非/原子性 name值：空(atomic) N(Nonatomic)  value：无
+ 变量名称  name值：V  value：变化
+ 使用property_getAttributes获得的描述是property_copyAttributeList能获取到的所有的name和value的总体描述，如 T@"NSDictionary",C,N,V_dict1
+ 
  */
 - (void)test2
 {
-    unsigned int count;
-    
+    unsigned int outCount = 0;
     // 获得指向该类所有属性的指针
-    objc_property_t *properties = class_copyPropertyList([Person class], &count);
-    
-    for (int i = 0; i<count; i++)
+    // 说明：使用class_copyPropertyList并不会获取无@property声明的成员变量
+    objc_property_t *properties = class_copyPropertyList([Person class], &outCount);
+    for (unsigned int i = 0; i < outCount; i ++)
     {
         // 获得该类的一个属性的指针
         objc_property_t property = properties[i];
-        // 获取属性的名称
+        // 属性名
         const char *name = property_getName(property);
-        // 将C的字符串转为OC的
-        NSString *key = [NSString stringWithUTF8String:name];
+        // 属性的特性
+        // 使用property_getAttributes获得的描述是property_copyAttributeList能获取到的所有的name和value的总体描述，如 T@"NSDictionary",C,N,V_dict1
+        const char *propertyAttr = property_getAttributes(property);
+        BALog(@"2、获取一个类的全部属性的特性1，不包含property声明的成员变量：%s 的 %s ", propertyAttr, name);
         
-        NSLog(@"2、获取一个类的全部属性名：%d == %@", i, key);
+        // 属性的特性
+        unsigned int attrCount = 0;
+        objc_property_attribute_t * attrs = property_copyAttributeList(property, &attrCount);
+        for (unsigned int j = 0; j < attrCount; j ++)
+        {
+            objc_property_attribute_t attr = attrs[j];
+            const char *name = attr.name;
+            const char *value = attr.value;
+            BALog(@"2、获取一个类的全部属性的特性2：%s 值：%s", name, value);
+        }
+        free(attrs);
+        BALog(@"\n");
     }
-    // 记得释放
     free(properties);
 }
 /*
- 2016-04-11 18:41:27.203 runTimetest[35822:446441] 2、获取一个类的全部属性名：0 == delegate
- 2016-04-11 18:41:27.204 runTimetest[35822:446441] 2、获取一个类的全部属性名：1 == name
- 2016-04-11 18:41:27.204 runTimetest[35822:446441] 2、获取一个类的全部属性名：2 == sex
- 2016-04-11 18:41:27.204 runTimetest[35822:446441] 2、获取一个类的全部属性名：3 == age
- 2016-04-11 18:41:27.205 runTimetest[35822:446441] 2、获取一个类的全部属性名：4 == height
- 2016-04-11 18:41:27.205 runTimetest[35822:446441] 2、获取一个类的全部属性名：5 == job
- 2016-04-11 18:41:27.205 runTimetest[35822:446441] 2、获取一个类的全部属性名：6 == native
- 2016-04-11 18:41:27.205 runTimetest[35822:446441] 2、获取一个类的全部属性名：7 == education
+ 2016-04-11 19:21:20.483 runTimetest[36301:490999] 2、获取一个类的全部属性的特性1，property声明的成员变量：T@"<PersonDelegate>",N,V_delegate 的 delegate
+ 2016-04-11 19:21:20.483 runTimetest[36301:490999] 2、获取一个类的全部属性的特性2：T 值：@"<PersonDelegate>"
+ 2016-04-11 19:21:20.483 runTimetest[36301:490999] 2、获取一个类的全部属性的特性2：N 值：
+ 2016-04-11 19:21:20.483 runTimetest[36301:490999] 2、获取一个类的全部属性的特性2：V 值：_delegate
+ 2016-04-11 19:21:20.484 runTimetest[36301:490999]
+ 2016-04-11 19:21:20.484 runTimetest[36301:490999] 2、获取一个类的全部属性的特性1，property声明的成员变量：T@"NSString",C,N,V_name 的 name
+ 2016-04-11 19:21:20.484 runTimetest[36301:490999] 2、获取一个类的全部属性的特性2：T 值：@"NSString"
+ 2016-04-11 19:21:20.484 runTimetest[36301:490999] 2、获取一个类的全部属性的特性2：C 值：
+ 2016-04-11 19:21:20.484 runTimetest[36301:490999] 2、获取一个类的全部属性的特性2：N 值：
+ 2016-04-11 19:21:20.484 runTimetest[36301:490999] 2、获取一个类的全部属性的特性2：V 值：_name
+ 2016-04-11 19:21:20.484 runTimetest[36301:490999]
+ 2016-04-11 19:21:20.511 runTimetest[36301:490999] 2、获取一个类的全部属性的特性1，property声明的成员变量：T@"NSString",C,N,V_sex 的 sex
+ 2016-04-11 19:21:20.511 runTimetest[36301:490999] 2、获取一个类的全部属性的特性2：T 值：@"NSString"
+ 2016-04-11 19:21:20.511 runTimetest[36301:490999] 2、获取一个类的全部属性的特性2：C 值：
+ 2016-04-11 19:21:20.511 runTimetest[36301:490999] 2、获取一个类的全部属性的特性2：N 值：
+ 2016-04-11 19:21:20.512 runTimetest[36301:490999] 2、获取一个类的全部属性的特性2：V 值：_sex
+ 2016-04-11 19:21:20.512 runTimetest[36301:490999]
+ 2016-04-11 19:21:20.512 runTimetest[36301:490999] 2、获取一个类的全部属性的特性1，property声明的成员变量：Ti,N,V_age 的 age
+ 2016-04-11 19:21:20.512 runTimetest[36301:490999] 2、获取一个类的全部属性的特性2：T 值：i
+ 2016-04-11 19:21:20.512 runTimetest[36301:490999] 2、获取一个类的全部属性的特性2：N 值：
+ 2016-04-11 19:21:20.512 runTimetest[36301:490999] 2、获取一个类的全部属性的特性2：V 值：_age
+ 2016-04-11 19:21:20.513 runTimetest[36301:490999]
+ 2016-04-11 19:21:20.513 runTimetest[36301:490999] 2、获取一个类的全部属性的特性1，property声明的成员变量：Tf,N,V_height 的 height
+ 2016-04-11 19:21:20.513 runTimetest[36301:490999] 2、获取一个类的全部属性的特性2：T 值：f
+ 2016-04-11 19:21:20.513 runTimetest[36301:490999] 2、获取一个类的全部属性的特性2：N 值：
+ 2016-04-11 19:21:20.513 runTimetest[36301:490999] 2、获取一个类的全部属性的特性2：V 值：_height
+ 2016-04-11 19:21:20.513 runTimetest[36301:490999]
+ 2016-04-11 19:21:20.514 runTimetest[36301:490999] 2、获取一个类的全部属性的特性1，property声明的成员变量：T@"NSString",C,N,V_job 的 job
+ 2016-04-11 19:21:20.514 runTimetest[36301:490999] 2、获取一个类的全部属性的特性2：T 值：@"NSString"
+ 2016-04-11 19:21:20.514 runTimetest[36301:490999] 2、获取一个类的全部属性的特性2：C 值：
+ 2016-04-11 19:21:20.514 runTimetest[36301:490999] 2、获取一个类的全部属性的特性2：N 值：
+ 2016-04-11 19:21:20.514 runTimetest[36301:490999] 2、获取一个类的全部属性的特性2：V 值：_job
+ 2016-04-11 19:21:20.515 runTimetest[36301:490999]
+ 2016-04-11 19:21:20.515 runTimetest[36301:490999] 2、获取一个类的全部属性的特性1，property声明的成员变量：T@"NSString",C,N,V_native 的 native
+ 2016-04-11 19:21:20.515 runTimetest[36301:490999] 2、获取一个类的全部属性的特性2：T 值：@"NSString"
+ 2016-04-11 19:21:20.515 runTimetest[36301:490999] 2、获取一个类的全部属性的特性2：C 值：
+ 2016-04-11 19:21:20.515 runTimetest[36301:490999] 2、获取一个类的全部属性的特性2：N 值：
+ 2016-04-11 19:21:20.515 runTimetest[36301:490999] 2、获取一个类的全部属性的特性2：V 值：_native
+ 2016-04-11 19:21:20.516 runTimetest[36301:490999]
+ 2016-04-11 19:21:20.516 runTimetest[36301:490999] 2、获取一个类的全部属性的特性1，property声明的成员变量：T@"NSString",C,N,V_education 的 education
+ 2016-04-11 19:21:20.516 runTimetest[36301:490999] 2、获取一个类的全部属性的特性2：T 值：@"NSString"
+ 2016-04-11 19:21:20.516 runTimetest[36301:490999] 2、获取一个类的全部属性的特性2：C 值：
+ 2016-04-11 19:21:20.516 runTimetest[36301:490999] 2、获取一个类的全部属性的特性2：N 值：
+ 2016-04-11 19:21:20.516 runTimetest[36301:490999] 2、获取一个类的全部属性的特性2：V 值：_education
+ 2016-04-11 19:21:20.516 runTimetest[36301:490999]
  */
 
 /*
@@ -146,7 +250,7 @@
         // 获取方法参数个数
         int arguments = method_getNumberOfArguments(method);
         
-        NSLog(@"3、获取一个类的全部方法：%d == %@ %d", i, methodName, arguments);
+        BALog(@"3、获取一个类的全部方法：%d == %@ %d", i, methodName, arguments);
     }
     // 记得释放
     free(methods);
@@ -206,7 +310,7 @@
         // C字符串转OC字符串
         NSString *protocolName = [NSString stringWithUTF8String:name];
         
-        NSLog(@"4、获取一个类遵循的全部协议：%d == %@", i, protocolName);
+        BALog(@"4、获取一个类遵循的全部协议：%d == %@", i, protocolName);
     }
     // 记得释放
     free(protocols);
@@ -242,20 +346,53 @@
     
     Person *unarchiverPerson = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
     unarchiverPerson.delegate = self;
-    
-    // 此处需要在模拟器上查看，真机暂时不行！
-    NSLog(@"5、unarchiverPerson == %@ %@",path,unarchiverPerson);
-    NSLog(@"5、unarchiverPerson == %@ name: %@",path,unarchiverPerson.name);
+    BALog(@"5、unarchiverPerson == %@ %@",path,unarchiverPerson);
+    BALog(@"5、unarchiverPerson == %@ name: %@",path,unarchiverPerson.name);
 }
 /*
  2016-04-11 18:43:51.434 runTimetest[35867:449428] 5、unarchiverPerson == /Users/boai/Library/Developer/CoreSimulator/Devices/E409AD16-A6BE-4D0C-9195-861137F66ED1/data/Containers/Data/Application/D27B8613-EDB1-4FDB-A6C9-A20BB8934232/archive <Person: 0x7fd8b1e18ff0>
  2016-04-11 18:59:46.557 runTimetest[35941:468178] 5、unarchiverPerson == /Users/boai/Library/Developer/CoreSimulator/Devices/E409AD16-A6BE-4D0C-9195-861137F66ED1/data/Containers/Data/Application/14E97695-5554-4EAE-9953-EB27EC2B8593/archive name: 博爱
  */
 
+/*
+ Json到Model的转化
+ 
+ 在开发中相信最常用的就是接口数据需要转化成Model了（当然如果你是直接从Dict取值的话。。。），很多开发者也都使用著名的第三方库如JsonModel、Mantle或MJExtension等，如果只用而不知其所以然，那真和“搬砖”没啥区别了，下面我们使用runtime去解析json来给Model赋值。
+ 
+ 原理描述：用runtime提供的函数遍历Model自身所有属性，如果属性在json中有对应的值，则将其赋值。
+ 
+ 核心方法：在NSObject的分类中添加方法：
+ 
+ 读者可以进一步思考：
+ 
+ 如何识别基本数据类型的属性并处理
+ 空（nil，null）值的处理
+ json中嵌套json（Dict或Array）的处理
+ 尝试解决以上问题，你也能写出属于自己的功能完备的Json转Model库。
+ */
+- (void)test6
+{
+    NSDictionary *dict = @{
+                           @"name":@"博爱",
+                           @"sex":@"男",
+                           @"age":@"25",
+                           @"height":@"175.0",
+                           @"education":@"本科",
+                           @"job":@"iOS工程师",
+                           @"native":@"广州"
+                           };
+    Person *person = [[Person alloc] initWithDict:dict];
+    
+    BALog(@"6、person: %@", person.name);
+}
+/*
+ 2016-04-11 19:48:59.012 runTimetest[36395:511720] 6、person: 博爱
+ */
+
 #pragma mark - PersonDelegate
 - (void)personDelegateToWork
 {
-    NSLog(@"PersonDelegate ...");
+    BALog(@"PersonDelegate ...");
 }
 
 @end
