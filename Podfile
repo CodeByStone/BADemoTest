@@ -43,6 +43,9 @@ pod 'MWPhotoBrowser'
 # 友盟分享
 pod 'UMengSocial', '~> 4.4'
 
+# 二维码
+#pod 'LBXScan','~> 1.1.1'
+
 
 end
 
