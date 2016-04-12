@@ -73,7 +73,8 @@
                          @"15、MVVM设计模式+自定义navi",
                          @"16、友盟分享和登陆",
                          @"17、QQ好友分组",
-                         @"18、runtime测试/gif动画"
+                         @"18、runtime测试/gif动画",
+                         @"19、联系人分组（带索引）"
                          ];
     }
     return _titlesArray;

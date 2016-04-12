@@ -19,6 +19,9 @@
 #import "UMSocialQQHandler.h"
 #import "UMSocialSinaSSOHandler.h"
 
+#import "BAChineseString.h"
+
+
 @interface AppDelegate ()
 
 @end
