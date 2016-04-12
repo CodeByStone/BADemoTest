@@ -1,9 +1,9 @@
 //
 //  BAChineseString.m
-//  YZX_ChineseSorting
+//  demoTest
 //
-//  Created by Suilongkeji on 13-10-29.
-//  Copyright (c) 2013年 Suilongkeji. All rights reserved.
+//  Created by 博爱 on 16/4/11.
+//  Copyright © 2016年 博爱之家. All rights reserved.
 //
 
 #import "BAChineseString.h"
