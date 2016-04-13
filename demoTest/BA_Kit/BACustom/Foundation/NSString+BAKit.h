@@ -12,6 +12,7 @@
  *  给NSString类添加许多有用的方法
  */
 @interface NSString (BAKit)
+
 /**
  *  搜索两个字符之间的字符串。
  *  例如: "This is a test" 的开始字符'h'和结束字符't'将返回"his is a "
@@ -169,6 +170,17 @@
 
 /*! 解析新浪微博中的日期, 判断日期是今天，昨天还是明天 */
 + (nullable NSString *)BA_time_resolveSinaWeiboDate:(nullable NSString*)dateStr;
+
+#pragma mark - *****  数字处理 类
+/*! 判断数字为2.1千，3.4万（点赞数处理） */
++ (nullable NSString *)BA_stringHandleWithString:(nullable NSString *)string;
+
+/*! 判断是否为整形 */
+- (BOOL)BA_isPureInt:(nullable NSString*)string;
+
+/*! 判断是否为浮点形 */
+- (BOOL)BA_isPureFloat:(nullable NSString*)string;
+
 
 #pragma mark - *****  特殊字符串处理 类
 

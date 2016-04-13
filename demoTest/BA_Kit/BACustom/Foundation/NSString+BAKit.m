@@ -609,6 +609,47 @@
     return timeString;
 }
 
+#pragma mark - *****  数字处理 类
+/*! 判断数字为2.1千，3.4万（点赞数处理） */
++ (NSString *)BA_stringHandleWithString:(NSString *)string
+{
+    float number = [string integerValue];
+    
+    NSString *numberString = @"";
+    if (number<1000)
+    {
+        numberString = [NSString stringWithFormat:@"%.1f", number];
+    }
+    else
+        if (number/1000 && number/10000 <1)
+        {
+            numberString = [NSString stringWithFormat:@"%.1f千", number/1000];
+        }
+        else
+        {
+            numberString = [NSString stringWithFormat:@"%.1f万", number/10000];
+        }
+    
+    return numberString;
+}
+
+/*! 判断是否为整形 */
+- (BOOL)BA_isPureInt:(NSString*)string
+{
+    NSScanner* scan = [NSScanner scannerWithString:string];
+    int val;
+    return [scan scanInt:&val] && [scan isAtEnd];
+}
+
+/*! 判断是否为浮点形 */
+- (BOOL)BA_isPureFloat:(NSString*)string
+{
+    NSScanner* scan = [NSScanner scannerWithString:string];
+    float val;
+    return [scan scanFloat:&val] && [scan isAtEnd];
+}
+
+#pragma mark - *****  特殊字符串处理 类
 /*! 去掉字符串中的html标签的方法 */
 - (NSString *)BA_filterHTML:(NSString *)html
 {
