@@ -618,7 +618,7 @@
     NSString *numberString = @"";
     if (number<1000)
     {
-        numberString = [NSString stringWithFormat:@"%.1f", number];
+        numberString = [NSString stringWithFormat:@"%.0f", number];
     }
     else
         if (number/1000 && number/10000 <1)
