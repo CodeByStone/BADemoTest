@@ -12,7 +12,10 @@
 @interface DemoVC19 ()
 <
     UITableViewDelegate,
-    UITableViewDataSource
+    UITableViewDataSource,
+    /*! 搜索 */
+    UISearchBarDelegate,
+    UISearchResultsUpdating
 >
 
 @property (nonatomic, strong) UITableView    *tableView;
@@ -21,6 +24,10 @@
 @property (nonatomic, strong) NSMutableArray *LetterResultArr;
 
 @property (nonatomic, strong) NSArray *namesArray;
+
+/*! 搜索 */
+@property (nonatomic, strong) UISearchController * searchController;
+@property (nonatomic, strong) NSMutableArray * searchList;
 
 @end
 
@@ -68,15 +75,126 @@
     
     self.tableView.hidden = NO;
     
+    self.searchList = [[NSMutableArray alloc]init];
+    
+    //初始化数据
+//    for(char c = 'A'; c <= 'Z'; c++ )
+//    {
+////        [_dataList addObject:[NSString stringWithFormat:@"%c",c]];
+//        [_dataBase addObject:[[NSString stringWithFormat:@"%c",c] lowercaseString]];
+//        [_dataBase addObject:[[NSString stringWithFormat:@"%c",c] lowercaseString]];
+//        [_dataBase addObject:[[NSString stringWithFormat:@"%c",c] lowercaseString]];
+//    }
+
+    /*! 索引 */
     self.indexArray = [BAChineseString BA_IndexArray:self.namesArray];
+    /*! 排序后的联系人数组 */
     self.LetterResultArr = [BAChineseString BA_LetterSortArray:self.namesArray];
+    
+    [self createSearchBar];
+
 }
+
+#pragma mark - 搜索
+/*! createSearchBar */
+- (void)createSearchBar
+{
+    _searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+    _searchController.searchResultsUpdater = self;
+    _searchController.dimsBackgroundDuringPresentation = NO;
+    _searchController.hidesNavigationBarDuringPresentation = NO;
+    _searchController.searchBar.frame = CGRectMake(self.searchController.searchBar.frame.origin.x, self.searchController.searchBar.frame.origin.y, self.searchController.searchBar.frame.size.width, 44.0);
+    
+    self.searchController.searchBar.delegate = self;
+    self.searchController.searchBar.searchBarStyle = UISearchBarStyleProminent;
+    
+    self.searchController.searchBar.keyboardType = UIKeyboardTypeDefault;
+    
+    self.tableView.tableHeaderView = self.searchController.searchBar;
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    searchBar.text = @"";
+    [searchBar setShowsCancelButton:NO animated:YES];
+    [searchBar resignFirstResponder];
+    self.tableView.allowsSelection = YES;
+    self.tableView.scrollEnabled = YES;
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    //
+    //    NSArray *results;
+    [searchBar setShowsCancelButton:NO animated:YES];
+    [searchBar resignFirstResponder];
+    self.tableView.allowsSelection=YES;
+    self.tableView.scrollEnabled=YES;
+    //
+    //    [self.dataList removeAllObjects];
+    //    [self.dataList addObjectsFromArray:results];
+    //
+    //    [self.tableView reloadData];
+    NSPredicate *preicate = [NSPredicate predicateWithFormat:@"SELF CONTAINS[c] %@", searchBar.text];
+    if (self.searchList!= nil) {
+        [self.searchList removeAllObjects];
+    }
+    //过滤数据
+    self.searchList= [NSMutableArray arrayWithArray:[_indexArray filteredArrayUsingPredicate:preicate]];
+    //刷新表格
+    [self.tableView reloadData];
+}
+
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
+    
+    NSLog(@"搜索begin");
+    
+    self.searchController.searchBar.showsCancelButton = YES;
+    
+    
+    return YES;
+}
+
+- (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar{
+    
+    NSLog(@"搜索end");
+    
+    //刷新表格
+    [self.tableView reloadData];
+    [searchBar setShowsCancelButton:NO animated:YES];
+    [searchBar resignFirstResponder];
+    
+    
+    return YES;
+}
+
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController{
+    
+    NSString *searchString = [self.searchController.searchBar text];
+    NSPredicate *preicate = [NSPredicate predicateWithFormat:@"SELF CONTAINS[c] %@", searchString];
+    if (self.searchList!= nil) {
+        [self.searchList removeAllObjects];
+    }
+    
+    //过滤数据
+    self.searchList= [NSMutableArray arrayWithArray:[_LetterResultArr filteredArrayUsingPredicate:preicate]];
+    //刷新表格
+    [self.tableView reloadData];
+}
+
 
 #pragma mark - Section的Header的值
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    NSString *key = [self.indexArray objectAtIndex:section];
-    return key;
+    if (self.searchController.active)
+    {
+        return [[_searchList objectAtIndex:section] uppercaseString];
+    }
+    else
+    {
+        NSString *key = [self.indexArray objectAtIndex:section];
+        return key;
+    }
 }
 
 #pragma mark - Section header view
@@ -108,14 +226,36 @@
 #pragma mark -
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
 {
-    BALog(@"title === %@",title);
+//    BALog(@"title === %@",title);
+//    return index;
+    
+    NSInteger count = 0;
+    
+    NSLog(@"%@-%ld",title,(long)index);
+    
+    for(NSString *character in self.indexArray)
+    {
+        if([character isEqualToString:title])
+        {
+            return count;
+        }
+        count ++;
+    }
+    
     return index;
 }
 
 #pragma mark - 允许数据源告知必须加载到Table View中的表的Section数。
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return [self.indexArray count];
+    if (self.searchController.active)
+    {
+        return [self.searchList count];
+    }
+    else
+    {
+        return [self.indexArray count];
+    }
 }
 
 #pragma mark - 设置表格的行数为数组的元素个数
@@ -135,7 +275,15 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
-    cell.textLabel.text = self.LetterResultArr[indexPath.section][indexPath.row];
+    if (self.searchController.active)
+    {
+        [cell.textLabel setText:self.searchList[indexPath.row]];
+    }
+    else
+    {
+        cell.textLabel.text = self.LetterResultArr[indexPath.section][indexPath.row];
+    }
+    
     return cell;
 }
 

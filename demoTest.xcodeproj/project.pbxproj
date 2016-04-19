@@ -220,6 +220,10 @@
 		C4D415EA1CB4D39F00384434 /* NSObject+Network.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D415E71CB4D39F00384434 /* NSObject+Network.m */; };
 		C4D415EB1CB4D39F00384434 /* UIScrollView+BARefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D415E91CB4D39F00384434 /* UIScrollView+BARefresh.m */; };
 		C4D415EF1CB4D3D900384434 /* BABaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D415EE1CB4D3D900384434 /* BABaseViewModel.m */; };
+		C4E20B6A1CC6528100E32F0E /* DemoVC20.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E20B691CC6528000E32F0E /* DemoVC20.m */; };
+		C4E20B711CC652EB00E32F0E /* YRHomeTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E20B6C1CC652EB00E32F0E /* YRHomeTopView.m */; };
+		C4E20B721CC652EB00E32F0E /* BALayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E20B6E1CC652EB00E32F0E /* BALayout.m */; };
+		C4E20B731CC652EB00E32F0E /* BAPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E20B701CC652EB00E32F0E /* BAPhotoCell.m */; };
 		C4F02F4F1CAD440700371A9C /* UIDevice+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F02F4E1CAD440700371A9C /* UIDevice+BAKit.m */; };
 		C4F02F521CAD444F00371A9C /* UIFont+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F02F511CAD444F00371A9C /* UIFont+BAKit.m */; };
 		C4F02F551CAD449B00371A9C /* UIImage+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F02F541CAD449B00371A9C /* UIImage+BAKit.m */; };
@@ -584,6 +588,14 @@
 		C4D415E91CB4D39F00384434 /* UIScrollView+BARefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+BARefresh.m"; sourceTree = "<group>"; };
 		C4D415ED1CB4D3D900384434 /* BABaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BABaseViewModel.h; sourceTree = "<group>"; };
 		C4D415EE1CB4D3D900384434 /* BABaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BABaseViewModel.m; sourceTree = "<group>"; };
+		C4E20B681CC6528000E32F0E /* DemoVC20.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC20.h; sourceTree = "<group>"; };
+		C4E20B691CC6528000E32F0E /* DemoVC20.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC20.m; sourceTree = "<group>"; };
+		C4E20B6B1CC652EB00E32F0E /* YRHomeTopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YRHomeTopView.h; sourceTree = "<group>"; };
+		C4E20B6C1CC652EB00E32F0E /* YRHomeTopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YRHomeTopView.m; sourceTree = "<group>"; };
+		C4E20B6D1CC652EB00E32F0E /* BALayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BALayout.h; sourceTree = "<group>"; };
+		C4E20B6E1CC652EB00E32F0E /* BALayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BALayout.m; sourceTree = "<group>"; };
+		C4E20B6F1CC652EB00E32F0E /* BAPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAPhotoCell.h; sourceTree = "<group>"; };
+		C4E20B701CC652EB00E32F0E /* BAPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAPhotoCell.m; sourceTree = "<group>"; };
 		C4F02F4D1CAD440700371A9C /* UIDevice+BAKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+BAKit.h"; sourceTree = "<group>"; };
 		C4F02F4E1CAD440700371A9C /* UIDevice+BAKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+BAKit.m"; sourceTree = "<group>"; };
 		C4F02F501CAD444F00371A9C /* UIFont+BAKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+BAKit.h"; sourceTree = "<group>"; };
@@ -960,6 +972,7 @@
 				C442C2C81CB73DAA00E493DD /* DemoVC17 */,
 				C442C2F41CB7944F00E493DD /* DemoVC18 */,
 				C47A1EBE1CBBDBAA008A6349 /* DemoVC19 */,
+				C4E20B671CC6524300E32F0E /* DemoVC20 */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -1418,6 +1431,21 @@
 			path = Model/ViewModel;
 			sourceTree = "<group>";
 		};
+		C4E20B671CC6524300E32F0E /* DemoVC20 */ = {
+			isa = PBXGroup;
+			children = (
+				C4E20B681CC6528000E32F0E /* DemoVC20.h */,
+				C4E20B691CC6528000E32F0E /* DemoVC20.m */,
+				C4E20B6B1CC652EB00E32F0E /* YRHomeTopView.h */,
+				C4E20B6C1CC652EB00E32F0E /* YRHomeTopView.m */,
+				C4E20B6D1CC652EB00E32F0E /* BALayout.h */,
+				C4E20B6E1CC652EB00E32F0E /* BALayout.m */,
+				C4E20B6F1CC652EB00E32F0E /* BAPhotoCell.h */,
+				C4E20B701CC652EB00E32F0E /* BAPhotoCell.m */,
+			);
+			path = DemoVC20;
+			sourceTree = "<group>";
+		};
 		C4F623711CA8C76100DCF152 /* BANavigationItem */ = {
 			isa = PBXGroup;
 			children = (
@@ -1781,6 +1809,7 @@
 				C430928F1CAD3E6900A9E081 /* DemoVC5.m in Sources */,
 				C43092771CAD3E6900A9E081 /* DemoVC10Cell.m in Sources */,
 				C44A805E1CAD4648002AA7C9 /* UIWebView+BAKit.m in Sources */,
+				C4E20B711CC652EB00E32F0E /* YRHomeTopView.m in Sources */,
 				C47A1C3F1CBBC6F6008A6349 /* Person.m in Sources */,
 				C43092971CAD3E6900A9E081 /* DemoVC7_replyVC.m in Sources */,
 				C47383611CB8A38B0090C22F /* DemoVC17Header.m in Sources */,
@@ -1812,6 +1841,7 @@
 				C430929A1CAD3E6900A9E081 /* DemoVC7Model.m in Sources */,
 				C43092981CAD3E6900A9E081 /* DemoVC7_replyView.m in Sources */,
 				C4F02F5E1CAD451B00371A9C /* UIScrollView+BAKit.m in Sources */,
+				C4E20B721CC652EB00E32F0E /* BALayout.m in Sources */,
 				C43092711CAD3E6900A9E081 /* BAHomeIncomeModel.m in Sources */,
 				C47A1ECD1CBBDD0A008A6349 /* BAChineseString.m in Sources */,
 				C43092721CAD3E6900A9E081 /* DemoVC1.m in Sources */,
@@ -1823,12 +1853,14 @@
 				C43092911CAD3E6900A9E081 /* DemoVC5Cell.m in Sources */,
 				C44A80711CAD475C002AA7C9 /* NSMutableArray+BAKit.m in Sources */,
 				C493ED291CAA92CE00DF2A44 /* UIViewController+BAAlertView.m in Sources */,
+				C4E20B6A1CC6528100E32F0E /* DemoVC20.m in Sources */,
 				C430927F1CAD3E6900A9E081 /* DemoVC14.m in Sources */,
 				C4D415EA1CB4D39F00384434 /* NSObject+Network.m in Sources */,
 				C43092951CAD3E6900A9E081 /* DemoVC7.m in Sources */,
 				C43091FF1CAD3E3200A9E081 /* BAAPP.m in Sources */,
 				C44A807D1CAD47E6002AA7C9 /* NSString+BAKit.m in Sources */,
 				C47A1EC11CBBDBCE008A6349 /* DemoVC19.m in Sources */,
+				C4E20B731CC652EB00E32F0E /* BAPhotoCell.m in Sources */,
 				C430928A1CAD3E6900A9E081 /* YRDemandShareModel.m in Sources */,
 				C4F02F4F1CAD440700371A9C /* UIDevice+BAKit.m in Sources */,
 			);
@@ -2000,6 +2032,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/BADemo.pch";
 				INFOPLIST_FILE = demoTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -2022,6 +2055,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(PRODUCT_NAME)/BADemo.pch";
 				INFOPLIST_FILE = demoTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
