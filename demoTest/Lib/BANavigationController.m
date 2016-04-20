@@ -37,7 +37,7 @@
 //    [bar setBarTintColor:BA_White_Color];
     [bar setTranslucent:NO]; // 半透明
     
-    self.navigationBar.barTintColor = BA_White_Color;
+    self.navigationBar.barTintColor = BA_Green_Color;
 
     // 去掉导航分割线
     [bar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
@@ -45,7 +45,7 @@
 
     // 设置导航条按钮的文字颜色
     NSMutableDictionary *titleAttr = [NSMutableDictionary dictionary];
-    titleAttr[NSForegroundColorAttributeName] = BA_Green_Color;
+    titleAttr[NSForegroundColorAttributeName] = BA_Red_Color;
     titleAttr[NSFontAttributeName] = BA_FontSize(18);
     
     [bar setTitleTextAttributes:titleAttr];

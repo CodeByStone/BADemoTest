@@ -149,7 +149,7 @@
             DemoVC10Cell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
             if (!cell)
             {
-                cell = [[DemoVC10Cell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
+                cell = [[DemoVC10Cell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellID];
             }
             cell.backgroundColor = BA_White_Color;
             cell.addFriendButton.hidden = YES;
@@ -179,7 +179,7 @@
         DemoVC10_replyVC_replyCell *cell3 = [tableView dequeueReusableCellWithIdentifier:cellID2];
         if (!cell3)
         {
-            cell3 = [[DemoVC10_replyVC_replyCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
+            cell3 = [[DemoVC10_replyVC_replyCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellID2];
         }
         cell3.backgroundColor = BA_BGGrayColor;
         cell3.model = self.replyDataArray[indexPath.row];

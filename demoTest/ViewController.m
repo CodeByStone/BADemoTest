@@ -75,7 +75,7 @@
                          @"17、QQ好友分组",
                          @"18、runtime测试/gif动画",
                          @"19、联系人分组（带索引）",
-                         @"20、自定义collectionView"
+                         @"20、(最简单的)自定义collectionView"
                          ];
     }
     return _titlesArray;

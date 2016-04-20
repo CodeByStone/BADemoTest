@@ -102,7 +102,7 @@
     DemoVC7Cell *cell7 = [tableView dequeueReusableCellWithIdentifier:cellID];
     if (!cell7)
     {
-        cell7 = [[DemoVC7Cell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
+        cell7 = [[DemoVC7Cell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellID];
     }
     
     cell7.model = self.dataArray7[indexPath.section];

@@ -180,7 +180,7 @@
         DemoVC10Cell *cell3 = [tableView dequeueReusableCellWithIdentifier:cellID3];
         if (!cell3)
         {
-            cell3 = [[DemoVC10Cell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
+            cell3 = [[DemoVC10Cell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellID3];
         }
         
         cell3.model = self.dataArray10[indexPath.section];

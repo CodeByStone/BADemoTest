@@ -137,7 +137,7 @@
     DemoVC6Cell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     if (!cell)
     {
-        cell = [[DemoVC6Cell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
+        cell = [[DemoVC6Cell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellID];
     }
     
     cell.model = self.dataArray[indexPath.row];
