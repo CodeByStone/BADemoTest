@@ -10,6 +10,9 @@ ios开发中重难点展示
 
 **QQ：     137361770**
 
+**博客园：http://www.cnblogs.com/boai/**
+**简书：http://www.jianshu.com/users/95c9800fdf47/latest_articles**
+
 **如果大神发现其中代码有bug，希望可以尽快联系本人修复，在此感谢各路大神的帮助！**
 ###本Demo中使用三方布局工具库【gsdios】开发的SDAutoLayout  原三方库地址： https://github.com/gsdios/SDAutoLayout
 ``` 在开发中遇到很多问题，非常感谢SDLayout（原作者gsdios）和其他各路大神的帮助，在此基础上开始更新自己开发中的重难点demo，希望能够帮助更多遇到类似难点的同道中人！ ```
@@ -33,7 +36,10 @@ ios开发中重难点展示
 
 ## 更新记录：【倒叙】（最新的更新在最上面）【基本每天一更】以后均不加图片展示，需要根据功能自行下载demo运行！
 
-### 2016.04.12 --- 
+### 2016.04.20 --- 
+
+>###3、新写博客：iOS 学习笔记七 【博爱手把手教你使用2016年gitHub Mac客户端】
+http://www.cnblogs.com/boai/p/5412952.html
 
 >###2、优化性能
 
