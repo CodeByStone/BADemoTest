@@ -39,7 +39,7 @@
 #import "IQKeyboardManager.h"
 
 // 加载框提示
-//#import "NSObject+BAProgressHUD.h"
+#import "NSObject+BAProgressHUD.h"
 
 // 只要有网络操作
 #import <AFNetworking.h>

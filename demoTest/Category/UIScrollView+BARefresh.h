@@ -12,22 +12,22 @@
 @interface UIScrollView (BARefresh)
 
 /** 添加头部刷新 */
-- (void)addHeaderRefresh:(MJRefreshComponentRefreshingBlock)refreshBlock;
+- (void)BA_addHeaderRefresh:(MJRefreshComponentRefreshingBlock)refreshBlock;
 
 /** 开始头部刷新 */
-- (void)beginHeaderRefresh;
+- (void)BA_beginHeaderRefresh;
 
 /** 结束头部刷新 */
-- (void)endHeaderRefresh;
+- (void)BA_endHeaderRefresh;
 
 /** 添加底部刷新 */
-- (void)addFooterRefresh:(MJRefreshComponentRefreshingBlock)refreshBlock;
+- (void)BA_addFooterRefresh:(MJRefreshComponentRefreshingBlock)refreshBlock;
 
 /** 开始底部刷新 */
-- (void)beginFooterRefresh;
+- (void)BA_beginFooterRefresh;
 
 /** 结束底部刷新 */
-- (void)endFooterRefresh;
+- (void)BA_endFooterRefresh;
 
 
 @end

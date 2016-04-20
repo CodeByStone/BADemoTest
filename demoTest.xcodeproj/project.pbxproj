@@ -117,6 +117,7 @@
 		C430929B1CAD3E6900A9E081 /* DemoVC8.m in Sources */ = {isa = PBXBuildFile; fileRef = C43092691CAD3E6900A9E081 /* DemoVC8.m */; };
 		C430929C1CAD3E6900A9E081 /* DemoVC8_View1.m in Sources */ = {isa = PBXBuildFile; fileRef = C430926B1CAD3E6900A9E081 /* DemoVC8_View1.m */; };
 		C430929D1CAD3E6900A9E081 /* DemoVC9.m in Sources */ = {isa = PBXBuildFile; fileRef = C430926E1CAD3E6900A9E081 /* DemoVC9.m */; };
+		C4388D4C1CC7A3E200A6AF28 /* NSObject+BAProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C4388D4B1CC7A3E200A6AF28 /* NSObject+BAProgressHUD.m */; };
 		C43B62B81CB5E86500D44D5E /* BAFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C43B62B71CB5E86500D44D5E /* BAFPSLabel.m */; };
 		C43B62BF1CB629C100D44D5E /* BAShareAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = C43B62BA1CB629C100D44D5E /* BAShareAnimationView.m */; };
 		C43B62C01CB629C100D44D5E /* BAShareManage.m in Sources */ = {isa = PBXBuildFile; fileRef = C43B62BC1CB629C100D44D5E /* BAShareManage.m */; };
@@ -425,6 +426,8 @@
 		C430926B1CAD3E6900A9E081 /* DemoVC8_View1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC8_View1.m; sourceTree = "<group>"; };
 		C430926D1CAD3E6900A9E081 /* DemoVC9.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC9.h; sourceTree = "<group>"; };
 		C430926E1CAD3E6900A9E081 /* DemoVC9.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC9.m; sourceTree = "<group>"; };
+		C4388D4A1CC7A3E200A6AF28 /* NSObject+BAProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+BAProgressHUD.h"; sourceTree = "<group>"; };
+		C4388D4B1CC7A3E200A6AF28 /* NSObject+BAProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+BAProgressHUD.m"; sourceTree = "<group>"; };
 		C43B62B61CB5E86500D44D5E /* BAFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BAFPSLabel.h; path = ../Lib/BAFPSLabel.h; sourceTree = "<group>"; };
 		C43B62B71CB5E86500D44D5E /* BAFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BAFPSLabel.m; path = ../Lib/BAFPSLabel.m; sourceTree = "<group>"; };
 		C43B62B91CB629C100D44D5E /* BAShareAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAShareAnimationView.h; sourceTree = "<group>"; };
@@ -771,6 +774,8 @@
 				C4D415E71CB4D39F00384434 /* NSObject+Network.m */,
 				C4D415E81CB4D39F00384434 /* UIScrollView+BARefresh.h */,
 				C4D415E91CB4D39F00384434 /* UIScrollView+BARefresh.m */,
+				C4388D4A1CC7A3E200A6AF28 /* NSObject+BAProgressHUD.h */,
+				C4388D4B1CC7A3E200A6AF28 /* NSObject+BAProgressHUD.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1786,6 +1791,7 @@
 				C44A80771CAD47A5002AA7C9 /* NSNumber+BAKit.m in Sources */,
 				C42453CA1C979D9300D01865 /* main.m in Sources */,
 				C4D415D01CB4D32700384434 /* BACustomModalTransition.m in Sources */,
+				C4388D4C1CC7A3E200A6AF28 /* NSObject+BAProgressHUD.m in Sources */,
 				C43092731CAD3E6900A9E081 /* YRHomeIncomeBlockView.m in Sources */,
 				C442C2F31CB7817300E493DD /* UIBarButtonItem+Item.m in Sources */,
 				C4871CB21CAD3FB50089EF82 /* BAPickerView.m in Sources */,
