@@ -124,6 +124,14 @@
     return UIStatusBarStyleLightContent;
 }
 
+/*! 
+ 
+ iOS加载启动图的时候隐藏statusbar
+ 
+ 只需需要在info.plist中加入Status bar is initially hidden 设置为YES就好
+ 
+ */
+
 /*! 另一种简单写法，看个人喜好（此写法是系统navi，返回按钮带字）
  - (void)viewDidLoad {
  [super viewDidLoad];
