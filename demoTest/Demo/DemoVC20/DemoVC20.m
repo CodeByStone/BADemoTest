@@ -68,6 +68,7 @@
     {
         CGRect frame = CGRectMake(0, self.view.centerY - 200, BA_SCREEN_WIDTH, 200);
         
+//        BA_WEAKSELF;
         _homeTopView = [[YRHomeTopView alloc] initWithFrame:frame withDataArray:_dataArr withBlock:^(UICollectionView *collectionView, NSIndexPath *indexPath, NSArray *dataArray) {
             BALog(@"点击的item---%zd",indexPath.item);
             

@@ -62,6 +62,7 @@
 - (void)creatSendReplyView
 {
     CGRect frame = CGRectMake(0, BA_SCREEN_HEIGHT - 50, BA_SCREEN_WIDTH, 50);
+    BA_WEAKSELF;
     DemoVC7_replyView *replyView = [[DemoVC7_replyView alloc] initWithFrame:frame withImage:self.quesstionDataModel.imageName callBackIndex:^(NSString *contentStr) {
         
         NSString *msg = [NSString stringWithFormat:@"发送内容：%@", contentStr];
@@ -73,8 +74,8 @@
         model.content = contentStr;
         model.time = [NSString BA_time_getCurrentDateAndTime];
         
-        [self.replyDataArray addObject:model];
-        [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [weakSelf.replyDataArray addObject:model];
+        [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationAutomatic];
         
     }];
     replyView.backgroundColor = BA_COLOR(245, 244, 245, 1.0);

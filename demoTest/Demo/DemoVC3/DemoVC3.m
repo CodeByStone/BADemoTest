@@ -146,13 +146,13 @@
 {
     UITableViewCell *cell = nil;
     
+    BA_WEAKSELF;
     if (indexPath.section == 0)
     {
         
         DemoVC3Cell *cell1 = [tableView dequeueReusableCellWithIdentifier:kDemoVC3CellId];
         cell1.indexPath = indexPath;
         
-        __weak typeof(self) weakSelf = self;
         if (!cell1.moreButtonClickBlock)
         {
             [cell1 setMoreButtonClickBlock:^(NSIndexPath *indexPath) {
@@ -178,19 +178,19 @@
             
             if (index == 1)
             {
-                [self clickCollectionBtn:@"收藏"];
+                [weakSelf clickCollectionBtn:@"收藏"];
             }
             if (index == 2)
             {
-                [self clickCollectionBtn:@"点赞"];
+                [weakSelf clickCollectionBtn:@"点赞"];
             }
             if (index == 3)
             {
-                [self clickshareBtn];
+                [weakSelf clickshareBtn];
             }
             if (index == 4)
             {
-                [self clickCollectionBtn:@"赏"];
+                [weakSelf clickCollectionBtn:@"赏"];
             }
         }];
         
