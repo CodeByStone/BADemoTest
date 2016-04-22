@@ -135,8 +135,8 @@ static BAShareManage *shareManage;
     NSMutableArray *picarray = [NSMutableArray arrayWithObjects:@"wechat",@"pyq",@"weibo", @"qq",@"zone",nil];
     BAShareAnimationView *animationView = [[BAShareAnimationView alloc]initWithTitleArray:titarray picarray:picarray title:@"第三方分享"];
     [animationView selectedWithIndex:^(NSInteger index,id shareType) {
-        NSLog(@"你选择的index ＝＝ %ld",(long)index);
-        NSLog(@"要分享到的平台");
+        BALog(@"你选择的index ＝＝ %ld",(long)index);
+        BALog(@"要分享到的平台");
         
         switch (index)
         {
@@ -162,7 +162,7 @@ static BAShareManage *shareManage;
     }];
     [animationView CLBtnBlock:^(UIButton *btn) {
         
-        NSLog(@"你点了选择/取消按钮");
+        BALog(@"你点了选择/取消按钮");
     }];
     [animationView show];
 }
@@ -184,7 +184,7 @@ static BAShareManage *shareManage;
     if(response.responseCode == UMSResponseCodeSuccess)
     {
         // 得到分享到的微博平台名
-        NSLog(@"share to sns name is %@",[[response.data allKeys] objectAtIndex:0]);
+        BALog(@"share to sns name is %@",[[response.data allKeys] objectAtIndex:0]);
     }
 }
 
@@ -212,7 +212,7 @@ static BAShareManage *shareManage;
             // delegate
             [self.delegate getUserData:dict];
 
-            NSLog(@"username is %@, uid is %@, token is %@ url is %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL);
+            BALog(@"username is %@, uid is %@, token is %@ url is %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL);
         }});
 }
 
@@ -238,7 +238,7 @@ static BAShareManage *shareManage;
             // delegate
             [self.delegate getUserData:dict];
 
-            NSLog(@"username is %@, uid is %@, token is %@ url is %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL);
+            BALog(@"username is %@, uid is %@, token is %@ url is %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL);
             
         }});
 }
@@ -265,7 +265,7 @@ static BAShareManage *shareManage;
             // delegate
             [self.delegate getUserData:dict];
 
-            NSLog(@"username is %@, uid is %@, token is %@ url is %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL);
+            BALog(@"username is %@, uid is %@, token is %@ url is %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL);
             
         }});
 }
@@ -274,7 +274,7 @@ static BAShareManage *shareManage;
 - (void)deleteSinaLogin
 {
     [[UMSocialDataService defaultDataService] requestUnOauthWithType:UMShareToSina  completion:^(UMSocialResponseEntity *response){
-        NSLog(@"response is %@",response);
+        BALog(@"response is %@",response);
     }];
 }
 
@@ -300,7 +300,7 @@ static BAShareManage *shareManage;
             // delegate
             [self.delegate getUserData:dict];
 
-            NSLog(@"username is %@, uid is %@, token is %@ url is %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL);
+            BALog(@"username is %@, uid is %@, token is %@ url is %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL);
         }
     });
 }
@@ -312,8 +312,8 @@ static BAShareManage *shareManage;
     NSMutableArray *picarray = [NSMutableArray arrayWithObjects:@"wechat",@"weibo", @"qq",@"zone",nil];
     BAShareAnimationView *animationView = [[BAShareAnimationView alloc]initWithTitleArray:titarray picarray:picarray title:@"第三方登录"];
     [animationView selectedWithIndex:^(NSInteger index,id shareType) {
-        NSLog(@"你选择的index ＝＝ %ld",(long)index);
-        NSLog(@"要登录的平台");
+        BALog(@"你选择的index ＝＝ %ld",(long)index);
+        BALog(@"要登录的平台");
         
         switch (index)
         {
@@ -336,7 +336,7 @@ static BAShareManage *shareManage;
     }];
     [animationView CLBtnBlock:^(UIButton *btn) {
         
-        NSLog(@"你点了选择/取消按钮");
+        BALog(@"你点了选择/取消按钮");
     }];
     [animationView show];
 }

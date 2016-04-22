@@ -69,7 +69,7 @@
         CGRect frame = CGRectMake(0, self.view.centerY - 200, BA_SCREEN_WIDTH, 200);
         
         _homeTopView = [[YRHomeTopView alloc] initWithFrame:frame withDataArray:_dataArr withBlock:^(UICollectionView *collectionView, NSIndexPath *indexPath, NSArray *dataArray) {
-            NSLog(@"点击的item---%zd",indexPath.item);
+            BALog(@"点击的item---%zd",indexPath.item);
             
         }];
         _homeTopView.backgroundColor = BA_Green_Color;

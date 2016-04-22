@@ -96,7 +96,7 @@
         cell.textLabel.text = [NSString stringWithFormat:@"md5加密测试：%@，【不建议使用MD5加密】目前MD5加密算法已不安全，解密网站【http://www.cmd5.com】",self.titleArray[indexPath.row]];
     }
     
-    NSLog(@"DemoVC9 打印测试：%@", cell.textLabel.text);
+    BALog(@"DemoVC9 打印测试：%@", cell.textLabel.text);
     
     return cell;
     

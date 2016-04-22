@@ -74,7 +74,7 @@
             _iconFull = [UIImage imageNamed:@"LPLevelView.bundle/lp_badge_star_full"];
             _iconHalf = [UIImage imageNamed:@"LPLevelView.bundle/lp_badge_star_half"];
             _iconEmpty = [UIImage imageNamed:@"LPLevelView.bundle/lp_badge_star_empty"];
-            NSLog(@"LPLevelView：找不到属性iconFull对象，将使用默认风格图标！");
+            BALog(@"LPLevelView：找不到属性iconFull对象，将使用默认风格图标！");
         }
         [self setNeedsDisplay];
     }

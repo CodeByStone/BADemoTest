@@ -297,7 +297,7 @@
     
     [dateformatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
     NSString *morelocationString = [dateformatter stringFromDate:senddate];
-    NSLog(@"当前日期为：%@", morelocationString);
+    BALog(@"当前日期为：%@", morelocationString);
     
     return morelocationString;
 }
@@ -446,10 +446,10 @@
     //    NSString *string = @"<f7091300 00000000 830000c4 00002c00 0000c500>";
     NSCharacterSet *set = [NSCharacterSet characterSetWithCharactersInString:@"@／：；（）¥「」＂、<>[]{}#%-*+=_\\|~＜＞$?^?'@#$%^&*()_+'\""];
     NSString*trimmedString = [string stringByTrimmingCharactersInSet:set];
-    NSLog(@"trimmedString1:%@",trimmedString);
+    BALog(@"trimmedString1:%@",trimmedString);
     // 去除字符串的空格
     trimmedString = [trimmedString stringByReplacingOccurrencesOfString:@" " withString:@""];
-    NSLog(@"trimmedString2: %@",trimmedString);
+    BALog(@"trimmedString2: %@",trimmedString);
     
     return trimmedString;
 }
@@ -499,7 +499,7 @@
     
     if ([currentDate compare:date8]==NSOrderedDescending && [currentDate compare:date23]==NSOrderedAscending)
     {
-        NSLog(@"该时间在 %ld:00-%ld:00 之间！", (long)fromHour, (long)toHour);
+        BALog(@"该时间在 %ld:00-%ld:00 之间！", (long)fromHour, (long)toHour);
         return YES;
     }
     return NO;
@@ -582,7 +582,7 @@
     [datestring insertString:@" " atIndex:10];
     [datestring insertString:@":" atIndex:13];
     [datestring insertString:@":" atIndex:16];
-    NSLog(@"datestring==%@",datestring);
+    BALog(@"datestring==%@",datestring);
     NSDateFormatter * dm = [[NSDateFormatter alloc]init];
     
     //指定输出的格式  这里格式必须是和上面定义字符串的格式相同，否则输出空
@@ -605,7 +605,7 @@
         timeString = [NSString stringWithFormat:@"%ld", dd/86400];
         timeString=[NSString stringWithFormat:@"%@天前", timeString];
     }
-    NSLog(@"=====%@",timeString);
+    BALog(@"=====%@",timeString);
     return timeString;
 }
 
@@ -670,7 +670,7 @@
     html = [html stringByReplacingOccurrencesOfString:@"\n" withString:@""];    //去掉换行
     
     html = [html stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];  //去掉前后两边空白
-    //    NSLog(@"html:------------%@",html);
+    //    BALog(@"html:------------%@",html);
     return html;
 }
 
@@ -687,7 +687,7 @@
         myBuffer[i / 2] = (char)anInt;
     }
     NSString *unicodeString = [NSString stringWithCString:myBuffer encoding:4];
-    NSLog(@"------字符串=======%@",unicodeString);
+    BALog(@"------字符串=======%@",unicodeString);
     return unicodeString;
 }
 

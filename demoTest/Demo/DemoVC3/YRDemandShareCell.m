@@ -101,7 +101,7 @@
     if (self.clickIndexBlock)
     {
         self.clickIndexBlock(sender.tag);
-        NSLog(@"点击了 %ld个按钮！", (long)sender.tag);
+        BALog(@"点击了 %ld个按钮！", (long)sender.tag);
     }
 }
 

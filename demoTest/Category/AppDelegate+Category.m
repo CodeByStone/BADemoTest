@@ -56,19 +56,19 @@
 
 - (void)applicationWillResignActive:(UIApplication *)application {
 
-    NSLog(@"程序即将进入后台！");
+    BALog(@"程序即将进入后台！");
 
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
 
-    NSLog(@"程序已进入后台！");
+    BALog(@"程序已进入后台！");
 
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
 
-    NSLog(@"程序已进入前台！");
+    BALog(@"程序已进入前台！");
 
 }
 

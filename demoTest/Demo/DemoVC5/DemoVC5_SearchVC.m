@@ -60,7 +60,7 @@
         [self readNSUserDefaults];
         
     }else{
-        NSLog(@"请输入查找内容");
+        BALog(@"请输入查找内容");
     }
     
     return YES;
@@ -147,6 +147,6 @@
     NSArray * myArray = [userDefaultes arrayForKey:@"myArray"];
     self.myArray = myArray;
     [self.tableView reloadData];
-    NSLog(@"myArray======%@",myArray);
+    BALog(@"myArray======%@",myArray);
 }
 @end

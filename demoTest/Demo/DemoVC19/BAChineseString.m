@@ -23,7 +23,7 @@
         // 不同
         if(![tempString isEqualToString:pinyin])
         {
-           // NSLog(@"IndexArray----->%@",pinyin);
+           // BALog(@"IndexArray----->%@",pinyin);
             [A_Result addObject:pinyin];
             tempString = pinyin;
         }
@@ -93,7 +93,7 @@
         
         //这里我自己写了一个递归过滤指定字符串   RemoveSpecialCharacter
         chineseString.string =[BAChineseString BA_RemoveSpecialCharacter:chineseString.string];
-       // NSLog(@"string====%@",chineseString.string);
+       // BALog(@"string====%@",chineseString.string);
         
         
         // 判断首字符是否为字母
@@ -128,9 +128,9 @@
 
 //
 //for(int i=0;i<[chineseStringsArray count];i++){
-//    // NSLog(@"chineseStringsArray====%@",((ChineseString*)[chineseStringsArray objectAtIndex:i]).pinYin);
+//    // BALog(@"chineseStringsArray====%@",((ChineseString*)[chineseStringsArray objectAtIndex:i]).pinYin);
 //}
-//// NSLog(@"-----------------------------");
+//// BALog(@"-----------------------------");
 #pragma mark - 返回一组字母排序数组(中英混排)
 + (NSMutableArray*)BA_SortArray:(NSArray*)stringArr
 {
@@ -140,7 +140,7 @@
     NSMutableArray *result=[NSMutableArray array];
     for(int i=0;i<[stringArr count];i++){
         [result addObject:((BAChineseString *)[tempArray objectAtIndex:i]).string];
-//        NSLog(@"SortArray----->%@",((BAChineseString *)[tempArray objectAtIndex:i]).string);
+//        BALog(@"SortArray----->%@",((BAChineseString *)[tempArray objectAtIndex:i]).string);
     }
     return result;
 }

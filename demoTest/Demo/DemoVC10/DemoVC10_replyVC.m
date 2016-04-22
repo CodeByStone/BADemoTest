@@ -52,7 +52,7 @@
     
     self.view.backgroundColor = BA_White_Color;
     self.tableView.hidden = NO;
-    NSLog(@"%s self.replyDataArray: %@", __func__,self.quesstionDataModel);
+    BALog(@"%s self.replyDataArray: %@", __func__,self.quesstionDataModel);
 }
 
 #pragma mark - ***** 添加评论View

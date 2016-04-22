@@ -576,7 +576,7 @@
     }
     else
     {
-        NSLog(@"数组 %@ 为空！", array);
+        BALog(@"数组 %@ 为空！", array);
     }
 }
 

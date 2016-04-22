@@ -66,7 +66,7 @@
     // ************* 友盟分享 *************
     [UMSocialData setAppKey:YRUmengAppkey];
     // 打开调试log的开关
-    [UMSocialData openLog:YES];
+//    [UMSocialData openLog:YES];
     
     // 如果你要支持不同的屏幕方向，需要这样设置，否则在iPhone只支持一个竖屏方向
     [UMSocialConfig setSupportedInterfaceOrientations:UIInterfaceOrientationMaskAll];
@@ -91,7 +91,7 @@
     copyPlatform.displayName = @"复制";
     copyPlatform.smallImageName = @"icon"; //用于tableView样式的分享列表
     copyPlatform.bigImageName = @"icon"; //用于actionsheet样式的分享列表
-    copyPlatform.snsClickHandler = ^(UIViewController *presentingController, UMSocialControllerService * socialControllerService, BOOL isPresentInController){ NSLog(@"copy!"); };                                                                                                                                                                                                          [UMSocialConfig addSocialSnsPlatform:@[copyPlatform]];                                                                                                                                                                                                        [UMSocialConfig setSnsPlatformNames:@[UMShareToSina, UMShareToWechatSession, UMShareToWechatTimeline, UMShareToQQ, UMShareToQzone]];
+    copyPlatform.snsClickHandler = ^(UIViewController *presentingController, UMSocialControllerService * socialControllerService, BOOL isPresentInController){ BALog(@"copy!"); };                                                                                                                                                                                                          [UMSocialConfig addSocialSnsPlatform:@[copyPlatform]];                                                                                                                                                                                                        [UMSocialConfig setSnsPlatformNames:@[UMShareToSina, UMShareToWechatSession, UMShareToWechatTimeline, UMShareToQQ, UMShareToQzone]];
 }
 
 /**

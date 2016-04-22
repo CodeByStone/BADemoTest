@@ -233,7 +233,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    NSLog(@"%s self.dataArray7: %@", __func__, self.dataArray7[indexPath.section]);
+//    BALog(@"%s self.dataArray7: %@", __func__, self.dataArray7[indexPath.section]);
     
     DemoVC10_replyVC *replyVC = [[DemoVC10_replyVC alloc] init];
     replyVC.quesstionDataModel = self.dataArray10[indexPath.section];

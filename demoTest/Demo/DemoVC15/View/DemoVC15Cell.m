@@ -128,7 +128,7 @@
     }
     else
     {
-        NSLog(@"温馨提示：点击了%ld个button!", (long)sender.tag);
+        BALog(@"温馨提示：点击了%ld个button!", (long)sender.tag);
     }
 }
 

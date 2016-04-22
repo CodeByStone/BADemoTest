@@ -52,7 +52,7 @@
         }
         
     } animated:YES action:^(NSArray<UITextField *> *fields, NSInteger index) {
-        NSLog(@"账号：%@, 密码：%@", fields[0].text, fields[1].text);
+        BALog(@"账号：%@, 密码：%@", fields[0].text, fields[1].text);
     }];
 }
 
@@ -67,7 +67,7 @@
 {
     /** 自适应 */
     [self BAAlertWithTitle:@"测试ios8Alert" message:@"ios8Alert message" andOthers:@[KCancel, KSure] animated:YES action:^(NSInteger index) {
-        NSLog(@"click %ld",(long)index);
+        BALog(@"click %ld",(long)index);
     }];
 }
 
@@ -75,9 +75,9 @@
 {
     /** 自适应 */
     [self BAActionSheetWithTitle:@"测试ios8Actionsheet" message:@"ios8Actionsheet message" destructive:KSure destructiveAction:^(NSInteger index) {
-        NSLog(@"click destructive");
+        BALog(@"click destructive");
     } andOthers:@[KCancel,@"1",@"2"] animated:YES action:^(NSInteger index) {
-        NSLog(@"click %ld",(long)index);
+        BALog(@"click %ld",(long)index);
     }];
 }
 

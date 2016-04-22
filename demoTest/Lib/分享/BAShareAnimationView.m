@@ -139,7 +139,7 @@
         
     } completion:^(BOOL finished) {
         
-        NSLog(@"所有动画之行完毕");
+        BALog(@"所有动画之行完毕");
     }];
 }
 

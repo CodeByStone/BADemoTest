@@ -21,9 +21,9 @@
     NSString *urlStr = @"http://www.cnblogs.com/boai/p/5337558.html";
     
     UIWebView *webView = [UIWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlStr] ] loaded:^(UIWebView *webView) {
-        NSLog(@"Loaded %@", webView.request.URL);
+        BALog(@"Loaded %@", webView.request.URL);
     } failed:^(UIWebView *webView, NSError *error) {
-        NSLog(@"Failed loading with error: %@", error.localizedDescription);
+        BALog(@"Failed loading with error: %@", error.localizedDescription);
     }];
     webView.frame = frame;
     webView.scalesPageToFit = YES;

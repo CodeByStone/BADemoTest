@@ -144,8 +144,8 @@
         [imageView removeFromSuperview];
     }];
     
-    //    NSLog(@"%ld",self.displayLink.frameInterval);
-    //    NSLog(@"%lf",self.displayLink.duration);
+    //    BALog(@"%ld",self.displayLink.frameInterval);
+    //    BALog(@"%lf",self.displayLink.duration);
     //
 }
 

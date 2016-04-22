@@ -79,7 +79,7 @@
 //        [self.navigationController pushViewController:ctrl animated:YES];
 //    }
     
-    NSLog(@"你点击了第 %ld 行！", (long)indexPath.row);
+    BALog(@"你点击了第 %ld 行！", (long)indexPath.row);
     
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

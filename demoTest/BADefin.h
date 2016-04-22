@@ -78,7 +78,7 @@
 // 警告框-一个按钮【VC】
 #define BA_SHOW_ALERT(title, msg)  UIAlertController *alert = [UIAlertController alertControllerWithTitle:title  message:msg preferredStyle:UIAlertControllerStyleAlert];\
 [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {\
-NSLog(@"你点击了确定按钮！");\
+BALog(@"你点击了确定按钮！");\
 }]];\
 [self presentViewController:alert animated:YES completion:nil];\
 // 警告框-一个按钮【View】

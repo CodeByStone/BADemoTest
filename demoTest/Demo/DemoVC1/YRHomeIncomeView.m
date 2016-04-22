@@ -52,7 +52,7 @@
     YRHomeIncomeBlockView *IncomRankDataView = [[YRHomeIncomeBlockView alloc] initWithFrame:CGRectMake(self.width/2, CGRectGetMaxY(myIncomLabel.frame), self.width/2, self.height - myIncomLabel.height) withSelectRowBlock:^(UITableView *tableView, NSIndexPath *indexPath, NSArray *dataArray) {
         
         NSString *msg = [NSString stringWithFormat:@"你点击了第 %ld 行！", (long)indexPath.row];
-        NSLog(@"%@",msg);
+        BALog(@"%@",msg);
     }];
     
     UILabel *incomTotalLabel = [UILabel new];

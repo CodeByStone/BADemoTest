@@ -147,7 +147,7 @@
 
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
     
-    NSLog(@"搜索begin");
+    BALog(@"搜索begin");
     
     self.searchController.searchBar.showsCancelButton = YES;
     
@@ -157,7 +157,7 @@
 
 - (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar{
     
-    NSLog(@"搜索end");
+    BALog(@"搜索end");
     
     //刷新表格
     [self.tableView reloadData];
@@ -231,7 +231,7 @@
     
     NSInteger count = 0;
     
-    NSLog(@"%@-%ld",title,(long)index);
+    BALog(@"%@-%ld",title,(long)index);
     
     for(NSString *character in self.indexArray)
     {
