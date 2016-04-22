@@ -104,7 +104,7 @@
     self.height = h;
     
     self.fixedHeight = @(h);
-    self.fixedWith = @(w);
+    self.fixedWidth = @(w);
 }
 
 - (void)tapImageView:(UITapGestureRecognizer *)tap

@@ -275,5 +275,18 @@
 
 + (instancetype)imageWithStretchableName:(NSString *)imageName;
 
+/*! 获得的就是一个圆形的图片 */
+- (UIImage *)BA_circleImage;
+
+/*!
+ *  creat a circleImage
+ *
+ *  @param name        imageName
+ *  @param borderWidth borderWidth
+ *  @param borderColor borderColor
+ *
+ *  @return creat a circleImage
+ */
++ (instancetype)circleImageWithName:(NSString *)name borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor;
 
 @end

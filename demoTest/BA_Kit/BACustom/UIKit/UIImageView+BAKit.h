@@ -30,15 +30,6 @@
  */
 - (void)setRadiusImg;
 
-/*!
- *  creat a circleImage
- *
- *  @param name        imageName
- *  @param borderWidth borderWidth
- *  @param borderColor borderColor
- *
- *  @return creat a circleImage
- */
-+ (instancetype)circleImageWithName:(NSString *)name borderWidth:(CGFloat)borderWidth borderColor:(UIColor *)borderColor;
+
 
 @end

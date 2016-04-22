@@ -243,8 +243,9 @@
 /* 6.设置圆角半径 */
 - (void)setCornerRadius:(CGFloat)radius
 {
-    self.layer.cornerRadius = radius;
-    [self.layer setMasksToBounds:YES];
+    CALayer *roundedlayer = [self layer];
+    roundedlayer.cornerRadius = radius;
+    [roundedlayer setMasksToBounds:YES];
 }
 
 /* 7.创建阴影 */

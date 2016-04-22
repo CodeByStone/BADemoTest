@@ -23,7 +23,7 @@ pod 'SDWebImage', '~> 3.7.5'
 pod 'MJRefresh', '~> 3.1.0'
 
 # 键盘框架
-pod 'IQKeyboardManager', '~> 4.0.0'
+pod 'IQKeyboardManager'
 
 # 自定义button框架
 pod 'BAButton', '~> 1.0.1'
@@ -45,6 +45,9 @@ pod 'UMengSocial', '~> 4.4'
 
 # 二维码
 #pod 'LBXScan','~> 1.1.1'
+
+# 离屏渲染，切边角
+pod 'JMRoundedCorner', '~> 1.1.2'
 
 
 end

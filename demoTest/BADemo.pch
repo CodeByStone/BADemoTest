@@ -58,6 +58,13 @@
 // FPS
 #import "BAFPSLabel.h"
 
+// 离屏渲染绘制 layer
+#import "UIView+RoundedCorner.h"
+
+
+
+
+
 #endif
 
 
