@@ -51,38 +51,67 @@
  
  */
 
-#import <UIKit/UIKit.h>
-#import "UIFont+BAKit.h"
-/**
- *  给UILabel类添加许多有用的方法
- */
-@interface UILabel (STKit)
+#import "BATextView.h"
 
-/**
- *  初始化UILael
- */
-+ (UILabel *)initWithFrame:(CGRect)frame                // 结构
-                      text:(NSString *)text             // 标题
-                      font:(FontName)fontName           // 字体
-                      size:(CGFloat)size                // 尺寸
-                     color:(UIColor *)color             // 颜色
-                 alignment:(NSTextAlignment)alignment   // 对齐方式
-                     lines:(NSInteger)lines;            // 行数
+@implementation BATextView
 
-/**
- *  初始化UILael
- */
-+ (UILabel *)initWithFrame:(CGRect)frame                // 结构
-                      text:(NSString *)text             // 标题
-                      font:(FontName)fontName           // 字体
-                      size:(CGFloat)size                // 尺寸
-                     color:(UIColor *)color             // 颜色
-                 alignment:(NSTextAlignment)alignment   // 对齐方式
-                     lines:(NSInteger)lines             // 行数
-               shadowColor:(UIColor *)colorShadow;      // 阴影颜色
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    if (self = [super initWithFrame:frame])
+    {
+        [self addObserver];
+    }
+    return self;
+}
 
-/**
- *  Remove the commment to this line if you want to use an UILabel to show the progress of an operation in AFNetworking
- */
-//- (void)setProgressWithUploadProgressOfOperation:(AFURLConnectionOperation *)operation;
+- (id)init
+{
+    if (self = [super init])
+    {
+        [self addObserver];
+    }
+    return self;
+}
+
+- (void)addObserver
+{
+    // 注册通知
+    [BA_Noti addObserver:self selector:@selector(didBeginEditing:) name:UITextViewTextDidBeginEditingNotification object:self];
+    [BA_Noti addObserver:self selector:@selector(didEndEditing:) name:UITextViewTextDidEndEditingNotification object:self];
+    [BA_Noti addObserver:self selector:@selector(terminate:) name:UIApplicationWillTerminateNotification object:BASharedApplication];
+}
+
+- (void)setPlaceholder:(NSString *)placeholder
+{
+    _placeholder = placeholder;
+    self.text = placeholder;
+    self.textColor = self.placeholderTextColor;
+}
+
+- (void)terminate:(NSNotification *)notification
+{
+    // 移除通知
+    [BA_Noti removeObserver:self];
+}
+
+- (void)didBeginEditing:(NSNotification *)notification
+{
+    if ([self.text isEqualToString:self.placeholder])
+    {
+        BALog(@"开始编辑！")
+        self.text = @"";
+        self.textColor = [UIColor blackColor];
+    }
+}
+
+- (void)didEndEditing:(NSNotification *)notification
+{
+    if (self.text.length < 1)
+    {
+        BALog(@"结束编辑！")
+        self.text = self.placeholder;
+        self.textColor = [UIColor grayColor];
+    }
+}
+
 @end

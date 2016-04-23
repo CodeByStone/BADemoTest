@@ -84,9 +84,11 @@ BALog(@"你点击了确定按钮！");\
 // 警告框-一个按钮【View】
 #define BA_SHOW_AlertAtView(msg) [[[UIAlertView alloc] initWithTitle:@"温馨提示：" message:msg delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
 
-
+// weakSelf
 #define BA_WEAKSELF typeof(self) __weak weakSelf = self
 
+// 通知
+#define BA_Noti [NSNotificationCenter defaultCenter]
 
 
 

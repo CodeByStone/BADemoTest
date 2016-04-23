@@ -1,10 +1,55 @@
-//
-//  BAAPP.h
-//  demoTest
-//
-//  Created by 博爱 on 16/3/31.
-//  Copyright © 2016年 博爱之家. All rights reserved.
-//  IOS自定义常用控件
+
+/*!
+ *  @header BAKit
+ *          demoTest
+ *
+ *  @brief  BAKit
+ *
+ *  @author 博爱
+ *  @copyright    Copyright © 2016年 博爱. All rights reserved.
+ *  @version    V1.0
+ */
+
+/*!
+ *
+ *          ┌─┐       ┌─┐
+ *       ┌──┘ ┴───────┘ ┴──┐
+ *       │                 │
+ *       │       ───       │
+ *       │  ─┬┘       └┬─  │
+ *       │                 │
+ *       │       ─┴─       │
+ *       │                 │
+ *       └───┐         ┌───┘
+ *           │         │
+ *           │         │
+ *           │         │
+ *           │         └──────────────┐
+ *           │                        │
+ *           │                        ├─┐
+ *           │                        ┌─┘
+ *           │                        │
+ *           └─┐  ┐  ┌───────┬──┐  ┌──┘
+ *             │ ─┤ ─┤       │ ─┤ ─┤
+ *             └──┴──┘       └──┴──┘
+ *                 神兽保佑
+ *                 代码无BUG!
+ */
+
+/*
+ 
+ *********************************************************************************
+ *
+ * 在使用BAKit的过程中如果出现bug请及时以以下任意一种方式联系我，我会及时修复bug
+ *
+ * QQ     : 可以添加SDAutoLayout群 497140713 在这里找到我(博爱1616【137361770】)
+ * 微博    : 博爱1616
+ * Email  : 137361770@qq.com
+ * GitHub : https://github.com/boai
+ * 博客园  : http://www.cnblogs.com/boai/
+ *********************************************************************************
+ 
+ */
 
 #import <Foundation/Foundation.h>
 
@@ -27,6 +72,9 @@
 
 /*! 5、获取AppDelegate */
 #define APPDelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+
+/*! 6、获取sharedApplication */
+#define BASharedApplication [UIApplication sharedApplication]
 
 FOUNDATION_EXPORT NSString * _Nonnull const BABundleName;
 FOUNDATION_EXPORT NSString * _Nonnull const BABundleVersion;

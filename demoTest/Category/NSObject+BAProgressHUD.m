@@ -28,7 +28,7 @@
 }
 
 /** 弹出文字提示 */
-- (void)showAlert:(NSString *)text
+- (void)BA_showAlert:(NSString *)text
 {
     // 防止在非主线程中调用此方法,会报错
     dispatch_async(dispatch_get_main_queue(), ^{
@@ -45,7 +45,7 @@
 }
 
 /** 显示忙 */
-- (void)showBusy
+- (void)BA_showBusy
 {
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         [MBProgressHUD hideAllHUDsForView:[self getCurrentView] animated:YES];
@@ -57,7 +57,7 @@
 }
 
 /** 隐藏提示 */
-- (void)hideProgress
+- (void)BA_hideProgress
 {
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         [MBProgressHUD hideAllHUDsForView:[self getCurrentView] animated:YES];

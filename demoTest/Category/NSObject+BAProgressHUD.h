@@ -12,12 +12,12 @@
 @interface NSObject (BAProgressHUD)
 
 /** 弹出文字提示 */
-- (void)showAlert:(NSString *)text;
+- (void)BA_showAlert:(NSString *)text;
 
 /** 显示忙 */
-- (void)showBusy;
+- (void)BA_showBusy;
 
 /** 隐藏提示 */
-- (void)hideProgress;
+- (void)BA_hideProgress;
 
 @end
