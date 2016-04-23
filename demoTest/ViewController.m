@@ -78,7 +78,8 @@
                          @"20、(最简单的)自定义collectionView",
                          @"21、自定义绘图",
                          @"22、自定义textView",
-                         @"23、KVC和KVO监测"
+                         @"23、KVC和KVO监测",
+                         @"24、通知传值"
                          ];
     }
     return _titlesArray;

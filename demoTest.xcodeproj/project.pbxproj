@@ -157,6 +157,8 @@
 		C442C2F31CB7817300E493DD /* UIBarButtonItem+Item.m in Sources */ = {isa = PBXBuildFile; fileRef = C442C2F21CB7817300E493DD /* UIBarButtonItem+Item.m */; };
 		C4471E301CCB2A8D009EF1C7 /* BATextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4471E2F1CCB2A8D009EF1C7 /* BATextView.m */; };
 		C4471E351CCB41CF009EF1C7 /* DemoVC23.m in Sources */ = {isa = PBXBuildFile; fileRef = C4471E341CCB41CF009EF1C7 /* DemoVC23.m */; };
+		C4471E391CCB569E009EF1C7 /* DemoVC24.m in Sources */ = {isa = PBXBuildFile; fileRef = C4471E381CCB569E009EF1C7 /* DemoVC24.m */; };
+		C4471E3C1CCB58CC009EF1C7 /* DemoVC24_NSNotificationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C4471E3B1CCB58CC009EF1C7 /* DemoVC24_NSNotificationVC.m */; };
 		C44A80551CAD4583002AA7C9 /* UITextField+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A80541CAD4583002AA7C9 /* UITextField+BAKit.m */; };
 		C44A80581CAD45A8002AA7C9 /* UIView+BA.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A80571CAD45A8002AA7C9 /* UIView+BA.m */; };
 		C44A805B1CAD45EF002AA7C9 /* UIView+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A805A1CAD45EF002AA7C9 /* UIView+BAKit.m */; };
@@ -484,6 +486,10 @@
 		C4471E2F1CCB2A8D009EF1C7 /* BATextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BATextView.m; sourceTree = "<group>"; };
 		C4471E331CCB41CF009EF1C7 /* DemoVC23.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC23.h; sourceTree = "<group>"; };
 		C4471E341CCB41CF009EF1C7 /* DemoVC23.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC23.m; sourceTree = "<group>"; };
+		C4471E371CCB569E009EF1C7 /* DemoVC24.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC24.h; sourceTree = "<group>"; };
+		C4471E381CCB569E009EF1C7 /* DemoVC24.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC24.m; sourceTree = "<group>"; };
+		C4471E3A1CCB58CC009EF1C7 /* DemoVC24_NSNotificationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC24_NSNotificationVC.h; sourceTree = "<group>"; };
+		C4471E3B1CCB58CC009EF1C7 /* DemoVC24_NSNotificationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC24_NSNotificationVC.m; sourceTree = "<group>"; };
 		C44A80531CAD4583002AA7C9 /* UITextField+BAKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+BAKit.h"; sourceTree = "<group>"; };
 		C44A80541CAD4583002AA7C9 /* UITextField+BAKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+BAKit.m"; sourceTree = "<group>"; };
 		C44A80561CAD45A8002AA7C9 /* UIView+BA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BA.h"; sourceTree = "<group>"; };
@@ -1010,6 +1016,7 @@
 				C4FFA46A1CC8E915009160CC /* DemoVC21 */,
 				C400E8281CCB20F100C90AC7 /* DemoVC22 */,
 				C4471E321CCB41B6009EF1C7 /* DemoVC23 */,
+				C4471E361CCB5687009EF1C7 /* DemoVC24 */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -1276,6 +1283,17 @@
 				C4471E341CCB41CF009EF1C7 /* DemoVC23.m */,
 			);
 			path = DemoVC23;
+			sourceTree = "<group>";
+		};
+		C4471E361CCB5687009EF1C7 /* DemoVC24 */ = {
+			isa = PBXGroup;
+			children = (
+				C4471E371CCB569E009EF1C7 /* DemoVC24.h */,
+				C4471E381CCB569E009EF1C7 /* DemoVC24.m */,
+				C4471E3A1CCB58CC009EF1C7 /* DemoVC24_NSNotificationVC.h */,
+				C4471E3B1CCB58CC009EF1C7 /* DemoVC24_NSNotificationVC.m */,
+			);
+			path = DemoVC24;
 			sourceTree = "<group>";
 		};
 		C44A80621CAD46C2002AA7C9 /* Foundation */ = {
@@ -1891,12 +1909,14 @@
 				C430927B1CAD3E6900A9E081 /* DemoVC12.m in Sources */,
 				C43092941CAD3E6900A9E081 /* DemoVC6Cell.m in Sources */,
 				C430927A1CAD3E6900A9E081 /* DemoVC11.m in Sources */,
+				C4471E391CCB569E009EF1C7 /* DemoVC24.m in Sources */,
 				C43092031CAD3E3200A9E081 /* BATouchID.m in Sources */,
 				C46866161CB4D9360038BA76 /* DemoVC15Cell.m in Sources */,
 				C430928E1CAD3E6900A9E081 /* BATokenManager.m in Sources */,
 				C43092961CAD3E6900A9E081 /* DemoVC7_quesstionCell.m in Sources */,
 				C43092901CAD3E6900A9E081 /* DemoVC5_SearchVC.m in Sources */,
 				C430927D1CAD3E6900A9E081 /* DemoVC13.m in Sources */,
+				C4471E3C1CCB58CC009EF1C7 /* DemoVC24_NSNotificationVC.m in Sources */,
 				C4D415EF1CB4D3D900384434 /* BABaseViewModel.m in Sources */,
 				C44A80651CAD46CC002AA7C9 /* NSArray+BAKit.m in Sources */,
 				C4225DCC1C990ED2006262C9 /* SDWaitingView.m in Sources */,
