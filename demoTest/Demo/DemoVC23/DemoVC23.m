@@ -55,7 +55,48 @@
     self.slider.hidden = NO;
     self.label.hidden  = NO;
     
+    [self KVC];
     [self KVO_Value];
+}
+
+- (void)KVC
+{
+    /*!
+     
+     KVC
+       KVC也就是key-value-coding,即键值编码，通常是用来给某一个对象的属性进行赋值，例如有人这么一个类，其对外有两个属性，姓名和年龄,我们在创建了一个人p后可以通过点语法直接给p赋值。
+     
+     Person *p = [[Person alloc] init];
+     p.name = @"张三";
+     p.age = 20;
+     
+     我们也可以通过kvc给这个人p赋值,代码如下,因为setValue这里的值是id类型的,所以将整数包装成一个对象,
+     
+     [p setValue:@"张三" forKey:@"name"];
+     [p setValue:@20 forKey:@"age"];
+     
+     除了[p setValue:@170 forKey:@"height"]这个方法外,还有一个方法也是可以对私有属性进行赋值的[p setValue:@170 forKeyPath:@"height"];这两个方法对于一个普通的属性是没有区别的,都可以用,但是对于一些特殊的属性就有区别了。
+     比如说人这个类有个属性是狗,狗又有属性体重。
+     
+     p.dog = [[Dog alloc] init];
+     [p setValue:@200 forKey:@"dog.weight"];
+     
+     
+     kvc最常见的两种用法就是:
+     
+     1，对私有变量进行赋值
+     2，字典转模型
+     但是也有一些需要注意的地方
+     
+     1，字典转模型的时候,字典中的某一个key一定要在模型中有对应的属性
+     2，如果一个模型中包含了另外的模型对象,是不能直接转化成功的。
+     3，通过kvc转化模型中的模型,也是不能直接转化成功的。
+     
+       既然可以通过kvc赋值,同样的也可以通过它进行取值。
+     
+     所以，在此不多做解释！
+     */
+    
 }
 
 #pragma mark - KVO的实现
