@@ -49,6 +49,10 @@ pod 'UMengSocial', '~> 4.4'
 # 离屏渲染，切边角
 pod 'JMRoundedCorner', '~> 1.1.2'
 
+# 把系统的target+selector/委托模式 转为 Block语法，让代码结构更加紧凑
+pod 'BlocksKit'
+
+
 
 end
 

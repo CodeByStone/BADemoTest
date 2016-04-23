@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>BlocksKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>DACircularProgress.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -82,6 +87,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>2C65033DC29183C7C7FF3498B688EE64</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>53480ED0BE09FF49E34B1702D485CAAB</key>
 		<dict>
 			<key>primary</key>
@@ -97,12 +107,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>62BFCE99BB1F0943C2402CEB91E8C50B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7444797FE72490647AA494404916C18E</key>
+		<key>737692749E295D796CB919F892615EDF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -127,11 +132,6 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>98F0FE68855837E8CB728287FFF6571B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>9EAB3E42EF957541E6C3C76D35FD008E</key>
 		<dict>
 			<key>primary</key>
@@ -142,12 +142,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>DA1A7295DF2A99609DA0EEBF5E83233D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>DE3B07ED7FF04F506B0C5E00F4973589</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>E2FE87384A67337831E53490EEA8BF11</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F7E373FDB19473226AF4B50018EA09A1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -77,7 +77,8 @@
                          @"19、联系人分组（带索引）",
                          @"20、(最简单的)自定义collectionView",
                          @"21、自定义绘图",
-                         @"22、自定义textView"
+                         @"22、自定义textView",
+                         @"23、KVO监测"
                          ];
     }
     return _titlesArray;

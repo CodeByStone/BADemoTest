@@ -45,6 +45,9 @@
 #import <AFNetworking.h>
 #import <UIKit+AFNetworking.h>
 
+#import <BlocksKit.h>
+#import <BlocksKit+UIKit.h>
+
 // 可选(与<UIKit+AFNetworking.h>冲突，二选一)
 #import <SDImageCache.h>
 
