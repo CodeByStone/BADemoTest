@@ -10,7 +10,7 @@
 
 @interface BAPhotoCell : UICollectionViewCell
 
-@property (nonatomic, strong) UIImageView *imageView;
-@property (nonatomic, strong) UILabel *title;
+@property (nonatomic, strong) UIImageView  *imageView;
+@property (nonatomic, strong) UILabel      *title;
 
 @end

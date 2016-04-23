@@ -14,12 +14,12 @@ const CGFloat maxContentLabelHeights = 54;
 
 @implementation DemoVC3Cell
 {
-    UILabel *_titleLable;
-    UILabel *_contentLabel;
-    UIButton *_playButton;
-    UIButton *_moreButton;
-//    UILabel *_timeLabel;
-    BOOL _shouldOpenContentLabel;
+    UILabel    *_titleLable;
+    UILabel    *_contentLabel;
+    UIButton   *_playButton;
+    UIButton   *_moreButton;
+//    UILabel  *_timeLabel;
+    BOOL        _shouldOpenContentLabel;
 }
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier

@@ -15,9 +15,9 @@
     UICollectionViewDataSource
 >
 
-@property (nonatomic, strong) UICollectionView *collectionView;
+@property (nonatomic, strong) UICollectionView  *collectionView;
 // 存放img名字的数组;
-@property (nonatomic, strong) NSMutableArray *imageArray;
+@property (nonatomic, strong) NSMutableArray    *imageArray;
 
 @end
 

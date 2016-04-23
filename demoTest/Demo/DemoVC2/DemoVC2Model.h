@@ -10,14 +10,14 @@
 
 @interface DemoVC2Model : NSObject
 
-@property (nonatomic, copy) NSString *iconName;
-@property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSString *content;
-@property (nonatomic, strong) NSArray *picNamesArray;
+@property (nonatomic, copy            ) NSString  *iconName;
+@property (nonatomic, copy            ) NSString  *name;
+@property (nonatomic, copy            ) NSString  *content;
+@property (nonatomic, strong          ) NSArray   *picNamesArray;
 
-@property (nonatomic, assign) BOOL isOpening;
+@property (nonatomic, assign          ) BOOL       isOpening;
 
-@property (nonatomic, assign, readonly) BOOL shouldShowMoreButton;
+@property (nonatomic, assign, readonly) BOOL       shouldShowMoreButton;
 
 
 @end

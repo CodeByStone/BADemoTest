@@ -23,9 +23,9 @@
     UITableViewDataSource
 >
 
-@property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) NSMutableArray *dataArray;
-@property (nonatomic, strong) YRDemandModelAuthor *authorModel;
+@property (nonatomic, strong) UITableView          *tableView;
+@property (nonatomic, strong) NSMutableArray       *dataArray;
+@property (nonatomic, strong) YRDemandModelAuthor  *authorModel;
 
 
 @end

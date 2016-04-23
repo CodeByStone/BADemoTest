@@ -27,13 +27,13 @@
     UITableViewDataSource
 >
 
-@property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) NSMutableArray *dataArray;
+@property (nonatomic, strong) UITableView     *tableView;
+@property (nonatomic, strong) NSMutableArray  *dataArray;
 /*！ viewModel:DemoVC15_ViewModel */
-@property (nonatomic, strong) NSMutableArray *statusFrames;
+@property (nonatomic, strong) NSMutableArray  *statusFrames;
 
-@property (nonatomic, strong) DemoVC17Header *headView;
-@property (nonatomic, strong) UIImageView    *bigImageView;
+@property (nonatomic, strong) DemoVC17Header  *headView;
+@property (nonatomic, strong) UIImageView     *bigImageView;
 
 @end
 

@@ -11,11 +11,11 @@
 
 @interface BAHomeIncomeCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *rankImageView;
-@property (weak, nonatomic) IBOutlet UILabel *rankNameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *rankIncomeLabel;
+@property (weak, nonatomic  ) IBOutlet UIImageView   *rankImageView;
+@property (weak, nonatomic  ) IBOutlet UILabel       *rankNameLabel;
+@property (weak, nonatomic  ) IBOutlet UILabel       *rankIncomeLabel;
 
-@property (nonatomic, strong) YRHomeIncomeModelData *dataModel;
+@property (nonatomic, strong) YRHomeIncomeModelData  *dataModel;
 
 + (instancetype)theBAHomeIncomeCellWithTableView:(UITableView *)tableView;
 

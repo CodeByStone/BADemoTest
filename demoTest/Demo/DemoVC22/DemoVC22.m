@@ -7,7 +7,6 @@
 //
 
 #import "DemoVC22.h"
-#import "BATextView.h"
 
 @interface DemoVC22 ()
 

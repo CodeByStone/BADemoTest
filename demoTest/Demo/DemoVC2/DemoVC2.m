@@ -18,8 +18,8 @@
 >
 
 
-@property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) NSMutableArray *modelsArray;
+@property (nonatomic, strong) UITableView     *tableView;
+@property (nonatomic, strong) NSMutableArray  *modelsArray;
 
 @end
 

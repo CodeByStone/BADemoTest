@@ -11,7 +11,7 @@
 @class DemoVC7Model;
 @interface DemoVC7_replyVC : UIViewController
 
-@property (nonatomic, strong) DemoVC7Model *quesstionDataModel;
-@property (nonatomic, strong) NSMutableArray *replyDataArray;
+@property (nonatomic, strong) DemoVC7Model    *quesstionDataModel;
+@property (nonatomic, strong) NSMutableArray  *replyDataArray;
 
 @end

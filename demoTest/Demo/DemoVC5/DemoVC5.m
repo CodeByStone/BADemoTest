@@ -17,11 +17,11 @@
 
 @interface DemoVC5 ()
 
-@property (nonatomic, strong) NSMutableArray *dataArray;
-@property (nonatomic, strong) BASearchBar *searchBar;
+@property (nonatomic, strong) NSMutableArray  *dataArray;
+@property (nonatomic, strong) BASearchBar     *searchBar;
 
-@property (nonatomic, strong) NSMutableArray * searchHistory;
-@property (nonatomic, strong) NSArray *myArray;//搜索记录的数组
+@property (nonatomic, strong) NSMutableArray  *searchHistory;
+@property (nonatomic, strong) NSArray         *myArray;       //搜索记录的数组
 
 
 @end

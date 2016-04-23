@@ -10,10 +10,10 @@
 
 @implementation DemoVC8_View1
 {
-    UIScrollView *bgScrollView;
-    UIView *subView1;
-    UILabel *subView1_Label1;
-    UILabel *subView1_Label2;
+    UIScrollView  *bgScrollView;
+    UIView        *subView1;
+    UILabel       *subView1_Label1;
+    UILabel       *subView1_Label2;
 
     
 }

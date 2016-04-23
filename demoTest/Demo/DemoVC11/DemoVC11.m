@@ -14,11 +14,11 @@
     BAPickerViewDelegate
 >
 
-@property (nonatomic, strong) BAPickerView *cityPickView;
-@property (nonatomic, strong) NSString *resultString;
+@property (nonatomic, strong) BAPickerView  *cityPickView;
+@property (nonatomic, strong) NSString      *resultString;
 
-@property (nonatomic, strong) NSArray *titleArray;
-@property (nonatomic, assign) NSIndexPath *selectIndexPath;
+@property (nonatomic, strong) NSArray       *titleArray;
+@property (nonatomic, assign) NSIndexPath   *selectIndexPath;
 
 @end
 

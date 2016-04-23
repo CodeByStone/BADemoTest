@@ -15,10 +15,10 @@
 >
 
 
-@property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, strong) NSArray *titlesArray;
-@property (nonatomic, strong) NSMutableArray *classNamesArray;
-@property (nonatomic, strong) NSDictionary *dict;
+@property (nonatomic, strong) UITableView     *tableView;
+@property (nonatomic, strong) NSArray         *titlesArray;
+@property (nonatomic, strong) NSMutableArray  *classNamesArray;
+@property (nonatomic, strong) NSDictionary    *dict;
 
 @end
 
@@ -137,9 +137,9 @@
     
     self.tableView.hidden = NO;
     
-    [self BA_starYingHuaCoreAnimation];
+//    [self BA_starYingHuaCoreAnimation];
 //    [self BA_starXueHuaCoreAnimation];
-    [self BA_starYanHuaCoreAnimation];
+//    [self BA_starYanHuaCoreAnimation];
 
 }
 

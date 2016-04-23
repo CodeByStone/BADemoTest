@@ -11,11 +11,11 @@
 
 @interface YRDemandUserViewCell : UITableViewCell
 
-@property (nonatomic, strong) YRDemandModelAuthor *demandDataModel;
+@property (nonatomic, strong) YRDemandModelAuthor  *demandDataModel;
 
-@property (strong, nonatomic) UIImageView *userImageView;
-@property (strong, nonatomic) UILabel *userNameLabel;
-@property (strong, nonatomic) UILabel *userInfoLabel;
-@property (strong, nonatomic) UIButton *attentionButton;
+@property (strong, nonatomic) UIImageView          *userImageView;
+@property (strong, nonatomic) UILabel              *userNameLabel;
+@property (strong, nonatomic) UILabel              *userInfoLabel;
+@property (strong, nonatomic) UIButton             *attentionButton;
 
 @end

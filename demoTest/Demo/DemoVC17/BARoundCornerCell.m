@@ -19,13 +19,13 @@ typedef NS_ENUM(NSInteger, BARoundCornerCellType) {
 
 @interface BARoundCornerCell ()
 
-@property (nonatomic, strong) NSIndexPath *indexPath;
-@property (nonatomic, weak)   UITableView *tableView;
-@property (nonatomic, assign) CGFloat radius;
-@property (nonatomic, strong) UIColor *fillColor;
-@property (nonatomic, assign) BARoundCornerCellType cellType;
+@property (nonatomic, strong) NSIndexPath            *indexPath;
+@property (nonatomic, weak  ) UITableView            *tableView;
+@property (nonatomic, assign) CGFloat                 radius;
+@property (nonatomic, strong) UIColor                *fillColor;
+@property (nonatomic, assign) BARoundCornerCellType   cellType;
 
-@property (nonatomic, strong) CAShapeLayer *strokeLayer;
+@property (nonatomic, strong) CAShapeLayer           *strokeLayer;
 
 @end
 

@@ -11,9 +11,9 @@
 @implementation DemoVC2HeadView
 
 {
-    UIImageView *_backgroundImageView;
-    UIImageView *_iconView;
-    UILabel *_nameLabel;
+    UIImageView  *_backgroundImageView;
+    UIImageView  *_iconView;
+    UILabel      *_nameLabel;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame

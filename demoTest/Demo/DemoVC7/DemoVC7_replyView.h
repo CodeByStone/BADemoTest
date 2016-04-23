@@ -12,12 +12,12 @@ typedef void(^cilckIndexBlock)(NSString *contentStr);
 
 @interface DemoVC7_replyView : UIView<UITextFieldDelegate>
 {
-    NSString *imageNameStr;
-    UIImageView *userImageView;
-    UIButton *sendButton;
+    NSString     *imageNameStr;
+    UIImageView  *userImageView;
+    UIButton     *sendButton;
 }
-@property (nonatomic, strong) UITextField *replyTextField;
-@property (nonatomic, copy) cilckIndexBlock clickIndexBlock;
+@property (nonatomic, strong) UITextField      *replyTextField;
+@property (nonatomic, copy  ) cilckIndexBlock   clickIndexBlock;
 
 - (instancetype)initWithFrame:(CGRect)frame withImage:(NSString *)imageName callBackIndex:(cilckIndexBlock)clickIndex;
 

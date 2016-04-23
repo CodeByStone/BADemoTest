@@ -11,9 +11,9 @@
 
 @interface DemoVC10_replyVC : UIViewController
 
-@property (nonatomic, strong) DemoVC10Model *quesstionDataModel;
-@property (nonatomic, strong) DemoVC10Model *replyDataModel;
+@property (nonatomic, strong) DemoVC10Model   *quesstionDataModel;
+@property (nonatomic, strong) DemoVC10Model   *replyDataModel;
 
-@property (nonatomic, strong) NSMutableArray *replyDataArray;
+@property (nonatomic, strong) NSMutableArray  *replyDataArray;
 
 @end

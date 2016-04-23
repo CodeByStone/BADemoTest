@@ -11,9 +11,9 @@
 @class DemoVC2Model;
 @interface DemoVC2Cell : UITableViewCell
 
-@property (nonatomic, strong) DemoVC2Model *model;
+@property (nonatomic, strong) DemoVC2Model  *model;
 
-@property (nonatomic, strong) NSIndexPath *indexPath;
+@property (nonatomic, strong) NSIndexPath   *indexPath;
 
 @property (nonatomic, copy) void (^moreButtonClickedBlock)(NSIndexPath *indexPath);
 

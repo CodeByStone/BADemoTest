@@ -16,13 +16,13 @@ const CGFloat maxContentLabelHeight = 54;
 
 @implementation DemoVC2Cell
 {
-    UIImageView *_iconView;
-    UILabel *_nameLable;
-    UILabel *_contentLabel;
-    SDWeiXinPhotoContainerView *_picContainerView;
-    UILabel *_timeLabel;
-    UIButton *_moreButton;
-    BOOL _shouldOpenContentLabel;
+    UIImageView                 *_iconView;
+    UILabel                     *_nameLable;
+    UILabel                     *_contentLabel;
+    SDWeiXinPhotoContainerView  *_picContainerView;
+    UILabel                     *_timeLabel;
+    UIButton                    *_moreButton;
+    BOOL                         _shouldOpenContentLabel;
 }
 
 

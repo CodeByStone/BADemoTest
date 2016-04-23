@@ -18,16 +18,16 @@
     UISearchResultsUpdating
 >
 
-@property (nonatomic, strong) UITableView    *tableView;
-@property (nonatomic, strong) NSMutableArray *indexArray;
+@property (nonatomic, strong) UITableView         *tableView;
+@property (nonatomic, strong) NSMutableArray      *indexArray;
 // 设置每个section下的cell内容
-@property (nonatomic, strong) NSMutableArray *LetterResultArr;
+@property (nonatomic, strong) NSMutableArray      *LetterResultArr;
 
-@property (nonatomic, strong) NSArray *namesArray;
+@property (nonatomic, strong) NSArray             *namesArray;
 
 /*! 搜索 */
-@property (nonatomic, strong) UISearchController * searchController;
-@property (nonatomic, strong) NSMutableArray * searchList;
+@property (nonatomic, strong) UISearchController  *searchController;
+@property (nonatomic, strong) NSMutableArray      *searchList;
 
 @end
 

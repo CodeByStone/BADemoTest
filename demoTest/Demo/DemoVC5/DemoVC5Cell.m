@@ -10,10 +10,10 @@
 
 @interface DemoVC5Cell ()
 
-@property (nonatomic, strong) UIImageView *weixinImageView;//图像
-@property (nonatomic, strong) UILabel *weixinNameLable;//用户名
-@property (nonatomic, strong) UILabel *weixinTimeLable;//发帖时间
-@property (nonatomic, strong) UILabel *weixinContentLable;//发帖内容
+@property (nonatomic, strong) UIImageView  *weixinImageView;    //图像
+@property (nonatomic, strong) UILabel      *weixinNameLable;    //用户名
+@property (nonatomic, strong) UILabel      *weixinTimeLable;    //发帖时间
+@property (nonatomic, strong) UILabel      *weixinContentLable; //发帖内容
 
 @end
 
