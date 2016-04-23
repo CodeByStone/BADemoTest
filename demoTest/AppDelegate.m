@@ -46,6 +46,7 @@
     // 友盟分享
     [self addShareOpt];
 
+    [self initializeWithApplication:application];
     
     return YES;
 }
