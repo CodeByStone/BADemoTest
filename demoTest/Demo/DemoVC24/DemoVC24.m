@@ -67,7 +67,7 @@
 {
     // 2.获取通知携带的数据，更新label的文本信息
     NSDictionary *dictData = [notification userInfo];
-    if (!dictData) return;
+    if (!dictData) return; // 此处处理有问题，需看实际情况！
     _label1.text = [NSString stringWithFormat:@"用户名：%@", dictData[@"name"]];
     _label2.text = [NSString stringWithFormat:@"密 码 ：%@", dictData[@"pwd"]];
 }
