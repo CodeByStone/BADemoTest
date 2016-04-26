@@ -175,6 +175,11 @@
 		C44A807D1CAD47E6002AA7C9 /* NSString+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A807C1CAD47E6002AA7C9 /* NSString+BAKit.m */; };
 		C44A80801CAD4808002AA7C9 /* NSThread+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A807F1CAD4808002AA7C9 /* NSThread+BAKit.m */; };
 		C462F3B41CAE01BC00E932F0 /* AppDelegate+BATest.m in Sources */ = {isa = PBXBuildFile; fileRef = C462F3B31CAE01BC00E932F0 /* AppDelegate+BATest.m */; };
+		C4660E361CCDCEB800B64F88 /* DemoVC25.m in Sources */ = {isa = PBXBuildFile; fileRef = C4660E351CCDCEB800B64F88 /* DemoVC25.m */; };
+		C4660E3B1CCDCF3600B64F88 /* WMPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C4660E381CCDCF3600B64F88 /* WMPlayer.bundle */; };
+		C4660E3C1CCDCF3600B64F88 /* WMPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C4660E3A1CCDCF3600B64F88 /* WMPlayer.m */; };
+		C4660E3F1CCDD04900B64F88 /* DemoVC25_DetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C4660E3E1CCDD04900B64F88 /* DemoVC25_DetailVC.m */; };
+		C4660E421CCDD22300B64F88 /* VideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4660E411CCDD22300B64F88 /* VideoModel.m */; };
 		C46866161CB4D9360038BA76 /* DemoVC15Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = C46866151CB4D9360038BA76 /* DemoVC15Cell.m */; };
 		C46866191CB4DBBC0038BA76 /* DemoVC15_ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C46866181CB4DBBC0038BA76 /* DemoVC15_ViewModel.m */; };
 		C47383611CB8A38B0090C22F /* DemoVC17Header.m in Sources */ = {isa = PBXBuildFile; fileRef = C47383601CB8A38B0090C22F /* DemoVC17Header.m */; };
@@ -522,6 +527,15 @@
 		C44A807F1CAD4808002AA7C9 /* NSThread+BAKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSThread+BAKit.m"; sourceTree = "<group>"; };
 		C462F3B21CAE01BC00E932F0 /* AppDelegate+BATest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AppDelegate+BATest.h"; path = "../AppDelegate+BATest.h"; sourceTree = "<group>"; };
 		C462F3B31CAE01BC00E932F0 /* AppDelegate+BATest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate+BATest.m"; path = "../AppDelegate+BATest.m"; sourceTree = "<group>"; };
+		C4660E341CCDCEB800B64F88 /* DemoVC25.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC25.h; sourceTree = "<group>"; };
+		C4660E351CCDCEB800B64F88 /* DemoVC25.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC25.m; sourceTree = "<group>"; };
+		C4660E381CCDCF3600B64F88 /* WMPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WMPlayer.bundle; sourceTree = "<group>"; };
+		C4660E391CCDCF3600B64F88 /* WMPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPlayer.h; sourceTree = "<group>"; };
+		C4660E3A1CCDCF3600B64F88 /* WMPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPlayer.m; sourceTree = "<group>"; };
+		C4660E3D1CCDD04900B64F88 /* DemoVC25_DetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC25_DetailVC.h; sourceTree = "<group>"; };
+		C4660E3E1CCDD04900B64F88 /* DemoVC25_DetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC25_DetailVC.m; sourceTree = "<group>"; };
+		C4660E401CCDD22300B64F88 /* VideoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoModel.h; sourceTree = "<group>"; };
+		C4660E411CCDD22300B64F88 /* VideoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoModel.m; sourceTree = "<group>"; };
 		C46866141CB4D9360038BA76 /* DemoVC15Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC15Cell.h; sourceTree = "<group>"; };
 		C46866151CB4D9360038BA76 /* DemoVC15Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC15Cell.m; sourceTree = "<group>"; };
 		C46866171CB4DBBC0038BA76 /* DemoVC15_ViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC15_ViewModel.h; sourceTree = "<group>"; };
@@ -1017,6 +1031,7 @@
 				C400E8281CCB20F100C90AC7 /* DemoVC22 */,
 				C4471E321CCB41B6009EF1C7 /* DemoVC23 */,
 				C4471E361CCB5687009EF1C7 /* DemoVC24 */,
+				C4660E331CCDCD9700B64F88 /* DemoVC25 */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -1323,6 +1338,30 @@
 				C44A807F1CAD4808002AA7C9 /* NSThread+BAKit.m */,
 			);
 			path = Foundation;
+			sourceTree = "<group>";
+		};
+		C4660E331CCDCD9700B64F88 /* DemoVC25 */ = {
+			isa = PBXGroup;
+			children = (
+				C4660E341CCDCEB800B64F88 /* DemoVC25.h */,
+				C4660E351CCDCEB800B64F88 /* DemoVC25.m */,
+				C4660E401CCDD22300B64F88 /* VideoModel.h */,
+				C4660E411CCDD22300B64F88 /* VideoModel.m */,
+				C4660E3D1CCDD04900B64F88 /* DemoVC25_DetailVC.h */,
+				C4660E3E1CCDD04900B64F88 /* DemoVC25_DetailVC.m */,
+				C4660E371CCDCF3600B64F88 /* WMPlayer */,
+			);
+			path = DemoVC25;
+			sourceTree = "<group>";
+		};
+		C4660E371CCDCF3600B64F88 /* WMPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				C4660E381CCDCF3600B64F88 /* WMPlayer.bundle */,
+				C4660E391CCDCF3600B64F88 /* WMPlayer.h */,
+				C4660E3A1CCDCF3600B64F88 /* WMPlayer.m */,
+			);
+			path = WMPlayer;
 			sourceTree = "<group>";
 		};
 		C47383671CB906990090C22F /* 樱花 */ = {
@@ -1728,6 +1767,7 @@
 				C404EC5E1CA9680F00A82D3A /* 8.jpg in Resources */,
 				C496FADB1CB91D5B00E32618 /* 樱花树1.jpg in Resources */,
 				C496FADD1CB91D5B00E32618 /* 樱花树3.jpg in Resources */,
+				C4660E3B1CCDCF3600B64F88 /* WMPlayer.bundle in Resources */,
 				C442C2E11CB74D1B00E493DD /* icon-2@2x.png in Resources */,
 				C4CAF6B31CAB97BC00CE265A /* InfoPlist.strings in Resources */,
 				C404EC6B1CA9680F00A82D3A /* pic4.jpg in Resources */,
@@ -1828,6 +1868,7 @@
 				C43092991CAD3E6900A9E081 /* DemoVC7Cell.m in Sources */,
 				C442C2F01CB77F5900E493DD /* BANavigationController.m in Sources */,
 				C43092891CAD3E6900A9E081 /* YRDemandShareCell.m in Sources */,
+				C4660E3C1CCDCF3600B64F88 /* WMPlayer.m in Sources */,
 				C46866191CB4DBBC0038BA76 /* DemoVC15_ViewModel.m in Sources */,
 				C43092871CAD3E6900A9E081 /* DemoVC3Model.m in Sources */,
 				C43092931CAD3E6900A9E081 /* DemoVC6.m in Sources */,
@@ -1835,6 +1876,7 @@
 				C43092881CAD3E6900A9E081 /* YRDemandModel.m in Sources */,
 				C44A805B1CAD45EF002AA7C9 /* UIView+BAKit.m in Sources */,
 				C44A80581CAD45A8002AA7C9 /* UIView+BA.m in Sources */,
+				C4660E3F1CCDD04900B64F88 /* DemoVC25_DetailVC.m in Sources */,
 				C430929C1CAD3E6900A9E081 /* DemoVC8_View1.m in Sources */,
 				C400E82B1CCB210900C90AC7 /* DemoVC22.m in Sources */,
 				C4225DCA1C990ED2006262C9 /* SDBrowserImageView.m in Sources */,
@@ -1857,6 +1899,7 @@
 				C43B62C11CB629C100D44D5E /* BAShareManageView.m in Sources */,
 				C44A80801CAD4808002AA7C9 /* NSThread+BAKit.m in Sources */,
 				C44A806E1CAD4739002AA7C9 /* NSFileManager+BAKit.m in Sources */,
+				C4660E421CCDD22300B64F88 /* VideoModel.m in Sources */,
 				C4225DCB1C990ED2006262C9 /* SDPhotoBrowser.m in Sources */,
 				C42453CD1C979D9300D01865 /* AppDelegate.m in Sources */,
 				C48489811CB50366002F8815 /* LPLevelView.m in Sources */,
@@ -1920,6 +1963,7 @@
 				C4D415EF1CB4D3D900384434 /* BABaseViewModel.m in Sources */,
 				C44A80651CAD46CC002AA7C9 /* NSArray+BAKit.m in Sources */,
 				C4225DCC1C990ED2006262C9 /* SDWaitingView.m in Sources */,
+				C4660E361CCDCEB800B64F88 /* DemoVC25.m in Sources */,
 				C4D415DD1CB4D34B00384434 /* BAVideoModel.m in Sources */,
 				C4FFA46D1CC8E931009160CC /* DemoVC21.m in Sources */,
 				C430929A1CAD3E6900A9E081 /* DemoVC7Model.m in Sources */,

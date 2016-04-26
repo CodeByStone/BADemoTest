@@ -24,12 +24,18 @@
     /*! 4、使用BALocalizedString检索本地化字符串 */
     // 详见首页VC
     
+    /*! 5、获取iOS版本 */
+    NSString *systemVersion = [NSString stringWithFormat:@"5、获取iOS版本：%@", IOS_VERSION];
     
+    /*! 6、返回平台设备 */
+    NSString *devicePlatform = [NSString stringWithFormat:@"6、返回平台设备：%@", [UIDevice devicePlatform]];
     
 
     BALog(appName);
     BALog(appVersion);
     BALog(appVersionShort);
+    BALog(systemVersion);
+    BALog(devicePlatform);
 
 }
 

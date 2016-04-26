@@ -79,8 +79,10 @@
                          @"21、自定义绘图",
                          @"22、自定义textView",
                          @"23、KVC和KVO监测",
-                         @"24、通知传值"
+                         @"24、通知传值",
+                         @"25、视频播放器"
                          ];
+        _titlesArray = [[_titlesArray reverseObjectEnumerator] allObjects];
     }
     return _titlesArray;
 }
@@ -94,6 +96,7 @@
             NSString *name = [NSString stringWithFormat:@"DemoVC%d",i+1];
             [_classNamesArray addObject:name];
         }
+        _classNamesArray = [(NSArray *)[[_classNamesArray reverseObjectEnumerator] allObjects] mutableCopy];
     }
     return _classNamesArray;
 }
