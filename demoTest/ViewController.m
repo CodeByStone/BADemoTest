@@ -79,8 +79,8 @@
                          @"21、自定义绘图",
                          @"22、自定义textView",
                          @"23、KVC和KVO监测",
-                         @"24、通知传值",
-                         @"25、视频播放器"
+                         @"24、通知传值(自定义转场动画！)",
+                         @"25、视频播放器(自适应tabelHeaderView)"
                          ];
         _titlesArray = [[_titlesArray reverseObjectEnumerator] allObjects];
     }

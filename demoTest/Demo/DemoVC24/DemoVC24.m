@@ -39,7 +39,8 @@
     BACustomButton *btn = [BACustomButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(_label1.x, _label2.bottom + 20, _label2.width, 50);
     btn.backgroundColor = BA_Yellow_Color;
-    [btn setTitle:@"下一页面" forState:UIControlStateNormal];
+    [btn setTitle:@"下一页面(自定义转场动画！)" forState:UIControlStateNormal];
+    [btn setTitleColor:BA_Red_Color];
     [btn addTarget:self action:@selector(clickBtn:) forControlEvents:UIControlEventTouchUpInside];
     
     _label3 = [UILabel new];
@@ -58,9 +59,62 @@
 
 - (IBAction)clickBtn:(BACustomButton *)sender
 {
+    /*!
+     
+     在项目中没有创建 UINavgationController，无法使用默认的 push 方法 进行页面的跳转时。
+     
+     使用另一种页面跳转方法 ：
+     
+     */
+    
+    //   默认跳转方式，从底部推出
+    //    UIViewController * viewController = [UIViewController alloc] init];
+    //    [self presentViewController: viewController animated:YES completion:nil];
+    
+    
+    //    根据需求设置跳转时的样式:
+    CATransition *animation = [CATransition animation];
+    //  时间
+    animation.duration = 0.5;
+    /**  type：动画类型
+     *  pageCurl       向上翻一页
+     *  pageUnCurl     向下翻一页
+     *  rippleEffect   水滴
+     *  suckEffect     收缩
+     *  cube           方块
+     *  oglFlip        上下翻转
+     */
+    animation.type = @"pageCurl";
+    
+    /**  type：页面转换类型
+     *  kCATransitionFade       淡出
+     *  kCATransitionMoveIn     覆盖
+     *  kCATransitionReveal     底部显示
+     *  kCATransitionPush       推出
+     */
+    animation.type = kCATransitionReveal;
+    
+    //PS：type 更多效果请 搜索： CATransition
+    
+    /**  subtype：出现的方向
+     *  kCATransitionFromRight       右
+     *  kCATransitionFromLeft        左
+     *  kCATransitionFromTop         上
+     *  kCATransitionFromBottom      下
+     */
+    animation.subtype = kCATransitionFromRight;
+    
+    
+    
     DemoVC24_NSNotificationVC *vc = [DemoVC24_NSNotificationVC new];
     
-    [self.navigationController pushViewController:vc animated:YES];
+    [self.view.window.layer addAnimation:animation forKey:nil];                   //  添加动作
+    [self presentViewController: vc animated:YES completion:nil];
+    
+    
+//    DemoVC24_NSNotificationVC *vc = [DemoVC24_NSNotificationVC new];
+    
+//    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)AMethod:(NSNotification *)notification
