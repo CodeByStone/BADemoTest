@@ -164,7 +164,6 @@
     view3.frame = CGRectMake(0, CGRectGetMaxY(view2.frame) + 5, BA_SCREEN_WIDTH, 100);
     view3.backgroundColor = [UIColor greenColor];
     [self.view addSubview:view3];
-
 }
 
 @end

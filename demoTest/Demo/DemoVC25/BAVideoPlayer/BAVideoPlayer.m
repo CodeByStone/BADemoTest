@@ -584,7 +584,7 @@
     }
     else
     {
-        //非全屏
+        // 非全屏
         [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationPortrait];
 
         [UIView animateWithDuration:0.3 animations:^{
@@ -684,7 +684,9 @@
     {
         // 全屏
         NSInteger systemVersion = [[UIDevice currentDevice].systemVersion integerValue];
-        self.frame = (systemVersion<8.0&&systemVersion>=7.0) ? CGRectMake(0,0,BA_SCREEN_WIDTH,BA_SCREEN_HEIGHT):CGRectMake(0,0,BA_SCREEN_HEIGHT,BA_SCREEN_WIDTH);
+//        self.frame = (systemVersion<8.0&&systemVersion>=7.0) ? CGRectMake(0,0,BA_SCREEN_WIDTH,BA_SCREEN_HEIGHT):CGRectMake(0,0,BA_SCREEN_HEIGHT,BA_SCREEN_WIDTH);
+
+        self.frame = (systemVersion >= 7.0) ? CGRectMake(0,0,BA_SCREEN_WIDTH,BA_SCREEN_HEIGHT):CGRectMake(0,0,BA_SCREEN_HEIGHT,BA_SCREEN_WIDTH);
         _playerLayer.frame = self.bounds;
         self.center = self.window.center;
         
@@ -709,7 +711,7 @@
             
             [self restoreOrChangeFrame:YES];
             
-            _switchButton.selected=NO;
+            _switchButton.selected = NO;
         }
     }
 }
@@ -848,6 +850,7 @@
     [_activityView removeFromSuperview];
     [_bufferLabel removeFromSuperview];
 }
+
 #pragma mark 设置标题
 - (void)setTitle:(NSString *)title
 {
