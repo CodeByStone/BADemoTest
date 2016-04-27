@@ -74,6 +74,7 @@
         [moreBtn addTarget:self action:@selector(moreBtnClick:) forControlEvents:UIControlEventTouchUpInside ];
         moreBtn.selected = YES;
         moreBtn.backgroundColor = BA_Red_Color;
+        [moreBtn setCornerRadius:5];
 //        moreBtn.frame = CGRectMake(BA_SCREEN_WIDTH - 50, _label.bottom + 15, 40, 20);
         
         // 添加到headView

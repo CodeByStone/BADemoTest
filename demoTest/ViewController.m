@@ -165,7 +165,7 @@ static NSString *const CellId = @"cell";
     }
     cell.backgroundColor = [UIColor clearColor];
 //    NSArray *indexArray = 
-    cell.titleLabel.text = [NSString stringWithFormat:@"Demo -- %ld", (long)indexPath.row];
+    cell.titleLabel.text = [NSString stringWithFormat:@"Demo ** %ld **", (long)indexPath.row];
     cell.contentLabel.text = self.titlesArray[indexPath.row];
     
     return cell;
