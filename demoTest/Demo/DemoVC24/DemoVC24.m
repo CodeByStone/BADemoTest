@@ -92,7 +92,7 @@
      *  kCATransitionReveal     底部显示
      *  kCATransitionPush       推出
      */
-    animation.type = kCATransitionPush;
+    animation.type = kCATransitionFade;
     
     //PS：type 更多效果请 搜索： CATransition
     
