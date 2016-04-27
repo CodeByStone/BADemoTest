@@ -10,10 +10,10 @@
 
 @interface DemoVC25_DetailVC ()
 {
-    CGRect     playerFrame;
+    CGRect playerFrame;
 }
 
-@property (nonatomic, strong) WMPlayer  *wmPlayer;
+@property (nonatomic, strong) WMPlayer *wmPlayer;
 
 @end
 
@@ -29,41 +29,71 @@
     }
     return self;
 }
--(BOOL)prefersStatusBarHidden{
-    if (_wmPlayer) {
-        if (_wmPlayer.isFullscreen) {
-            return YES;
-        }else{
-            return NO;
-        }
-    }else{
-        return NO;
-    }
-}
-
-- (WMPlayer *)wmPlayer
-{
-    if (!_wmPlayer)
-    {
-        playerFrame = CGRectMake(0, 0, BA_SCREEN_WIDTH, (BA_SCREEN_WIDTH)*3/4);
-        _wmPlayer = [[WMPlayer alloc]initWithFrame:playerFrame videoURLStr:self.URLString];
-        _wmPlayer.closeBtn.hidden = YES;
-        [self.view addSubview:_wmPlayer];
-        [_wmPlayer play];
-    }
-    return _wmPlayer;
-}
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    
+    if (_wmPlayer)
+    {
+        [_wmPlayer play];
+    }
     //旋转屏幕通知
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(onDeviceOrientationChange)
                                                  name:UIDeviceOrientationDidChangeNotification
                                                object:nil
      ];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appwillResignActive:) name:UIApplicationWillResignActiveNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appDidEnterBackground:) name:UIApplicationDidEnterBackgroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appWillEnterForeground:) name:UIApplicationWillEnterForegroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
 }
--(void)toFullScreenWithInterfaceOrientation:(UIInterfaceOrientation )interfaceOrientation{
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    [[[UIApplication sharedApplication] keyWindow] endEditing:YES];
+    [self.navigationController setNavigationBarHidden:NO animated:NO];
+
+//    NSArray *viewControllers = self.navigationController.viewControllers;
+//    if (viewControllers.count > 1 && [viewControllers objectAtIndex:viewControllers.count-2] == self) {
+//        // View is disappearing because a new view controller was pushed onto the stack
+//        NSLog(@"New view controller was pushed");
+//        if (_wmPlayer)
+//        {
+//            [_wmPlayer pause];
+//        }
+//    } else if ([viewControllers indexOfObject:self] == NSNotFound) {
+//        // View is disappearing because it was popped from the stack
+//        NSLog(@"View controller was popped");
+//        
+//    }
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    //UIStatusBarStyleDefault = 0 黑色文字，浅色背景时使用
+    //UIStatusBarStyleLightContent = 1 白色文字，深色背景时使用
+    return UIStatusBarStyleLightContent;
+}
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES; // 返回NO表示要显示，返回YES将hiden
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.wmPlayer.hidden = NO;
+}
+
+- (void)toFullScreenWithInterfaceOrientation:(UIInterfaceOrientation )interfaceOrientation
+{
     [[UIApplication sharedApplication] cancelAllLocalNotifications];
     [_wmPlayer removeFromSuperview];
     _wmPlayer.transform = CGAffineTransformIdentity;
@@ -85,7 +115,7 @@
         make.right.equalTo(_wmPlayer).with.offset((-BA_SCREEN_HEIGHT/2));
         make.height.mas_equalTo(30);
         make.width.mas_equalTo(30);
-        make.top.equalTo(_wmPlayer).with.offset(5);
+        make.top.equalTo(_wmPlayer).with.offset(20);
         
     }];
     [[UIApplication sharedApplication].keyWindow addSubview:_wmPlayer];
@@ -93,7 +123,9 @@
     [_wmPlayer bringSubviewToFront:_wmPlayer.bottomView];
     
 }
--(void)toNormal{
+
+- (void)toNormal
+{
     [_wmPlayer removeFromSuperview];
     [UIView animateWithDuration:0.5f animations:^{
         _wmPlayer.transform = CGAffineTransformIdentity;
@@ -110,7 +142,7 @@
             make.left.equalTo(_wmPlayer).with.offset(5);
             make.height.mas_equalTo(30);
             make.width.mas_equalTo(30);
-            make.top.equalTo(_wmPlayer).with.offset(5);
+            make.top.equalTo(_wmPlayer).with.offset(20);
         }];
         
     }completion:^(BOOL finished) {
@@ -120,7 +152,9 @@
         
     }];
 }
--(void)fullScreenBtnClick:(NSNotification *)notice{
+
+- (void)fullScreenBtnClick:(NSNotification *)notice
+{
     UIButton *fullScreenBtn = (UIButton *)[notice object];
     if (fullScreenBtn.isSelected) {//全屏显示
         _wmPlayer.isFullscreen = YES;
@@ -130,10 +164,11 @@
         [self toNormal];
     }
 }
-/**
- *  旋转屏幕通知
- */
-- (void)onDeviceOrientationChange{
+
+#pragma mark - ***** 通知
+#pragma mark 旋转屏幕通知
+- (void)onDeviceOrientationChange
+{
     if (_wmPlayer==nil||_wmPlayer.superview==nil){
         return;
     }
@@ -177,13 +212,46 @@
     }
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.wmPlayer.hidden = NO;
+- (void)appwillResignActive:(NSNotification *)note
+{
+    if (_wmPlayer)
+    {
+        [_wmPlayer pause];
+    }
+    NSLog(@"appwillResignActive");
+}
+- (void)appDidEnterBackground:(NSNotification*)note
+{
+    if (_wmPlayer)
+    {
+        [_wmPlayer pause];
+    }
+    NSLog(@"appDidEnterBackground");
+}
+- (void)appWillEnterForeground:(NSNotification*)note
+{
+    if (_wmPlayer)
+    {
+        [_wmPlayer pause];
+    }
+    NSLog(@"appWillEnterForeground");
+}
+- (void)appBecomeActive:(NSNotification *)note
+{
+    if (_wmPlayer)
+    {
+        [_wmPlayer play];
+    }
 }
 
--(void)releaseWMPlayer{
+- (void)backButtonAction
+{
+    [self.wmPlayer pause];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)releaseWMPlayer
+{
     [_wmPlayer.player.currentItem cancelPendingSeeks];
     [_wmPlayer.player.currentItem.asset cancelLoading];
     
@@ -202,13 +270,40 @@
 - (void)dealloc
 {
     [self releaseWMPlayer];
-    [BA_Noti removeObserver:self];
-    BALog(@"player 释放了");
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    NSLog(@"player 释放了");
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+- (WMPlayer *)wmPlayer
+{
+    if (!_wmPlayer)
+    {
+        playerFrame = CGRectMake(0, 0, BA_SCREEN_WIDTH, (BA_SCREEN_HEIGHT)*3/4);
+        _wmPlayer = [[WMPlayer alloc]initWithFrame:playerFrame videoURLStr:self.URLString];
+        _wmPlayer.closeBtn.hidden = NO;
+        [_wmPlayer.closeBtn setImage:[UIImage imageNamed:@"WMPlayer.bundle/返回"] ?: [UIImage imageNamed:@"WMPlayer.bundle/返回"] forState:UIControlStateNormal];
+        _wmPlayer.closeBtn.backgroundColor = [UIColor lightGrayColor];
+        _wmPlayer.closeBtn.alpha = 0.65f;
+        [_wmPlayer.closeBtn addTarget:self action:@selector(backButtonAction) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:_wmPlayer];
+        [_wmPlayer play];
+        
+        UIView *view2 = [UIView new];
+        view2.frame = CGRectMake(0, CGRectGetMaxY(_wmPlayer.frame) + 5, BA_SCREEN_WIDTH, 50);
+        view2.backgroundColor = [UIColor redColor];
+        [self.view addSubview:view2];
+        
+        UIView *view3 = [UIView new];
+        view3.frame = CGRectMake(0, CGRectGetMaxY(view2.frame) + 5, BA_SCREEN_WIDTH, 100);
+        view3.backgroundColor = [UIColor greenColor];
+        [self.view addSubview:view3];
+    }
+    return _wmPlayer;
 }
 
 @end

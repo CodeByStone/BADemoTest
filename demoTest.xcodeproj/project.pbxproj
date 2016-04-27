@@ -174,6 +174,9 @@
 		C44A807A1CAD47C7002AA7C9 /* NSProcessInfo+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A80791CAD47C7002AA7C9 /* NSProcessInfo+BAKit.m */; };
 		C44A807D1CAD47E6002AA7C9 /* NSString+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A807C1CAD47E6002AA7C9 /* NSString+BAKit.m */; };
 		C44A80801CAD4808002AA7C9 /* NSThread+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C44A807F1CAD4808002AA7C9 /* NSThread+BAKit.m */; };
+		C44D7AE31CCF6A6900430905 /* BAVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C44D7AE11CCF6A6900430905 /* BAVideoPlayer.m */; };
+		C44D7AE51CCF7C8F00430905 /* BAVideoPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C44D7AE41CCF7C8F00430905 /* BAVideoPlayer.bundle */; };
+		C44D7AE81CCF804900430905 /* DemoVC25_DetailVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = C44D7AE71CCF804800430905 /* DemoVC25_DetailVC2.m */; };
 		C462F3B41CAE01BC00E932F0 /* AppDelegate+BATest.m in Sources */ = {isa = PBXBuildFile; fileRef = C462F3B31CAE01BC00E932F0 /* AppDelegate+BATest.m */; };
 		C4660E361CCDCEB800B64F88 /* DemoVC25.m in Sources */ = {isa = PBXBuildFile; fileRef = C4660E351CCDCEB800B64F88 /* DemoVC25.m */; };
 		C4660E3B1CCDCF3600B64F88 /* WMPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C4660E381CCDCF3600B64F88 /* WMPlayer.bundle */; };
@@ -525,6 +528,11 @@
 		C44A807C1CAD47E6002AA7C9 /* NSString+BAKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BAKit.m"; sourceTree = "<group>"; };
 		C44A807E1CAD4808002AA7C9 /* NSThread+BAKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSThread+BAKit.h"; sourceTree = "<group>"; };
 		C44A807F1CAD4808002AA7C9 /* NSThread+BAKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSThread+BAKit.m"; sourceTree = "<group>"; };
+		C44D7AE01CCF6A6900430905 /* BAVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAVideoPlayer.h; sourceTree = "<group>"; };
+		C44D7AE11CCF6A6900430905 /* BAVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAVideoPlayer.m; sourceTree = "<group>"; };
+		C44D7AE41CCF7C8F00430905 /* BAVideoPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BAVideoPlayer.bundle; sourceTree = "<group>"; };
+		C44D7AE61CCF804800430905 /* DemoVC25_DetailVC2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC25_DetailVC2.h; sourceTree = "<group>"; };
+		C44D7AE71CCF804800430905 /* DemoVC25_DetailVC2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC25_DetailVC2.m; sourceTree = "<group>"; };
 		C462F3B21CAE01BC00E932F0 /* AppDelegate+BATest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AppDelegate+BATest.h"; path = "../AppDelegate+BATest.h"; sourceTree = "<group>"; };
 		C462F3B31CAE01BC00E932F0 /* AppDelegate+BATest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate+BATest.m"; path = "../AppDelegate+BATest.m"; sourceTree = "<group>"; };
 		C4660E341CCDCEB800B64F88 /* DemoVC25.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC25.h; sourceTree = "<group>"; };
@@ -1340,6 +1348,16 @@
 			path = Foundation;
 			sourceTree = "<group>";
 		};
+		C44D7ADD1CCF6A6900430905 /* BAVideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				C44D7AE41CCF7C8F00430905 /* BAVideoPlayer.bundle */,
+				C44D7AE01CCF6A6900430905 /* BAVideoPlayer.h */,
+				C44D7AE11CCF6A6900430905 /* BAVideoPlayer.m */,
+			);
+			path = BAVideoPlayer;
+			sourceTree = "<group>";
+		};
 		C4660E331CCDCD9700B64F88 /* DemoVC25 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1349,7 +1367,10 @@
 				C4660E411CCDD22300B64F88 /* VideoModel.m */,
 				C4660E3D1CCDD04900B64F88 /* DemoVC25_DetailVC.h */,
 				C4660E3E1CCDD04900B64F88 /* DemoVC25_DetailVC.m */,
+				C44D7AE61CCF804800430905 /* DemoVC25_DetailVC2.h */,
+				C44D7AE71CCF804800430905 /* DemoVC25_DetailVC2.m */,
 				C4660E371CCDCF3600B64F88 /* WMPlayer */,
+				C44D7ADD1CCF6A6900430905 /* BAVideoPlayer */,
 			);
 			path = DemoVC25;
 			sourceTree = "<group>";
@@ -1704,6 +1725,7 @@
 				C404EC4A1CA9680F00A82D3A /* 10.jpg in Resources */,
 				C404EC5C1CA9680F00A82D3A /* 6.jpg in Resources */,
 				C48489801CB50366002F8815 /* LPLevelView.bundle in Resources */,
+				C44D7AE51CCF7C8F00430905 /* BAVideoPlayer.bundle in Resources */,
 				C404EC6C1CA9680F00A82D3A /* pic5.jpg in Resources */,
 				C496FAE81CB9284500E32618 /* fire.png in Resources */,
 				C404EC611CA9680F00A82D3A /* icon0.jpg in Resources */,
@@ -1875,6 +1897,7 @@
 				C4D415DC1CB4D34B00384434 /* BABaseModel.m in Sources */,
 				C43092881CAD3E6900A9E081 /* YRDemandModel.m in Sources */,
 				C44A805B1CAD45EF002AA7C9 /* UIView+BAKit.m in Sources */,
+				C44D7AE31CCF6A6900430905 /* BAVideoPlayer.m in Sources */,
 				C44A80581CAD45A8002AA7C9 /* UIView+BA.m in Sources */,
 				C4660E3F1CCDD04900B64F88 /* DemoVC25_DetailVC.m in Sources */,
 				C430929C1CAD3E6900A9E081 /* DemoVC8_View1.m in Sources */,
@@ -1921,6 +1944,7 @@
 				C43092021CAD3E3200A9E081 /* BASystemSound.m in Sources */,
 				C4D415CA1CB4CF0C00384434 /* NSObject+BAMJParse.m in Sources */,
 				C462F3B41CAE01BC00E932F0 /* AppDelegate+BATest.m in Sources */,
+				C44D7AE81CCF804900430905 /* DemoVC25_DetailVC2.m in Sources */,
 				C43B62C01CB629C100D44D5E /* BAShareManage.m in Sources */,
 				C4D415DF1CB4D34B00384434 /* BANewsNetManager.m in Sources */,
 				C44A807A1CAD47C7002AA7C9 /* NSProcessInfo+BAKit.m in Sources */,

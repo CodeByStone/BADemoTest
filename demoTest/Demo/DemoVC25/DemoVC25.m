@@ -7,20 +7,14 @@
 //
 
 #import "DemoVC25.h"
-//#import "WMPlayer.h"
 #import "DemoVC25_DetailVC.h"
-//#import "VideoModel.h"
+#import "DemoVC25_DetailVC2.h"
 
 @interface DemoVC25 ()
 <
     UITableViewDelegate,
     UITableViewDataSource
 >
-{
-//    WMPlayer *wmPlayer;
-//    NSMutableArray *dataSource;
-
-}
 
 @property (nonatomic, strong) UITableView     *tableView;
 @property (nonatomic, strong) NSArray         *titlesArray;
@@ -73,6 +67,17 @@
     return _dataArray;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -103,10 +108,24 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DemoVC25_DetailVC *detailVC = [[DemoVC25_DetailVC alloc]init];
-    detailVC.URLString  = @"http://yycloudvod1932283664.26702.bs2.yy.com/djk3NTI2MTI0M2RkNDAzMjJkMWJlNmIzNDI4OWU2NTEwMTI1Njc3Mjcy";
-    detailVC.title = self.titlesArray[indexPath.row];
-    [self.navigationController pushViewController:detailVC animated:YES];
+    if (indexPath.row == 0)
+    {
+        DemoVC25_DetailVC *detailVC = [[DemoVC25_DetailVC alloc]init];
+        detailVC.URLString  = @"http://yycloudvod1932283664.26702.bs2.yy.com/djk3NTI2MTI0M2RkNDAzMjJkMWJlNmIzNDI4OWU2NTEwMTI1Njc3Mjcy";
+        detailVC.title = self.titlesArray[indexPath.row];
+        [self.navigationController pushViewController:detailVC animated:YES];
+    }
+    if (indexPath.row == 1)
+    {
+        DemoVC25_DetailVC2 *detailVC = [[DemoVC25_DetailVC2 alloc]init];
+        detailVC.URLString  = @"http://yycloudvod1932283664.26702.bs2.yy.com/djk3NTI2MTI0M2RkNDAzMjJkMWJlNmIzNDI4OWU2NTEwMTI1Njc3Mjcy";
+        detailVC.title = self.titlesArray[indexPath.row];
+        [self.navigationController pushViewController:detailVC animated:YES];
+    }
+
+    
+    
+    
     // 点击立刻取消该cell的选中状态
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
