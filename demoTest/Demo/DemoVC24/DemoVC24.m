@@ -84,7 +84,7 @@
      *  cube           方块
      *  oglFlip        上下翻转
      */
-    animation.type = @"pageCurl";
+    animation.type = @"rippleEffect";
     
     /**  type：页面转换类型
      *  kCATransitionFade       淡出
@@ -92,7 +92,7 @@
      *  kCATransitionReveal     底部显示
      *  kCATransitionPush       推出
      */
-    animation.type = kCATransitionReveal;
+    animation.type = kCATransitionPush;
     
     //PS：type 更多效果请 搜索： CATransition
     
