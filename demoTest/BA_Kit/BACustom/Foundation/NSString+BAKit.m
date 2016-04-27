@@ -876,4 +876,16 @@
     return attributedStr;
 }
 
+/*! 重复字符串N次 */
++ (NSString *)getText:(NSString *)text withRepeat:(int)repeat
+{
+    NSMutableString *String = [NSMutableString new];
+    
+    for (int i = 0; i < repeat; i++) {
+        [String appendString:text];
+    }
+    
+    return String;
+}
+
 @end

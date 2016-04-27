@@ -7,7 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "BAMainDemoCell.h"
 
+static NSString *const CellId = @"cell";
 @interface ViewController ()
 <
     UITableViewDelegate,
@@ -19,6 +21,8 @@
 @property (nonatomic, strong) NSArray         *titlesArray;
 @property (nonatomic, strong) NSMutableArray  *classNamesArray;
 @property (nonatomic, strong) NSDictionary    *dict;
+@property (nonatomic, strong) NSArray         *subtitlesArray;
+
 
 @end
 
@@ -80,7 +84,7 @@
                          @"22、自定义textView",
                          @"23、KVC和KVO监测",
                          @"24、通知传值(自定义转场动画！)",
-                         @"25、视频播放器(自适应tabelHeaderView)"
+                         @"25、视频播放器(自适应tabelHeaderView/解决分割线距离顶端15像素的问题)"
                          ];
         _titlesArray = [[_titlesArray reverseObjectEnumerator] allObjects];
     }
@@ -155,16 +159,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellID = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-    if (!cell)
-    {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
+    BAMainDemoCell *cell = [tableView dequeueReusableCellWithIdentifier:CellId];
+    if (!cell) {
+        cell = [[BAMainDemoCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellId];
     }
-    
     cell.backgroundColor = [UIColor clearColor];
-    cell.textLabel.text = self.titlesArray[indexPath.row];
-    cell.textLabel.textColor = [UIColor whiteColor];
+//    NSArray *indexArray = 
+    cell.titleLabel.text = [NSString stringWithFormat:@"Demo -- %ld", (long)indexPath.row];
+    cell.contentLabel.text = self.titlesArray[indexPath.row];
     
     return cell;
 }
@@ -183,6 +185,11 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+        // 此升级版方法适用于cell的model有多个的情况下,性能比普通版稍微差一些,不建议在数据量大的tableview中使用,推荐使用“cellHeightForIndexPath:model:keyPath:cellClass:contentViewWidth:”方法同样是一步设置即可完成
+    return [self.tableView cellHeightForIndexPath:indexPath cellContentViewWidth:BA_SCREEN_WIDTH tableView:self.tableView];
+}
 
 
 @end

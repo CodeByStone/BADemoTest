@@ -229,6 +229,9 @@
 
 #pragma mark - *****  特殊字符串处理 类
 
+/*! 重复字符串N次 */
++ (nullable NSString *)getText:(nullable NSString *)text withRepeat:(int)repeat;
+
 /*! 去掉字符串中的html标签的方法 */
 - (nullable NSString *)BA_filterHTML:(nullable NSString *)html;
 
@@ -342,6 +345,7 @@
 
 /*! 在软件沙盒路径中获取指定userPath路径 */
 - (nullable NSString *)BA_path_getUserInfoStorePath:(nullable NSString *)userPath;
+
 
 
 

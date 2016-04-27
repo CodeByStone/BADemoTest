@@ -185,6 +185,7 @@
 		C4660E421CCDD22300B64F88 /* VideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4660E411CCDD22300B64F88 /* VideoModel.m */; };
 		C46866161CB4D9360038BA76 /* DemoVC15Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = C46866151CB4D9360038BA76 /* DemoVC15Cell.m */; };
 		C46866191CB4DBBC0038BA76 /* DemoVC15_ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C46866181CB4DBBC0038BA76 /* DemoVC15_ViewModel.m */; };
+		C46E93031CD0BF9500DF79ED /* BAMainDemoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C46E93021CD0BF9500DF79ED /* BAMainDemoCell.m */; };
 		C47383611CB8A38B0090C22F /* DemoVC17Header.m in Sources */ = {isa = PBXBuildFile; fileRef = C47383601CB8A38B0090C22F /* DemoVC17Header.m */; };
 		C47383641CB8AC0B0090C22F /* BANavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C47383631CB8AC0B0090C22F /* BANavigationBar.m */; };
 		C47383661CB905D40090C22F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C47383651CB905D40090C22F /* QuartzCore.framework */; };
@@ -548,6 +549,8 @@
 		C46866151CB4D9360038BA76 /* DemoVC15Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC15Cell.m; sourceTree = "<group>"; };
 		C46866171CB4DBBC0038BA76 /* DemoVC15_ViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC15_ViewModel.h; sourceTree = "<group>"; };
 		C46866181CB4DBBC0038BA76 /* DemoVC15_ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC15_ViewModel.m; sourceTree = "<group>"; };
+		C46E93011CD0BF9500DF79ED /* BAMainDemoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAMainDemoCell.h; sourceTree = "<group>"; };
+		C46E93021CD0BF9500DF79ED /* BAMainDemoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAMainDemoCell.m; sourceTree = "<group>"; };
 		C473835F1CB8A38B0090C22F /* DemoVC17Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC17Header.h; sourceTree = "<group>"; };
 		C47383601CB8A38B0090C22F /* DemoVC17Header.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC17Header.m; sourceTree = "<group>"; };
 		C47383621CB8AC0B0090C22F /* BANavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BANavigationBar.h; path = ../Lib/BANavigationBar.h; sourceTree = "<group>"; };
@@ -902,6 +905,8 @@
 				C42453CC1C979D9300D01865 /* AppDelegate.m */,
 				C42453CE1C979D9300D01865 /* ViewController.h */,
 				C42453CF1C979D9300D01865 /* ViewController.m */,
+				C46E93011CD0BF9500DF79ED /* BAMainDemoCell.h */,
+				C46E93021CD0BF9500DF79ED /* BAMainDemoCell.m */,
 				C43092041CAD3E6900A9E081 /* Demo */,
 				C496FACD1CB918AF00E32618 /* BABaseData */,
 				C4F99A251CACEDF50013C7DF /* BA_Kit */,
@@ -1902,6 +1907,7 @@
 				C4660E3F1CCDD04900B64F88 /* DemoVC25_DetailVC.m in Sources */,
 				C430929C1CAD3E6900A9E081 /* DemoVC8_View1.m in Sources */,
 				C400E82B1CCB210900C90AC7 /* DemoVC22.m in Sources */,
+				C46E93031CD0BF9500DF79ED /* BAMainDemoCell.m in Sources */,
 				C4225DCA1C990ED2006262C9 /* SDBrowserImageView.m in Sources */,
 				C47383641CB8AC0B0090C22F /* BANavigationBar.m in Sources */,
 				C430929D1CAD3E6900A9E081 /* DemoVC9.m in Sources */,

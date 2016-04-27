@@ -140,6 +140,22 @@
     self.tableView.hidden = NO;
     self.tableView.tableHeaderView = self.headView;
 
+    /*! 
+     
+     在ios7中，UITableViewCell左侧会有默认15像素的空白。这时候，设置setSeparatorInset:UIEdgeInsetsZero 能将空白去掉。
+     但是在ios8中，设置setSeparatorInset:UIEdgeInsetsZero 已经不起作用了。下面是解决办法
+     1、首先在viewDidLoad方法加入以下代码：
+     2、在- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath的代理方法中加入以下代码。。。
+     */
+    if ([self.tableView respondsToSelector:@selector(setSeparatorInset:)])
+    {
+        [self.tableView setSeparatorInset:UIEdgeInsetsZero];
+    }
+    
+    if ([self.tableView respondsToSelector:@selector(setLayoutMargins:)])
+    {
+        [self.tableView setLayoutMargins:UIEdgeInsetsZero];
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -183,9 +199,23 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-/**
- *  监听按钮点击切换显示的行数
- */
+/*! 2、然后在UITableView的代理方法中加入以下代码 */
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)])
+    {
+        [cell setSeparatorInset:UIEdgeInsetsZero];
+    }
+    
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)])
+    {
+        [cell setLayoutMargins:UIEdgeInsetsZero];
+    }
+}
+
+
+
+/*! 监听按钮点击切换显示的行数 */
 - (IBAction)moreBtnClick:(UIButton *)sender
 {
     self.label.numberOfLines = self.label.numberOfLines == 0? 3:0;
@@ -193,5 +223,8 @@
         self.tableView.tableHeaderView = self.headView;
     });
 }
+
+
+
 
 @end
