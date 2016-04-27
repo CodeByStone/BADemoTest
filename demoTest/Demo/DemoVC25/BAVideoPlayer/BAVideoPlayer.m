@@ -9,6 +9,12 @@
 #import "BAVideoPlayer.h"
 #import <MediaPlayer/MediaPlayer.h>
 
+#define BA_VideoSrcName(file) [@"BAVideoPlayer.bundle" stringByAppendingPathComponent:file]
+#define BA_VideoFrameworkSrcName(file) [@"Frameworks/BAVideoPlayer.framework/BAVideoPlayer.bundle" stringByAppendingPathComponent:file]
+
+#define BA_HalfWidth self.frame.size.width * 0.5
+#define BA_HalfHeight self.frame.size.height * 0.5
+
 // 当前设备的屏幕宽度
 #define BA_SCREEN_WIDTH    [[UIScreen mainScreen] bounds].size.width
 // 当前设备的屏幕高度
@@ -453,8 +459,10 @@
         // 返回
         _backButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _backButton.frame = CGRectMake(5,_topBar.frame.origin.y+BATOPHEIGHT(NO)/2-BAButtonHeight/2,BAButtonWidth,BAButtonHeight);
+        _backButton.showsTouchWhenHighlighted = YES;
         [_backButton addTarget:self action:@selector(backClick) forControlEvents:UIControlEventTouchUpInside];
-        [_backButton setImage:[UIImage imageNamed:@"BAVideoPlayer.bundle/返回"] forState:UIControlStateNormal];
+        [_backButton setImage:[UIImage imageNamed:BA_VideoSrcName(@"返回")] ?: [UIImage imageNamed:BA_VideoFrameworkSrcName(@"返回")] forState:UIControlStateNormal];
+        [_backButton setImage:[UIImage imageNamed:BA_VideoSrcName(@"返回")] ?: [UIImage imageNamed:BA_VideoFrameworkSrcName(@"返回")] forState:UIControlStateSelected];
         [self addSubview:_backButton];
         
 //        // 标题
@@ -477,16 +485,18 @@
         
         // 播放\暂停
         _playButton = [[UIButton alloc] initWithFrame:CGRectMake(5,_footBar.frame.origin.y+BAFOOTHEIGHT/2-BAButtonHeight/2,BAButtonWidth,BAButtonHeight)];
+        _playButton.showsTouchWhenHighlighted = YES;
         [_playButton addTarget:self action:@selector(playOrPause) forControlEvents:UIControlEventTouchUpInside];
-        [_playButton setImage:[UIImage imageNamed:@"BAVideoPlayer.bundle/play"] forState:UIControlStateNormal];
-        [_playButton setImage:[UIImage imageNamed:@"BAVideoPlayer.bundle/pause"] forState:UIControlStateSelected];
+        [_playButton setImage:[UIImage imageNamed:BA_VideoSrcName(@"play")] ?: [UIImage imageNamed:BA_VideoFrameworkSrcName(@"play")] forState:UIControlStateNormal];
+        [_playButton setImage:[UIImage imageNamed:BA_VideoSrcName(@"pause")] ?: [UIImage imageNamed:BA_VideoFrameworkSrcName(@"pause")] forState:UIControlStateSelected];
         [self addSubview:_playButton];
         
         // 切换全屏
         _switchButton = [[UIButton alloc] initWithFrame:CGRectMake(_footBar.frame.size.width-35,_footBar.frame.origin.y+BAFOOTHEIGHT/2-BAButtonHeight/2,BAButtonWidth,BAButtonHeight)];
+        _switchButton.showsTouchWhenHighlighted = YES;
         [_switchButton addTarget:self action:@selector(switchClick) forControlEvents:UIControlEventTouchUpInside];
-        [_switchButton setImage:[UIImage imageNamed:@"BAVideoPlayer.bundle/fullscreen"] forState:UIControlStateNormal];
-        [_switchButton setImage:[UIImage imageNamed:@"BAVideoPlayer.bundle/nonfullscreen"] forState:UIControlStateSelected];
+        [_switchButton setImage:[UIImage imageNamed:BA_VideoSrcName(@"fullscreen")] ?: [UIImage imageNamed:BA_VideoFrameworkSrcName(@"fullscreen")] forState:UIControlStateNormal];
+        [_switchButton setImage:[UIImage imageNamed:BA_VideoSrcName(@"nonfullscreen")] ?: [UIImage imageNamed:BA_VideoFrameworkSrcName(@"nonfullscreen")] forState:UIControlStateSelected];
         [self addSubview:_switchButton];
         
         // 时间
@@ -507,7 +517,7 @@
         
         // 进度条
         _slider = [[UISlider alloc] initWithFrame:CGRectMake(_progressView.frame.origin.x-2,_progressView.frame.origin.y-14,_progressView.bounds.size.width+2,30)];
-        [_slider setThumbImage:[UIImage imageNamed:@"BAVideoPlayer.bundle/dot"] forState:UIControlStateNormal];
+        [_slider setThumbImage:[UIImage imageNamed:BA_VideoSrcName(@"dot")] ?: [UIImage imageNamed:BA_VideoFrameworkSrcName(@"dot")] forState:UIControlStateNormal];
         _slider.minimumTrackTintColor = [UIColor whiteColor];
         _slider.maximumTrackTintColor = [UIColor clearColor];
         [_slider addTarget:self action:@selector(sliderChange) forControlEvents:UIControlEventValueChanged];

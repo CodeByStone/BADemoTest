@@ -60,7 +60,7 @@
 }
 
 #pragma mark - BAVideoPlayerDelegate
-//非全屏下返回点击(仅限默认UI)
+// 非全屏下返回点击(仅限默认UI)
 - (void)backBtnClick
 {
     [self backClick];
@@ -153,7 +153,6 @@
     // 开始播放
     [_player play];
 
-    [self.view bringSubviewToFront:_player];
 
     UIView *view2 = [UIView new];
     view2.frame = CGRectMake(0, CGRectGetMaxY(_player.frame) + 5, BA_SCREEN_WIDTH, 50);
@@ -164,6 +163,9 @@
     view3.frame = CGRectMake(0, CGRectGetMaxY(view2.frame) + 5, BA_SCREEN_WIDTH, 100);
     view3.backgroundColor = [UIColor greenColor];
     [self.view addSubview:view3];
+    
+    [self.view bringSubviewToFront:_player];
+
 }
 
 @end
