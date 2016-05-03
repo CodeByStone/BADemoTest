@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>LBXAlertAction.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -84,10 +89,15 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ZXingObjC.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2C65033DC29183C7C7FF3498B688EE64</key>
+		<key>0B8E2BA1107B3B56850139206E85CB80</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -103,11 +113,6 @@
 			<true/>
 		</dict>
 		<key>5813251FEA21E4AEE97385709F1912DE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>737692749E295D796CB919F892615EDF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -142,7 +147,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>B68A455F228717EB8081047A1F942F68</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>DA1A7295DF2A99609DA0EEBF5E83233D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DCDBA99DB0E948C10E1A3DCFB8F46EA8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -157,12 +172,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F7E373FDB19473226AF4B50018EA09A1</key>
+		<key>F7ABA6E64EFF78A2771208566B244480</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>FE2F1D7B9D9FCEA148517E4657B243F4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE83EF077736BF2D6CDEA8C14F09E6F4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

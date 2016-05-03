@@ -60,31 +60,32 @@ static NSString *const CellId = @"cell";
 - (NSArray *)titlesArray
 {
     if (!_titlesArray) {
-        _titlesArray = @[@"1、自定义View(多重嵌套tableView)",
-                         @"2、微信朋友圈",
-                         @"3、自适应文字高度",
-                         @"4、测试tableView",
-                         @"5、评论界面(WHC)",
-                         @"6、评论界面(SD)",
-                         @"7、评论列表",
-                         @"8、动态该表label的高度",
-                         @"9、NSString扩展",
-                         @"10、多级评论",
-                         @"11、城市选择器(pickView)",
-                         @"12、alertView封装",
-                         @"13、文字和APP名字的国际化(webView封装)",
-                         @"14、自定义collection",
-                         @"15、MVVM设计模式+自定义navi",
-                         @"16、友盟分享和登陆",
-                         @"17、QQ好友分组",
-                         @"18、runtime测试/gif动画",
-                         @"19、联系人分组（带索引）",
-                         @"20、(最简单的)自定义collectionView",
-                         @"21、自定义绘图",
-                         @"22、自定义textView",
-                         @"23、KVC和KVO监测",
-                         @"24、通知传值(自定义转场动画！)",
-                         @"25、视频播放器(自适应tabelHeaderView/解决分割线距离顶端15像素的问题)"
+        _titlesArray = @[@"Demo ** 1 **\r\n自定义View(多重嵌套tableView)",
+                         @"Demo ** 2 **\r\n微信朋友圈",
+                         @"Demo ** 3 **\r\n自适应文字高度",
+                         @"Demo ** 4 **\r\n测试tableView",
+                         @"Demo ** 5 **\r\n评论界面(WHC)",
+                         @"Demo ** 6 **\r\n评论界面(SD)",
+                         @"Demo ** 7 **\r\n评论列表",
+                         @"Demo ** 8 **\r\n动态该表label的高度",
+                         @"Demo ** 9 **\r\nNSString扩展",
+                         @"Demo ** 10 **\r\n多级评论",
+                         @"Demo ** 11 **\r\n城市选择器(pickView)",
+                         @"Demo ** 12 **\r\nalertView封装",
+                         @"Demo ** 13 **\r\n文字和APP名字的国际化(webView封装)",
+                         @"Demo ** 14 **\r\n自定义collection",
+                         @"Demo ** 15 **\r\nMVVM设计模式+自定义navi",
+                         @"Demo ** 16 **\r\n友盟分享和登陆",
+                         @"Demo ** 17 **\r\nQQ好友分组",
+                         @"Demo ** 18 **\r\nruntime测试/gif动画",
+                         @"Demo ** 19 **\r\n联系人分组（带索引）",
+                         @"Demo ** 20 **\r\n(最简单的)自定义collectionView",
+                         @"Demo ** 21 **\r\n自定义绘图",
+                         @"Demo ** 22 **\r\n自定义textView",
+                         @"Demo ** 23 **\r\nKVC和KVO监测",
+                         @"Demo ** 24 **\r\n通知传值(自定义转场动画！)",
+                         @"Demo ** 25 **\r\n视频播放器(自适应tabelHeaderView/解决分割线距离顶端15像素的问题)",
+                         @"Demo ** 26 **\r\n二维码扫描"
                          ];
         _titlesArray = [[_titlesArray reverseObjectEnumerator] allObjects];
     }
@@ -165,7 +166,7 @@ static NSString *const CellId = @"cell";
     }
     cell.backgroundColor = [UIColor clearColor];
 //    NSArray *indexArray = 
-    cell.titleLabel.text = [NSString stringWithFormat:@"Demo ** %ld **", (long)indexPath.row];
+//    cell.titleLabel.text = [NSString stringWithFormat:@"Demo ** %ld **", (long)indexPath.row];
     cell.contentLabel.text = self.titlesArray[indexPath.row];
     
     return cell;
@@ -184,6 +185,14 @@ static NSString *const CellId = @"cell";
     // 点击立刻取消该cell的选中状态
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
+//- (NSString *)cutLocalStringForShow:(NSString *)iStr
+//{
+//    //对显示坐标进行去重
+//    NSArray * arr = [iStr componentsSeparatedByString:NSLocalizedString(@"**", nil)];
+//    if([arr count] < 2) return iStr;
+//    return arr[0];
+//}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {

@@ -45,6 +45,8 @@ pod 'UMengSocial', '~> 4.4'
 
 # 二维码
 #pod 'LBXScan','~> 1.1.1'
+pod 'LBXAlertAction'
+pod 'ZXingObjC', '~> 3.0'
 
 # 离屏渲染，切边角
 pod 'JMRoundedCorner', '~> 1.1.2'

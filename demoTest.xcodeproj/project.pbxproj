@@ -239,6 +239,24 @@
 		C4E20B711CC652EB00E32F0E /* YRHomeTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E20B6C1CC652EB00E32F0E /* YRHomeTopView.m */; };
 		C4E20B721CC652EB00E32F0E /* BALayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E20B6E1CC652EB00E32F0E /* BALayout.m */; };
 		C4E20B731CC652EB00E32F0E /* BAPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E20B701CC652EB00E32F0E /* BAPhotoCell.m */; };
+		C4EB573A1CD845BF003A7094 /* DemoVC26.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB57391CD845BF003A7094 /* DemoVC26.m */; };
+		C4EB573D1CD84E7F003A7094 /* DemoVC26_QRCodeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB573C1CD84E7F003A7094 /* DemoVC26_QRCodeVC.m */; };
+		C4EB57401CD853BF003A7094 /* SubLBXScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB573F1CD853BF003A7094 /* SubLBXScanViewController.m */; };
+		C4EB57441CD8540C003A7094 /* ScanResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB57421CD8540C003A7094 /* ScanResultViewController.m */; };
+		C4EB57451CD8540C003A7094 /* ScanResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4EB57431CD8540C003A7094 /* ScanResultViewController.xib */; };
+		C4EB57481CD85423003A7094 /* MyQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB57471CD85423003A7094 /* MyQRViewController.m */; };
+		C4EB57641CD8580D003A7094 /* LBXScanLineAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB574E1CD8580D003A7094 /* LBXScanLineAnimation.m */; };
+		C4EB57651CD8580D003A7094 /* LBXScanNative.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB57501CD8580D003A7094 /* LBXScanNative.m */; };
+		C4EB57661CD8580D003A7094 /* LBXScanNetAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB57521CD8580D003A7094 /* LBXScanNetAnimation.m */; };
+		C4EB57671CD8580D003A7094 /* LBXScanResult.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB57541CD8580D003A7094 /* LBXScanResult.m */; };
+		C4EB57681CD8580D003A7094 /* LBXScanVideoZoomView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB57561CD8580D003A7094 /* LBXScanVideoZoomView.m */; };
+		C4EB57691CD8580D003A7094 /* LBXScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB57581CD8580D003A7094 /* LBXScanView.m */; };
+		C4EB576A1CD8580D003A7094 /* LBXScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB575A1CD8580D003A7094 /* LBXScanViewController.m */; };
+		C4EB576B1CD8580D003A7094 /* LBXScanViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB575C1CD8580D003A7094 /* LBXScanViewStyle.m */; };
+		C4EB576C1CD8580D003A7094 /* LBXScanWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB575E1CD8580D003A7094 /* LBXScanWrapper.m */; };
+		C4EB576D1CD8580D003A7094 /* LBXZXCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB57601CD8580D003A7094 /* LBXZXCapture.m */; };
+		C4EB576E1CD8580D003A7094 /* ZXingWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB57631CD8580D003A7094 /* ZXingWrapper.m */; };
+		C4EB57701CD85A26003A7094 /* CodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C4EB576F1CD85A26003A7094 /* CodeScan.bundle */; };
 		C4F02F4F1CAD440700371A9C /* UIDevice+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F02F4E1CAD440700371A9C /* UIDevice+BAKit.m */; };
 		C4F02F521CAD444F00371A9C /* UIFont+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F02F511CAD444F00371A9C /* UIFont+BAKit.m */; };
 		C4F02F551CAD449B00371A9C /* UIImage+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F02F541CAD449B00371A9C /* UIImage+BAKit.m */; };
@@ -642,6 +660,41 @@
 		C4E20B6E1CC652EB00E32F0E /* BALayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BALayout.m; sourceTree = "<group>"; };
 		C4E20B6F1CC652EB00E32F0E /* BAPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAPhotoCell.h; sourceTree = "<group>"; };
 		C4E20B701CC652EB00E32F0E /* BAPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAPhotoCell.m; sourceTree = "<group>"; };
+		C4EB57381CD845BF003A7094 /* DemoVC26.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC26.h; sourceTree = "<group>"; };
+		C4EB57391CD845BF003A7094 /* DemoVC26.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC26.m; sourceTree = "<group>"; };
+		C4EB573B1CD84E7F003A7094 /* DemoVC26_QRCodeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoVC26_QRCodeVC.h; sourceTree = "<group>"; };
+		C4EB573C1CD84E7F003A7094 /* DemoVC26_QRCodeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoVC26_QRCodeVC.m; sourceTree = "<group>"; };
+		C4EB573E1CD853BF003A7094 /* SubLBXScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubLBXScanViewController.h; sourceTree = "<group>"; };
+		C4EB573F1CD853BF003A7094 /* SubLBXScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubLBXScanViewController.m; sourceTree = "<group>"; };
+		C4EB57411CD8540C003A7094 /* ScanResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanResultViewController.h; sourceTree = "<group>"; };
+		C4EB57421CD8540C003A7094 /* ScanResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanResultViewController.m; sourceTree = "<group>"; };
+		C4EB57431CD8540C003A7094 /* ScanResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScanResultViewController.xib; sourceTree = "<group>"; };
+		C4EB57461CD85423003A7094 /* MyQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQRViewController.h; sourceTree = "<group>"; };
+		C4EB57471CD85423003A7094 /* MyQRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQRViewController.m; sourceTree = "<group>"; };
+		C4EB574D1CD8580D003A7094 /* LBXScanLineAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanLineAnimation.h; sourceTree = "<group>"; };
+		C4EB574E1CD8580D003A7094 /* LBXScanLineAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanLineAnimation.m; sourceTree = "<group>"; };
+		C4EB574F1CD8580D003A7094 /* LBXScanNative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanNative.h; sourceTree = "<group>"; };
+		C4EB57501CD8580D003A7094 /* LBXScanNative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanNative.m; sourceTree = "<group>"; };
+		C4EB57511CD8580D003A7094 /* LBXScanNetAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanNetAnimation.h; sourceTree = "<group>"; };
+		C4EB57521CD8580D003A7094 /* LBXScanNetAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanNetAnimation.m; sourceTree = "<group>"; };
+		C4EB57531CD8580D003A7094 /* LBXScanResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanResult.h; sourceTree = "<group>"; };
+		C4EB57541CD8580D003A7094 /* LBXScanResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanResult.m; sourceTree = "<group>"; };
+		C4EB57551CD8580D003A7094 /* LBXScanVideoZoomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanVideoZoomView.h; sourceTree = "<group>"; };
+		C4EB57561CD8580D003A7094 /* LBXScanVideoZoomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanVideoZoomView.m; sourceTree = "<group>"; };
+		C4EB57571CD8580D003A7094 /* LBXScanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanView.h; sourceTree = "<group>"; };
+		C4EB57581CD8580D003A7094 /* LBXScanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanView.m; sourceTree = "<group>"; };
+		C4EB57591CD8580D003A7094 /* LBXScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanViewController.h; sourceTree = "<group>"; };
+		C4EB575A1CD8580D003A7094 /* LBXScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanViewController.m; sourceTree = "<group>"; };
+		C4EB575B1CD8580D003A7094 /* LBXScanViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanViewStyle.h; sourceTree = "<group>"; };
+		C4EB575C1CD8580D003A7094 /* LBXScanViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanViewStyle.m; sourceTree = "<group>"; };
+		C4EB575D1CD8580D003A7094 /* LBXScanWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanWrapper.h; sourceTree = "<group>"; };
+		C4EB575E1CD8580D003A7094 /* LBXScanWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanWrapper.m; sourceTree = "<group>"; };
+		C4EB575F1CD8580D003A7094 /* LBXZXCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXZXCapture.h; sourceTree = "<group>"; };
+		C4EB57601CD8580D003A7094 /* LBXZXCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXZXCapture.m; sourceTree = "<group>"; };
+		C4EB57611CD8580D003A7094 /* LBXZXCaptureDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXZXCaptureDelegate.h; sourceTree = "<group>"; };
+		C4EB57621CD8580D003A7094 /* ZXingWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXingWrapper.h; sourceTree = "<group>"; };
+		C4EB57631CD8580D003A7094 /* ZXingWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXingWrapper.m; sourceTree = "<group>"; };
+		C4EB576F1CD85A26003A7094 /* CodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CodeScan.bundle; sourceTree = "<group>"; };
 		C4F02F4D1CAD440700371A9C /* UIDevice+BAKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+BAKit.h"; sourceTree = "<group>"; };
 		C4F02F4E1CAD440700371A9C /* UIDevice+BAKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+BAKit.m"; sourceTree = "<group>"; };
 		C4F02F501CAD444F00371A9C /* UIFont+BAKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+BAKit.h"; sourceTree = "<group>"; };
@@ -1045,6 +1098,7 @@
 				C4471E321CCB41B6009EF1C7 /* DemoVC23 */,
 				C4471E361CCB5687009EF1C7 /* DemoVC24 */,
 				C4660E331CCDCD9700B64F88 /* DemoVC25 */,
+				C4EB57371CD84582003A7094 /* DemoVC26 */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -1575,6 +1629,56 @@
 			path = DemoVC20;
 			sourceTree = "<group>";
 		};
+		C4EB57371CD84582003A7094 /* DemoVC26 */ = {
+			isa = PBXGroup;
+			children = (
+				C4EB57381CD845BF003A7094 /* DemoVC26.h */,
+				C4EB57391CD845BF003A7094 /* DemoVC26.m */,
+				C4EB573B1CD84E7F003A7094 /* DemoVC26_QRCodeVC.h */,
+				C4EB573C1CD84E7F003A7094 /* DemoVC26_QRCodeVC.m */,
+				C4EB573E1CD853BF003A7094 /* SubLBXScanViewController.h */,
+				C4EB573F1CD853BF003A7094 /* SubLBXScanViewController.m */,
+				C4EB57411CD8540C003A7094 /* ScanResultViewController.h */,
+				C4EB57421CD8540C003A7094 /* ScanResultViewController.m */,
+				C4EB57431CD8540C003A7094 /* ScanResultViewController.xib */,
+				C4EB57461CD85423003A7094 /* MyQRViewController.h */,
+				C4EB57471CD85423003A7094 /* MyQRViewController.m */,
+				C4EB574C1CD8580D003A7094 /* LBXScan */,
+			);
+			path = DemoVC26;
+			sourceTree = "<group>";
+		};
+		C4EB574C1CD8580D003A7094 /* LBXScan */ = {
+			isa = PBXGroup;
+			children = (
+				C4EB576F1CD85A26003A7094 /* CodeScan.bundle */,
+				C4EB574D1CD8580D003A7094 /* LBXScanLineAnimation.h */,
+				C4EB574E1CD8580D003A7094 /* LBXScanLineAnimation.m */,
+				C4EB574F1CD8580D003A7094 /* LBXScanNative.h */,
+				C4EB57501CD8580D003A7094 /* LBXScanNative.m */,
+				C4EB57511CD8580D003A7094 /* LBXScanNetAnimation.h */,
+				C4EB57521CD8580D003A7094 /* LBXScanNetAnimation.m */,
+				C4EB57531CD8580D003A7094 /* LBXScanResult.h */,
+				C4EB57541CD8580D003A7094 /* LBXScanResult.m */,
+				C4EB57551CD8580D003A7094 /* LBXScanVideoZoomView.h */,
+				C4EB57561CD8580D003A7094 /* LBXScanVideoZoomView.m */,
+				C4EB57571CD8580D003A7094 /* LBXScanView.h */,
+				C4EB57581CD8580D003A7094 /* LBXScanView.m */,
+				C4EB57591CD8580D003A7094 /* LBXScanViewController.h */,
+				C4EB575A1CD8580D003A7094 /* LBXScanViewController.m */,
+				C4EB575B1CD8580D003A7094 /* LBXScanViewStyle.h */,
+				C4EB575C1CD8580D003A7094 /* LBXScanViewStyle.m */,
+				C4EB575D1CD8580D003A7094 /* LBXScanWrapper.h */,
+				C4EB575E1CD8580D003A7094 /* LBXScanWrapper.m */,
+				C4EB575F1CD8580D003A7094 /* LBXZXCapture.h */,
+				C4EB57601CD8580D003A7094 /* LBXZXCapture.m */,
+				C4EB57611CD8580D003A7094 /* LBXZXCaptureDelegate.h */,
+				C4EB57621CD8580D003A7094 /* ZXingWrapper.h */,
+				C4EB57631CD8580D003A7094 /* ZXingWrapper.m */,
+			);
+			path = LBXScan;
+			sourceTree = "<group>";
+		};
 		C4F623711CA8C76100DCF152 /* BANavigationItem */ = {
 			isa = PBXGroup;
 			children = (
@@ -1717,6 +1821,7 @@
 			files = (
 				C404EC501CA9680F00A82D3A /* 16.jpg in Resources */,
 				C496FAE31CB920C800E32618 /* snowbg.jpg in Resources */,
+				C4EB57451CD8540C003A7094 /* ScanResultViewController.xib in Resources */,
 				C496FAF21CB92C0C00E32618 /* gif1.gif in Resources */,
 				C496FAE91CB9284500E32618 /* snow.png in Resources */,
 				C404EC6A1CA9680F00A82D3A /* pic3.jpg in Resources */,
@@ -1749,6 +1854,7 @@
 				C404EC701CA9680F00A82D3A /* picon.jpg in Resources */,
 				C4CAF6AF1CAB97B000CE265A /* Localizable.strings in Resources */,
 				C404EC541CA9680F00A82D3A /* 2.jpg in Resources */,
+				C4EB57701CD85A26003A7094 /* CodeScan.bundle in Resources */,
 				C43092701CAD3E6900A9E081 /* BAHomeIncomeCell.xib in Resources */,
 				C442C2E61CB74D1B00E493DD /* icon-7@2x.png in Resources */,
 				C404EC5F1CA9680F00A82D3A /* 9.jpg in Resources */,
@@ -1916,6 +2022,7 @@
 				C44A80681CAD46F3002AA7C9 /* NSDate+BAKit.m in Sources */,
 				C47A1ECC1CBBDD0A008A6349 /* pinyin.c in Sources */,
 				C4F02F551CAD449B00371A9C /* UIImage+BAKit.m in Sources */,
+				C4EB576D1CD8580D003A7094 /* LBXZXCapture.m in Sources */,
 				C4F02F581CAD44CE00371A9C /* UIImageView+BAKit.m in Sources */,
 				C42453D01C979D9300D01865 /* ViewController.m in Sources */,
 				C4F02F611CAD454900371A9C /* UITableView+BAKit.m in Sources */,
@@ -1924,16 +2031,20 @@
 				C430928B1CAD3E6900A9E081 /* YRDemandUserViewCell.m in Sources */,
 				C4FFA4731CC8EA7B009160CC /* UIImage+BACategory.m in Sources */,
 				C496FAD01CB918CD00E32618 /* BABaseViewController.m in Sources */,
+				C4EB576C1CD8580D003A7094 /* LBXScanWrapper.m in Sources */,
 				C430927E1CAD3E6900A9E081 /* BACardLayout.m in Sources */,
+				C4EB57661CD8580D003A7094 /* LBXScanNetAnimation.m in Sources */,
 				C43B62C11CB629C100D44D5E /* BAShareManageView.m in Sources */,
 				C44A80801CAD4808002AA7C9 /* NSThread+BAKit.m in Sources */,
 				C44A806E1CAD4739002AA7C9 /* NSFileManager+BAKit.m in Sources */,
 				C4660E421CCDD22300B64F88 /* VideoModel.m in Sources */,
 				C4225DCB1C990ED2006262C9 /* SDPhotoBrowser.m in Sources */,
 				C42453CD1C979D9300D01865 /* AppDelegate.m in Sources */,
+				C4EB57481CD85423003A7094 /* MyQRViewController.m in Sources */,
 				C48489811CB50366002F8815 /* LPLevelView.m in Sources */,
 				C43092741CAD3E6900A9E081 /* YRHomeIncomeView.m in Sources */,
 				C43092801CAD3E6900A9E081 /* DemoVC2.m in Sources */,
+				C4EB57681CD8580D003A7094 /* LBXScanVideoZoomView.m in Sources */,
 				C43B62B81CB5E86500D44D5E /* BAFPSLabel.m in Sources */,
 				C44A80771CAD47A5002AA7C9 /* NSNumber+BAKit.m in Sources */,
 				C42453CA1C979D9300D01865 /* main.m in Sources */,
@@ -1952,6 +2063,7 @@
 				C462F3B41CAE01BC00E932F0 /* AppDelegate+BATest.m in Sources */,
 				C44D7AE81CCF804900430905 /* DemoVC25_DetailVC2.m in Sources */,
 				C43B62C01CB629C100D44D5E /* BAShareManage.m in Sources */,
+				C4EB57641CD8580D003A7094 /* LBXScanLineAnimation.m in Sources */,
 				C4D415DF1CB4D34B00384434 /* BANewsNetManager.m in Sources */,
 				C44A807A1CAD47C7002AA7C9 /* NSProcessInfo+BAKit.m in Sources */,
 				C442C2ED1CB77BEE00E493DD /* BARoundCornerCell.m in Sources */,
@@ -1959,9 +2071,11 @@
 				C43092921CAD3E6900A9E081 /* DemoVC5Model.m in Sources */,
 				C4D415EB1CB4D39F00384434 /* UIScrollView+BARefresh.m in Sources */,
 				C44A806B1CAD4719002AA7C9 /* NSDictionary+BAKit.m in Sources */,
+				C4EB57651CD8580D003A7094 /* LBXScanNative.m in Sources */,
 				C44A80611CAD4671002AA7C9 /* UIWindow+BAKit.m in Sources */,
 				C430928F1CAD3E6900A9E081 /* DemoVC5.m in Sources */,
 				C43092771CAD3E6900A9E081 /* DemoVC10Cell.m in Sources */,
+				C4EB57671CD8580D003A7094 /* LBXScanResult.m in Sources */,
 				C44A805E1CAD4648002AA7C9 /* UIWebView+BAKit.m in Sources */,
 				C4E20B711CC652EB00E32F0E /* YRHomeTopView.m in Sources */,
 				C47A1C3F1CBBC6F6008A6349 /* Person.m in Sources */,
@@ -1971,8 +2085,10 @@
 				C430928D1CAD3E6900A9E081 /* BASearchBar.m in Sources */,
 				C4D415C41CB4CE6000384434 /* DemoVC15.m in Sources */,
 				C4D415CD1CB4D2FD00384434 /* NSData+BAKit.m in Sources */,
+				C4EB576B1CD8580D003A7094 /* LBXScanViewStyle.m in Sources */,
 				C4F02F5B1CAD44F200371A9C /* UILabel+BAKit.m in Sources */,
 				C4D415C71CB4CE8900384434 /* DemoVC15Model.m in Sources */,
+				C4EB57441CD8540C003A7094 /* ScanResultViewController.m in Sources */,
 				C43092751CAD3E6900A9E081 /* DemoVC10.m in Sources */,
 				C496FAEC1CB9289900E32618 /* BAGIFImageView.m in Sources */,
 				C430926F1CAD3E6900A9E081 /* BAHomeIncomeCell.m in Sources */,
@@ -1985,17 +2101,21 @@
 				C4471E391CCB569E009EF1C7 /* DemoVC24.m in Sources */,
 				C43092031CAD3E3200A9E081 /* BATouchID.m in Sources */,
 				C46866161CB4D9360038BA76 /* DemoVC15Cell.m in Sources */,
+				C4EB57691CD8580D003A7094 /* LBXScanView.m in Sources */,
 				C430928E1CAD3E6900A9E081 /* BATokenManager.m in Sources */,
 				C43092961CAD3E6900A9E081 /* DemoVC7_quesstionCell.m in Sources */,
 				C43092901CAD3E6900A9E081 /* DemoVC5_SearchVC.m in Sources */,
+				C4EB576E1CD8580D003A7094 /* ZXingWrapper.m in Sources */,
 				C430927D1CAD3E6900A9E081 /* DemoVC13.m in Sources */,
 				C4471E3C1CCB58CC009EF1C7 /* DemoVC24_NSNotificationVC.m in Sources */,
 				C4D415EF1CB4D3D900384434 /* BABaseViewModel.m in Sources */,
 				C44A80651CAD46CC002AA7C9 /* NSArray+BAKit.m in Sources */,
+				C4EB57401CD853BF003A7094 /* SubLBXScanViewController.m in Sources */,
 				C4225DCC1C990ED2006262C9 /* SDWaitingView.m in Sources */,
 				C4660E361CCDCEB800B64F88 /* DemoVC25.m in Sources */,
 				C4D415DD1CB4D34B00384434 /* BAVideoModel.m in Sources */,
 				C4FFA46D1CC8E931009160CC /* DemoVC21.m in Sources */,
+				C4EB573A1CD845BF003A7094 /* DemoVC26.m in Sources */,
 				C430929A1CAD3E6900A9E081 /* DemoVC7Model.m in Sources */,
 				C43092981CAD3E6900A9E081 /* DemoVC7_replyView.m in Sources */,
 				C4F02F5E1CAD451B00371A9C /* UIScrollView+BAKit.m in Sources */,
@@ -2014,8 +2134,10 @@
 				C44A80711CAD475C002AA7C9 /* NSMutableArray+BAKit.m in Sources */,
 				C493ED291CAA92CE00DF2A44 /* UIViewController+BAAlertView.m in Sources */,
 				C4E20B6A1CC6528100E32F0E /* DemoVC20.m in Sources */,
+				C4EB573D1CD84E7F003A7094 /* DemoVC26_QRCodeVC.m in Sources */,
 				C430927F1CAD3E6900A9E081 /* DemoVC14.m in Sources */,
 				C4D415EA1CB4D39F00384434 /* NSObject+Network.m in Sources */,
+				C4EB576A1CD8580D003A7094 /* LBXScanViewController.m in Sources */,
 				C43092951CAD3E6900A9E081 /* DemoVC7.m in Sources */,
 				C43091FF1CAD3E3200A9E081 /* BAAPP.m in Sources */,
 				C44A807D1CAD47E6002AA7C9 /* NSString+BAKit.m in Sources */,

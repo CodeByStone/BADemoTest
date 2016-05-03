@@ -10,6 +10,8 @@
 
 @interface DemoVC13 : BABaseViewController
 
+@property (strong, nonatomic) NSString *currentURL;
+@property (strong, nonatomic) NSString *currentTitle;
 
 @end
 
