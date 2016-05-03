@@ -12,7 +12,7 @@
 #import "LBXScanView.h"
 #import "LBXScanResult.h"
 #import "LBXScanWrapper.h"
-#import "SubLBXScanViewController.h"
+#import "DemoVC26_QRCodeVC.h"
 
 @interface DemoVC26 ()
 <
@@ -63,8 +63,7 @@
 
 - (void)showError:(NSString*)str
 {
-//    [LBXAlertAction showAlertWithTitle:@"提示" msg:str chooseBlock:nil buttonsStatement:@"知道了",nil];
-    [self.view showAlertView:@"温馨提示：" message:str];
+    [LBXAlertAction showAlertWithTitle:@"提示" msg:str chooseBlock:nil buttonsStatement:@"知道了",nil];
 }
 
 - (BOOL)cameraPemission
@@ -123,7 +122,7 @@
     
     //SubLBXScanViewController继承自LBXScanViewController
     //添加一些扫码或相册结果处理
-    SubLBXScanViewController *vc2 = [SubLBXScanViewController new];
+    DemoVC26_QRCodeVC *vc2 = [DemoVC26_QRCodeVC new];
     vc2.style = style;
     
     vc2.isQQSimulator = YES;

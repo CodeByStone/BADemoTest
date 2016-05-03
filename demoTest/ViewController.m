@@ -23,7 +23,6 @@ static NSString *const CellId = @"cell";
 @property (nonatomic, strong) NSDictionary    *dict;
 @property (nonatomic, strong) NSArray         *subtitlesArray;
 
-
 @end
 
 @implementation ViewController
@@ -188,7 +187,7 @@ static NSString *const CellId = @"cell";
 
 //- (NSString *)cutLocalStringForShow:(NSString *)iStr
 //{
-//    //对显示坐标进行去重
+//    // 对显示坐标进行去重
 //    NSArray * arr = [iStr componentsSeparatedByString:NSLocalizedString(@"**", nil)];
 //    if([arr count] < 2) return iStr;
 //    return arr[0];

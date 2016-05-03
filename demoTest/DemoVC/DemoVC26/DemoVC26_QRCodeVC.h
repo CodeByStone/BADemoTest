@@ -1,19 +1,15 @@
 //
-//  SubLBXScanViewController.h
+//  DemoVC26_QRCodeVC.h
+//  demoTest
 //
-//  github:https://github.com/MxABC/LBXScan
-//  Created by lbxia on 15/10/21.
-//  Copyright © 2015年 lbxia. All rights reserved.
+//  Created by 博爱 on 16/5/3.
+//  Copyright © 2016年 博爱之家. All rights reserved.
 //
 
 #import "LBXAlertAction.h"
 #import "LBXScanViewController.h"
 
-
-//继承LBXScanViewController,在界面上绘制想要的按钮，提示语等
-@interface SubLBXScanViewController : LBXScanViewController
-
-
+@interface DemoVC26_QRCodeVC : LBXScanViewController
 
 #pragma mark -模仿qq界面
 
@@ -36,11 +32,6 @@
 @property (nonatomic, strong) UIButton *btnFlash;
 // 我的二维码
 @property (nonatomic, strong) UIButton *btnMyQR;
-
-@property (nonatomic, copy, setter = ba_setDidFinishQRCodeBlock:) void (^ba_didFinishQRCodeBlock)(NSString *urlStr, UIImage *imgScanned, NSString *strBarCodeType);
-
-
-
 
 
 @end

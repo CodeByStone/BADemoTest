@@ -1,24 +1,25 @@
 //
+//  DemoVC26_QRCodeVC.m
+//  demoTest
 //
-//
-//
-//  Created by lbxia on 15/10/21.
-//  Copyright © 2015年 lbxia. All rights reserved.
+//  Created by 博爱 on 16/5/3.
+//  Copyright © 2016年 博爱之家. All rights reserved.
 //
 
-#import "SubLBXScanViewController.h"
-//#import "MyQRViewController.h"
+#import "DemoVC26_QRCodeVC.h"
+#import "MyQRViewController.h"
 #import "ScanResultViewController.h"
 #import "LBXScanResult.h"
 #import "LBXScanWrapper.h"
 #import "LBXScanVideoZoomView.h"
-#import "DemoVC26_QRCodeVC.h"
+#import "DemoVC13.h"
 
-@interface SubLBXScanViewController ()
+@interface DemoVC26_QRCodeVC ()
 @property (nonatomic, strong) LBXScanVideoZoomView *zoomView;
+
 @end
 
-@implementation SubLBXScanViewController
+@implementation DemoVC26_QRCodeVC
 
 
 - (void)viewDidLoad
@@ -26,6 +27,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.title = @"扫一扫";
+
     if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)]) {
         
         self.edgesForExtendedLayout = UIRectEdgeNone;
@@ -43,9 +46,9 @@
     
     if (_isQQSimulator) {
         
-         [self drawBottomItems];
+        [self drawBottomItems];
         [self drawTitle];
-         [self.view bringSubviewToFront:_topTitle];
+        [self.view bringSubviewToFront:_topTitle];
     }
     else
         _topTitle.hidden = YES;
@@ -73,7 +76,7 @@
         _topTitle.text = @"将取景框对准二维码即可自动扫描";
         _topTitle.textColor = [UIColor whiteColor];
         [self.view addSubview:_topTitle];
-    }    
+    }
 }
 
 - (void)cameraInitOver
@@ -87,7 +90,7 @@
 {
     if (!_zoomView)
     {
-      
+        
         CGRect frame = self.view.frame;
         
         int XRetangleLeft = self.style.xScanRetangleOffset;
@@ -119,17 +122,17 @@
         
         __weak __typeof(self) weakSelf = self;
         _zoomView.block= ^(float value)
-        {            
+        {
             [weakSelf.scanObj setVideoScale:value];
         };
         [self.view addSubview:_zoomView];
-                
+        
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap)];
         [self.view addGestureRecognizer:tap];
     }
     
     return _zoomView;
-   
+    
 }
 
 - (void)tap
@@ -145,7 +148,7 @@
     }
     
     self.bottomItemsView = [[UIView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.view.frame)-164,
-                                                                      CGRectGetWidth(self.view.frame), 100)];
+                                                                   CGRectGetWidth(self.view.frame), 100)];
     _bottomItemsView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.6];
     
     [self.view addSubview:_bottomItemsView];
@@ -153,31 +156,32 @@
     CGSize size = CGSizeMake(65, 87);
     self.btnFlash = [[UIButton alloc]init];
     _btnFlash.bounds = CGRectMake(0, 0, size.width, size.height);
-    _btnFlash.center = CGPointMake(CGRectGetWidth(_bottomItemsView.frame)/1.5, CGRectGetHeight(_bottomItemsView.frame)/2);
-     [_btnFlash setImage:[UIImage imageNamed:@"CodeScan.bundle/qrcode_scan_btn_flash_nor"] forState:UIControlStateNormal];
+    _btnFlash.center = CGPointMake(CGRectGetWidth(_bottomItemsView.frame)/2, CGRectGetHeight(_bottomItemsView.frame)/2);
+    [_btnFlash setImage:[UIImage imageNamed:@"CodeScan.bundle/qrcode_scan_btn_flash_nor"] forState:UIControlStateNormal];
     [_btnFlash addTarget:self action:@selector(openOrCloseFlash) forControlEvents:UIControlEventTouchUpInside];
     
     self.btnPhoto = [[UIButton alloc]init];
     _btnPhoto.bounds = _btnFlash.bounds;
-    _btnPhoto.center = CGPointMake(CGRectGetWidth(_bottomItemsView.frame)/3, CGRectGetHeight(_bottomItemsView.frame)/2);
+    _btnPhoto.center = CGPointMake(CGRectGetWidth(_bottomItemsView.frame)/4, CGRectGetHeight(_bottomItemsView.frame)/2);
     [_btnPhoto setImage:[UIImage imageNamed:@"CodeScan.bundle/qrcode_scan_btn_photo_nor"] forState:UIControlStateNormal];
     [_btnPhoto setImage:[UIImage imageNamed:@"CodeScan.bundle/qrcode_scan_btn_photo_down"] forState:UIControlStateHighlighted];
     [_btnPhoto addTarget:self action:@selector(openPhoto) forControlEvents:UIControlEventTouchUpInside];
     
-//    self.btnMyQR = [[UIButton alloc]init];
-//    _btnMyQR.bounds = _btnFlash.bounds;
-//    _btnMyQR.center = CGPointMake(CGRectGetWidth(_bottomItemsView.frame) * 3/4, CGRectGetHeight(_bottomItemsView.frame)/2);
-//    [_btnMyQR setImage:[UIImage imageNamed:@"CodeScan.bundle/qrcode_scan_btn_myqrcode_nor"] forState:UIControlStateNormal];
-//    [_btnMyQR setImage:[UIImage imageNamed:@"CodeScan.bundle/qrcode_scan_btn_myqrcode_down"] forState:UIControlStateHighlighted];
-//    [_btnMyQR addTarget:self action:@selector(myQRCode) forControlEvents:UIControlEventTouchUpInside];
+    self.btnMyQR = [[UIButton alloc]init];
+    _btnMyQR.bounds = _btnFlash.bounds;
+    _btnMyQR.center = CGPointMake(CGRectGetWidth(_bottomItemsView.frame) * 3/4, CGRectGetHeight(_bottomItemsView.frame)/2);
+    [_btnMyQR setImage:[UIImage imageNamed:@"CodeScan.bundle/qrcode_scan_btn_myqrcode_nor"] forState:UIControlStateNormal];
+    [_btnMyQR setImage:[UIImage imageNamed:@"CodeScan.bundle/qrcode_scan_btn_myqrcode_down"] forState:UIControlStateHighlighted];
+    [_btnMyQR addTarget:self action:@selector(myQRCode) forControlEvents:UIControlEventTouchUpInside];
     
     [_bottomItemsView addSubview:_btnFlash];
     [_bottomItemsView addSubview:_btnPhoto];
+    [_bottomItemsView addSubview:_btnMyQR];
 }
 
 - (void)showError:(NSString*)str
 {
-//    [LBXAlertAction showAlertWithTitle:@"提示" msg:str chooseBlock:nil buttonsStatement:@"知道了",nil];
+    //    [LBXAlertAction showAlertWithTitle:@"提示" msg:str chooseBlock:nil buttonsStatement:@"知道了",nil];
     [self.view showAlertView:@"温馨提示：" message:str];
 }
 
@@ -189,7 +193,7 @@
     if (array.count < 1)
     {
         [self popAlertMsgWithScanResult:nil];
-     
+        
         return;
     }
     
@@ -217,10 +221,10 @@
     //声音提醒
     [LBXScanWrapper systemSound];
     
-//    if (_ba_didFinishQRCodeBlock)
-//    {
-//        _ba_didFinishQRCodeBlock(scanResult.strScanned, scanResult.imgScanned, scanResult.strBarCodeType);
-//    }
+    //    if (_ba_didFinishQRCodeBlock)
+    //    {
+    //        _ba_didFinishQRCodeBlock(scanResult.strScanned, scanResult.imgScanned, scanResult.strBarCodeType);
+    //    }
     
     [self showNextVCWithScanResult:scanResult];
 }
@@ -244,8 +248,8 @@
 {
     if ([NSString BA_url_isURL:strResult.strScanned])
     {
-        DemoVC26_QRCodeVC *vc = [DemoVC26_QRCodeVC new];
-        vc.urlStr = strResult.strScanned;
+        DemoVC13 *vc = [DemoVC13 new];
+        vc.currentURL = strResult.strScanned;
         [self.navigationController pushViewController:vc animated:YES];
     }
     else
@@ -258,7 +262,7 @@
         vc.strCodeType = strResult.strBarCodeType;
         
         [self.navigationController pushViewController:vc animated:YES];
-    } 
+    }
 }
 
 
@@ -279,7 +283,7 @@
 {
     
     [super openOrCloseFlash];
-   
+    
     
     if (self.isOpenFlash)
     {
@@ -295,8 +299,8 @@
 
 - (void)myQRCode
 {
-//    MyQRViewController *vc = [MyQRViewController new];
-//    [self.navigationController pushViewController:vc animated:YES];
+    MyQRViewController *vc = [MyQRViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 

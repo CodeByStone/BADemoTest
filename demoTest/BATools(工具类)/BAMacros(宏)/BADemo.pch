@@ -21,8 +21,11 @@
 
 // 全局宏定义文件
 #import "BADefin.h"
+#import "BAHeader.h"
+#import "BAColorHeader.h"
+#import "BAFrameHeader.h"
 
-#import "BA_Kit/BAKit.h"
+#import "BAKit.h"
 
 #import "UINavigationItem+CustomItem.h"
 
