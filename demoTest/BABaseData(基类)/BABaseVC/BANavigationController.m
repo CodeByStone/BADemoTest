@@ -1,9 +1,9 @@
 //
 //  BANavigationController.m
-//  QJdouguoView
+//  demoTest
 //
-//  Created by Justin on 16/3/19.
-//  Copyright © 2016年 Justin. All rights reserved.
+//  Created by 博爱 on 16/3/15.
+//  Copyright © 2016年 博爱之家. All rights reserved.
 //
 
 #import "BANavigationController.h"

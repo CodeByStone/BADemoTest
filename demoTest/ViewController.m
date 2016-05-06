@@ -20,8 +20,6 @@ static NSString *const CellId = @"cell";
 @property (nonatomic, strong) UITableView     *tableView;
 @property (nonatomic, strong) NSArray         *titlesArray;
 @property (nonatomic, strong) NSMutableArray  *classNamesArray;
-@property (nonatomic, strong) NSDictionary    *dict;
-@property (nonatomic, strong) NSArray         *subtitlesArray;
 
 @end
 
