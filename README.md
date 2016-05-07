@@ -3,18 +3,19 @@ ios开发中重难点展示
 
 >**开发中如有问题，可以联系本人**
 
-**新浪微博：@博爱1616**
+##            本Demo迁移通知！
 
-**QQ：     137361770**
+#### 为更好的整理iOS开发遇到的各种问题及bug处理，本人重新设计了一个主要使用 MVVM 设计模式 和 MVC 设计模式的基本项目框架 [『BABaseProject』](https://github.com/boai/BABaseProject) ，项目用到的各种类，各种封装，各种三方库的综合项目，欢迎大家使用！
 
-**博客园：http://www.cnblogs.com/boai/**
+#### 故 本demo不在继续更新，需要的朋友请前往下载最新demo [『BABaseProject』](https://github.com/boai/BABaseProject) ，再次感谢大家对我的支持！
 
-**简书：http://www.jianshu.com/users/95c9800fdf47/latest_articles**
+## 0、个人简介
+**新浪微博：@博爱1616** <br>
+**QQ：     137361770** <br>
+**博客：http://boai.github.io** <br>
+**博客园：http://www.cnblogs.com/boai/** <br>
+**简书：http://www.jianshu.com/users/95c9800fdf47/latest_articles** <br>
 
-**如果大神发现其中代码有bug，希望可以尽快联系本人修复，在此感谢各路大神的帮助！**
-###本Demo中使用三方布局工具库【gsdios】开发的SDAutoLayout  原三方库地址： https://github.com/gsdios/SDAutoLayout
-``` 在开发中遇到很多问题，非常感谢SDLayout（原作者gsdios）和其他各路大神的帮助，在此基础上开始更新自己开发中的重难点demo，希望能够帮助更多遇到类似难点的同道中人！ ```
-***
 
 ## 1、推荐:
 #### 完全实现button的自定义的类库，pod 导入：   pod 'BAButton', '~> 1.0.1'
@@ -180,85 +181,6 @@ http://www.cnblogs.com/boai/p/5332365.html
 ## 2016.03.20 --- 
 
 >##1、添加【DemoVC9】增加NSString类的扩展
-```
-/**
-*  获得系统当前日期和时间
-*
-*  @return 获得系统当前日期和时间
-*/
-+ (nullable NSString *)getCurrentDateAndTime;
-/**
-*  时间戳转换【YYYY-MM-dd HH:mm:ss】
-*
-*  @param string 时间戳
-*
-*  @return 时间戳转换【YYYY-MM-dd HH:mm:ss】
-*/
-+ (nullable NSString *)getCurrentDateAndTimeWithTimeString:(nullable NSString *)string;
-/**
-*  时间戳转换【YYYY-MM-dd】
-*
-*  @param string 时间戳
-*
-*  @return 时间戳转换【YYYY-MM-dd】
-*/
-+ (nullable NSString *)getDateWithTimeString:(nullable NSString *)string;
-/**
-*  时间戳转换【HH:mm】
-*
-*  @param string 时间戳
-*
-*  @return 时间戳转换【HH:mm】
-*/
-+ (nullable NSString *)getTimeWithTimeString:(nullable NSString *)string;
-/**
-*  时间转换时间戳
-*
-*  @param string 时间
-*
-*  @return 时间转换时间戳
-*/
-+ (nullable NSString *)getTimeStamp;
-/**
-*   Trim blank characters (space and newline) in head and tail.
-*
-*  @return the trimmed string.
-*/
-- (nullable NSString *)stringByTrim;
-/**
-*   Try to parse this string and returns an `NSNumber`.
-*
-*  @return Returns an `NSNumber` if parse succeed, or nil if an error occurs.
-*/
-- (nullable NSNumber *)numberValue;
-/**
-*  Returns an NSData using UTF-8 encoding.
-*
-*  @return Returns an NSData using UTF-8 encoding.
-*/
-- (nullable NSData *)dataValue;
-/**
-*   Create a string from the file in main bundle (similar to [UIImage imageNamed:]).
-*
-*  @param name The file name (in main bundle).
-*
-*  @return A new string create from the file in UTF-8 character encoding.
-*/
-+ (nullable NSString *)stringNamed:(nullable NSString *)name;
-/**
-*   Returns a lowercase NSString for md5 hash.
-*
-*  @return  Returns a lowercase NSString for md5 hash.
-*/
-- (nullable NSString *)md5String;
-/**
-*   Returns a lowercase NSString for hmac using algorithm md5 with key.
-*
-*  @param key The hmac key.
-*
-*  @return  Returns a lowercase NSString for hmac using algorithm md5 with key.
-*/
-- (nullable NSString *)hmacMD5StringWithKey:(nullable NSString *)key;
 
 ![image](https://github.com/boai/BADemoTest/blob/master/Image/image2.png)
 
