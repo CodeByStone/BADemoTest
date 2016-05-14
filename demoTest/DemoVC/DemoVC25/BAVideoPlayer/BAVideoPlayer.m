@@ -108,6 +108,7 @@
     if (self.superview)
     {
         [self removeFromSuperview];
+        NSLog(@"BAVideoPlayer销毁了！");
     }
 }
 

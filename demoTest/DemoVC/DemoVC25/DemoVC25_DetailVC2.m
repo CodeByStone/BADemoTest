@@ -8,7 +8,7 @@
 
 #import "DemoVC25_DetailVC2.h"
 #import "BAVideoPlayer.h"
-
+#import "UIDevice+WF.h"
 
 @interface DemoVC25_DetailVC2 ()<BAVideoPlayerDelegate>
 {
@@ -39,11 +39,17 @@
     BALog(@"player 释放了");
 }
 
+// 是否支持屏幕旋转
+//- (BOOL)shouldAutorotate
+//{
+//    return !_player.isSwitch;
+//}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     
-    [UIApplication sharedApplication].statusBarStyle=UIStatusBarStyleLightContent;
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     //    self.view.backgroundColor=[UIColor lightTextColor];
     
     [self.navigationController setNavigationBarHidden:YES animated:NO];
@@ -52,11 +58,6 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appDidEnterBackground:) name:UIApplicationDidEnterBackgroundNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appWillEnterForeground:) name:UIApplicationWillEnterForegroundNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
-}
-
-- (BOOL)shouldAutorotate
-{
-    return !_player.isSwitch;
 }
 
 #pragma mark - BAVideoPlayerDelegate
@@ -141,7 +142,7 @@
 #pragma mark - 创建UI
 - (void)createUI
 {
-    playerFrame = CGRectMake(0, 0, BA_SCREEN_WIDTH, (BA_SCREEN_HEIGHT)*3/4);
+    playerFrame = CGRectMake(0, 0, BA_SCREEN_WIDTH, 270);
     
     // 播放器
     _player = [[BAVideoPlayer alloc] initWithFrame:playerFrame
@@ -167,5 +168,26 @@
     [self.view bringSubviewToFront:_player];
 
 }
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    return (toInterfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (BOOL)shouldAutorotate
+{
+    return YES;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+    if ([UIViewController isKindOfClass:[DemoVC25_DetailVC2 class]])
+    {
+        return UIInterfaceOrientationMaskAllButUpsideDown;
+    }
+    return UIInterfaceOrientationMaskPortrait;//只支持这一个方向(正常的方向)
+}
+
+
 
 @end

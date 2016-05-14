@@ -690,10 +690,73 @@ static void *PlayViewStatusObservationContext = &PlayViewStatusObservationContex
 }
 -(void)dealloc{
     NSLog(@"WMPlayer dealloc");
+    
     [self.player pause];
-    self.autoDismissTimer = nil;
-    self.durationTimer = nil;
-    self.player = nil;
-    [self.currentItem removeObserver:self forKeyPath:@"status"];
+
+    [self closePlayer];
 }
+
+#pragma mark - ***** 关闭播放器
+- (void)closePlayer
+{
+    if (_durationTimer)
+    {
+        [_durationTimer invalidate];
+        _durationTimer = nil;
+    }
+    if (_autoDismissTimer)
+    {
+        [_autoDismissTimer invalidate];
+        _autoDismissTimer = nil;
+    }
+    
+    
+    [self removeObserver];
+    [self removeNotification];
+    
+    [_player.currentItem cancelPendingSeeks];
+    [_player.currentItem.asset cancelLoading];
+    
+    [_player cancelPendingPrerolls];
+    
+    [_player replaceCurrentItemWithPlayerItem:nil];
+    
+    for (UIView *view in self.subviews)
+    {
+        [view removeFromSuperview];
+    }
+    
+    for (CALayer *subLayer in self.layer.sublayers)
+    {
+        [subLayer removeFromSuperlayer];
+    }
+}
+
+#pragma mark 添加KVO监控
+- (void)addObserver
+{
+    AVPlayerItem *playerItem = _player.currentItem;
+    
+    // 监控状态属性(AVPlayer也有一个status属性，通过监控它的status也可以获得播放状态)
+    [playerItem addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:nil];
+    // 监控网络加载情况属性
+    [playerItem addObserver:self forKeyPath:@"loadedTimeRanges" options:NSKeyValueObservingOptionNew context:nil];
+    // 监控是否可播放
+    [playerItem addObserver:self forKeyPath:@"playbackLikelyToKeepUp" options:NSKeyValueObservingOptionNew context:nil];
+}
+
+#pragma mark 移除KVO监控
+- (void)removeObserver
+{
+    [_player.currentItem removeObserver:self forKeyPath:@"status"];
+    [_player.currentItem removeObserver:self forKeyPath:@"loadedTimeRanges"];
+    [_player.currentItem removeObserver:self forKeyPath:@"playbackLikelyToKeepUp"];
+}
+
+#pragma mark 移除通知
+- (void)removeNotification
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 @end

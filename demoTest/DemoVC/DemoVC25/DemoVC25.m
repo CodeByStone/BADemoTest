@@ -184,14 +184,14 @@
     if (indexPath.row == 0)
     {
         DemoVC25_DetailVC *detailVC = [[DemoVC25_DetailVC alloc]init];
-        detailVC.URLString  = @"http://yycloudvod1932283664.26702.bs2.yy.com/djk3NTI2MTI0M2RkNDAzMjJkMWJlNmIzNDI4OWU2NTEwMTI1Njc3Mjcy";
+        detailVC.URLString  = @"http://7rfkz6.com1.z0.glb.clouddn.com/480p_20160229_T2.mp4";
         detailVC.title = self.titlesArray[indexPath.row];
         [self.navigationController pushViewController:detailVC animated:YES];
     }
     if (indexPath.row == 1)
     {
         DemoVC25_DetailVC2 *detailVC = [[DemoVC25_DetailVC2 alloc]init];
-        detailVC.URLString  = @"http://yycloudvod1932283664.26702.bs2.yy.com/djk3NTI2MTI0M2RkNDAzMjJkMWJlNmIzNDI4OWU2NTEwMTI1Njc3Mjcy";
+        detailVC.URLString  = @"http://7rfkz6.com1.z0.glb.clouddn.com/480p_20160229_T2.mp4";
         detailVC.title = self.titlesArray[indexPath.row];
         [self.navigationController pushViewController:detailVC animated:YES];
     }

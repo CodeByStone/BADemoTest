@@ -55,6 +55,7 @@
 		C496FAEE1CB929F700E32618 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C496FAED1CB929F700E32618 /* ImageIO.framework */; };
 		C4CAF6AF1CAB97B000CE265A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4CAF6B11CAB97B000CE265A /* Localizable.strings */; };
 		C4CAF6B31CAB97BC00CE265A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4CAF6B51CAB97BC00CE265A /* InfoPlist.strings */; };
+		C4D1089B1CE35B9900F735B9 /* UIDevice+WF.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D1089A1CE35B9900F735B9 /* UIDevice+WF.m */; };
 		C4D415CD1CB4D2FD00384434 /* NSData+BAKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D415CC1CB4D2FD00384434 /* NSData+BAKit.m */; };
 		C4D415D01CB4D32700384434 /* BACustomModalTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D415CF1CB4D32700384434 /* BACustomModalTransition.m */; };
 		C4EB57D51CD88BE0003A7094 /* BABaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C4EB57C31CD88BE0003A7094 /* BABaseModel.m */; };
@@ -394,6 +395,8 @@
 		C4CAF6B21CAB97B200CE265A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C4CAF6B41CAB97BC00CE265A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		C4CAF6B61CAB97BE00CE265A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C4D108991CE35B9900F735B9 /* UIDevice+WF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+WF.h"; sourceTree = "<group>"; };
+		C4D1089A1CE35B9900F735B9 /* UIDevice+WF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+WF.m"; sourceTree = "<group>"; };
 		C4D415CB1CB4D2FD00384434 /* NSData+BAKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+BAKit.h"; sourceTree = "<group>"; };
 		C4D415CC1CB4D2FD00384434 /* NSData+BAKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+BAKit.m"; sourceTree = "<group>"; };
 		C4D415CE1CB4D32700384434 /* BACustomModalTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BACustomModalTransition.h; sourceTree = "<group>"; };
@@ -1041,6 +1044,13 @@
 			path = "分享";
 			sourceTree = "<group>";
 		};
+		C4D108951CE3492000F735B9 /* BAPlayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BAPlayer;
+			sourceTree = "<group>";
+		};
 		C4EB57A61CD887DA003A7094 /* BABaseData(基类) */ = {
 			isa = PBXGroup;
 			children = (
@@ -1625,6 +1635,7 @@
 		C4EB59411CD89396003A7094 /* DemoVC25 */ = {
 			isa = PBXGroup;
 			children = (
+				C4D108951CE3492000F735B9 /* BAPlayer */,
 				C4EB59421CD89396003A7094 /* BAVideoPlayer */,
 				C4EB59461CD89396003A7094 /* DemoVC25.h */,
 				C4EB59471CD89396003A7094 /* DemoVC25.m */,
@@ -1634,6 +1645,8 @@
 				C4EB594B1CD89396003A7094 /* DemoVC25_DetailVC2.m */,
 				C4EB594C1CD89396003A7094 /* VideoModel.h */,
 				C4EB594D1CD89396003A7094 /* VideoModel.m */,
+				C4D108991CE35B9900F735B9 /* UIDevice+WF.h */,
+				C4D1089A1CE35B9900F735B9 /* UIDevice+WF.m */,
 				C4EB594E1CD89396003A7094 /* WMPlayer */,
 			);
 			path = DemoVC25;
@@ -2184,6 +2197,7 @@
 				C4EB5A0D1CD89397003A7094 /* DemoVC5Cell.m in Sources */,
 				C48489811CB50366002F8815 /* LPLevelView.m in Sources */,
 				C4EB59F31CD89397003A7094 /* LBXScanLineAnimation.m in Sources */,
+				C4D1089B1CE35B9900F735B9 /* UIDevice+WF.m in Sources */,
 				C44A80771CAD47A5002AA7C9 /* NSNumber+BAKit.m in Sources */,
 				C4EB59ED1CD89397003A7094 /* VideoModel.m in Sources */,
 				C42453CA1C979D9300D01865 /* main.m in Sources */,
